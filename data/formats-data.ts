@@ -1362,6 +1362,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "NUBL",
 		doublesTier: "(DUU)",
 	},
+	porygonzmega: {},
 	omanyte: {
 		tier: "LC",
 	},
@@ -1373,6 +1374,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "PUBL",
 		doublesTier: "(DUU)",
 	},
+	omastarrebirthed: {},
 	kabuto: {
 		tier: "LC",
 	},
@@ -1384,6 +1386,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "(PU)",
 		doublesTier: "(DUU)",
 	},
+	kabutopsrebirthed: {},
 	aerodactyl: {
 		randomBattleMoves: ["aquatail", "dualwingbeat", "earthquake", "honeclaws", "stoneedge"],
 		randomBattleLevel: 82,
@@ -1396,6 +1399,8 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		isNonstandard: "Past",
 		tier: "Illegal",
 	},
+	aerodactylrebirthed: {},
+	aerodactylrebirthedmega: {},
 	munchlax: {
 		tier: "LC",
 	},
