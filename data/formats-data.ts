@@ -863,10 +863,12 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		isNonstandard: "Past",
 		tier: "Illegal",
 	},
+	electrodemega: {},
 	electrodehisui: {
 		isNonstandard: "Future",
 		tier: "Illegal",
 	},
+	electrodehisuimega: {},
 	exeggcute: {
 		tier: "LC",
 	},
