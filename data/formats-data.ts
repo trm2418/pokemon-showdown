@@ -382,9 +382,11 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	zubat: {
 		tier: "LC",
 	},
+	zubatsoran: {},
 	golbat: {
 		tier: "NFE",
 	},
+	golbatsoran: {},
 	crobat: {
 		randomBattleMoves: ["bravebird", "defog", "roost", "superfang", "taunt", "toxic", "uturn"],
 		randomBattleLevel: 82,
@@ -393,6 +395,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "RU",
 		doublesTier: "(DUU)",
 	},
+	crobatsoran: {},
 	oddish: {
 		tier: "LC",
 	},
@@ -423,6 +426,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		isNonstandard: "Past",
 		tier: "Illegal",
 	},
+	paracordis: {},
 	venonat: {
 		isNonstandard: "Past",
 		tier: "Illegal",
@@ -445,6 +449,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "(PU)",
 		doublesTier: "(DUU)",
 	},
+	dugtriomega: {},
 	dugtrioalola: {
 		randomBattleMoves: ["earthquake", "ironhead", "stealthrock", "stoneedge", "suckerpunch"],
 		randomBattleLevel: 82,
@@ -453,6 +458,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "(PU)",
 		doublesTier: "(DUU)",
 	},
+	dugtrioalolamega: {},
 	meowth: {
 		tier: "LC",
 	},
@@ -510,13 +516,13 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		isNonstandard: "Past",
 		tier: "Illegal",
 	},
+	empirilla: {},
 	growlithe: {
 		tier: "LC",
 	},
 	growlithehisui: {
-		isNonstandard: "Future",
-		tier: "Illegal",
 	},
+	growlithesoran: {},
 	arcanine: {
 		randomBattleMoves: ["closecombat", "extremespeed", "flareblitz", "morningsun", "toxic", "wildcharge", "willowisp"],
 		randomBattleLevel: 82,
@@ -526,9 +532,8 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		doublesTier: "DUU",
 	},
 	arcaninehisui: {
-		isNonstandard: "Future",
-		tier: "Illegal",
 	},
+	arcaninesoran: {},
 	poliwag: {
 		tier: "LC",
 	},
