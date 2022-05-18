@@ -1232,10 +1232,13 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	gyaradosrebirthed: {},
 	gigakarp: {},
+	nessea: {},
 	lapras: {
 		tier: "(PU)",
 		doublesTier: "(DUU)",
 	},
+	laprasmegax: {},
+	laprasmegay: {},
 	laprasgmax: {
 		randomBattleMoves: ["freezedry", "icebeam", "protect", "sparklingaria", "thunderbolt", "toxic"],
 		randomBattleLevel: 86,
