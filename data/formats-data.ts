@@ -1161,6 +1161,8 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "(PU)",
 		doublesTier: "(DUU)",
 	},
+	sorcerice: {},
+	sorcericemega: {},
 	elekid: {
 		tier: "LC",
 	},
@@ -1175,6 +1177,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "(PU)",
 		doublesTier: "(DUU)",
 	},
+	electiviremega: {},
 	magby: {
 		tier: "LC",
 	},
@@ -1189,6 +1192,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "(PU)",
 		doublesTier: "(DUU)",
 	},
+	magmortarmega: {},
 	pinsir: {
 		randomBattleMoves: ["closecombat", "earthquake", "knockoff", "stealthrock", "stoneedge", "xscissor"],
 		randomBattleLevel: 84,
