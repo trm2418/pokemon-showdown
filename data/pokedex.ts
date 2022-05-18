@@ -2659,9 +2659,9 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Gray",
 		evos: ["Steelix"],
 		eggGroups: ["Mineral"],
-		//otherFormes: ["Onix-Soran", "Onix-Bone"],
-		//formeOrder: ["Onix", "Onix-Soran", "Onix-Bone"]
-	},/*
+		otherFormes: ["Onix-Soran", "Onix-Bone"],
+		formeOrder: ["Onix", "Onix-Soran", "Onix-Bone"]
+	},
 	onixsoran: {
 		num: 95,
 		name: "Onix-Soran",
@@ -2689,7 +2689,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Gray",
 		evos: ["Steelix-Bone"],
 		eggGroups: ["Mineral"],
-	},*/
+	},
 	drowzee: {
 		num: 96,
 		name: "Drowzee",

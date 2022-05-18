@@ -769,12 +769,15 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "RU",
 		doublesTier: "(DUU)",
 	},
+	cloystermega: {},
 	gastly: {
 		tier: "NFE",
 	},
+	gastlysoran: {},
 	haunter: {
 		tier: "NFE",
 	},
+	hauntersoran: {},
 	gengar: {
 		randomDoubleBattleMoves: ["focusblast", "nastyplot", "protect", "shadowball", "sludgebomb", "thunderbolt", "trick", "willowisp"],
 		randomDoubleBattleLevel: 86,
