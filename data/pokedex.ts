@@ -2776,7 +2776,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		otherFormes: ["Krabby-Soran"],
 		formeOrder: ["Krabby", "Krabby-Soran"],
 	},
-	sorankrabby: {
+	krabbysoran: {
 		num: 98,
 		name: "Krabby-Soran",
 		baseSpecies: "Krabby",
@@ -2834,7 +2834,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		eggGroups: ["Water 3"],
 		changesFrom: "Kingler",
 	},
-	sorankingler: {
+	kinglersoran: {
 		num: 99,
 		name: "Kingler-Soran",
 		baseSpecies: "Kingler",
