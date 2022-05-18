@@ -1213,9 +1213,11 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "NU",
 		doublesTier: "(DUU)",
 	},
+	taurosmega: {},
 	magikarp: {
 		tier: "LC",
 	},
+	magikarprebirthed: {},
 	gyarados: {
 		randomBattleMoves: ["bounce", "dragondance", "earthquake", "powerwhip", "waterfall"],
 		randomBattleLevel: 76,
@@ -1228,6 +1230,8 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		isNonstandard: "Past",
 		tier: "Illegal",
 	},
+	gyaradosrebirthed: {},
+	gigakarp: {},
 	lapras: {
 		tier: "(PU)",
 		doublesTier: "(DUU)",
