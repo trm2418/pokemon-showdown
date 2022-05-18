@@ -811,10 +811,15 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "RU",
 		doublesTier: "(DUU)",
 	},
-	steelixmega: {
+	steelixmegax: {
 		isNonstandard: "Past",
 		tier: "Illegal",
 	},
+	steelixmegay: {},
+	steelixsoran: {},
+	steelixsoranmega: {},
+	steelixbone: {},
+	steelixbonemega: {},
 	drowzee: {
 		isNonstandard: "Past",
 		tier: "Illegal",
