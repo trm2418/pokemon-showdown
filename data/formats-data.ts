@@ -794,6 +794,8 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "AG",
 		doublesTier: "(DUber)",
 	},
+	gengarsoran: {},
+	gengarsoranmega: {},
 	onix: {
 		tier: "LC",
 	},
