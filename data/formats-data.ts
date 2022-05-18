@@ -156,10 +156,13 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		isNonstandard: "Past",
 		tier: "Illegal",
 	},
+	spearowsoran: {},
 	fearow: {
 		isNonstandard: "Past",
 		tier: "Illegal",
 	},
+	fearowsoran: {},
+	thunderoc: {},
 	ekans: {
 		isNonstandard: "Past",
 		tier: "Illegal",
@@ -168,6 +171,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		isNonstandard: "Past",
 		tier: "Illegal",
 	},
+	arbokmega: {},
 	pichu: {
 		tier: "LC",
 	},
@@ -340,6 +344,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	vulpixalola: {
 		tier: "NFE",
 	},
+	vulpixsoran: {},
 	ninetales: {
 		randomBattleMoves: ["fireblast", "nastyplot", "scorchingsands", "solarbeam", "willowisp"],
 		randomBattleLevel: 82,
@@ -348,6 +353,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "(PU)",
 		doublesTier: "DUU",
 	},
+	ninetalesmega: {},
 	ninetalesalola: {
 		randomBattleMoves: ["auroraveil", "blizzard", "freezedry", "moonblast", "nastyplot"],
 		randomBattleLevel: 79,
@@ -356,6 +362,9 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "OU",
 		doublesTier: "DOU",
 	},
+	ninetalesalolamega: {},
+	ninetalessoran: {},
+	ninetalessoranmega: {},
 	igglybuff: {
 		tier: "LC",
 	},
