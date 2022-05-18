@@ -559,9 +559,11 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	abra: {
 		tier: "LC",
 	},
+	abrasoran: {},
 	kadabra: {
 		tier: "NFE",
 	},
+	kadabrasoran: {},
 	alakazam: {
 		randomBattleMoves: ["counter", "focusblast", "nastyplot", "psychic", "shadowball"],
 		randomBattleLevel: 78,
@@ -574,6 +576,8 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		isNonstandard: "Past",
 		tier: "Illegal",
 	},
+	alakazamsoran: {},
+	alakazamsoranmega: {},
 	machop: {
 		tier: "LC",
 	},
@@ -588,6 +592,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "NU",
 		doublesTier: "(DUU)",
 	},
+	machampmega: {},
 	machampgmax: {
 		isNonstandard: "Gigantamax",
 		tier: "AG",
@@ -605,6 +610,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		isNonstandard: "Past",
 		tier: "Illegal",
 	},
+	victreebelmega: {},
 	tentacool: {
 		tier: "LC",
 	},
@@ -646,6 +652,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	ponytagalar: {
 		tier: "LC",
 	},
+	ponytasoran: {},
 	rapidash: {
 		randomBattleMoves: ["flareblitz", "highhorsepower", "morningsun", "swordsdance", "wildcharge", "willowisp"],
 		randomBattleLevel: 84,
@@ -662,6 +669,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "(PU)",
 		doublesTier: "(DUU)",
 	},
+	rapidashsoran: {},
 	slowpoke: {
 		tier: "LC",
 	},
@@ -707,10 +715,12 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	magnemite: {
 		tier: "LC",
 	},
+	magnemitesoran: {},
 	magneton: {
 		tier: "PU",
 		doublesTier: "NFE",
 	},
+	magnetonsoran: {},
 	magnezone: {
 		randomBattleMoves: ["bodypress", "flashcannon", "mirrorcoat", "thunderbolt", "voltswitch"],
 		randomBattleLevel: 84,
@@ -719,6 +729,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "OU",
 		doublesTier: "(DUU)",
 	},
+	magnezonesoran: {},
 	farfetchd: {
 		randomBattleMoves: ["bravebird", "closecombat", "knockoff", "leafblade", "swordsdance"],
 		randomBattleLevel: 90,
@@ -751,10 +762,12 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		isNonstandard: "Past",
 		tier: "Illegal",
 	},
+	seelsoran: {},
 	dewgong: {
 		isNonstandard: "Past",
 		tier: "Illegal",
 	},
+	dewgongsoran: {},
 	grimer: {
 		isNonstandard: "Past",
 		tier: "Illegal",
@@ -816,6 +829,8 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	onix: {
 		tier: "LC",
 	},
+	onixsoran: {},
+	onixbone: {},
 	steelix: {
 		randomBattleMoves: ["dragondance", "earthquake", "headsmash", "heavyslam", "stealthrock", "toxic"],
 		randomBattleLevel: 84,
@@ -838,6 +853,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		isNonstandard: "Past",
 		tier: "Illegal",
 	},
+	drowzeesoran: {},
 	hypno: {
 		isNonstandard: "Past",
 		tier: "Illegal",
@@ -847,6 +863,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	krabby: {
 		tier: "LC",
 	},
+	krabbysoran: {},
 	kingler: {
 		randomBattleMoves: ["agility", "liquidation", "rockslide", "superpower", "swordsdance", "xscissor"],
 		randomBattleLevel: 84,
@@ -963,6 +980,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "(PU)",
 		doublesTier: "(DUU)",
 	},
+	lickilickymega: {},
 	koffing: {
 		tier: "LC",
 	},
@@ -998,6 +1016,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "RU",
 		doublesTier: "(DUU)",
 	},
+	rhyperiormega: {},
 	happiny: {
 		tier: "LC",
 	},
@@ -1015,6 +1034,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "OU",
 		doublesTier: "(DUU)",
 	},
+	blisseymega: {},
 	tangela: {
 		tier: "NFE",
 	},
@@ -1041,9 +1061,11 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	horsea: {
 		tier: "LC",
 	},
+	horseasoran: {},
 	seadra: {
 		tier: "NFE",
 	},
+	seadrasoran: {},
 	kingdra: {
 		randomBattleMoves: ["dracometeor", "flipturn", "hurricane", "hydropump", "raindance"],
 		randomBattleLevel: 82,
@@ -1053,6 +1075,9 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "PUBL",
 		doublesTier: "DUU",
 	},
+	kingdramega: {},
+	kingdrasoran: {},
+	kingdrasoranmega: {},
 	goldeen: {
 		tier: "LC",
 	},
@@ -1093,6 +1118,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		randomDoubleBattleLevel: 86,
 		tier: "NFE",
 	},
+	mastermime: {},
 	mrrime: {
 		randomBattleMoves: ["focusblast", "freezedry", "psychic", "rapidspin", "slackoff", "trick"],
 		randomBattleLevel: 86,
@@ -1101,6 +1127,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "(PU)",
 		doublesTier: "(DUU)",
 	},
+	scythlett: {},
 	scyther: {
 		randomBattleMoves: ["brickbreak", "dualwingbeat", "knockoff", "roost", "swordsdance", "uturn"],
 		randomBattleLevel: 81,
@@ -1122,6 +1149,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		isNonstandard: "Past",
 		tier: "Illegal",
 	},
+	scydeas: {},
 	smoochum: {
 		tier: "LC",
 	},
@@ -6251,40 +6279,22 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		doublesTier: "DUber",
 	},
 	wyrdeer: {
-		isNonstandard: "Future",
-		tier: "Illegal",
 	},
 	kleavor: {
-		isNonstandard: "Future",
-		tier: "Illegal",
 	},
 	ursaluna: {
-		isNonstandard: "Future",
-		tier: "Illegal",
 	},
 	basculegion: {
-		isNonstandard: "Future",
-		tier: "Illegal",
 	},
 	basculegionf: {
-		isNonstandard: "Future",
-		tier: "Illegal",
 	},
 	sneasler: {
-		isNonstandard: "Future",
-		tier: "Illegal",
 	},
 	overqwil: {
-		isNonstandard: "Future",
-		tier: "Illegal",
 	},
 	enamorus: {
-		isNonstandard: "Future",
-		tier: "Illegal",
 	},
 	enamorustherian: {
-		isNonstandard: "Future",
-		tier: "Illegal",
 	},
 	missingno: {
 		isNonstandard: "Custom",
