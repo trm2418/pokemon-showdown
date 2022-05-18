@@ -2633,7 +2633,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		prevo: "Haunter-Soran",
 		evoType: "trade",
 		eggGroups: ["Amorphous"],
-	},
+	},/*
 	gengarsoranmega: {
 		num: 94,
 		name: "Gengar-Soran-Mega",
@@ -2647,7 +2647,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Yellow",
 		eggGroups: ["Amorphous"],
 		requiredItem: "Gengarite-Soran",
-	},
+	},*/
 	onix: {
 		num: 95,
 		name: "Onix",
