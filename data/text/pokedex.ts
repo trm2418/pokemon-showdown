@@ -1100,6 +1100,9 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	meganium: {
 		name: "Meganium",
 	},
+	meganiummega: {
+		name: "Meganium-Mega",
+	},
 	cyndaquil: {
 		name: "Cyndaquil",
 	},
@@ -1109,6 +1112,15 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	typhlosion: {
 		name: "Typhlosion",
 	},
+	typhlosionmega: {
+		name: "Typhlosion-Mega",
+	},
+	typhlosionhisui: {
+		name: "Typhlosion-Hisui",
+	},
+	typhlosionhisuimega: {
+		name: "Typhlosion-Hisui-Mega",
+	},
 	totodile: {
 		name: "Totodile",
 	},
@@ -1117,6 +1129,9 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	},
 	feraligatr: {
 		name: "Feraligatr",
+	},
+	feraligatrmega: {
+		name: "Feraligatr-Mega",
 	},
 	sentret: {
 		name: "Sentret",
@@ -1135,6 +1150,9 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	},
 	ledian: {
 		name: "Ledian",
+	},
+	ledianmega: {
+		name: "Ledian-Mega",
 	},
 	spinarak: {
 		name: "Spinarak",

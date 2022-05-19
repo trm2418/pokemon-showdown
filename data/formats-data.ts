@@ -1528,6 +1528,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		isNonstandard: "Past",
 		tier: "Illegal",
 	},
+	meganiummega: {},
 	cyndaquil: {
 		isNonstandard: "Past",
 		tier: "Illegal",
@@ -1540,10 +1541,12 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		isNonstandard: "Past",
 		tier: "Illegal",
 	},
+	typhlosionmega: {},
 	typhlosionhisui: {
 		isNonstandard: "Future",
 		tier: "Illegal",
 	},
+	typhlosionhisuimega: {},
 	totodile: {
 		isNonstandard: "Past",
 		tier: "Illegal",
@@ -1556,6 +1559,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		isNonstandard: "Past",
 		tier: "Illegal",
 	},
+	feraligatrmega: {},
 	sentret: {
 		isNonstandard: "Past",
 		tier: "Illegal",
@@ -1577,13 +1581,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		doublesTier: "(DUU)",
 	},
 	ledyba: {
-		isNonstandard: "Past",
-		tier: "Illegal",
 	},
 	ledian: {
-		isNonstandard: "Past",
-		tier: "Illegal",
 	},
+	ledianmega: {},
 	spinarak: {
 		isNonstandard: "Past",
 		tier: "Illegal",
