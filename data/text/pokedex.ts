@@ -1268,14 +1268,26 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	aipom: {
 		name: "Aipom",
 	},
+	ambipom: {
+		name: "Ambipom",
+	},
 	sunkern: {
 		name: "Sunkern",
 	},
 	sunflora: {
 		name: "Sunflora",
 	},
+	sunfloramega: {
+		name: "Sunflora-Mega",
+	},
 	yanma: {
 		name: "Yanma",
+	},
+	yanmega: {
+		name: "Yanmega",
+	},
+	yanmegamega: {
+		name: "Yanmega-Mega",
 	},
 	wooper: {
 		name: "Wooper",
@@ -1286,17 +1298,32 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	murkrow: {
 		name: "Murkrow",
 	},
+	honchkrow: {
+		name: "Honchkrow",
+	},
 	misdreavus: {
 		name: "Misdreavus",
 	},
+	mismagius: {
+		name: "Mismagius",
+	},
 	unown: {
 		name: "Unown",
+	},
+	alphaglyph: {
+		name: "Alphaglyph",
+	},
+	wynaut: {
+		name: "Wynaut",
 	},
 	wobbuffet: {
 		name: "Wobbuffet",
 	},
 	girafarig: {
 		name: "Girafarig",
+	},
+	girafarigmega: {
+		name: "Girafarig-Mega",
 	},
 	pineco: {
 		name: "Pineco",
@@ -1307,8 +1334,17 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	dunsparce: {
 		name: "Dunsparce",
 	},
+	dunseraph: {
+		name: "Dunseraph",
+	},
 	gligar: {
 		name: "Gligar",
+	},
+	gliscor: {
+		name: "Gliscor",
+	},
+	gliscormega: {
+		name: "Gliscor-Mega",
 	},
 	snubbull: {
 		name: "Snubbull",
@@ -1316,11 +1352,23 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	granbull: {
 		name: "Granbull",
 	},
+	granbullmega: {
+		name: "Granbull-Mega",
+	},
 	qwilfish: {
 		name: "Qwilfish",
 	},
+	qwilfishhisui: {
+		name: "Qwilfish-Hisui",
+	},
+	overqwil: {
+		name: "Overqwil",
+	},
 	shuckle: {
 		name: "Shuckle",
+	},
+	shucklerebirthed: {
+		name: "Shuckle-Rebirthed",
 	},
 	heracross: {
 		name: "Heracross",
@@ -1331,17 +1379,32 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	sneasel: {
 		name: "Sneasel",
 	},
+	sneaselhisui: {
+		name: "Sneasel-Hisui",
+	},
+	weavile: {
+		name: "Weavile",
+	},
+	sneasler: {
+		name: "Sneasler",
+	},
 	teddiursa: {
 		name: "Teddiursa",
 	},
 	ursaring: {
 		name: "Ursaring",
 	},
+	ursaluna: {
+		name: "Ursaluna",
+	},
 	slugma: {
 		name: "Slugma",
 	},
 	magcargo: {
 		name: "Magcargo",
+	},
+	ignelix: {
+		name: "Ignelix",
 	},
 	swinub: {
 		name: "Swinub",
@@ -1802,9 +1865,6 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	absolmega: {
 		name: "Absol-Mega",
 	},
-	wynaut: {
-		name: "Wynaut",
-	},
 	snorunt: {
 		name: "Snorunt",
 	},
@@ -1813,6 +1873,9 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	},
 	glaliemega: {
 		name: "Glalie-Mega",
+	},
+	froslass: {
+		name: "Froslass",
 	},
 	spheal: {
 		name: "Spheal",
@@ -2036,9 +2099,6 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	gastrodon: {
 		name: "Gastrodon",
 	},
-	ambipom: {
-		name: "Ambipom",
-	},
 	drifloon: {
 		name: "Drifloon",
 	},
@@ -2053,12 +2113,6 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	},
 	lopunnymega: {
 		name: "Lopunny-Mega",
-	},
-	mismagius: {
-		name: "Mismagius",
-	},
-	honchkrow: {
-		name: "Honchkrow",
 	},
 	glameow: {
 		name: "Glameow",
@@ -2147,15 +2201,6 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	abomasnowmega: {
 		name: "Abomasnow-Mega",
 	},
-	weavile: {
-		name: "Weavile",
-	},
-	yanmega: {
-		name: "Yanmega",
-	},
-	gliscor: {
-		name: "Gliscor",
-	},
 	mamoswine: {
 		name: "Mamoswine",
 	},
@@ -2170,9 +2215,6 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	},
 	dusknoir: {
 		name: "Dusknoir",
-	},
-	froslass: {
-		name: "Froslass",
 	},
 	rotom: {
 		name: "Rotom",
