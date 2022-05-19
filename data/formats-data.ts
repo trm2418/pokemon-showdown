@@ -1472,6 +1472,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		doublesTier: "DUU",
 	},
 	thufizer: {},
+	thufizergalar: {},
 	dratini: {
 		tier: "LC",
 	},
@@ -1487,6 +1488,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "OU",
 		doublesTier: "(DUU)",
 	},
+	dragonitemega: {},
 	mewtwo: {
 		randomBattleMoves: ["fireblast", "nastyplot", "psystrike", "recover", "shadowball"],
 		randomBattleLevel: 72,
