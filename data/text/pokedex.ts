@@ -1412,11 +1412,23 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	piloswine: {
 		name: "Piloswine",
 	},
+	mamoswine: {
+		name: "Mamoswine",
+	},
+	mamoswinemega: {
+		name: "Mamoswine-Mega",
+	},
 	corsola: {
 		name: "Corsola",
 	},
 	corsolagalar: {
 		name: "Corsola-Galar",
+	},
+	corsoreef: {
+		name: "Corsoreef",
+	},
+	cursola: {
+		name: "Cursola",
 	},
 	remoraid: {
 		name: "Remoraid",
@@ -1427,11 +1439,29 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	delibird: {
 		name: "Delibird",
 	},
+	krampuror: {
+		name: "Krampuror",
+	},
+	kringuin: {
+		name: "Kringuin",
+	},
+	mantyke: {
+		name: "Mantyke",
+	},
 	mantine: {
 		name: "Mantine",
 	},
+	mantinemega: {
+		name: "Mantine-Mega",
+	},
+	skarby: {
+		name: "Skarby",
+	},
 	skarmory: {
 		name: "Skarmory",
+	},
+	skarfury: {
+		name: "Skarfury",
 	},
 	houndour: {
 		name: "Houndour",
@@ -1448,14 +1478,23 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	donphan: {
 		name: "Donphan",
 	},
+	donphanmega: {
+		name: "Donphan-Mega",
+	},
 	stantler: {
 		name: "Stantler",
+	},
+	wyrdeer: {
+		name: "Wyrdeer",
 	},
 	smeargle: {
 		name: "Smeargle",
 	},
 	miltank: {
 		name: "Miltank",
+	},
+	miltankmega: {
+		name: "Miltank-Mega",
 	},
 	raikou: {
 		name: "Raikou",
@@ -2189,9 +2228,6 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	lumineon: {
 		name: "Lumineon",
 	},
-	mantyke: {
-		name: "Mantyke",
-	},
 	snover: {
 		name: "Snover",
 	},
@@ -2200,9 +2236,6 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	},
 	abomasnowmega: {
 		name: "Abomasnow-Mega",
-	},
-	mamoswine: {
-		name: "Mamoswine",
 	},
 	gallade: {
 		name: "Gallade",
@@ -3727,9 +3760,6 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	},
 	obstagoon: {
 		name: "Obstagoon",
-	},
-	cursola: {
-		name: "Cursola",
 	},
 	runerigus: {
 		name: "Runerigus",
