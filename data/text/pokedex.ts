@@ -1208,8 +1208,14 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	mareep: {
 		name: "Mareep",
 	},
+	mareepsoran: {
+		name: "Mareep-Soran",
+	},
 	flaaffy: {
 		name: "Flaaffy",
+	},
+	flaaffysoran: {
+		name: "Flaaffy-Soran",
 	},
 	ampharos: {
 		name: "Ampharos",
@@ -1217,14 +1223,38 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	ampharosmega: {
 		name: "Ampharos-Mega",
 	},
+	ampharossoran: {
+		name: "Ampharos-Soran",
+	},
+	ampharossoranmega: {
+		name: "Ampharos-Soran-Mega",
+	},
+	azurill: {
+		name: "Azurill",
+	},
+	azurillsoran: {
+		name: "Azurill-Soran",
+	},
 	marill: {
 		name: "Marill",
+	},
+	marillsoran: {
+		name: "Marill-Soran",
 	},
 	azumarill: {
 		name: "Azumarill",
 	},
+	azumarillsoran: {
+		name: "Azumarill-Soran",
+	},
+	bonsly: {
+		name: "Bonsly",
+	},
 	sudowoodo: {
 		name: "Sudowoodo",
+	},
+	sudowoodomega: {
+		name: "Sudowoodo-Mega",
 	},
 	hoppip: {
 		name: "Hoppip",
@@ -1549,9 +1579,6 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	},
 	hariyama: {
 		name: "Hariyama",
-	},
-	azurill: {
-		name: "Azurill",
 	},
 	nosepass: {
 		name: "Nosepass",
@@ -2053,9 +2080,6 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	},
 	bronzong: {
 		name: "Bronzong",
-	},
-	bonsly: {
-		name: "Bonsly",
 	},
 	chatot: {
 		name: "Chatot",

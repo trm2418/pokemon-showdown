@@ -1641,10 +1641,12 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		isNonstandard: "Past",
 		tier: "Illegal",
 	},
+	mareepsoran: {},
 	flaaffy: {
 		isNonstandard: "Past",
 		tier: "Illegal",
 	},
+	flaaffysoran: {},
 	ampharos: {
 		isNonstandard: "Past",
 		tier: "Illegal",
@@ -1653,12 +1655,16 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		isNonstandard: "Past",
 		tier: "Illegal",
 	},
+	ampharossoran: {},
+	ampharossoranmega: {},
 	azurill: {
 		tier: "LC",
 	},
+	azurillsoran: {},
 	marill: {
 		tier: "NFE",
 	},
+	marillsoran: {},
 	azumarill: {
 		randomBattleMoves: ["aquajet", "knockoff", "liquidation", "playrough", "superpower"],
 		randomBattleLevel: 84,
@@ -1667,6 +1673,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "UU",
 		doublesTier: "(DUU)",
 	},
+	azumarillsoran: {},
 	bonsly: {
 		tier: "LC",
 	},
@@ -1678,6 +1685,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "(PU)",
 		doublesTier: "(DUU)",
 	},
+	sudowoodomega: {},
 	hoppip: {
 		isNonstandard: "Past",
 		tier: "Illegal",
