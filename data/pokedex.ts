@@ -5090,7 +5090,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	thufizer: {
 		num: 2019,
 		name: "Thu-Fi-Zer",
-		types: ["Flying", "Ice", "Electric", "Fire"],
+		types: ["Flying", "Ice"/*, "Electric", "Fire"*/],
 		baseStats: {hp: 130, atk: 122, def: 127, spa: 160, spd: 135, spe: 132},
 		abilities: {0: "Pressure"},
 		heightm: 2,
@@ -5103,7 +5103,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		name: "Thu-Fi-Zer-Galar",
 		baseSpecies: "Thu-Fi-Zer",
 		forme: "Galar",
-		types: ["Flying", "Psychic", "Fighting", "Dark"],
+	types: ["Flying", "Psychic"/*, "Fighting", "Dark"*/],
 		baseStats: {hp: 130, atk: 135, def: 123, spa: 137, spd: 145, spe: 136},
 		abilities: {0: "Pressure"},
 		heightm: 2,
