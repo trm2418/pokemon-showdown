@@ -1160,23 +1160,50 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	ariados: {
 		name: "Ariados",
 	},
+	widoweb: {
+		name: "Widoweb",
+	},
 	chinchou: {
 		name: "Chinchou",
 	},
 	lanturn: {
 		name: "Lanturn",
 	},
+	eldralamp: {
+		name: "Eldralamp",
+	},
 	togepi: {
 		name: "Togepi",
 	},
+	togepisoran: {
+		name: "Togepi-Soran",
+	},
 	togetic: {
 		name: "Togetic",
+	},
+	togeticsoran: {
+		name: "Togetic-Soran",
+	},
+	togekiss: {
+		name: "Togekiss",
+	},
+	togekisssoran: {
+		name: "Togekiss-Soran",
+	},
+	togetops: {
+		name: "Togetops",
+	},
+	togesaurus: {
+		name: "Togesaurus",
 	},
 	natu: {
 		name: "Natu",
 	},
 	xatu: {
 		name: "Xatu",
+	},
+	nahualtu: {
+		name: "Nahualtu",
 	},
 	mareep: {
 		name: "Mareep",
@@ -2098,9 +2125,6 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	},
 	weavile: {
 		name: "Weavile",
-	},
-	togekiss: {
-		name: "Togekiss",
 	},
 	yanmega: {
 		name: "Yanmega",

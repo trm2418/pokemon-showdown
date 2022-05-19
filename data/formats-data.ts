@@ -1593,6 +1593,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		isNonstandard: "Past",
 		tier: "Illegal",
 	},
+	widoweb: {},
 	chinchou: {
 		tier: "LC",
 	},
@@ -1604,12 +1605,15 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "PU",
 		doublesTier: "(DUU)",
 	},
+	eldralamp: {},
 	togepi: {
 		tier: "LC",
 	},
+	togepisoran: {},
 	togetic: {
 		tier: "NFE",
 	},
+	togeticsoran: {},
 	togekiss: {
 		randomBattleMoves: ["airslash", "aurasphere", "fireblast", "nastyplot", "roost", "thunderwave", "trick"],
 		randomBattleLevel: 80,
@@ -1618,6 +1622,9 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "RU",
 		doublesTier: "DUU",
 	},
+	togekisssoran: {},
+	togetops: {},
+	togesaurus: {},
 	natu: {
 		tier: "LC",
 	},
@@ -1629,6 +1636,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "NU",
 		doublesTier: "(DUU)",
 	},
+	nahualtu: {},
 	mareep: {
 		isNonstandard: "Past",
 		tier: "Illegal",
