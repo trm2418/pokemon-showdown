@@ -611,8 +611,8 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	steelix: {
 		name: "Steelix",
 	},
-	steelixmegax: {
-		name: "Steelix-Mega-X",
+	steelixmega: {
+		name: "Steelix-Mega",
 	},
 	steelixmegay: {
 		name: "Steelix-Mega-Y",

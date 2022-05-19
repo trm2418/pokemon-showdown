@@ -2965,12 +2965,12 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoType: "trade",
 		evoItem: "Metal Coat",
 		eggGroups: ["Mineral"],
-		otherFormes: ["Steelix-Mega-X", "Steelix-Mega-Y", "Steelix-Soran", "Steelix-Soran-Mega", "Steelix-Bone", "Steelix-Bone-Mega"],
-		formeOrder: ["Steelix", "Steelix-Mega-X", "Steelix-Mega-Y", "Steelix-Soran", "Steelix-Soran-Mega", "Steelix-Bone", "Steelix-Bone-Mega"],
+		otherFormes: ["Steelix-Mega", "Steelix-Mega-Y", "Steelix-Soran", "Steelix-Soran-Mega", "Steelix-Bone", "Steelix-Bone-Mega"],
+		formeOrder: ["Steelix", "Steelix-Mega", "Steelix-Mega-Y", "Steelix-Soran", "Steelix-Soran-Mega", "Steelix-Bone", "Steelix-Bone-Mega"],
 	},
-	steelixmegax: {
+	steelixmega: {
 		num: 208,
-		name: "Steelix-Mega-X",
+		name: "Steelix-Mega",
 		baseSpecies: "Steelix",
 		forme: "Mega-X",
 		types: ["Steel", "Ground"],
@@ -2980,7 +2980,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 740,
 		color: "Gray",
 		eggGroups: ["Mineral"],
-		requiredItem: "Steelixite X",
+		requiredItem: "Steelixite",
 	},
 	steelixmegay: {
 		num: 208,

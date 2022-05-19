@@ -842,7 +842,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "RU",
 		doublesTier: "(DUU)",
 	},
-	steelixmegax: {
+	steelixmega: {
 		isNonstandard: "Past",
 		tier: "Illegal",
 	},
