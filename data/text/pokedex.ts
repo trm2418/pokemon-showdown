@@ -1499,17 +1499,32 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	raikou: {
 		name: "Raikou",
 	},
+	raikousoran: {
+		name: "Raikou-Soran",
+	},
 	entei: {
 		name: "Entei",
+	},
+	enteisoran: {
+		name: "Entei-Soran",
 	},
 	suicune: {
 		name: "Suicune",
 	},
+	suicunesoran: {
+		name: "Suicune-Soran",
+	},
 	larvitar: {
 		name: "Larvitar",
 	},
+	larvitarsoran: {
+		name: "Larvitar-Soran",
+	},
 	pupitar: {
 		name: "Pupitar",
+	},
+	pupitarsoran: {
+		name: "Pupitar-Soran",
 	},
 	tyranitar: {
 		name: "Tyranitar",
@@ -1517,11 +1532,23 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	tyranitarmega: {
 		name: "Tyranitar-Mega",
 	},
+	tyranitarsoran: {
+		name: "Tyranitar-Soran",
+	},
+	tyranitarsoranmega: {
+		name: "Tyranitar-Soran-Mega",
+	},
 	lugia: {
 		name: "Lugia",
 	},
+	lugiamega: {
+		name: "Lugia-Mega",
+	},
 	hooh: {
 		name: "Ho-Oh",
+	},
+	hoohmega: {
+		name: "Ho-Oh-Mega",
 	},
 	celebi: {
 		name: "Celebi",
