@@ -2018,6 +2018,9 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	castform: {
 		name: "Castform",
 	},
+	castformmega: {
+		name: "Castform-Mega",
+	},
 	castformsunny: {
 		name: "Castform-Sunny",
 	},
@@ -2032,9 +2035,6 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	},
 	castformfoggy: {
 		name: "Castform-Foggy",
-	},
-	castformmega: {
-		name: "Castform-Mega",
 	},
 	kecleon: {
 		name: "Kecleon",

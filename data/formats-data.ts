@@ -2556,6 +2556,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	miloticmega: {},
 	castform: {
 	},
+	castformmega: {},
 	castformsunny: {
 	},
 	castformrainy: {
@@ -2564,7 +2565,6 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	castformsandy: {},
 	castformfoggy: {},
-	castformmega: {},
 	kecleon: {
 	},
 	shuppet: {
