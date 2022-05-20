@@ -6002,9 +6002,6 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	venomiconepilogue: {
 	},
-	pokestarspirit: {
-		tier: "Illegal",
-	},
 	seikamater: {},
 	baitatao: {},
 	leviathao: {},
