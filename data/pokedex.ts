@@ -21051,7 +21051,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	},
 	erion: {
 		num: 5007,
-		name: "Eronze",
+		name: "Erion",
 		types: ["Steel", "Poison"],
 		gender: "N",
 		baseStats: {hp: 105, atk: 120, def: 130, spa: 90, spd: 95, spe: 85},
