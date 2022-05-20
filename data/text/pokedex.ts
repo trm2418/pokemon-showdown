@@ -3095,6 +3095,9 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	kyuremwhite: {
 		name: "Kyurem-White",
 	},
+	originaldragon: {
+		name: "Original Dragon",
+	},
 	keldeo: {
 		name: "Keldeo",
 	},
@@ -3109,6 +3112,15 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	},
 	genesect: {
 		name: "Genesect",
+	},
+	genesectmega: {
+		name: "Genesect",
+	},
+	genesectrebirthed: {
+		name: "Genesect-Rebirthed",
+	},
+	genesectrebirthedmega: {
+		name: "Genesect-Rebirthed-Mega",
 	},
 	genesectdouse: {
 		name: "Genesect-Douse",
@@ -3359,8 +3371,14 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	xerneasneutral: {
 		name: "Xerneas-Neutral",
 	},
+	xerneasmega: {
+		name: "Xerneas-Mega",
+	},
 	yveltal: {
 		name: "Yveltal",
+	},
+	yveltalmega: {
+		name: "Yveltal-Mega",
 	},
 	zygarde: {
 		name: "Zygarde",
@@ -3766,6 +3784,9 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	},
 	melmetal: {
 		name: "Melmetal",
+	},
+	melmetalmega: {
+		name: "Melmetal-Mega",
 	},
 	melmetalgmax: {
 		name: "Melmetal-Gmax",

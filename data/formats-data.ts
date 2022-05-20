@@ -4268,6 +4268,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Uber",
 		doublesTier: "DUber",
 	},
+	originaldragon: {},
 	keldeo: {
 		randomDoubleBattleMoves: ["airslash", "calmmind", "icywind", "muddywater", "protect", "secretsword"],
 		randomDoubleBattleLevel: 82,
@@ -4293,6 +4294,9 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Uber",
 		doublesTier: "DOU",
 	},
+	genesectmega: {},
+	genesectrebirthed: {},
+	genesectrebirthedmega: {},
 	genesectburn: {
 		tier: "Uber",
 		doublesTier: "(DOU)",
@@ -4723,6 +4727,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		isNonstandard: "Custom", // can't be used in battle
 		tier: "Illegal",
 	},
+	xerneasmega: {},
 	yveltal: {
 		randomBattleMoves: ["defog", "heatwave", "knockoff", "oblivionwing", "roost", "suckerpunch", "taunt"],
 		randomBattleLevel: 69,
@@ -4731,6 +4736,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Uber",
 		doublesTier: "DUber",
 	},
+	yveltalmega: {},
 	zygarde: {
 		randomBattleMoves: ["dragondance", "outrage", "substitute", "thousandarrows"],
 		randomBattleLevel: 70,
@@ -5549,6 +5555,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "OU",
 		doublesTier: "DUber",
 	},
+	melmetalmega: {},
 	melmetalgmax: {
 		isNonstandard: "Gigantamax",
 		tier: "AG",
