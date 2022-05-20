@@ -20958,7 +20958,6 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		gen: 5,
 	},
-
 	seikamater: {
 		num: 5000,
 		name: "Seikamater",
@@ -21364,7 +21363,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	},
 	kirin: {
 		num: 5026,
-		name: "Sankira",
+		name: "Kirin",
 		types: ["Fairy", "Electric"],
 		gender: "N",
 		baseStats: {hp: 90, atk: 95, def: 95, spa: 125, spd: 115, spe: 140},
