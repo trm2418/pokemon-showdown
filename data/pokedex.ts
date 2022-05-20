@@ -20522,7 +20522,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		name: "Seikamater",
 		types: ["Bug", "Normal"],
 		gender: "F",
-		baseStats: {hp: 160, atk: 95, def: 100, spa: 120, spd: 100, spe: 65},
+		baseStats: {hp: 170, atk: 95, def: 100, spa: 120, spd: 100, spe: 65},
 		abilities: {0: "Elementalist"},
 		heightm: 8.4,
 		weightkg: 638.5,
