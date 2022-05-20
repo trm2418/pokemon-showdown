@@ -4193,14 +4193,29 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	arghonaut: {
 		name: "Arghonaut",
 	},
+	nohface: {
+		name: "Nohface",
+	},
 	kitsunoh: {
 		name: "Kitsunoh",
+	},
+	monohm: {
+		name: "Monohm",
+	},
+	duohm: {
+		name: "Duohm",
 	},
 	cyclohm: {
 		name: "Cyclohm",
 	},
+	dorsoil: {
+		name: "Dorsoil",
+	},
 	colossoil: {
 		name: "Colossoil",
+	},
+	protowatt: {
+		name: "Protowatt",
 	},
 	krilowatt: {
 		name: "Krilowatt",
@@ -4316,11 +4331,83 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	snaelstrom: {
 		name: "Snaelstrom",
 	},
+	justyke: {
+		name: "Justyke",
+	},
 	equilibra: {
 		name: "Equilibra",
 	},
+	solotl: {
+		name: "Solotl",
+	},
 	astrolotl: {
 		name: "Astrolotl",
+	},
+	miasmite: {
+		name: "Miasmite",
+	},
+	miasmaw: {
+		name: "Miasmaw",
+	},
+	chromera: {
+		name: "Chromera",
+	},
+	venomicon: {
+		name: "Venomicon",
+	},
+	venomiconepilogue: {
+		name: "Venomicon-Epilogue",
+	},
+	pokestarsmeargle: {
+		name: "Pokestar Smeargle",
+	},
+	pokestarufo: {
+		name: "Pokestar UFO",
+	},
+	pokestarufo2: {
+		name: "Pokestar UFO-2",
+	},
+	pokestarbrycenman: {
+		name: "Pokestar Brycen-Man",
+	},
+	pokestarmt: {
+		name: "Pokestar MT",
+	},
+	pokestarmt2: {
+		name: "Pokestar MT2",
+	},
+	pokestartransport: {
+		name: "Pokestar Transport",
+	},
+	pokestargiant: {
+		name: "Pokestar Giant",
+	},
+	pokestarhumanoid: {
+		name: "Pokestar Humanoid",
+	},
+	pokestarmonster: {
+		name: "Pokestar Monster",
+	},
+	pokestarf00: {
+		name: "Pokestar F-00",
+	},
+	pokestarf002: {
+		name: "Pokestar F-002",
+	},
+	pokestarspirit: {
+		name: "Pokestar Spirit",
+	},
+	pokestarblackdoor: {
+		name: "Pokestar Black Door",
+	},
+	pokestarwhitedoor: {
+		name: "Pokestar White Door",
+	},
+	pokestarblackbelt: {
+		name: "Pokestar Black Belt",
+	},
+	pokestarufopropu2: {
+		name: "Pokestar UFO-PropU2",
 	},
 	seikamater: {
 		name: "Seikamater",
