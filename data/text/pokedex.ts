@@ -2486,8 +2486,20 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	dialga: {
 		name: "Dialga",
 	},
+	dialgaorigin: {
+		name: "Dialga-Origin",
+	},
+	dialgaprimal: {
+		name: "Dialga-Primal",
+	},
 	palkia: {
 		name: "Palkia",
+	},
+	palkiaorigin: {
+		name: "Palkia-Origin",
+	},
+	palkiaprimal: {
+		name: "Palkia-Primal",
 	},
 	heatran: {
 		name: "Heatran",
@@ -2495,11 +2507,17 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	regigigas: {
 		name: "Regigigas",
 	},
+	regigigasprimal: {
+		name: "Regigigas-Primal",
+	},
 	giratina: {
 		name: "Giratina",
 	},
 	giratinaorigin: {
 		name: "Giratina-Origin",
+	},
+	giratinaprimal: {
+		name: "Giratina-Primal",
 	},
 	cresselia: {
 		name: "Cresselia",
@@ -2521,6 +2539,9 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	},
 	arceus: {
 		name: "Arceus",
+	},
+	arceusprimal: {
+		name: "Arceus-Primal",
 	},
 	arceusbug: {
 		name: "Arceus-Bug",

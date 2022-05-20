@@ -3210,6 +3210,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	dialgaorigin: {
 	},
+	dialgaprimal: {},
 	palkia: {
 		randomBattleMoves: ["dracometeor", "fireblast", "hydropump", "spacialrend", "thunderwave"],
 		randomBattleLevel: 74,
@@ -3220,6 +3221,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	palkiaorigin: {
 	},
+	palkiaprimal: {},
 	heatran: {
 		randomBattleMoves: ["earthpower", "flashcannon", "lavaplume", "protect", "stealthrock", "taunt", "toxic"],
 		randomBattleLevel: 78,
@@ -3236,6 +3238,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "(PU)",
 		doublesTier: "(DUU)",
 	},
+	regigigasprimal: {},
 	giratina: {
 		randomBattleMoves: ["hex", "rest", "sleeptalk", "toxic", "willowisp"],
 		randomBattleLevel: 74,
@@ -3253,6 +3256,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Uber",
 		doublesTier: "DUber",
 	},
+	giratinaprimal: {},
 	cresselia: {
 		randomBattleMoves: ["calmmind", "moonblast", "moonlight", "psyshock", "thunderwave", "toxic"],
 		randomBattleLevel: 80,
@@ -3285,6 +3289,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		isNonstandard: "Past",
 		tier: "Illegal",
 	},
+	arcuesprimal: {},
 	arceusbug: {
 		isNonstandard: "Past",
 	},
