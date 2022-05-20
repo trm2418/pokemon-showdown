@@ -365,7 +365,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	paras: {
 	},
 	parasect: {
-		tier: "(PU)",
+		tier: "PU",
 	},
 	paracordis: {},
 	venonat: {
