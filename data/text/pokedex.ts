@@ -4322,6 +4322,9 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	astrolotl: {
 		name: "Astrolotl",
 	},
+	pokestartspirit: {
+		name: "Pokestar Spirit",
+	},
 	seikamater: {
 		name: "Seikamater",
 	},

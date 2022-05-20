@@ -5208,7 +5208,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		randomBattleLevel: 74,
 		randomDoubleBattleMoves: ["courtchange", "gunkshot", "highjumpkick", "protect", "pyroball", "suckerpunch", "uturn"],
 		randomDoubleBattleLevel: 80,
-		tier: "OU",
+		tier: "Uber",
 		doublesTier: "DUU",
 	},
 	cinderacegmax: {
@@ -6001,6 +6001,9 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	venomicon: {
 	},
 	venomiconepilogue: {
+	},
+	pokestarspirit: {
+		tier: "Illegal",
 	},
 	seikamater: {},
 	baitatao: {},
