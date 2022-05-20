@@ -4373,4 +4373,97 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	pokestarufopropu2: {
 		name: "Pokestar UFO-PropU2",
 	},
+	seikamater: {
+		name: "Seikamater",
+	},
+	baitatao: {
+		name: "Baitatao",
+	},
+	leviathao: {
+		name: "Leviathao",
+	},
+	krakanao: {
+		name: "Krakanao",
+	},
+	aotius: {
+		name: "Aotius",
+	},
+	mutios: {
+		name: "Mutios",
+	},
+	eronze: {
+		name: "Eronze",
+	},
+	erion: {
+		name: "Erion",
+	},
+	erace: {
+		name: "Erace",
+	},
+	quetzar: {
+		name: "Quetzar",
+	},
+	quetzarspace: {
+		name: "Quetzar-Space",
+	},
+	blightmare: {
+		name: "Blightmare",
+	},
+	xenomonster: {
+		name: "Xenomonster",
+	},
+	xenomatriarch: {
+		name: "Xenomatriarch",
+	},
+	faminine: {
+		name: "Faminine",
+	},
+	serafemme: {
+		name: "Serafemme",
+	},
+	mythulu: {
+		name: "Mythulu",
+	},
+	atlantar: {
+		name: "Atlantar",
+	},
+	alduestroyer: {
+		name: "Alduestroyer",
+	},
+	hongruor: {
+		name: "Hongruor",
+	},
+	fablelock: {
+		name: "Fablelock",
+	},
+	arkamera: {
+		name: "Arkamera",
+	},
+	astronoir: {
+		name: "Astronoir",
+	},
+	astronoirsatellite: {
+		name: "Astronoir-Satellite",
+	},
+	astronoirexplorer: {
+		name: "Astronoir-Explorer",
+	},
+	astronoirshuttle: {
+		name: "Astronoir-Shuttle",
+	},
+	gadavian: {
+		name: "Gadavian",
+	},
+	byoxic: {
+		name: "Byoxic",
+	},
+	aurest: {
+		name: "Aurest",
+	},
+	sankira: {
+		name: "Sankira",
+	},
+	kirin: {
+		name: "Kirin",
+	},
 };
