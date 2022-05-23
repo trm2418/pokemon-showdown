@@ -56,6 +56,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "NFE",
 	},
 	blastoise: {
+		//randomBattleMoves: ["aurasphere", "hydropump", "darkpulse", "icebeam", "shellsmash"],
 		randomBattleMoves: ["earthquake", "hydropump", "icebeam", "shellsmash"],
 		randomBattleLevel: 82,
 		randomDoubleBattleMoves: ["icebeam", "muddywater", "protect", "shellsmash"],
@@ -1001,9 +1002,9 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		doublesTier: "(DUU)",
 	},
 	hitmontop: {
-		randomBattleMoves: ["closecombat", "earthquake", "rapidspin", "suckerpunch", "toxic", "tripleaxel"],
+		randomBattleMoves: ["earthquake", "rapidspin", "suckerpunch", "toxic", "tripleaxel", "triplekick"],
 		randomBattleLevel: 85,
-		randomDoubleBattleMoves: ["closecombat", "coaching", "fakeout", "helpinghand", "rapidspin", "suckerpunch", "tripleaxel"],
+		randomDoubleBattleMoves: ["coaching", "fakeout", "helpinghand", "rapidspin", "suckerpunch", "tripleaxel", "triplekick"],
 		randomDoubleBattleLevel: 88,
 		tier: "NU",
 		doublesTier: "DUU",
@@ -3016,7 +3017,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "LC",
 	},
 	glalie: {
-		randomBattleMoves: ["disable", "earthquake", "freezedry", "protect", "substitute"],
+		randomBattleMoves: ["disable", "earthquake", "freezedry", "protect", "stoneedge", "substitute"],
 		randomBattleLevel: 80,
 		randomDoubleBattleMoves: ["disable", "earthquake", "freezedry", "protect", "substitute"],
 		randomDoubleBattleLevel: 84,
