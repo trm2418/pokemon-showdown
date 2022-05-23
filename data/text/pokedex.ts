@@ -2246,6 +2246,9 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	torterra: {
 		name: "Torterra",
 	},
+	torterramega: {
+		name: "Torterra-Mega",
+	},
 	chimchar: {
 		name: "Chimchar",
 	},
