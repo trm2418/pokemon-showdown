@@ -223,6 +223,14 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "(PU)",
 		doublesTier: "(DUU)",
 	},
+	pikachupartner: {
+		tier: "(PU)",
+		doublesTier: "(DUU)",
+	},
+	pikachustarter: {
+		isNonstandard: "LGPE",
+		tier: "Illegal",
+	},
 	pikachugmax: {
 		randomDoubleBattleMoves: ["extremespeed", "fakeout", "knockoff", "surf", "volttackle"],
 		randomDoubleBattleLevel: 90,

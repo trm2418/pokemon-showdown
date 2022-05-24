@@ -170,6 +170,9 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	pikachualola: {
 		name: "Pikachu-Alola",
 	},
+	pikachupartner: {
+		name: "Pikachu-Partner",
+	},
 	pikachustarter: {
 		name: "Pikachu-Starter",
 	},
