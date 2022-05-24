@@ -12841,8 +12841,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {protect: 1, mirror: 1},
 		secondary: {
 			chance: 20,
-			boosts: {
-				spa: 1,
+			self: {
+				boosts: {
+					spa: 1,
+				},
 			},
 		},
 		target: "normal",
