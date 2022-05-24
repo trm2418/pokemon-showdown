@@ -3349,7 +3349,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			if (move.hasSheerForce) return this.chainModify([5325, 4096]);
 		},
 		name: "Sheer Force",
-		rating: 3.5,
+		rating: 4,
 		num: 125,
 	},
 	shellarmor: {

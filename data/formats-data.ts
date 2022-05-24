@@ -103,30 +103,30 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		doublesTier: "(DUber)",
 	},
 	weedle: {
-		tier: "OU",
+		tier: "LC",
 	},
 	kakuna: {
-		tier: "OU",
+		tier: "NFE",
 	},
 	beedrill: {
 		randomBattleMoves: ["knockoff", "poisonjab", "swordsdance", "twineedle"],
 		randomBattleLevel: 88,
-		tier: "OU",
+		tier: "NU",
 	},
 	beedrillmega: {
-		tier: "OU",
+		tier: "UU",
 	},
 	pidgey: {
-		tier: "OU",
+		tier: "LC",
 	},
 	pidgeotto: {
-		tier: "OU",
+		tier: "NFE",
 	},
 	pidgeot: {
-		tier: "OU",
+		tier: "(PU)",
 	},
 	pidgeotmega: {
-		tier: "OU",
+		tier: "RU",
 	},
 	rattata: {
 		tier: "OU",
@@ -3628,7 +3628,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "OU",
 	},
 	garchompsoran: {
-		randomBattleMoves: ["icepunch", "iciclecrash", "dualwingbeat", "swordsdance", "ironhead"],
+		randomBattleMoves: ["icepunch", "dualwingbeat", "swordsdance", "ironhead", "doubleedge"],
 		randomBattleLevel: 74,
 		tier: "OU",
 	},
@@ -3673,7 +3673,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "LC",
 	},
 	drapion: {
-		randomBattleMoves: ["aquatail", "earthquake", "wickedblow", "poisonjab", "swordsdance", "taunt", "toxicspikes"],
+		randomBattleMoves: ["aquatail", "earthquake", "wickedblow", "crosspoison", "swordsdance", "taunt", "toxicspikes"],
 		randomBattleLevel: 82,
 		randomDoubleBattleMoves: ["knockoff", "poisonjab", "protect", "rockslide", "taunt"],
 		randomDoubleBattleLevel: 88,
