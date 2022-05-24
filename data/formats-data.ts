@@ -172,7 +172,8 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "LC",
 	},
 	pichuspikyeared: {
-		tier: "LC",
+		isNonstandard: "Past",
+		tier: "Illegal",
 	},
 	pikachu: {
 		randomBattleMoves: ["irontail", "knockoff", "surf", "voltswitch", "volttackle"],
