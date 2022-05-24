@@ -444,8 +444,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	blastburn: {
 		name: "Blast Burn",
-		desc: "If this move is successful, the user must recharge on the following turn and cannot select a move.",
-		shortDesc: "User cannot move next turn.",
+		desc: "40% chance to burn. If this move is successful, the user must recharge on the following turn and cannot select a move.",
+		shortDesc: "40% burn. User cannot move next turn.",
 	},
 	blazekick: {
 		name: "Blaze Kick",
@@ -1773,8 +1773,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	fireblast: {
 		name: "Fire Blast",
-		desc: "Has a 10% chance to burn the target.",
-		shortDesc: "10% chance to burn the target.",
+		desc: "Has a 20% chance to burn the target.",
+		shortDesc: "20% chance to burn the target.",
 		gen1: {
 			desc: "Has a 30% chance to burn the target.",
 			shortDesc: "30% chance to burn the target.",
@@ -3015,14 +3015,10 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	incinerate: {
 		name: "Incinerate",
-		desc: "The target loses its held item if it is a Berry or a Gem. This move cannot cause Pokemon with the Sticky Hold Ability to lose their held item. Items lost to this move cannot be regained with Recycle or the Harvest Ability.",
-		shortDesc: "Destroys the foe(s) Berry/Gem.",
-		gen5: {
-			desc: "The target loses its held item if it is a Berry. This move cannot cause Pokemon with the Sticky Hold Ability to lose their held item. Items lost to this move cannot be regained with Recycle or the Harvest Ability.",
-			shortDesc: "Destroys the foe(s) Berry.",
-		},
+		desc: "If the user has not fainted, the target loses its held item. This move cannot cause Pokemon with the Sticky Hold Ability to lose their held item or cause a Kyogre, a Groudon, a Giratina, an Arceus, a Genesect, a Silvally, a Zacian, or a Zamazenta to lose their Blue Orb, Red Orb, Griseous Orb, Plate, Drive, Memory, Rusted Sword, or Rusted Shield respectively. Items lost to this move cannot be regained with Recycle or the Harvest Ability.",
+		shortDesc: "Removes the foe(s) item.",
 
-		removeItem: "  [POKEMON]'s [ITEM] was burned up!",
+		removeItem: "  [SOURCE] incinerated [POKEMON]'s [ITEM]!",
 	},
 	inferno: {
 		name: "Inferno",
@@ -6887,6 +6883,6 @@ export const MovesText: {[k: string]: MoveText} = {
 	lavawave: {
 		name: "Lava Wave",
 		desc: "Has a 100% chance to lower the target's Speed by 1 stage. Has a 30% chance to burn the target. Hits all enemies.",
-		shortDesc: "100% chance lower adjacent foe(s) Speed by 1 and 30% burn.",
+		shortDesc: "100% chance lower foe(s) Speed by 1 and 30% burn.",
 	},
 };

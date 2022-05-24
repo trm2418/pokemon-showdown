@@ -8947,10 +8947,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		onHit(pokemon, source) {
-			const item = pokemon.getItem();
-			if ((item.isBerry || item.isGem) && pokemon.takeItem(source)) {
-				this.add('-enditem', pokemon, item.name, '[from] move: Incinerate');
+		onAfterHit(target, source) {
+			if (source.hp) {
+				const item = target.takeItem();
+				if (item) {
+					this.add('-enditem', target, item.name, '[from] move: Incinerate', '[of] ' + source);
+				}
 			}
 		},
 		secondary: null,
