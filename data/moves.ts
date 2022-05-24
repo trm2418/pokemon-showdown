@@ -8144,7 +8144,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	hiddenpowerelectric: {
 		num: 237,
 		accuracy: 100,
-		basePower: 60,
+		basePower: 75,
 		category: "Special",
 		realMove: "Hidden Power",
 		name: "Hidden Power Electric",
@@ -8159,7 +8159,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	hiddenpowerfighting: {
 		num: 237,
 		accuracy: 100,
-		basePower: 60,
+		basePower: 75,
 		category: "Special",
 		realMove: "Hidden Power",
 		name: "Hidden Power Fighting",
@@ -8174,7 +8174,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	hiddenpowerfire: {
 		num: 237,
 		accuracy: 100,
-		basePower: 60,
+		basePower: 75,
 		category: "Special",
 		realMove: "Hidden Power",
 		name: "Hidden Power Fire",
@@ -8189,7 +8189,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	hiddenpowerflying: {
 		num: 237,
 		accuracy: 100,
-		basePower: 60,
+		basePower: 75,
 		category: "Special",
 		realMove: "Hidden Power",
 		name: "Hidden Power Flying",
@@ -8204,7 +8204,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	hiddenpowerghost: {
 		num: 237,
 		accuracy: 100,
-		basePower: 60,
+		basePower: 75,
 		category: "Special",
 		realMove: "Hidden Power",
 		name: "Hidden Power Ghost",
@@ -8219,7 +8219,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	hiddenpowergrass: {
 		num: 237,
 		accuracy: 100,
-		basePower: 60,
+		basePower: 75,
 		category: "Special",
 		realMove: "Hidden Power",
 		name: "Hidden Power Grass",
@@ -8234,7 +8234,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	hiddenpowerground: {
 		num: 237,
 		accuracy: 100,
-		basePower: 60,
+		basePower: 75,
 		category: "Special",
 		realMove: "Hidden Power",
 		name: "Hidden Power Ground",
@@ -8249,7 +8249,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	hiddenpowerice: {
 		num: 237,
 		accuracy: 100,
-		basePower: 60,
+		basePower: 75,
 		category: "Special",
 		realMove: "Hidden Power",
 		name: "Hidden Power Ice",
@@ -8264,7 +8264,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	hiddenpowerpoison: {
 		num: 237,
 		accuracy: 100,
-		basePower: 60,
+		basePower: 75,
 		category: "Special",
 		realMove: "Hidden Power",
 		name: "Hidden Power Poison",
@@ -8279,7 +8279,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	hiddenpowerpsychic: {
 		num: 237,
 		accuracy: 100,
-		basePower: 60,
+		basePower: 75,
 		category: "Special",
 		realMove: "Hidden Power",
 		name: "Hidden Power Psychic",
@@ -8294,7 +8294,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	hiddenpowerrock: {
 		num: 237,
 		accuracy: 100,
-		basePower: 60,
+		basePower: 75,
 		category: "Special",
 		realMove: "Hidden Power",
 		name: "Hidden Power Rock",
@@ -8309,7 +8309,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	hiddenpowersteel: {
 		num: 237,
 		accuracy: 100,
-		basePower: 60,
+		basePower: 75,
 		category: "Special",
 		realMove: "Hidden Power",
 		name: "Hidden Power Steel",
@@ -8324,7 +8324,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	hiddenpowerwater: {
 		num: 237,
 		accuracy: 100,
-		basePower: 60,
+		basePower: 75,
 		category: "Special",
 		realMove: "Hidden Power",
 		name: "Hidden Power Water",

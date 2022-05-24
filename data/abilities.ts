@@ -1109,7 +1109,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		isBreakable: true,
 		name: "Flower Veil",
-		rating: 0,
+		rating: 3,
 		num: 166,
 	},
 	fluffy: {
@@ -3099,7 +3099,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 		},
 		name: "Rock Head",
-		rating: 3,
+		rating: 4,
 		num: 69,
 	},
 	roughskin: {

@@ -2447,14 +2447,26 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	gible: {
 		name: "Gible",
 	},
+	giblesoran: {
+		name: "Gible-Soran",
+	},
 	gabite: {
 		name: "Gabite",
+	},
+	gabitesoran: {
+		name: "Gabite-Soran",
 	},
 	garchomp: {
 		name: "Garchomp",
 	},
 	garchompmega: {
 		name: "Garchomp-Mega",
+	},
+	garchompsoran: {
+		name: "Garchomp-Soran",
+	},
+	garchompsoranmega: {
+		name: "Garchomp-Soran-Mega",
 	},
 	riolu: {
 		name: "Riolu",
@@ -2468,8 +2480,14 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	hippopotas: {
 		name: "Hippopotas",
 	},
+	hippopotassoran: {
+		name: "Hippopotas-Soran",
+	},
 	hippowdon: {
 		name: "Hippowdon",
+	},
+	hippowdonsoran: {
+		name: "Hippowdon-Soran",
 	},
 	skorupi: {
 		name: "Skorupi",
@@ -2489,8 +2507,14 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	finneon: {
 		name: "Finneon",
 	},
+	finneonsoran: {
+		name: "Finneon-Soran",
+	},
 	lumineon: {
 		name: "Lumineon",
+	},
+	lumineonsoran: {
+		name: "Lumineon-Soran",
 	},
 	snover: {
 		name: "Snover",
@@ -2518,6 +2542,18 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	},
 	rotommow: {
 		name: "Rotom-Mow",
+	},
+	rotomsatellite: {
+		name: "Rotom-Satellite",
+	},
+	rotomdrill: {
+		name: "Rotom-Drill",
+	},
+	rotomlight: {
+		name: "Rotom-Light",
+	},
+	rotombrawl: {
+		name: "Rotom-Brawl",
 	},
 	uxie: {
 		name: "Uxie",
