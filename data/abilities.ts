@@ -4470,9 +4470,23 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		isBreakable: true,
 		name: "Pollen Armor",
 		rating: 2,
-		num: 400,
+		num: 1000,
 	},
 
+	amplifier: {
+		onBasePowerPriority: 7,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.flags['sound']) {
+				this.debug('Amplifier boost');
+				return this.chainModify(1.5);
+			}
+		},
+		name: "Amplifier",
+		rating: 3.5,
+		num: 244,
+	},
+
+	
 	// CAP
 	mountaineer: {
 		onDamage(damage, target, source, effect) {
