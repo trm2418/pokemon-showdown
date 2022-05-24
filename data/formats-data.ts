@@ -183,22 +183,28 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "NFE",
 	},
 	pikachucosplay: {
-		tier: "OU",
+		isNonstandard: "Past",
+		tier: "Illegal",
 	},
 	pikachurockstar: {
-		tier: "OU",
+		isNonstandard: "Past",
+		tier: "Illegal",
 	},
 	pikachubelle: {
-		tier: "OU",
+		isNonstandard: "Past",
+		tier: "Illegal",
 	},
 	pikachupopstar: {
-		tier: "OU",
+		isNonstandard: "Past",
+		tier: "Illegal",
 	},
 	pikachuphd: {
-		tier: "OU",
+		isNonstandard: "Past",
+		tier: "Illegal",
 	},
 	pikachulibre: {
-		tier: "OU",
+		isNonstandard: "Past",
+		tier: "Illegal",
 	},
 	pikachuoriginal: {
 		tier: "(PU)",
@@ -223,6 +229,14 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	pikachualola: {
 		tier: "(PU)",
 		doublesTier: "(DUU)",
+	},
+	pikachupartner: {
+		tier: "(PU)",
+		doublesTier: "(DUU)",
+	},
+	pikachustarter: {
+		isNonstandard: "LGPE",
+		tier: "Illegal",
 	},
 	pikachugmax: {
 		randomDoubleBattleMoves: ["extremespeed", "fakeout", "knockoff", "surf", "volttackle"],
