@@ -11701,7 +11701,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Mystical Fire",
 		pp: 10,
 		priority: 0,
-		flags: {protect: 1, mirror: 1},
+		flags: {protect: 1, mirror: 1, magic: 1},
 		secondary: {
 			chance: 100,
 			boosts: {
@@ -15189,7 +15189,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	shelltrap: {
 		num: 704,
 		accuracy: 100,
-		basePower: 150,
+		basePower: 200,
 		category: "Special",
 		name: "Shell Trap",
 		pp: 5,
@@ -19832,6 +19832,141 @@ export const Moves: {[moveid: string]: MoveData} = {
 			},
 		],
 		target: "allAdjacentFoes",
+		type: "Fire",
+	},
+	conflagrate: {
+		num: 2007,
+		accuracy: 100,
+		basePower: 75,
+		category: "Special",
+		name: "Conflagrate",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onBasePower(basePower, pokemon, target) {
+			if (target.status === 'brn') {
+				return this.chainModify(2);
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Fire",
+	},
+	cursedflames: {
+		num: 2008,
+		accuracy: 100,
+		basePower: 95,
+		category: "Special",
+		name: "Cursed Flames",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, magic: 1},
+		secondary: {
+			chance: 30,
+			volatileStatus: 'disable',
+		},
+		target: "normal",
+		type: "Fire",
+	},
+	fireballs: {
+		num: 2009,
+		accuracy: 85,
+		basePower: 30,
+		category: "Special",
+		name: "Fireballs",
+		pp: 20,
+		priority: 0,
+		flags: {bullet: 1, protect: 1, mirror: 1, pulse: 1},
+		multihit: [2, 5],
+		secondary: null,
+		target: "normal",
+		type: "Fire",
+	},
+	infernobreath: {
+		num: 2010,
+		accuracy: 90,
+		basePower: 90,
+		category: "Special",
+		name: "Inferno Breath",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 70,
+			status: 'brn',
+		},
+		target: "normal",
+		type: "Fire",
+	},
+	reapingflames: {
+		num: 2011,
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		name: "Reaping Flames",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, heal: 1},
+		drain: [1, 2],
+		secondary: null,
+		target: "normal",
+		type: "Fire",
+	},
+	sunblast: {
+		num: 2012,
+		accuracy: 100,
+		basePower: 85,
+		category: "Special",
+		name: "Sunblast",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onModifyMove(move, pokemon) {
+			move.secondaries = [];
+			if (['sunnyday', 'desolateland'].includes(pokemon.effectiveWeather())) {
+				move.secondaries.push({
+					chance: 50,
+					status: 'brn',
+				});
+			}
+		},
+		onBasePower(basePower, pokemon, target) {
+			if (['raindance', 'primordialsea', 'sandstorm', 'hail'].includes(pokemon.effectiveWeather())) {
+				this.debug('weakened by weather');
+				return this.chainModify(0.5);
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Fire",
+	},
+	supernova: {
+		num: 2013,
+		accuracy: 100,
+		basePower: 200,
+		category: "Special",
+		name: "Supernova",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		selfdestruct: "always",
+		secondary: null,
+		target: "allAdjacent",
+		type: "Fire",
+	},
+	vaporize: {
+		num: 2014,
+		accuracy: 100,
+		basePower: 90,
+		category: "Special",
+		name: "Vaporize",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Water') return 1;
+		},
+		target: "normal",
 		type: "Fire",
 	},
 };

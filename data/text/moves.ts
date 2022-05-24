@@ -6885,4 +6885,44 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Has a 100% chance to lower the target's Speed by 1 stage. Has a 30% chance to burn the target. Hits all enemies.",
 		shortDesc: "100% chance lower foe(s) Speed by 1 and 30% burn.",
 	},
+	conflagrate: {
+		name: "Conflagrate",
+		desc: "Power doubles if the target is burned.",
+		shortDesc: "Power doubles if the target is burned.",
+	},
+	cursedflames: {
+		name: "Cursed Flames",
+		desc: "Has a 30% chance to disable the target's last move.",
+		shortDesc: "10% chance to disable the target's last move.",
+	},
+	fireballs: {
+		name: "Fireballs",
+		desc: "Hits two to five times. Has a 35% chance to hit two or three times and a 15% chance to hit four or five times. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit five times.",
+		shortDesc: "Hits 2-5 times in one turn.",
+	},
+	infernobreath: {
+		name: "Inferno Breath",
+		desc: "Has a 70% chance to burn the target.",
+		shortDesc: "70% chance to burn the target.",
+	},
+	reapingflames: {
+		name: "Reaping Flames",
+		desc: "The user recovers 1/2 the HP lost by the target, rounded half up. If Big Root is held by the user, the HP recovered is 1.3x normal, rounded half down.",
+		shortDesc: "User recovers 50% of the damage dealt.",
+	},
+	sunblast: {
+		name: "Sunblast",
+		desc: "50% chance to burn in sunlight. Power is halved in other weather.",
+		shortDesc: "50% chance to burn in sunlight.",
+	},
+	supernova: {
+		name: "Supernova",
+		desc: "The user faints after using this move, even if this move fails for having no target. This move is prevented from executing if any active Pokemon has the Damp Ability.",
+		shortDesc: "Hits adjacent Pokemon. The user faints.",
+	},
+	vaporize: {
+		name: "Vaporize",
+		desc: "This move's type effectiveness against Water is changed to be super effective no matter what this move's type is.",
+		shortDesc: "Super effective on Water.",
+	},
 };
