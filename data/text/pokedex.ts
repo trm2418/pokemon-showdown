@@ -2687,6 +2687,9 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	serperior: {
 		name: "Serperior",
 	},
+	serperiormega: {
+		name: "Serperior-Mega",
+	},
 	tepig: {
 		name: "Tepig",
 	},
@@ -2696,6 +2699,9 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	emboar: {
 		name: "Emboar",
 	},
+	emboarmega: {
+		name: "Emboar-Mega",
+	},
 	oshawott: {
 		name: "Oshawott",
 	},
@@ -2704,6 +2710,15 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	},
 	samurott: {
 		name: "Samurott",
+	},
+	samurottmega: {
+		name: "Samurott-Mega",
+	},
+	samurotthisui: {
+		name: "Samurott-Hisui",
+	},
+	samurotthisuimega: {
+		name: "Samurott-Hisui-Mega",
 	},
 	patrat: {
 		name: "Patrat",
@@ -2719,6 +2734,9 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	},
 	stoutland: {
 		name: "Stoutland",
+	},
+	stoutlandmega: {
+		name: "Stoutland-Mega",
 	},
 	purrloin: {
 		name: "Purrloin",
@@ -2750,6 +2768,9 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	musharna: {
 		name: "Musharna",
 	},
+	musharnamega: {
+		name: "Musharna-Mega",
+	},
 	pidove: {
 		name: "Pidove",
 	},
@@ -2762,8 +2783,20 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	blitzle: {
 		name: "Blitzle",
 	},
+	blitzlesoran: {
+		name: "Blitzle-Soran",
+	},
 	zebstrika: {
 		name: "Zebstrika",
+	},
+	zebstrikamega: {
+		name: "Zebstrika-Mega",
+	},
+	zebstrikasoran: {
+		name: "Zebstrika-Soran",
+	},
+	zebstrikasoranmega: {
+		name: "Zebstrika-Soran-Mega",
 	},
 	roggenrola: {
 		name: "Roggenrola",
@@ -2774,6 +2807,9 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	gigalith: {
 		name: "Gigalith",
 	},
+	gigalithmega: {
+		name: "Gigalith-Mega",
+	},
 	woobat: {
 		name: "Woobat",
 	},
@@ -2783,8 +2819,14 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	drilbur: {
 		name: "Drilbur",
 	},
+	drilbursoran: {
+		name: "Drilbur-Soran",
+	},
 	excadrill: {
 		name: "Excadrill",
+	},
+	excadrillsoran: {
+		name: "Excadrill-Soran",
 	},
 	audino: {
 		name: "Audino",
@@ -2813,8 +2855,17 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	throh: {
 		name: "Throh",
 	},
+	throhsoran: {
+		name: "Throh-Soran",
+	},
 	sawk: {
 		name: "Sawk",
+	},
+	sawksoran: {
+		name: "Sawk-Soran",
+	},
+	kiq: {
+		name: "Kiq",
 	},
 	sewaddle: {
 		name: "Sewaddle",
@@ -2851,6 +2902,18 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	},
 	basculinbluestriped: {
 		name: "Basculin-Blue-Striped",
+	},
+	basculinwhitestriped: {
+		name: "Basculin-White-Striped",
+	},
+	basculegion: {
+		name: "Basculegion",
+	},
+	basculegionbluestriped: {
+		name: "Basculegion-Blue-Striped",
+	},
+	basculegionwhitestriped: {
+		name: "Basculegion-White-Striped",
 	},
 	sandile: {
 		name: "Sandile",
