@@ -56,6 +56,9 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	butterfree: {
 		name: "Butterfree",
 	},
+	butterfreemega: {
+		name: "Butterfree-Mega",
+	},
 	butterfreegmax: {
 		name: "Butterfree-Gmax",
 	},
@@ -101,14 +104,26 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	spearow: {
 		name: "Spearow",
 	},
+	spearowsoran: {
+		name: "Spearow-Soran",
+	},
 	fearow: {
 		name: "Fearow",
+	},
+	fearowsoran: {
+		name: "Fearow-Soran",
+	},
+	thunderoc: {
+		name: "Thunderoc",
 	},
 	ekans: {
 		name: "Ekans",
 	},
 	arbok: {
 		name: "Arbok",
+	},
+	arbokmega: {
+		name: "Arbok-Mega",
 	},
 	pikachu: {
 		name: "Pikachu",
