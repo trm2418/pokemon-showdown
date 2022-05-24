@@ -449,8 +449,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	blazekick: {
 		name: "Blaze Kick",
-		desc: "Has a 10% chance to burn the target and a higher chance for a critical hit.",
-		shortDesc: "High critical hit ratio. 10% chance to burn.",
+		desc: "Has a 20% chance to burn the target and a higher chance for a critical hit.",
+		shortDesc: "High critical hit ratio. 20% chance to burn.",
 	},
 	blizzard: {
 		name: "Blizzard",
@@ -1782,10 +1782,10 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	firefang: {
 		name: "Fire Fang",
-		desc: "Has a 10% chance to burn the target and a 10% chance to make it flinch.",
-		shortDesc: "10% chance to burn. 10% chance to flinch.",
+		desc: "Has a 20% chance to burn the target and a 20% chance to make it flinch.",
+		shortDesc: "20% chance to burn. 20% chance to flinch.",
 		gen4: {
-			desc: "Has a 10% chance to burn the target and a 10% chance to make it flinch. This move can hit Pokemon with the Wonder Guard Ability regardless of their typing.",
+			desc: "Has a 20% chance to burn the target and a 20% chance to make it flinch. This move can hit Pokemon with the Wonder Guard Ability regardless of their typing.",
 		},
 	},
 	firelash: {
@@ -1805,8 +1805,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	firepunch: {
 		name: "Fire Punch",
-		desc: "Has a 10% chance to burn the target.",
-		shortDesc: "10% chance to burn the target.",
+		desc: "Has a 20% chance to burn the target.",
+		shortDesc: "20% chance to burn the target.",
 	},
 	firespin: {
 		name: "Fire Spin",
@@ -6853,5 +6853,40 @@ export const MovesText: {[k: string]: MoveText} = {
 			desc: "Will always result in a critical hit.",
 			shortDesc: "Nearly always goes first. Always crits.",
 		},
+	},
+	ragingfury: {
+		name: "Raging Fury",
+		desc: "The user spends two or three turns locked into this move and becomes confused immediately after its move on the last turn of the effect if it is not already. This move targets an opposing Pokemon at random on each turn. If the user is prevented from moving, is asleep at the beginning of a turn, or the attack is not successful against the target on the first turn of the effect or the second turn of a three-turn effect, the effect ends without causing confusion. If this move is called by Sleep Talk and the user is asleep, the move is used for one turn and does not confuse the user.",
+		shortDesc: "Lasts 2-3 turns. Confuses the user afterwards.",
+	},
+	blazingclaws: {
+		name: "Blazing Claws",
+		desc: "Hits twice, with each hit having a 10% chance to burn the target. If the first hit breaks the target's substitute, it will take damage for the second hit.",
+		shortDesc: "Hits 2 times. Each hit has 10% chance to burn.",
+	},
+	coalscatter: {
+		name: "Coal Scatter",
+		desc: "Has a 10% chance to burn the target.",
+		shortDesc: "10% chance to burn the target.",
+	},
+	flameimpact: {
+		name: "Flame Impact",
+		desc: "No additional effect.",
+		shortDesc: "Nearly always goes first.",
+	},
+	infernalblade: {
+		name: "Infernal Blade",
+		desc: "Has a 30% chance to burn the target. This move's type effectiveness against Fairy is changed to be super effective no matter what this move's type is.",
+		shortDesc: "30% chance to burn. Super effective on Fairy.",
+	},
+	lavabomb: {
+		name: "Fire Fang",
+		desc: "Has a 30% chance to burn the target and a 30% chance to make it flinch.",
+		shortDesc: "30% chance to burn. 30% chance to flinch.",
+	},
+	lavawave: {
+		name: "Lava Wave",
+		desc: "Has a 100% chance to lower the target's Speed by 1 stage. Has a 30% chance to burn the target. Hits all enemies.",
+		shortDesc: "100% chance lower adjacent foe(s) Speed by 1 and 30% burn.",
 	},
 };

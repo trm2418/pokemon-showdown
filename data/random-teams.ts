@@ -892,7 +892,7 @@ export class RandomTeams {
 				categories[move.category]++;
 			}
 			// Moves that have a low base power:
-			if (moveid === 'lowkick' || (move.basePower && move.basePower <= 60 && moveid !== 'rapidspin')) {
+			if (moveid === 'lowkick' || (move.basePower && move.basePower <= 65 && moveid !== 'rapidspin')) {
 				counter.add('technician');
 			}
 			// Moves that hit up to 5 times:

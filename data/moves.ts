@@ -9053,7 +9053,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			const lastMove = target.lastMove;
 			const moveIndex = target.moves.indexOf(lastMove.id);
 			const noInstruct = [
-				'assist', 'beakblast', 'belch', 'bide', 'celebrate', 'copycat', 'dynamaxcannon', 'focuspunch', 'iceball', 'instruct', 'kingsshield', 'mefirst', 'metronome', 'mimic', 'mirrormove', 'naturepower', 'obstruct', 'outrage', 'petaldance', 'rollout', 'shelltrap', 'sketch', 'sleeptalk', 'struggle', 'thrash', 'transform', 'uproar',
+				'assist', 'beakblast', 'belch', 'bide', 'celebrate', 'copycat', 'dynamaxcannon', 'focuspunch', 'iceball', 'instruct', 'kingsshield', 'mefirst', 'metronome', 'mimic', 'mirrormove', 'naturepower', 'obstruct', 'outrage', 'ragingfury', 'petaldance', 'rollout', 'shelltrap', 'sketch', 'sleeptalk', 'struggle', 'thrash', 'transform', 'uproar',
 			];
 			if (
 				noInstruct.includes(lastMove.id) || lastMove.isZ || lastMove.isMax ||
@@ -19722,7 +19722,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		secondary: null,
 		target: "randomNormal",
 		type: "Fire",
-		contestType: "Cool",
 	},
 	blazingclaws: {
 		num: 2001,
@@ -19740,8 +19739,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		},
 		target: "normal",
 		type: "Fire",
-		maxMove: {basePower: 100},
-		contestType: "Cool",
 	},
 	coalscatter: {
 		num: 2002,
@@ -19758,7 +19755,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		},
 		target: "normal",
 		type: "Fire",
-		contestType: "Cute",
 	},
 	flameimpact: {
 		num: 2003,
@@ -19772,7 +19768,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		secondary: null,
 		target: "normal",
 		type: "Fire",
-		contestType: "Cool",
 	},
 	infernalblade: {
 		num: 2004,
@@ -19792,6 +19787,49 @@ export const Moves: {[moveid: string]: MoveData} = {
 		},
 		target: "normal",
 		type: "Fire",
-		contestType: "Cool",
+	},
+	lavabomb: {
+		num: 2005,
+		accuracy: 85,
+		basePower: 85,
+		category: "Physical",
+		name: "Lava Bomb",
+		pp: 15,
+		priority: 0,
+		flags: {bullet: 1, protect: 1, mirror: 1},
+		secondaries: [
+			{
+				chance: 30,
+				status: 'brn',
+			}, {
+				chance: 30,
+				volatileStatus: 'flinch',
+			},
+		],
+		target: "normal",
+		type: "Fire",
+	},
+	lavawave: {
+		num: 2006,
+		accuracy: 85,
+		basePower: 75,
+		category: "Physical",
+		name: "Lava Wave",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondaries: [
+			{
+				chance: 100,
+				boosts: {
+					spe: -1,
+				},
+			}, {
+				chance: 30,
+				status: 'brn',
+			},
+		],
+		target: "allAdjacentFoes",
+		type: "Fire",
 	},
 };
