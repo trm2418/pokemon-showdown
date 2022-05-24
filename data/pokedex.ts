@@ -10143,14 +10143,14 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		types: ["Water", "Fairy"],
 		genderRatio: {M: 0.25, F: 0.75},
 		baseStats: {hp: 53, atk: 20, def: 45, spa: 30, spd: 55, spe: 97},
-		abilities: {0: "Swift Swim", H: "Hydration", S: "Schooling"},
+		abilities: {0: "Swift Swim", H: "Hydration"/*, S: "Schooling"*/},
 		heightm: 0.6,
 		weightkg: 8.7,
 		color: "Pink",
-		eggGroups: ["Water 2"],
+		eggGroups: ["Water 2"],/*
 		otherFormes: ["Luvdisc-School"],
-		formeOrder: ["Luvdisc", "Luvdisc-School"],
-	},
+		formeOrder: ["Luvdisc", "Luvdisc-School"],*/
+	},/*
 	luvdiscschool: {
 		num: 370,
 		name: "Luvdisc-School",
@@ -10165,7 +10165,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		eggGroups: ["Water 2"],
 		requiredAbility: "Schooling",
 		battleOnly: "Luvdisc",
-	},
+	},*/
 	bagon: {
 		num: 371,
 		name: "Bagon",

@@ -2131,10 +2131,10 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	},
 	luvdisc: {
 		name: "Luvdisc",
-	},
+	},/*
 	luvdiscschool: {
 		name: "Luvdisc-School",
-	},
+	},*/
 	bagon: {
 		name: "Bagon",
 	},

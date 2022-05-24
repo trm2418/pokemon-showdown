@@ -3132,8 +3132,8 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	luvdisc: {
 		tier: "(PU)",
-	},
-	luvdiscschool: {},
+	},/*
+	luvdiscschool: {},*/
 	bagon: {
 		tier: "LC",
 	},
