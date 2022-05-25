@@ -550,8 +550,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	bounce: {
 		name: "Bounce",
-		desc: "Has a 30% chance to paralyze the target. This attack charges on the first turn and executes on the second. On the first turn, the user avoids all attacks other than Gust, Hurricane, Sky Uppercut, Smack Down, Thousand Arrows, Thunder, and Twister, and Gust and Twister have doubled power when used against it. If the user is holding a Power Herb, the move completes in one turn.",
-		shortDesc: "Bounces turn 1. Hits turn 2. 30% paralyze.",
+		desc: "Has a 30% chance to paralyze the target. This attack charges on the first turn and executes on the second, breaking protection. On the first turn, the user avoids all attacks other than Gust, Hurricane, Sky Uppercut, Smack Down, Thousand Arrows, Thunder, and Twister, and Gust and Twister have doubled power when used against it. If the user is holding a Power Herb, the move completes in one turn.",
+		shortDesc: "Bounces turn 1. Hits turn 2. 30% paralyze, breaks protection.",
 		gen5: {
 			desc: "Has a 30% chance to paralyze the target. This attack charges on the first turn and executes on the second. On the first turn, the user avoids all attacks other than Gust, Hurricane, Sky Uppercut, Smack Down, Thunder, and Twister, and Gust and Twister have doubled power when used against it. If the user is holding a Power Herb, the move completes in one turn.",
 		},
@@ -1195,8 +1195,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	dig: {
 		name: "Dig",
-		desc: "This attack charges on the first turn and executes on the second. On the first turn, the user avoids all attacks other than Earthquake and Magnitude but takes double damage from them, and is also unaffected by weather. If the user is holding a Power Herb, the move completes in one turn.",
-		shortDesc: "Digs underground turn 1, strikes turn 2.",
+		desc: "This attack charges on the first turn and executes on the second, breaking protection. On the first turn, the user avoids all attacks other than Earthquake and Magnitude but takes double damage from them, and is also unaffected by weather. If the user is holding a Power Herb, the move completes in one turn.",
+		shortDesc: "Digs turn 1. Hits turn 2. Breaks protection.",
 		gen4: {
 			desc: "This attack charges on the first turn and executes on the second. On the first turn, the user avoids all attacks other than Earthquake and Magnitude, which have doubled power when used against it, and is also unaffected by weather. If the user is holding a Power Herb, the move completes in one turn.",
 		},
@@ -1254,8 +1254,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	dive: {
 		name: "Dive",
-		desc: "This attack charges on the first turn and executes on the second. On the first turn, the user avoids all attacks other than Surf and Whirlpool but takes double damage from them, and is also unaffected by weather. If the user is holding a Power Herb, the move completes in one turn.",
-		shortDesc: "Dives underwater turn 1, strikes turn 2.",
+		desc: "This attack charges on the first turn and executes on the second, breaking protection. On the first turn, the user avoids all attacks other than Surf and Whirlpool but takes double damage from them, and is also unaffected by weather. If the user is holding a Power Herb, the move completes in one turn.",
+		shortDesc: "Dives turn 1. Hits turn 2. Breaks protection.",
 		gen4: {
 			desc: "This attack charges on the first turn and executes on the second. On the first turn, the user avoids all attacks other than Surf and Whirlpool, which have doubled power when used against it, and is also unaffected by weather. If the user is holding a Power Herb, the move completes in one turn.",
 		},
@@ -1954,8 +1954,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	fly: {
 		name: "Fly",
-		desc: "This attack charges on the first turn and executes on the second. On the first turn, the user avoids all attacks other than Gust, Hurricane, Sky Uppercut, Smack Down, Thousand Arrows, Thunder, and Twister, and Gust and Twister have doubled power when used against it. If the user is holding a Power Herb, the move completes in one turn.",
-		shortDesc: "Flies up on first turn, then strikes the next turn.",
+		desc: "This attack charges on the first turn and executes on the second, breaking protection. On the first turn, the user avoids all attacks other than Gust, Hurricane, Sky Uppercut, Smack Down, Thousand Arrows, Thunder, and Twister, and Gust and Twister have doubled power when used against it. If the user is holding a Power Herb, the move completes in one turn.",
+		shortDesc: "Flies turn 1. Hits turn 2. Breaks protection.",
 		gen5: {
 			desc: "This attack charges on the first turn and executes on the second. On the first turn, the user avoids all attacks other than Gust, Hurricane, Sky Uppercut, Smack Down, Thunder, and Twister, and Gust and Twister have doubled power when used against it. If the user is holding a Power Herb, the move completes in one turn.",
 		},
@@ -4652,8 +4652,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	razorshell: {
 		name: "Razor Shell",
-		desc: "Has a 50% chance to lower the target's Defense by 1 stage.",
-		shortDesc: "50% chance to lower the target's Defense by 1.",
+		desc: "Has a 50% chance to lower the target's Defense by 1 stage. Has a higher chance for a critical hit.",
+		shortDesc: "50% lower target's Defense by 1. High crit ratiio.",
 	},
 	razorwind: {
 		name: "Razor Wind",
@@ -6593,8 +6593,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	waterfall: {
 		name: "Waterfall",
-		desc: "Has a 20% chance to make the target flinch.",
-		shortDesc: "20% chance to make the target flinch.",
+		desc: "Has a 30% chance to make the target flinch.",
+		shortDesc: "30% chance to make the target flinch.",
 		gen3: {
 			desc: "No additional effect.",
 			shortDesc: "No additional effect.",
@@ -6924,5 +6924,69 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Vaporize",
 		desc: "This move's type effectiveness against Water is changed to be super effective no matter what this move's type is.",
 		shortDesc: "Super effective on Water.",
+	},
+	blazingshield: {
+		name: "Blazing Shield",
+		desc: "The user is protected from most attacks made by other Pokemon during this turn, and Pokemon making contact with the user become burned. This move has a 1/X chance of being successful, where X starts at 1 and triples each time this move is successfully used. X resets to 1 if this move fails, if the user's last move used is not Baneful Bunker, Detect, Endure, King's Shield, Max Guard, Obstruct, Protect, Quick Guard, Spiky Shield, or Wide Guard, or if it was one of those moves and the user's protection was broken. Fails if the user moves last this turn.",
+		shortDesc: "Protects from moves. Contact: burn.",
+	},
+	fierycharm: {
+		name: "Fiery Charm",
+		desc: "Burns the target and lower its Special Attack by 1 stage.",
+		shortDesc: "Burn and lower the target's Sp. Atk by 1.",
+	},
+	kindle: {
+		name: "Kindle",
+		desc: "Raises the user's Special Defense by 1 stage. If the user uses a Fire-type attack on the next turn, its power will be 2.5x.",
+		shortDesc: "+1 SpD, user's Fire move next turn 2.5x power.",
+
+		start: "  [POKEMON] began kindling!",
+	},
+	scorchedearth: {
+		name: "Scorched Earth",
+		desc: "Lowers the target's Attack by 1 stage. If this move is successful and whether or not the target's evasiveness was affected, the effects of Reflect, Light Screen, Aurora Veil, Safeguard, Mist, Spikes, Toxic Spikes, Stealth Rock, and Sticky Web end for the target's side, and the effects of Spikes, Toxic Spikes, Stealth Rock, and Sticky Web end for the user's side. Ignores a target's substitute, although a substitute will still block the lowering of evasiveness. If there is a terrain active and this move is successful, the terrain will be cleared.",
+		shortDesc: "-1 Atk; clears terrain and hazards on both sides.",
+	},
+	aquafang: {
+		name: "Aqua Fang",
+		desc: "No additional effect.",
+	},
+	bellyflop: {
+		name: "Belly Flop",
+		desc: "If the target lost HP, the user takes recoil damage equal to 1/4 the HP lost by the target, rounded half up, but not less than 1 HP.",
+		shortDesc: "Has 1/4 recoil.",
+	},
+	knucklefins: {
+		name: "Knucklefins",
+		shortDesc: "Applies torment to the target.",
+	},
+	maelstrom: {
+		name: "Maelstrom",
+		desc: "The user spends two or three turns locked into this move and becomes confused immediately after its move on the last turn of the effect if it is not already. This move targets an opposing Pokemon at random on each turn. If the user is prevented from moving, is asleep at the beginning of a turn, or the attack is not successful against the target on the first turn of the effect or the second turn of a three-turn effect, the effect ends without causing confusion. If this move is called by Sleep Talk and the user is asleep, the move is used for one turn and does not confuse the user.",
+		shortDesc: "Lasts 2-3 turns. Confuses the user afterwards.",
+	},
+	soakingfist: {
+		name: "Soaking Fist",
+		desc: "Has a 50% chance to cause the target to become a Water type. Fails if the target is an Arceus or a Silvally, or if the target is already purely Water type.",
+		shortDesc: "50% change the target's type to Water."
+	},
+	splashstrike: {
+		name: "Splash Strike",
+		desc: "No additional effect.",
+	},
+	tsuanmirush: {
+		name: "Tsunami Rush",
+		desc: "If the target lost HP, the user takes recoil damage equal to 33% the HP lost by the target, rounded half up, but not less than 1 HP.",
+		shortDesc: "Has 33% recoil.",
+	},
+	waterhammer: {
+		name: "Water Hammer",
+		desc: "Has a 30% chance to make the target flinch.",
+		shortDesc: "30% chance to make the target flinch.",
+	},
+	whirlpoolcharge: {
+		name: "Whirlpool Charge",
+		desc: "Has a 50% chance to confuse the target.",
+		shortDesc: "50% chance to confuse the target.",
 	},
 };

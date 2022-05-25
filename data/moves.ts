@@ -1425,7 +1425,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	boltbeak: {
 		num: 754,
 		accuracy: 100,
-		basePower: 70,
+		basePower: 75,
 		basePowerCallback(pokemon, target, move) {
 			if (target.newlySwitched || this.queue.willMove(target)) {
 				this.debug('Bolt Beak damage boost');
@@ -3387,6 +3387,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, charge: 1, protect: 1, mirror: 1, nonsky: 1, allyanim: 1},
+		breaksProtect: true,
 		onTryMove(attacker, defender, move) {
 			if (attacker.removeVolatile(move.id)) {
 				return;
@@ -4985,7 +4986,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	fishiousrend: {
 		num: 755,
 		accuracy: 100,
-		basePower: 70,
+		basePower: 75,
 		basePowerCallback(pokemon, target, move) {
 			if (target.newlySwitched || this.queue.willMove(target)) {
 				this.debug('Fishious Rend damage boost');
@@ -19359,7 +19360,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Will-O-Wisp",
 		pp: 15,
 		priority: 0,
-		flags: {protect: 1, reflectable: 1, mirror: 1},
+		flags: {protect: 1, reflectable: 1, mirror: 1, magic: 1},
 		status: 'brn',
 		secondary: null,
 		target: "normal",
@@ -19968,5 +19969,317 @@ export const Moves: {[moveid: string]: MoveData} = {
 		},
 		target: "normal",
 		type: "Fire",
+	},
+	blazingshield: {
+		num: 2015,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Blazing Shield",
+		pp: 10,
+		priority: 4,
+		flags: {},
+		stallingMove: true,
+		volatileStatus: 'blazingshield',
+		onPrepareHit(pokemon) {
+			return !!this.queue.willAct() && this.runEvent('StallMove', pokemon);
+		},
+		onHit(pokemon) {
+			pokemon.addVolatile('stall');
+		},
+		condition: {
+			duration: 1,
+			onStart(target) {
+				this.add('-singleturn', target, 'move: Protect');
+			},
+			onTryHitPriority: 3,
+			onTryHit(target, source, move) {
+				if (!move.flags['protect']) {
+					if (['gmaxoneblow', 'gmaxrapidflow'].includes(move.id)) return;
+					if (move.isZ || move.isMax) target.getMoveHitData(move).zBrokeProtect = true;
+					return;
+				}
+				if (move.smartTarget) {
+					move.smartTarget = false;
+				} else {
+					this.add('-activate', target, 'move: Protect');
+				}
+				const lockedmove = source.getVolatile('lockedmove');
+				if (lockedmove) {
+					// Outrage counter is reset
+					if (source.volatiles['lockedmove'].duration === 2) {
+						delete source.volatiles['lockedmove'];
+					}
+				}
+				if (this.checkMoveMakesContact(move, source, target)) {
+					source.trySetStatus('brn', target);
+				}
+				return this.NOT_FAIL;
+			},
+			onHit(target, source, move) {
+				if (move.isZOrMaxPowered && this.checkMoveMakesContact(move, source, target)) {
+					source.trySetStatus('brn', target);
+				}
+			},
+		},
+		secondary: null,
+		target: "self",
+		type: "Fire",
+	},
+	fierycharm: {
+		num: 2016,
+		accuracy: 100,
+		basePower: 0,
+		category: "Status",
+		name: "Fiery Charm",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, reflectable: 1, mirror: 1, magic: 1},
+		boosts: {
+			spa: -1,
+		},
+		status: 'brn',
+		secondary: null,
+		target: "normal",
+		type: "Fire",
+	},
+	kindle: {
+		num: 2019,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Kindle",
+		pp: 20,
+		priority: 0,
+		flags: {snatch: 1},
+		volatileStatus: 'kindle',
+		onHit(pokemon) {
+			this.add('-activate', pokemon, 'move: Kindle');
+		},
+		condition: {
+			duration: 2,
+			onRestart(pokemon) {
+				this.effectState.duration = 2;
+			},
+			onBasePowerPriority: 9,
+			onBasePower(basePower, attacker, defender, move) {
+				if (move.type === 'Fire') {
+					this.debug('kindle boost');
+					return this.chainModify(2.5);
+				}
+			},
+		},
+		boosts: {
+			spd: 1,
+		},
+		secondary: null,
+		target: "self",
+		type: "Fire",
+	},
+	scorchedearth: {
+		num: 2020,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Scorched Earth",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, reflectable: 1, mirror: 1, bypasssub: 1},
+		onHit(target, source, move) {
+			let success = false;
+			if (!target.volatiles['substitute'] || move.infiltrates) success = !!this.boost({atk: -1});
+			const removeTarget = [
+				'reflect', 'lightscreen', 'auroraveil', 'safeguard', 'mist', 'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge',
+			];
+			const removeAll = [
+				'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge',
+			];
+			for (const targetCondition of removeTarget) {
+				if (target.side.removeSideCondition(targetCondition)) {
+					if (!removeAll.includes(targetCondition)) continue;
+					this.add('-sideend', target.side, this.dex.conditions.get(targetCondition).name, '[from] move: Scorched Earth', '[of] ' + source);
+					success = true;
+				}
+			}
+			for (const sideCondition of removeAll) {
+				if (source.side.removeSideCondition(sideCondition)) {
+					this.add('-sideend', source.side, this.dex.conditions.get(sideCondition).name, '[from] move: Scorched Earth', '[of] ' + source);
+					success = true;
+				}
+			}
+			this.field.clearTerrain();
+			return success;
+		},
+		secondary: null,
+		target: "normal",
+		type: "Fire",
+	},
+	wavecrash: {
+		num: 2021,
+		accuracy: 100,
+		basePower: 85,
+		category: "Physical",
+		name: "Wave Crash",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		recoil: [1, 3],
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					spe: 1,
+				},
+			},
+		},
+		target: "normal",
+		type: "Water",
+	},
+	aquafang: {
+		num: 2022,
+		accuracy: 100,
+		basePower: 90,
+		category: "Physical",
+		name: "Aqua Fang",
+		pp: 20,
+		priority: 0,
+		flags: {bite: 1, contact: 1, protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Water",
+	},
+	bellyflop: {
+		num: 2023,
+		accuracy: 100,
+		basePower: 105,
+		category: "Physical",
+		name: "Belly Flop",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		recoil: [1, 4],
+		secondary: null,
+		target: "normal",
+		type: "Water",
+	},
+	knucklefins: {
+		num: 2024,
+		accuracy: 90,
+		basePower: 95,
+		category: "Physical",
+		name: "Knucklefins",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, punch: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			volatileStatus: 'torment',
+		},
+		target: "normal",
+		type: "Water",
+	},
+	maelstrom: {
+		num: 2025,
+		accuracy: 100,
+		basePower: 120,
+		category: "Physical",
+		name: "Maelstrom",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		self: {
+			volatileStatus: 'lockedmove',
+		},
+		onAfterMove(pokemon) {
+			if (pokemon.volatiles['lockedmove'] && pokemon.volatiles['lockedmove'].duration === 1) {
+				pokemon.removeVolatile('lockedmove');
+			}
+		},
+		secondary: null,
+		target: "randomNormal",
+		type: "Water",
+	},
+	soakingfist: {
+		num: 2026,
+		accuracy: 95,
+		basePower: 85,
+		category: "Physical",
+		name: "Soaking Fist",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, punch: 1, mirror: 1},
+		secondary: {
+			chance: 50,
+			onHit(target) {
+				if (target.getTypes().join() === 'Water' || !target.setType('Water')) {
+					// Soak should animate even when it fails.
+					// Returning false would suppress the animation.
+					this.add('-fail', target);
+					return null;
+				}
+				this.add('-start', target, 'typechange', 'Water');
+			},
+		},
+		target: "normal",
+		type: "Water",
+	},
+	splashstrike: {
+		num: 2027,
+		accuracy: 100,
+		basePower: 45,
+		category: "Physical",
+		name: "Splash Strike",
+		pp: 30,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Water",
+	},
+	tsunamirush: {
+		num: 2028,
+		accuracy: 95,
+		basePower: 130,
+		category: "Physical",
+		name: "Tsunami Rush",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, distance: 1},
+		recoil: [33, 100],
+		secondary: null,
+		target: "any",
+		type: "Water",
+	},
+	waterhammer: {
+		num: 2029,
+		accuracy: 75,
+		basePower: 125,
+		category: "Physical",
+		name: "Water Hammer",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 30,
+			volatileStatus: 'flinch',
+		},
+		target: "normal",
+		type: "Water",
+	},
+	whirlpoolcharge: {
+		num: 2030,
+		accuracy: 90,
+		basePower: 60,
+		category: "Physical",
+		name: "Whirlpool Charge",
+		pp: 20,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 50,
+			volatileStatus: 'confusion',
+		},
+		target: "any",
+		type: "Water",
 	},
 };
