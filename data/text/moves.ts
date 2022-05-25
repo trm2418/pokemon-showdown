@@ -5539,7 +5539,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	sparklingaria: {
 		name: "Sparkling Aria",
 		desc: "If the user has not fainted, the target is cured of its burn. Hits all foes but heals burns from all other Pokemon.",
-		shortDesc: "The target is cured of its burn.",
+		shortDesc: "Hits foes. All other Pokemon are cured of burn.",
 	},
 	sparklyswirl: {
 		name: "Sparkly Swirl",

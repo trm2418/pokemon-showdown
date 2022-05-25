@@ -453,7 +453,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 			},
 			onResidualOrder: 6,
 			onResidual(pokemon) {
-				this.heal(pokemon.baseMaxhp / 12);
+				if (['raindance', 'primordialsea'].includes(pokemon.effectiveWeather())) {
+					this.heal(pokemon.baseMaxhp / 8);
+				}
+				else {
+					this.heal(pokemon.baseMaxhp / 12);
+				}
 			},
 		},
 		secondary: null,
@@ -9643,6 +9648,22 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {snatch: 1, heal: 1, bypasssub: 1},
+		onHit(target, source) {
+			let success = false;
+			if (target.hasType('Water')) {
+				success = !!this.heal(this.modify(target.baseMaxhp, 0.5));
+			} else {
+				success = !!this.heal(Math.ceil(target.baseMaxhp * 0.25));
+			}
+			if (success && !target.isAlly(source)) {
+				target.staleness = 'external';
+			}
+			if (!success) {
+				this.add('-fail', target, 'heal');
+				return this.NOT_FAIL;
+			}
+			return success;
+		},
 		heal: [1, 4],
 		secondary: null,
 		target: "allies",
@@ -16232,32 +16253,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Electric",
 		contestType: "Cool",
-	},/*
-	sparklingaria: {
-		num: 664,
-		accuracy: 100,
-		basePower: 100,
-		category: "Special",
-		name: "Sparkling Aria",
-		pp: 15,
-		priority: 0,
-		flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1},
-		secondary: {
-			dustproof: true,
-			chance: 100,
-			volatileStatus: 'sparklingaria',
-		},
-		onAfterMove(source, target, move) {
-			for (const pokemon of this.getAllActive()) {
-				if (pokemon !== source && pokemon.removeVolatile('sparklingaria') && pokemon.status === 'brn' && !source.fainted) {
-					pokemon.cureStatus();
-				}
-			}
-		},
-		target: "allAdjacentFoes",
-		type: "Water",
-		contestType: "Tough",
-	},*/
+	},
 	sparklingaria: {
 		num: 664,
 		accuracy: 100,
