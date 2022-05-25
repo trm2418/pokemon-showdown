@@ -6883,7 +6883,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	lavawave: {
 		name: "Lava Wave",
 		desc: "Has a 100% chance to lower the target's Speed by 1 stage. Has a 30% chance to burn the target. Hits all enemies.",
-		shortDesc: "100% chance lower foe(s) Speed by 1 and 30% burn.",
+		shortDesc: "100% lower foe(s) Speed by 1 and 30% burn.",
 	},
 	conflagrate: {
 		name: "Conflagrate",
@@ -6893,7 +6893,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	cursedflames: {
 		name: "Cursed Flames",
 		desc: "Has a 30% chance to disable the target's last move.",
-		shortDesc: "10% chance to disable the target's last move.",
+		shortDesc: "30% chance to disable the target's last move.",
 	},
 	fireballs: {
 		name: "Fireballs",
@@ -6947,9 +6947,14 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Lowers the target's Attack by 1 stage. If this move is successful and whether or not the target's evasiveness was affected, the effects of Reflect, Light Screen, Aurora Veil, Safeguard, Mist, Spikes, Toxic Spikes, Stealth Rock, and Sticky Web end for the target's side, and the effects of Spikes, Toxic Spikes, Stealth Rock, and Sticky Web end for the user's side. Ignores a target's substitute, although a substitute will still block the lowering of evasiveness. If there is a terrain active and this move is successful, the terrain will be cleared.",
 		shortDesc: "-1 Atk; clears terrain and hazards on both sides.",
 	},
+	wavecrash: {
+		name: "Wave Crash",
+		desc: "Has a 100% chance to raise the user's Speed by 1 stage. If the target lost HP, the user takes recoil damage equal to 33% the HP lost by the target, rounded half up, but not less than 1 HP.",
+		shortDesc: "100% raise the user's Speed by 1. Has 33% recoil.",
+	},
 	aquafang: {
 		name: "Aqua Fang",
-		desc: "No additional effect.",
+		shortDesc: "No additional effect.",
 	},
 	bellyflop: {
 		name: "Belly Flop",
@@ -6972,9 +6977,9 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	splashstrike: {
 		name: "Splash Strike",
-		desc: "No additional effect.",
+		shortDesc: "No additional effect.",
 	},
-	tsuanmirush: {
+	tsunamirush: {
 		name: "Tsunami Rush",
 		desc: "If the target lost HP, the user takes recoil damage equal to 33% the HP lost by the target, rounded half up, but not less than 1 HP.",
 		shortDesc: "Has 33% recoil.",

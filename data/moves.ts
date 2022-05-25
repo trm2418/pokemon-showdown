@@ -3386,7 +3386,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Dive",
 		pp: 15,
 		priority: 0,
-		flags: {contact: 1, charge: 1, protect: 1, mirror: 1, nonsky: 1, allyanim: 1},
+		flags: {contact: 1, charge: 1, mirror: 1, nonsky: 1, allyanim: 1},
 		breaksProtect: true,
 		onTryMove(attacker, defender, move) {
 			if (attacker.removeVolatile(move.id)) {
