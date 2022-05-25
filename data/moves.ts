@@ -1532,7 +1532,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Bounce",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, charge: 1, protect: 1, mirror: 1, gravity: 1, distance: 1},
+		flags: {contact: 1, charge: 1, mirror: 1, gravity: 1, distance: 1},
 		onTryMove(attacker, defender, move) {
 			if (attacker.removeVolatile(move.id)) {
 				return;
@@ -3243,7 +3243,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Dig",
 		pp: 15,
 		priority: 0,
-		flags: {contact: 1, charge: 1, protect: 1, mirror: 1, nonsky: 1},
+		flags: {contact: 1, charge: 1, mirror: 1, nonsky: 1},
 		onTryMove(attacker, defender, move) {
 			if (attacker.removeVolatile(move.id)) {
 				return;
@@ -5383,7 +5383,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Fly",
 		pp: 15,
 		priority: 0,
-		flags: {contact: 1, charge: 1, protect: 1, mirror: 1, gravity: 1, distance: 1},
+		flags: {contact: 1, charge: 1, mirror: 1, gravity: 1, distance: 1},
 		onTryMove(attacker, defender, move) {
 			if (attacker.removeVolatile(move.id)) {
 				return;
@@ -13764,7 +13764,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Razor Shell",
 		pp: 15,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, blade: 1},
 		critRatio: 2,
 		secondary: {
 			chance: 50,
@@ -16232,7 +16232,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Electric",
 		contestType: "Cool",
-	},
+	},/*
 	sparklingaria: {
 		num: 664,
 		accuracy: 100,
@@ -16246,6 +16246,35 @@ export const Moves: {[moveid: string]: MoveData} = {
 			dustproof: true,
 			chance: 100,
 			volatileStatus: 'sparklingaria',
+		},
+		onAfterMove(source, target, move) {
+			for (const pokemon of this.getAllActive()) {
+				if (pokemon !== source && pokemon.removeVolatile('sparklingaria') && pokemon.status === 'brn' && !source.fainted) {
+					pokemon.cureStatus();
+				}
+			}
+		},
+		target: "allAdjacentFoes",
+		type: "Water",
+		contestType: "Tough",
+	},*/
+	sparklingaria: {
+		num: 664,
+		accuracy: 100,
+		basePower: 100,
+		category: "Special",
+		name: "Sparkling Aria",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1},
+		secondary: {
+			dustproof: true,
+			chance: 100,
+			onHit(target, source, move) {
+				for (const pokemon of this.getAllActive()) {
+					pokemon.addVolatile('sparklingaria');
+				}
+			},
 		},
 		onAfterMove(source, target, move) {
 			for (const pokemon of this.getAllActive()) {
@@ -20243,7 +20272,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {contact: 1, protect: 1, mirror: 1, distance: 1},
 		recoil: [33, 100],
 		secondary: null,
-		target: "any",
+		target: "normal",
 		type: "Water",
 	},
 	waterhammer: {
@@ -20275,7 +20304,87 @@ export const Moves: {[moveid: string]: MoveData} = {
 			chance: 50,
 			volatileStatus: 'confusion',
 		},
-		target: "any",
+		target: "normal",
+		type: "Water",
+	},
+	foamgeyser: {
+		num: 2031,
+		accuracy: 90,
+		basePower: 105,
+		category: "Special",
+		name: "Foam Geyser",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 30,
+			boosts: {
+				spe: -1,
+			},
+		},
+		target: "normal",
+		type: "Water",
+	},
+	frigidwave: {
+		num: 2032,
+		accuracy: 95,
+		basePower: 80,
+		category: "Special",
+		name: "Frigid Wave",
+		pp: 20,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 20,
+			status: 'frz',
+		},
+		target: "allAdjacentFoes",
+		type: "Water",
+	},
+	hydroshock: {
+		num: 2033,
+		accuracy: 100,
+		basePower: 90,
+		category: "Special",
+		overrideDefensiveStat: 'def',
+		name: "Hydroshock",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Water",
+	},
+	oceanswrath: {
+		num: 2034,
+		accuracy: 100,
+		basePower: 95,
+		category: "Special",
+		name: "Ocean's Wrath",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		volatileStatus: 'partiallytrapped',
+		secondary: null,
+		target: "normal",
+		type: "Water",
+	},
+	vortexblast: {
+		num: 2035,
+		accuracy: 95,
+		basePower: 135,
+		category: "Special",
+		name: "Vortex Blast",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		self: {
+			boosts: {
+				spa: -2,
+			},
+		},
+		secondary: null,
+		target: "normal",
 		type: "Water",
 	},
 };

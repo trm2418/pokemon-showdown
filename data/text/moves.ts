@@ -2877,8 +2877,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	hydrocannon: {
 		name: "Hydro Cannon",
-		desc: "If this move is successful, the user must recharge on the following turn and cannot select a move.",
-		shortDesc: "User cannot move next turn.",
+		desc: "40% chance to confuse. If this move is successful, the user must recharge on the following turn and cannot select a move.",
+		shortDesc: "40% confuse. User cannot move next turn.",
 	},
 	hydropump: {
 		name: "Hydro Pump",
@@ -5448,8 +5448,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	snipeshot: {
 		name: "Snipe Shot",
-		desc: "Has a higher chance for a critical hit. This move cannot be redirected to a different target by any effect.",
-		shortDesc: "High critical hit ratio. Cannot be redirected.",
+		desc: "Has a very high chance for a critical hit. This move cannot be redirected to a different target by any effect.",
+		shortDesc: "Very high critical hit ratio. Cannot be redirected.",
 	},
 	snore: {
 		name: "Snore",
@@ -5538,7 +5538,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	sparklingaria: {
 		name: "Sparkling Aria",
-		desc: "If the user has not fainted, the target is cured of its burn.",
+		desc: "If the user has not fainted, the target is cured of its burn. Hits all foes but heals burns from all other Pokemon.",
 		shortDesc: "The target is cured of its burn.",
 	},
 	sparklyswirl: {
@@ -6993,5 +6993,32 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Whirlpool Charge",
 		desc: "Has a 50% chance to confuse the target.",
 		shortDesc: "50% chance to confuse the target.",
+	},
+	foamgeyser: {
+		name: "Foam Geyser",
+		desc: "Has a 30% chance to lower the target's Speed by 1 stage.",
+		shortDesc: "30% chance to lower the target's Speed by 1.",
+	},
+	frigidwave: {
+		name: "Frigid Wave",
+		desc: "Has a 20% chance to freeze the target.",
+		shortDesc: "20% chance to freeze the foe(s).",
+	},
+	hydroshock: {
+		name: "Hydroshock",
+		desc: "Deals damage to the target based on its Defense instead of Special Defense.",
+		shortDesc: "Damages target based on Defense, not Sp. Def.",
+	},
+	oceanswrath: {
+		name: "Ocean's Wrath",
+		desc: "Prevents the target from switching for four or five turns (seven turns if the user is holding Grip Claw). Causes damage to the target equal to 1/8 of its maximum HP (1/6 if the user is holding Binding Band), rounded down, at the end of each turn during effect. The target can still switch out if it is holding Shed Shell or uses Baton Pass, Flip Turn, Parting Shot, Teleport, U-turn, or Volt Switch. The effect ends if either the user or the target leaves the field, or if the target uses Rapid Spin or Substitute successfully. This effect is not stackable or reset by using this or another binding move.",
+		shortDesc: "Traps and damages the target for 4-5 turns.",
+
+		start: "  [POKEMON] became trapped by the Ocean's Wrath!",
+	},
+	vortexblast: {
+		name: "Vortex Blast",
+		desc: "Lowers the user's Special Attack by 2 stages.",
+		shortDesc: "Lowers the user's Sp. Atk by 2.",
 	},
 };
