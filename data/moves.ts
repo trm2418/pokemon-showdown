@@ -9659,12 +9659,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 				target.staleness = 'external';
 			}
 			if (!success) {
-				this.add('-fail', target, 'heal');
+				this.add('-fail', target, 'heal', '[silent]');
 				return this.NOT_FAIL;
 			}
 			return success;
 		},
-		heal: [1, 4],
 		secondary: null,
 		target: "allies",
 		type: "Water",
@@ -16097,6 +16096,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 			}
 			this.add('-start', target, 'typechange', 'Water');
 		},
+		boosts: {
+			spd: -1,
+		},
 		secondary: null,
 		target: "normal",
 		type: "Water",
@@ -20381,6 +20383,40 @@ export const Moves: {[moveid: string]: MoveData} = {
 		},
 		secondary: null,
 		target: "normal",
+		type: "Water",
+	},
+	clearrain: {
+		num: 2037,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Clear Rain",
+		pp: 5,
+		priority: 0,
+		flags: {snatch: 1, heal: 1},
+		onHit(pokemon) {
+			let factor = 0.5;
+			switch (pokemon.effectiveWeather()) {
+			case 'raindance':
+			case 'primordialsea':
+				factor = 0.667;
+				break;
+			case 'sunnyday':
+			case 'desolateland':
+			case 'sandstorm':
+			case 'hail':
+				factor = 0.25;
+				break;
+			}
+			const success = !!this.heal(this.modify(pokemon.maxhp, factor));
+			if (!success) {
+				this.add('-fail', pokemon, 'heal');
+				return this.NOT_FAIL;
+			}
+			return success;
+		},
+		secondary: null,
+		target: "self",
 		type: "Water",
 	},
 };

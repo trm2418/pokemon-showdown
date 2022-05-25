@@ -146,8 +146,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	aquaring: {
 		name: "Aqua Ring",
-		desc: "The user has 1/16 of its maximum HP, rounded down, restored at the end of each turn while it remains active. If Big Root is held by the user, the HP recovered is 1.3x normal, rounded half down. If the user uses Baton Pass, the replacement will receive the healing effect.",
-		shortDesc: "User recovers 1/16 max HP per turn.",
+		desc: "The user has 1/12, or 1/8 if it's raining, of its maximum HP, rounded down, restored at the end of each turn while it remains active. If Big Root is held by the user, the HP recovered is 1.3x normal, rounded half down. If the user uses Baton Pass, the replacement will receive the healing effect.",
+		shortDesc: "User recovers 1/12 max HP per turn. 1/8 in rain.",
 
 		start: "  [POKEMON] surrounded itself with a veil of water!",
 		heal: "  A veil of water restored [POKEMON]'s HP!",
@@ -3268,8 +3268,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	lifedew: {
 		name: "Life Dew",
-		desc: "Each Pokemon on the user's side restores 1/4 of its maximum HP, rounded half up.",
-		shortDesc: "Heals the user and its allies by 1/4 their max HP.",
+		desc: "Each Pokemon on the user's side restores 1/4 of its maximum HP, rounded half up. Water types restore 1/2 of their maximum HP instead.",
+		shortDesc: "Heals user and allies 1/4 max HP, 1/2 if Water type.",
 	},
 	lightofruin: {
 		name: "Light of Ruin",
@@ -5458,8 +5458,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	soak: {
 		name: "Soak",
-		desc: "Causes the target to become a Water type. Fails if the target is an Arceus or a Silvally, or if the target is already purely Water type.",
-		shortDesc: "Changes the target's type to Water.",
+		desc: "Causes the target to become a Water type and lowers their Special Defense by 1 stage. Fails if the target is an Arceus or a Silvally, or if the target is already purely Water type.",
+		shortDesc: "Changes the target's type to Water and lower Sp. Def.",
 		gen6: {
 			desc: "Causes the target to become a Water type. Fails if the target is an Arceus, or if the target is already purely Water type.",
 		},
@@ -7020,5 +7020,10 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Vortex Blast",
 		desc: "Lowers the user's Special Attack by 2 stages.",
 		shortDesc: "Lowers the user's Sp. Atk by 2.",
+	},
+	clearrain: {
+		name: "Clear Rain",
+		desc: "The user restores 1/2 of its maximum HP if Delta Stream or no weather conditions are in effect or if the user is holding Utility Umbrella, 2/3 of its maximum HP if the weather is Primordial Sea or Rain Dance, and 1/4 of its maximum HP if the weather is Hail, Desolate Land, Sunny Day, or Sandstorm, all rounded half down.",
+		shortDesc: "Heals the user by a weather-dependent amount.",
 	},
 };
