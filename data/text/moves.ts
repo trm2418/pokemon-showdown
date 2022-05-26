@@ -2877,8 +2877,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	hydrocannon: {
 		name: "Hydro Cannon",
-		desc: "40% chance to confuse. If this move is successful, the user must recharge on the following turn and cannot select a move.",
-		shortDesc: "40% confuse. User cannot move next turn.",
+		desc: "40% chance to lower the target's accuracy by 2 stages. If this move is successful, the user must recharge on the following turn and cannot select a move.",
+		shortDesc: "40% lower acc by 2. User cannot move next turn.",
 	},
 	hydropump: {
 		name: "Hydro Pump",
@@ -4653,7 +4653,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	razorshell: {
 		name: "Razor Shell",
 		desc: "Has a 50% chance to lower the target's Defense by 1 stage. Has a higher chance for a critical hit.",
-		shortDesc: "50% lower target's Defense by 1. High crit ratiio.",
+		shortDesc: "50% lower target's Defense by 1. High crit ratio.",
 	},
 	razorwind: {
 		name: "Razor Wind",
@@ -5460,7 +5460,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	soak: {
 		name: "Soak",
 		desc: "Causes the target to become a Water type and lowers their Special Defense by 1 stage. Fails if the target is an Arceus or a Silvally, or if the target is already purely Water type.",
-		shortDesc: "Changes the target's type to Water and lower Sp. Def.",
+		shortDesc: "Changes target's type to Water and lower Sp. Def.",
 		gen6: {
 			desc: "Causes the target to become a Water type. Fails if the target is an Arceus, or if the target is already purely Water type.",
 		},
@@ -6913,8 +6913,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	sunblast: {
 		name: "Sunblast",
-		desc: "50% chance to burn in sunlight. Power is halved in other weather.",
-		shortDesc: "50% chance to burn in sunlight.",
+		desc: "50% chance to burn the target in sunlight. Power is halved in other weather.",
+		shortDesc: "50% chance to burn the target in sunlight.",
 	},
 	supernova: {
 		name: "Supernova",
@@ -7081,6 +7081,6 @@ export const MovesText: {[k: string]: MoveText} = {
 	sporeburst: {
 		name: "Spore Burst",
 		desc: "Has a 50% chance to either poison, paralyze, or sleep the target. This counts as a powder move so Pokemon with the Grass type, the ability Overcoat or the item Safety Goggles are immune.",
-		shortDesc: "20% chance to poison, paralyze or sleep target.",
+		shortDesc: "50% chance to poison, paralyze or sleep target.",
 	},
 };

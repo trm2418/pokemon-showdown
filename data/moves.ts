@@ -47,10 +47,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 	absorb: {
 		num: 71,
 		accuracy: 100,
-		basePower: 20,
+		basePower: 30,
 		category: "Special",
 		name: "Absorb",
-		pp: 25,
+		pp: 30,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, heal: 1},
 		drain: [1, 2],
@@ -4084,12 +4084,18 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {nonsky: 1},
 		terrain: 'electricterrain',
 		condition: {
-			duration: 7,
+			duration: 5,
 			durationCallback(source, effect) {
-				if (source?.hasItem('terrainextender')) {
-					return 12;
+				if (source?.moveThisTurn === 'electricterrain') {
+					if (source?.hasItem('terrainextender')) {
+						return 12;
+					}
+					return 7;
 				}
-				return 7;
+				else if (source?.hasItem('terrainextender')) {
+					return 10;
+				}
+				return 5;
 			},
 			onSetStatus(status, target, source, effect) {
 				if (status.id === 'slp' && target.isGrounded() && !target.isSemiInvulnerable()) {
@@ -5745,7 +5751,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		},
 		secondary: {
 			chance: 40,
-			status: 'leechseed',
+			volatileStatus: 'leechseed',
 		},
 		target: "normal",
 		type: "Grass",
