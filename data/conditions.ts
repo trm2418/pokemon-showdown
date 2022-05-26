@@ -459,8 +459,14 @@ export const Conditions: {[k: string]: ConditionData} = {
 		effectType: 'Weather',
 		duration: 5,
 		durationCallback(source, effect) {
-			if (source?.hasItem('damprock')) {
-				return 8;
+			if (source?.moveThisTurn === 'raindance') {
+				if (source?.hasItem('damprock')) {
+					return 12;
+				}
+				return 7;
+			}
+			else if (source?.hasItem('damprock')) {
+				return 10;
 			}
 			return 5;
 		},
@@ -529,8 +535,14 @@ export const Conditions: {[k: string]: ConditionData} = {
 		effectType: 'Weather',
 		duration: 5,
 		durationCallback(source, effect) {
-			if (source?.hasItem('heatrock')) {
-				return 8;
+			if (source?.moveThisTurn === 'sunnyday') {
+				if (source?.hasItem('heatrock')) {
+					return 12;
+				}
+				return 7;
+			}
+			else if (source?.hasItem('heatrock')) {
+				return 10;
 			}
 			return 5;
 		},
@@ -607,8 +619,14 @@ export const Conditions: {[k: string]: ConditionData} = {
 		effectType: 'Weather',
 		duration: 5,
 		durationCallback(source, effect) {
-			if (source?.hasItem('smoothrock')) {
-				return 8;
+			if (source?.moveThisTurn === 'sandstorm') {
+				if (source?.hasItem('smoothrock')) {
+					return 12;
+				}
+				return 7;
+			}
+			else if (source?.hasItem('smoothrock')) {
+				return 10;
 			}
 			return 5;
 		},

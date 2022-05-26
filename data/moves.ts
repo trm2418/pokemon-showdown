@@ -7202,12 +7202,26 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {nonsky: 1},
 		terrain: 'grassyterrain',
 		condition: {
-			duration: 7,
+			duration: 5,
 			durationCallback(source, effect) {
-				if (source?.hasItem('terrainextender')) {
-					return 12;
+				var dur = 5;
+				if (source?.moveThisTurn === 'grassyterrain') {
+					dur += 2;
 				}
-				return 7;
+				if (source?.hasItem('terrainextender')) {
+					dur += 5;
+				}
+				return dur;/*
+				if (source?.moveThisTurn === 'grassyterrain') {
+					if (source?.hasItem('terrainextender')) {
+						return 12;
+					}
+					return 7;
+				}
+				else if (source?.hasItem('terrainextender')) {
+					return 10;
+				}
+				return 5;*/
 			},
 			onBasePowerPriority: 6,
 			onBasePower(basePower, attacker, defender, move) {
@@ -11436,12 +11450,18 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {nonsky: 1},
 		terrain: 'mistyterrain',
 		condition: {
-			duration: 7,
+			duration: 5,
 			durationCallback(source, effect) {
-				if (source?.hasItem('terrainextender')) {
-					return 12;
+				if (source?.moveThisTurn === 'mistyterrain') {
+					if (source?.hasItem('terrainextender')) {
+						return 12;
+					}
+					return 7;
 				}
-				return 7;
+				else if (source?.hasItem('terrainextender')) {
+					return 10;
+				}
+				return 5;
 			},
 			onSetStatus(status, target, source, effect) {
 				if (!target.isGrounded() || target.isSemiInvulnerable()) return;
@@ -13234,12 +13254,18 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {nonsky: 1},
 		terrain: 'psychicterrain',
 		condition: {
-			duration: 8,
+			duration: 5,
 			durationCallback(source, effect) {
-				if (source?.hasItem('terrainextender')) {
-					return 12;
+				if (source?.moveThisTurn === 'psychicterrain') {
+					if (source?.hasItem('terrainextender')) {
+						return 12;
+					}
+					return 7;
 				}
-				return 8;
+				else if (source?.hasItem('terrainextender')) {
+					return 10;
+				}
+				return 5;
 			},
 			onTryHitPriority: 4,
 			onTryHit(target, source, effect) {
