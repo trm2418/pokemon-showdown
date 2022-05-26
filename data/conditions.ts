@@ -459,16 +459,14 @@ export const Conditions: {[k: string]: ConditionData} = {
 		effectType: 'Weather',
 		duration: 5,
 		durationCallback(source, effect) {
+			var dur = 5;
 			if (source?.moveThisTurn === 'raindance') {
-				if (source?.hasItem('damprock')) {
-					return 12;
-				}
-				return 7;
+				dur += 2;
 			}
-			else if (source?.hasItem('damprock')) {
-				return 10;
+			if (source?.hasItem('damprock')) {
+				dur += 5;
 			}
-			return 5;
+			return dur;
 		},
 		onWeatherModifyDamage(damage, attacker, defender, move) {
 			if (defender.hasItem('utilityumbrella')) return;
@@ -535,16 +533,14 @@ export const Conditions: {[k: string]: ConditionData} = {
 		effectType: 'Weather',
 		duration: 5,
 		durationCallback(source, effect) {
+			var dur = 5;
 			if (source?.moveThisTurn === 'sunnyday') {
-				if (source?.hasItem('heatrock')) {
-					return 12;
-				}
-				return 7;
+				dur += 2;
 			}
-			else if (source?.hasItem('heatrock')) {
-				return 10;
+			if (source?.hasItem('heatrock')) {
+				dur += 5;
 			}
-			return 5;
+			return dur;
 		},
 		onWeatherModifyDamage(damage, attacker, defender, move) {
 			if (defender.hasItem('utilityumbrella')) return;
@@ -619,16 +615,14 @@ export const Conditions: {[k: string]: ConditionData} = {
 		effectType: 'Weather',
 		duration: 5,
 		durationCallback(source, effect) {
+			var dur = 5;
 			if (source?.moveThisTurn === 'sandstorm') {
-				if (source?.hasItem('smoothrock')) {
-					return 12;
-				}
-				return 7;
+				dur += 2;
 			}
-			else if (source?.hasItem('smoothrock')) {
-				return 10;
+			if (source?.hasItem('smoothrock')) {
+				dur += 5;
 			}
-			return 5;
+			return dur;
 		},
 		// This should be applied directly to the stat before any of the other modifiers are chained
 		// So we give it increased priority.
@@ -663,10 +657,14 @@ export const Conditions: {[k: string]: ConditionData} = {
 		effectType: 'Weather',
 		duration: 5,
 		durationCallback(source, effect) {
-			if (source?.hasItem('icyrock')) {
-				return 8;
+			var dur = 5;
+			if (source?.moveThisTurn === 'hail') {
+				dur += 2;
 			}
-			return 5;
+			if (source?.hasItem('icyrock')) {
+				dur += 5;
+			}
+			return dur;
 		},
 		// This should be applied directly to the stat before any of the other modifiers are chained
 		// So we give it increased priority.

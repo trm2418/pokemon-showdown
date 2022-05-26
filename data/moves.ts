@@ -4086,16 +4086,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		condition: {
 			duration: 5,
 			durationCallback(source, effect) {
+				var dur = 5;
 				if (source?.moveThisTurn === 'electricterrain') {
-					if (source?.hasItem('terrainextender')) {
-						return 12;
-					}
-					return 7;
+					dur += 2;
 				}
-				else if (source?.hasItem('terrainextender')) {
-					return 10;
+				if (source?.hasItem('terrainextender')) {
+					dur += 5;
 				}
-				return 5;
+				return dur;
 			},
 			onSetStatus(status, target, source, effect) {
 				if (status.id === 'slp' && target.isGrounded() && !target.isSemiInvulnerable()) {
@@ -7211,17 +7209,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				if (source?.hasItem('terrainextender')) {
 					dur += 5;
 				}
-				return dur;/*
-				if (source?.moveThisTurn === 'grassyterrain') {
-					if (source?.hasItem('terrainextender')) {
-						return 12;
-					}
-					return 7;
-				}
-				else if (source?.hasItem('terrainextender')) {
-					return 10;
-				}
-				return 5;*/
+				return dur;
 			},
 			onBasePowerPriority: 6,
 			onBasePower(basePower, attacker, defender, move) {
@@ -11452,16 +11440,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		condition: {
 			duration: 5,
 			durationCallback(source, effect) {
+				var dur = 5;
 				if (source?.moveThisTurn === 'mistyterrain') {
-					if (source?.hasItem('terrainextender')) {
-						return 12;
-					}
-					return 7;
+					dur += 2;
 				}
-				else if (source?.hasItem('terrainextender')) {
-					return 10;
+				if (source?.hasItem('terrainextender')) {
+					dur += 5;
 				}
-				return 5;
+				return dur;
 			},
 			onSetStatus(status, target, source, effect) {
 				if (!target.isGrounded() || target.isSemiInvulnerable()) return;
@@ -13256,16 +13242,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		condition: {
 			duration: 5,
 			durationCallback(source, effect) {
-				if (source?.moveThisTurn === 'psychicterrain') {
-					if (source?.hasItem('terrainextender')) {
-						return 12;
-					}
-					return 7;
+				var dur = 5;
+				if (source?.moveThisTurn === 'grassyterrain') {
+					dur += 2;
 				}
-				else if (source?.hasItem('terrainextender')) {
-					return 10;
+				if (source?.hasItem('terrainextender')) {
+					dur += 5;
 				}
-				return 5;
+				return dur;
 			},
 			onTryHitPriority: 4,
 			onTryHit(target, source, effect) {

@@ -827,22 +827,22 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3.5,
 		num: 88,
 	},
-	dragonsmaw: {
+	dragonessence: {
 		onModifyAtkPriority: 5,
 		onModifyAtk(atk, attacker, defender, move) {
 			if (move.type === 'Dragon') {
-				this.debug('Dragon\'s Maw boost');
+				this.debug('Dragon Essence boost');
 				return this.chainModify(1.5);
 			}
 		},
 		onModifySpAPriority: 5,
 		onModifySpA(atk, attacker, defender, move) {
 			if (move.type === 'Dragon') {
-				this.debug('Dragon\'s Maw boost');
+				this.debug('Dragon Essence boost');
 				return this.chainModify(1.5);
 			}
 		},
-		name: "Dragon's Maw",
+		name: "Dragon Essence",
 		rating: 3.5,
 		num: 263,
 	},
