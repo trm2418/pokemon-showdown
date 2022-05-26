@@ -1118,7 +1118,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	defensecurl: {
 		name: "Defense Curl",
-		desc: "Raises the user's Defense by 1 stage. As long as the user remains active, the power of the user's Ice Ball and Rollout will be doubled (this effect is not stackable).",
+		desc: "Raises the user's Defense by 1 stage. As long as the user remains active, the power of the user's Ice Ball, Rollout and Timberfall will be doubled (this effect is not stackable).",
 		shortDesc: "Raises the user's Defense by 1.",
 		gen2: {
 			desc: "Raises the user's Defense by 1 stage. While the user remains active, the power of the user's Rollout will be doubled (this effect is not stackable). Baton Pass can be used to transfer this effect to an ally.",
@@ -3063,7 +3063,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	instruct: {
 		name: "Instruct",
-		desc: "The target immediately uses its last used move. Fails if the target has not made a move, if the move has 0 PP, if the target is Dynamaxed, if the target is preparing to use Beak Blast, Focus Punch, or Shell Trap, or if the move is Assist, Beak Blast, Belch, Bide, Celebrate, Copycat, Dynamax Cannon, Focus Punch, Ice Ball, Instruct, King's Shield, Me First, Metronome, Mimic, Mirror Move, Nature Power, Obstruct, Outrage, Petal Dance, Rollout, Shell Trap, Sketch, Sleep Talk, Struggle, Thrash, Transform, Uproar, any two-turn move, any recharge move, any Z-Move, or any Max or G-Max Move.",
+		desc: "The target immediately uses its last used move. Fails if the target has not made a move, if the move has 0 PP, if the target is Dynamaxed, if the target is preparing to use Beak Blast, Focus Punch, or Shell Trap, or if the move is Assist, Beak Blast, Belch, Bide, Celebrate, Copycat, Dynamax Cannon, Focus Punch, Ice Ball, Instruct, King's Shield, Me First, Metronome, Mimic, Mirror Move, Nature Power, Obstruct, Outrage, Petal Dance, Rollout, Timberfall, Shell Trap, Sketch, Sleep Talk, Struggle, Thrash, Transform, Uproar, any two-turn move, any recharge move, any Z-Move, or any Max or G-Max Move.",
 		shortDesc: "The target immediately uses its last used move.",
 		gen7: {
 			desc: "The target immediately uses its last used move. Fails if the target has not made a move, if the move has 0 PP, if the target is preparing to use Beak Blast, Focus Punch, or Shell Trap, or if the move is Assist, Beak Blast, Belch, Bide, Celebrate, Copycat, Focus Punch, Ice Ball, Instruct, King's Shield, Me First, Metronome, Mimic, Mirror Move, Nature Power, Outrage, Petal Dance, Rollout, Shell Trap, Sketch, Sleep Talk, Struggle, Thrash, Transform, Uproar, any two-turn move, any recharge move, or any Z-Move.",
@@ -7026,5 +7026,61 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Clear Rain",
 		desc: "The user restores 1/2 of its maximum HP if Delta Stream or no weather conditions are in effect or if the user is holding Utility Umbrella, 2/3 of its maximum HP if the weather is Primordial Sea or Rain Dance, and 1/4 of its maximum HP if the weather is Hail, Desolate Land, Sunny Day, or Sandstorm, all rounded half down.",
 		shortDesc: "Heals the user by a weather-dependent amount.",
+	},
+	overgrownfist: {
+		name: "Seed Bomb",
+		desc: "Has a 50% chance to create Grassy Terrain for 5 turns if this move hits.",
+		shortDesc: "50% chance to create Grassy Terrain for 5 turns.",
+	},
+	rootstrangle: {
+		name: "Root Strangle",
+		desc: "Prevents the target from switching for four or five turns (seven turns if the user is holding Grip Claw). Causes damage to the target equal to 1/8 of its maximum HP (1/6 if the user is holding Binding Band), rounded down, at the end of each turn during effect. The target can still switch out if it is holding Shed Shell or uses Baton Pass, Flip Turn, Parting Shot, Teleport, U-turn, or Volt Switch. The effect ends if either the user or the target leaves the field, or if the target uses Rapid Spin or Substitute successfully. This effect is not stackable or reset by using this or another binding move.",
+		shortDesc: "Traps and damages the target for 4-5 turns.",
+
+		start: "  [POKEMON] became trapped by roots!",
+	},
+	spikedtail: {
+		name: "Spiked Tail",
+		desc: "Sets a layer of Spikes on the target's side if this move hits.",
+		shortDesc: "Sets a layer of Spikes on the target's side.",
+	},
+	timberfall: {
+		name: "Timberfall",
+		desc: "If this move is successful, the user is locked into this move and cannot make another move until it misses, 5 turns have passed, or the attack cannot be used. Power doubles with each successful hit of this move and doubles again if Defense Curl was used previously by the user. If this move is called by Sleep Talk, the move is used for one turn. If this move hits an active Disguise during the effect, the power multiplier is paused but the turn counter is not, potentially allowing the multiplier to be used on the user's next move after this effect ends.",
+		shortDesc: "Power doubles with each hit. Repeats for 5 turns.",
+	},
+	woodthrow: {
+		name: "Wood Throw",
+		desc: "Has a 10% chance to make the target flinch.",
+		shortDesc: "10% chance to make the target flinch.",
+	},
+	chloroblast: {
+		name: "Chloroblast",
+		desc: "Whether or not this move is successful and even if it would cause fainting, the user loses 1/2 of its maximum HP, rounded up, unless the user has the Magic Guard Ability.",
+		shortDesc: "User loses 50% max HP.",
+	},
+	chlorobeam: {
+		name: "Chloro Beam",
+		shortDesc: "No additional effect.",
+	},
+	grassflurry: {
+		name: "Grass Flurry",
+		desc: "If the current terrain is Grassy Terrain, this move's power is doubled.",
+		shortDesc: "2x power in Grassy Terrain.",
+	},
+	sapshot: {
+		name: "Sap Shot",
+		desc: "Has a 100% chance to lower the target's Speed by 1 stage.",
+		shortDesc: "100% chance to lower the target's Speed by 1.",
+	},
+	solarpulse: {
+		name: "Solar Pulse",
+		desc: "Creates Sunny Day weather for 5 turns if this move hits.",
+		shortDesc: "Creates Sunny Day weather for 5 turns.",
+	},
+	sporeburst: {
+		name: "Spore Burst",
+		desc: "Has a 50% chance to either poison, paralyze, or sleep the target. This counts as a powder move so Pokemon with the Grass type, the ability Overcoat or the item Safety Goggles are immune.",
+		shortDesc: "20% chance to poison, paralyze or sleep target.",
 	},
 };

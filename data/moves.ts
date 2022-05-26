@@ -9064,7 +9064,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			const lastMove = target.lastMove;
 			const moveIndex = target.moves.indexOf(lastMove.id);
 			const noInstruct = [
-				'assist', 'beakblast', 'belch', 'bide', 'celebrate', 'copycat', 'dynamaxcannon', 'focuspunch', 'iceball', 'instruct', 'kingsshield', 'mefirst', 'metronome', 'mimic', 'mirrormove', 'naturepower', 'obstruct', 'outrage', 'ragingfury', 'petaldance', 'rollout', 'shelltrap', 'sketch', 'sleeptalk', 'struggle', 'thrash', 'transform', 'uproar',
+				'assist', 'beakblast', 'belch', 'bide', 'celebrate', 'copycat', 'dynamaxcannon', 'focuspunch', 'iceball', 'instruct', 'kingsshield', 'mefirst', 'metronome', 'mimic', 'mirrormove', 'naturepower', 'obstruct', 'outrage', 'ragingfury', 'petaldance', 'rollout', 'timberfall', 'shelltrap', 'sketch', 'sleeptalk', 'struggle', 'thrash', 'transform', 'uproar',
 			];
 			if (
 				noInstruct.includes(lastMove.id) || lastMove.isZ || lastMove.isMax ||
@@ -9527,7 +9527,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 65,
 		category: "Special",
 		name: "Leaf Tornado",
-		pp: 10,
+		pp: 20,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: {
@@ -10821,7 +10821,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 50,
 		category: "Special",
 		name: "Mega Drain",
-		pp: 15,
+		pp: 20,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, heal: 1},
 		drain: [1, 2],
@@ -20501,7 +20501,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			onResidual(target) {
 				if (target.lastMove && target.lastMove.id === 'struggle') {
 					// don't lock
-					delete target.volatiles['rollout'];
+					delete target.volatiles['timberfall'];
 				}
 			},
 		},
