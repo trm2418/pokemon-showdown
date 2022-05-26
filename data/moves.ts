@@ -206,7 +206,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Aerial Ace",
 		pp: 20,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1, distance: 1},
+		flags: {blade: 1, contact: 1, protect: 1, mirror: 1, distance: 1},
 		secondary: null,
 		target: "any",
 		type: "Flying",
@@ -293,7 +293,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Air Slash",
 		pp: 15,
 		priority: 0,
-		flags: {protect: 1, mirror: 1, distance: 1},
+		flags: {blade: 1, protect: 1, mirror: 1, distance: 1},
 		secondary: {
 			chance: 30,
 			volatileStatus: 'flinch',
@@ -1095,7 +1095,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Behemoth Blade",
 		pp: 15,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {blade: 1, contact: 1, protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
 		type: "Steel",
@@ -2484,7 +2484,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {},
 		onHit(pokemon) {
 			const noCopycat = [
-				'assist', 'banefulbunker', 'beakblast', 'behemothbash', 'behemothblade', 'belch', 'bestow', 'celebrate', 'chatter', 'circlethrow', 'copycat', 'counter', 'covet', 'craftyshield', 'destinybond', 'detect', 'dragontail', 'dynamaxcannon', 'endure', 'feint', 'focuspunch', 'followme', 'helpinghand', 'holdhands', 'kingsshield', 'matblock', 'mefirst', 'metronome', 'mimic', 'mirrorcoat', 'mirrormove', 'naturepower', 'obstruct', 'protect', 'ragepowder', 'roar', 'shelltrap', 'sketch', 'sleeptalk', 'snatch', 'spikyshield', 'spotlight', 'struggle', 'switcheroo', 'thief', 'transform', 'trick', 'whirlwind',
+				'assist', 'banefulbunker', 'beakblast', 'behemothbash', 'behemothblade', 'belch', 'bestow', 'celebrate', 'chatter', 'circlethrow', 'copycat', 'counter', 'covet', 'craftyshield', 'destinybond', 'detect', 'dragontail', 'dynamaxcannon', 'endure', 'feint', 'focuspunch', 'followme', 'helpinghand', 'holdhands', 'kingsshield', 'matblock', 'mefirst', 'metronome', 'mimic', 'mirrorcoat', 'mirrormove', 'naturepower', 'obstruct', 'protect', 'ragepowder', 'roar', 'shelltrap', 'sketch', 'sleeptalk', 'snatch', 'spikyshield', 'spotlight', 'struggle', 'switcheroo', 'thief', 'transform', 'trick', 'whirlwind', 'blazingshield', 'sporeshield'
 			];
 			let move: Move | ActiveMove | null = this.lastMove;
 			if (!move) return;
@@ -2839,7 +2839,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Cross Poison",
 		pp: 15,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {blade: 1, contact: 1, protect: 1, mirror: 1},
 		secondary: {
 			chance: 10,
 			status: 'tox',
@@ -2914,7 +2914,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Curse",
 		pp: 10,
 		priority: 0,
-		flags: {bypasssub: 1},
+		flags: {bypasssub: 1, magic: 1},
 		volatileStatus: 'curse',
 		onModifyMove(move, source, target) {
 			if (!source.hasType('Ghost')) {
@@ -2957,7 +2957,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Cut",
 		pp: 35,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {blade: 1, contact: 1, protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
 		type: "Normal",
@@ -3543,7 +3543,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Double Kick",
 		pp: 25,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
 		multihit: 2,
 		secondary: null,
 		target: "normal",
@@ -4039,7 +4039,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Eerie Spell",
 		pp: 10,
 		priority: 0,
-		flags: {protect: 1, mirror: 1, bypasssub: 1},
+		flags: {protect: 1, mirror: 1, magic: 1},
 		secondary: {
 			chance: 100,
 			onHit(target) {
@@ -4681,7 +4681,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "False Swipe",
 		pp: 30,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {blade: 1, contact: 1, protect: 1, mirror: 1},
 		onDamagePriority: -20,
 		onDamage(damage, target, source, effect) {
 			if (damage >= target.hp) return target.hp - 1;
@@ -5619,7 +5619,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Forest's Curse",
 		pp: 20,
 		priority: 0,
-		flags: {protect: 1, reflectable: 1, mirror: 1, allyanim: 1},
+		flags: {protect: 1, reflectable: 1, mirror: 1, allyanim: 1, magic: 1},
 		onHit(target) {
 			if (target.hasType('Grass')) return false;
 			if (!target.addType('Grass')) return false;
@@ -5743,7 +5743,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		self: {
 			volatileStatus: 'mustrecharge',
 		},
-		secondary: null,
+		secondary: {
+			chance: 40,
+			status: 'leechseed',
+		},
 		target: "normal",
 		type: "Grass",
 		contestType: "Cool",
@@ -5812,7 +5815,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Fury Cutter",
 		pp: 25,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {blade: 1, contact: 1, protect: 1, mirror: 1},
 		condition: {
 			duration: 2,
 			onStart() {
@@ -6115,7 +6118,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Glacial Lance",
 		pp: 5,
 		priority: 0,
-		flags: {protect: 1, mirror: 1},
+		flags: {blade: 1, protect: 1, mirror: 1},
 		secondary: null,
 		target: "allAdjacentFoes",
 		type: "Ice",
@@ -8078,7 +8081,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Hex",
 		pp: 15,
 		priority: 0,
-		flags: {protect: 1, mirror: 1},
+		flags: {protect: 1, mirror: 1, magic: 1},
 		secondary: null,
 		target: "normal",
 		type: "Ghost",
@@ -8367,7 +8370,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "High Jump Kick",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1, gravity: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, gravity: 1, kick: 1},
 		hasCrashDamage: true,
 		onMoveFail(target, source, move) {
 			this.damage(source.baseMaxhp / 2, source, source, this.dex.conditions.get('High Jump Kick'));
@@ -9210,7 +9213,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Jump Kick",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1, gravity: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, gravity: 1, kick: 1},
 		hasCrashDamage: true,
 		onMoveFail(target, source, move) {
 			this.damage(source.baseMaxhp / 2, source, source, this.dex.conditions.get('Jump Kick'));
@@ -9492,7 +9495,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Leaf Blade",
 		pp: 15,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {blade: 1, contact: 1, protect: 1, mirror: 1},
 		critRatio: 2,
 		secondary: null,
 		target: "normal",
@@ -9654,9 +9657,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 				success = !!this.heal(this.modify(target.baseMaxhp, 0.5));
 			} else {
 				success = !!this.heal(Math.ceil(target.baseMaxhp * 0.25));
-			}
-			if (success && !target.isAlly(source)) {
-				target.staleness = 'external';
 			}
 			if (!success) {
 				this.add('-fail', target, 'heal', '[silent]');
@@ -9840,7 +9840,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Low Kick",
 		pp: 20,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
 		onTryHit(target, pokemon, move) {
 			if (target.volatiles['dynamax']) {
 				this.add('-fail', pokemon, 'Dynamax');
@@ -9862,7 +9862,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Low Sweep",
 		pp: 15,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
 		secondary: {
 			chance: 100,
 			boosts: {
@@ -9950,7 +9950,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Lunge",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {blade: 1, contact: 1, protect: 1, mirror: 1},
 		secondary: {
 			chance: 100,
 			boosts: {
@@ -10002,7 +10002,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Magical Leaf",
 		pp: 20,
 		priority: 0,
-		flags: {protect: 1, mirror: 1},
+		flags: {protect: 1, mirror: 1, magic: 1},
 		secondary: null,
 		target: "normal",
 		type: "Grass",
@@ -10062,7 +10062,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Magic Powder",
 		pp: 20,
 		priority: 0,
-		flags: {powder: 1, protect: 1, reflectable: 1, mirror: 1, allyanim: 1},
+		flags: {powder: 1, protect: 1, reflectable: 1, mirror: 1, allyanim: 1, magic: 1},
 		onHit(target) {
 			if (target.getTypes().join() === 'Psychic' || !target.setType('Psychic')) return false;
 			this.add('-start', target, 'typechange', 'Psychic');
@@ -10853,7 +10853,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Mega Kick",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
 		secondary: null,
 		target: "normal",
 		type: "Normal",
@@ -11933,7 +11933,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Night Slash",
 		pp: 15,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {blade: 1, contact: 1, protect: 1, mirror: 1},
 		critRatio: 2,
 		secondary: null,
 		target: "normal",
@@ -12695,7 +12695,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 0,
 		category: "Status",
 		name: "Poison Powder",
-		pp: 35,
+		pp: 30,
 		priority: 0,
 		flags: {powder: 1, protect: 1, reflectable: 1, mirror: 1},
 		status: 'psn',
@@ -13304,7 +13304,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Psycho Cut",
 		pp: 15,
 		priority: 0,
-		flags: {protect: 1, mirror: 1},
+		flags: {blade: 1, protect: 1, mirror: 1},
 		critRatio: 2,
 		secondary: {
 			chance: 20,
@@ -13784,7 +13784,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Razor Shell",
 		pp: 15,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1, blade: 1},
+		flags: {blade: 1, contact: 1, protect: 1, mirror: 1},
 		critRatio: 2,
 		secondary: {
 			chance: 50,
@@ -14372,7 +14372,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Rolling Kick",
 		pp: 15,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
 		secondary: {
 			chance: 40,
 			volatileStatus: 'flinch',
@@ -14546,7 +14546,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Sacred Sword",
 		pp: 15,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {blade: 1, contact: 1, protect: 1, mirror: 1},
 		ignoreEvasion: true,
 		ignoreDefensive: true,
 		secondary: null,
@@ -14889,7 +14889,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Secret Sword",
 		pp: 15,
 		priority: 0,
-		flags: {protect: 1, mirror: 1},
+		flags: {blade: 1, protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
 		type: "Fighting",
@@ -15742,7 +15742,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Slash",
 		pp: 25,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {blade: 1, contact: 1, protect: 1, mirror: 1},
 		critRatio: 2,
 		secondary: null,
 		target: "normal",
@@ -16165,7 +16165,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Solar Blade",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, charge: 1, protect: 1, mirror: 1},
+		flags: {blade: 1, contact: 1, charge: 1, protect: 1, mirror: 1},
 		onTryMove(attacker, defender, move) {
 			if (attacker.removeVolatile(move.id)) {
 				return;
@@ -16906,7 +16906,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Stomp",
 		pp: 25,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1, nonsky: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, nonsky: 1, kick: 1},
 		secondary: {
 			chance: 30,
 			volatileStatus: 'flinch',
@@ -16930,7 +16930,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Stomping Tantrum",
 		pp: 15,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
 		secondary: null,
 		target: "normal",
 		type: "Ground",
@@ -16993,7 +16993,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Strange Steam",
 		pp: 10,
 		priority: 0,
-		flags: {protect: 1, mirror: 1},
+		flags: {protect: 1, mirror: 1, magic: 1},
 		secondary: {
 			chance: 30,
 			volatileStatus: 'confusion',
@@ -18237,7 +18237,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Thunderous Kick",
 		pp: 15,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
 		secondary: {
 			chance: 100,
 			boosts: {
@@ -18479,7 +18479,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 90,
 		category: "Special",
 		name: "Tri Attack",
-		pp: 10,
+		pp: 20,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: {
@@ -18624,7 +18624,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Triple Axel",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
 		multihit: 3,
 		multiaccuracy: true,
 		secondary: null,
@@ -18644,7 +18644,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Triple Kick",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
 		multihit: 3,
 		multiaccuracy: true,
 		secondary: null,
@@ -18662,7 +18662,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Trop Kick",
 		pp: 15,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
 		secondary: {
 			chance: 100,
 			boosts: {
@@ -19387,7 +19387,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Will-O-Wisp",
 		pp: 15,
 		priority: 0,
-		flags: {protect: 1, reflectable: 1, mirror: 1, magic: 1},
+		flags: {protect: 1, reflectable: 1, mirror: 1},
 		status: 'brn',
 		secondary: null,
 		target: "normal",
@@ -19619,7 +19619,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "X-Scissor",
 		pp: 15,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {blade: 1, contact: 1, protect: 1, mirror: 1},
 		critRatio: 2,
 		secondary: null,
 		target: "normal",
@@ -19807,7 +19807,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Infernal Blade",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1, blade: 1},
+		flags: {blade: 1, contact: 1, protect: 1, mirror: 1},
 		onEffectiveness(typeMod, target, type) {
 			if (type === 'Fairy') return 1;
 		},
@@ -20418,5 +20418,294 @@ export const Moves: {[moveid: string]: MoveData} = {
 		secondary: null,
 		target: "self",
 		type: "Water",
+	},
+	overgrownfist: {
+		num: 2038,
+		accuracy: 90,
+		basePower: 80,
+		category: "Physical",
+		name: "Overgrown Fist",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, punch: 1, mirror: 1},
+		secondary: {
+			chance: 50,
+			terrain: 'grassyterrain',
+		},
+		target: "normal",
+		type: "Grass",
+	},
+	rootstrangle: {
+		num: 2039,
+		accuracy: 75,
+		basePower: 100,
+		category: "Physical",
+		name: "Root Strangle",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		volatileStatus: 'partiallytrapped',
+		secondary: null,
+		target: "normal",
+		type: "Grass",
+	},
+	spikedtail: {
+		num: 2040,
+		accuracy: 80,
+		basePower: 95,
+		category: "Physical",
+		name: "Spiked Tail",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			sideCondition: 'spikes',
+		},
+		target: "normal",
+		type: "Grass",
+	},
+	timberfall: {
+		num: 2041,
+		accuracy: 90,
+		basePower: 30,
+		basePowerCallback(pokemon, target, move) {
+			let bp = move.basePower;
+			if (pokemon.volatiles['timberfall'] && pokemon.volatiles['timberfall'].hitCount) {
+				bp *= Math.pow(2, pokemon.volatiles['timberfall'].hitCount);
+			}
+			if (pokemon.status !== 'slp') pokemon.addVolatile('timberfall');
+			if (pokemon.volatiles['defensecurl']) {
+				bp *= 2;
+			}
+			this.debug("Timberfall bp: " + bp);
+			return bp;
+		},
+		category: "Physical",
+		name: "Timberfall",
+		pp: 20,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		condition: {
+			duration: 2,
+			onLockMove: 'timberfall',
+			onStart() {
+				this.effectState.hitCount = 1;
+			},
+			onRestart() {
+				this.effectState.hitCount++;
+				if (this.effectState.hitCount < 5) {
+					this.effectState.duration = 2;
+				}
+			},
+			onResidual(target) {
+				if (target.lastMove && target.lastMove.id === 'struggle') {
+					// don't lock
+					delete target.volatiles['rollout'];
+				}
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Grass",
+	},
+	woodthrow: {
+		num: 2042,
+		accuracy: 90,
+		basePower: 75,
+		category: "Physical",
+		name: "Wood Throw",
+		pp: 20,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 10,
+			volatileStatus: 'flinch',
+		},
+		target: "normal",
+		type: "Grass",
+	},
+	chloroblast: {
+		num: 2043,
+		accuracy: 95,
+		basePower: 150,
+		category: "Special",
+		name: "Chloroblast",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		mindBlownRecoil: true,
+		onAfterMove(pokemon, target, move) {
+			if (move.mindBlownRecoil && !move.multihit) {
+				this.damage(Math.round(pokemon.maxhp / 2), pokemon, pokemon, this.dex.conditions.get('Chloroblast'), true);
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Grass",
+	},
+	chlorobeam: {
+		num: 2044,
+		accuracy: 85,
+		basePower: 115,
+		category: "Special",
+		name: "Chloro Beam",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Grass",
+	},
+	grassflurry: {
+		num: 2045,
+		accuracy: 100,
+		basePower: 65,
+		basePowerCallback(source, target, move) {
+			if (this.field.isTerrain('grassyterrain')) {
+				if (!source.isAlly(target)) this.hint(`${move.name}'s BP doubled on target.`);
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
+		category: "Special",
+		name: "Grass Flurry",
+		pp: 20,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Grass",
+	},
+	sapshot: {
+		num: 2046,
+		accuracy: 90,
+		basePower: 60,
+		category: "Special",
+		name: "Sap Shot",
+		pp: 20,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			boosts: {
+				spe: -1,
+			},
+		},
+		target: "normal",
+		type: "Grass",
+	},
+	solarpulse: {
+		num: 2047,
+		accuracy: 90,
+		basePower: 70,
+		category: "Special",
+		name: "Solar Pulse",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, pulse: 1},
+		secondary: {
+			chance: 100,
+			weather: 'sunnyday',
+		},
+		target: "normal",
+		type: "Grass",
+	},
+	sporeburst: {
+		num: 2048,
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		name: "Spore Burst",
+		pp: 15,
+		priority: 0,
+		flags: {powder: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 50,
+			onHit(target, source) {
+				const result = this.random(3);
+				if (result === 0) {
+					target.trySetStatus('slp', source);
+				} else if (result === 1) {
+					target.trySetStatus('psn', source);
+				} else {
+					target.trySetStatus('par', source);
+				}
+			},
+		},
+		target: "normal",
+		type: "Grass",
+	},
+	pepperpowder: {
+		num: 2050,
+		accuracy: 75,
+		basePower: 0,
+		category: "Status",
+		name: "Pepper Powder",
+		pp: 30,
+		priority: 0,
+		flags: {powder: 1, protect: 1, reflectable: 1, mirror: 1},
+		status: 'brn',
+		secondary: null,
+		target: "normal",
+		type: "Grass",
+	},
+	sporeshield: {
+		num: 2051,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Spore Shield",
+		pp: 10,
+		priority: 4,
+		flags: {},
+		stallingMove: true,
+		volatileStatus: 'sporeshield',
+		onPrepareHit(pokemon) {
+			return !!this.queue.willAct() && this.runEvent('StallMove', pokemon);
+		},
+		onHit(pokemon) {
+			pokemon.addVolatile('stall');
+		},
+		condition: {
+			duration: 1,
+			onStart(target) {
+				this.add('-singleturn', target, 'Protect');
+			},
+			onTryHitPriority: 3,
+			onTryHit(target, source, move) {
+				if (!move.flags['protect'] || move.category === 'Status') {
+					if (['gmaxoneblow', 'gmaxrapidflow'].includes(move.id)) return;
+					if (move.isZ || move.isMax) target.getMoveHitData(move).zBrokeProtect = true;
+					return;
+				}
+				if (move.smartTarget) {
+					move.smartTarget = false;
+				} else {
+					this.add('-activate', target, 'move: Protect');
+				}
+				const lockedmove = source.getVolatile('lockedmove');
+				if (lockedmove) {
+					// Outrage counter is reset
+					if (source.volatiles['lockedmove'].duration === 2) {
+						delete source.volatiles['lockedmove'];
+					}
+				}
+				if (this.checkMoveMakesContact(move, source, target)) {
+					if (this.randomChance(1,2)) {
+						source.trySetStatus('slp', target);
+					}
+				}
+				return this.NOT_FAIL;
+			},
+			onHit(target, source, move) {
+				if (this.randomChance(1,2)) {
+					source.trySetStatus('slp', target);
+				}
+			},
+		},
+		secondary: null,
+		target: "self",
+		type: "Grass",
 	},
 };

@@ -1609,8 +1609,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	energyball: {
 		name: "Energy Ball",
-		desc: "Has a 10% chance to lower the target's Special Defense by 1 stage.",
-		shortDesc: "10% chance to lower the target's Sp. Def by 1.",
+		desc: "Has a 20% chance to lower the target's Special Defense by 1 stage.",
+		shortDesc: "20% chance to lower the target's Sp. Def by 1.",
 	},
 	entrainment: {
 		name: "Entrainment",
@@ -2084,8 +2084,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	frenzyplant: {
 		name: "Frenzy Plant",
-		desc: "If this move is successful, the user must recharge on the following turn and cannot select a move.",
-		shortDesc: "User cannot move next turn.",
+		desc: "40% chance to inflict the target with Leech Seed. If this move is successful, the user must recharge on the following turn and cannot select a move.",
+		shortDesc: "40% inflict Leech Seed. User cannot move next turn.",
 	},
 	frostbreath: {
 		name: "Frost Breath",
@@ -5071,7 +5071,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	seedbomb: {
 		name: "Seed Bomb",
-		shortDesc: "No additional effect.",
+		desc: "Has a 30% chance to make the target flinch.",
+		shortDesc: "30% chance to make the target flinch.",
 	},
 	seedflare: {
 		name: "Seed Flare",
