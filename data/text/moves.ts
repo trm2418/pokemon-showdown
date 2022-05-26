@@ -2569,8 +2569,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	hail: {
 		name: "Hail",
-		desc: "For 7 turns, the weather becomes Hail. At the end of each turn except the last, all active Pokemon lose 1/16 of their maximum HP, rounded down, unless they are an Ice type or have the Ice Body, Magic Guard, Overcoat, or Snow Cloak Abilities. Lasts for 12 turns if the user is holding Icy Rock. Fails if the current weather is Hail.",
-		shortDesc: "For 7 turns, hail crashes down.",
+		desc: "For 7 turns, the weather becomes Hail. At the end of each turn except the last, all active Pokemon lose 1/16 of their maximum HP, rounded down, unless they are an Ice type or have the Ice Body, Magic Guard, Overcoat, or Snow Cloak Abilities. During the effect, the Defense of Ice-type Pokemon is multiplied by 1.5 when taking damage from a physical attack. Lasts for 12 turns if the user is holding Icy Rock. Fails if the current weather is Hail.",
+		shortDesc: "For 7 turns, hail crashes down. Ice: 1.5x Def.",
 		gen4: {
 			desc: "For 5 turns, the weather becomes Hail. At the end of each turn except the last, all active Pokemon lose 1/16 of their maximum HP, rounded down, unless they are an Ice type or have the Ice Body, Magic Guard, or Snow Cloak Abilities. Lasts for 8 turns if the user is holding Icy Rock. Fails if the current weather is Hail.",
 		},

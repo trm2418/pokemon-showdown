@@ -40,7 +40,7 @@ type MoveEnforcementChecker = (
 
 // Moves that restore HP:
 const RecoveryMove = [
-	'healorder', 'milkdrink', 'moonlight', 'morningsun', 'recover', 'roost', 'shoreup', 'slackoff', 'softboiled', 'strengthsap', 'synthesis',
+	'healorder', 'milkdrink', 'moonlight', 'morningsun', 'recover', 'roost', 'shoreup', 'slackoff', 'softboiled', 'strengthsap', 'synthesis', 'clearrain',
 ];
 // Moves that drop stats:
 const ContraryMoves = [

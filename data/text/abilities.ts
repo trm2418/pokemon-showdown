@@ -352,7 +352,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	electricsurge: {
 		name: "Electric Surge",
-		shortDesc: "On switch-in, this Pokemon summons Electric Terrain for 5 turns, 10 if holding Terrain Extender.",
+		shortDesc: "On switch-in, summons Electric Terrain for 5 turns, 10 if holding Terrain Extender.",
 	},
 	emergencyexit: {
 		name: "Emergency Exit",
@@ -489,7 +489,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	grassysurge: {
 		name: "Grassy Surge",
-		shortDesc: "On switch-in, this Pokemon summons Grassy Terrain for 5 turns, 10 if holding Terrain Extender.",
+		shortDesc: "On switch-in, summons Grassy Terrain for 5 turns, 10 if holding Terrain Extender.",
 	},
 	grimneigh: {
 		name: "Grim Neigh",
@@ -804,7 +804,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	mistysurge: {
 		name: "Misty Surge",
-		shortDesc: "On switch-in, this Pokemon summons Misty Terrain for 5 turns, 10 if holding Terrain Extender.",
+		shortDesc: "On switch-in, summons Misty Terrain for 5 turns, 10 if holding Terrain Extender.",
 	},
 	moldbreaker: {
 		name: "Mold Breaker",
@@ -1075,7 +1075,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	psychicsurge: {
 		name: "Psychic Surge",
-		shortDesc: "On switch-in, this Pokemon summons Psychic Terrain for 5 turns, 10 if holding Terrain Extender.",
+		shortDesc: "On switch-in, summons Psychic Terrain for 5 turns, 10 if holding Terrain Extender.",
 	},
 	punkrock: {
 		name: "Punk Rock",
