@@ -292,7 +292,7 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	damprock: {
 		name: "Damp Rock",
-		desc: "Holder's use of Rain Dance lasts 8 turns instead of 5.",
+		desc: "Holder's use of Rain Dance lasts an additional 5 turns.",
 	},
 	darkgem: {
 		name: "Dark Gem",
@@ -740,7 +740,7 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	heatrock: {
 		name: "Heat Rock",
-		desc: "Holder's use of Sunny Day lasts 8 turns instead of 5.",
+		desc: "Holder's use of Sunny Day lasts an additional 5 turns.",
 	},
 	heavyball: {
 		name: "Heavy Ball",
@@ -805,7 +805,7 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	icyrock: {
 		name: "Icy Rock",
-		desc: "Holder's use of Hail lasts 8 turns instead of 5.",
+		desc: "Holder's use of Hail lasts an additional 5 turns.",
 	},
 	inciniumz: {
 		name: "Incinium Z",
@@ -1601,7 +1601,7 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	smoothrock: {
 		name: "Smooth Rock",
-		desc: "Holder's use of Sandstorm lasts 8 turns instead of 5.",
+		desc: "Holder's use of Sandstorm lasts an additional 5 turns.",
 	},
 	snorliumz: {
 		name: "Snorlium Z",
@@ -1729,7 +1729,7 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	terrainextender: {
 		name: "Terrain Extender",
-		desc: "Holder's use of Electric/Grassy/Misty/Psychic Terrain lasts 8 turns instead of 5.",
+		desc: "Holder's use of Electric/Grassy/Misty/Psychic Terrain lasts an additional 5 turns.",
 	},
 	thickclub: {
 		name: "Thick Club",

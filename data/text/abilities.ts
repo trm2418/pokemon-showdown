@@ -312,17 +312,17 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "On switch-in, this Pokemon's Attack or Special Attack is raised by 1 stage based on the weaker combined defensive stat of all opposing Pokemon. Attack is raised if their Defense is lower, and Special Attack is raised if their Special Defense is the same or lower.",
 		shortDesc: "On switch-in, Attack or Sp. Atk is raised 1 stage based on the foes' weaker Defense.",
 	},
-	dragonsmaw: {
-		name: "Dragon's Maw",
+	dragonessence: {
+		name: "Dragon Essence",
 		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using a Dragon-type attack.",
 	},
 	drizzle: {
 		name: "Drizzle",
-		shortDesc: "On switch-in, this Pokemon summons Rain Dance.",
+		shortDesc: "On switch-in, this Pokemon summons Rain Dance for 5 turns, 10 if holding Damp Rock.",
 	},
 	drought: {
 		name: "Drought",
-		shortDesc: "On switch-in, this Pokemon summons Sunny Day.",
+		shortDesc: "On switch-in, this Pokemon summons Sunny Day for 5 turns, 10 if holding Heat Rock.",
 	},
 	dryskin: {
 		name: "Dry Skin",
@@ -352,7 +352,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	electricsurge: {
 		name: "Electric Surge",
-		shortDesc: "On switch-in, this Pokemon summons Electric Terrain.",
+		shortDesc: "On switch-in, this Pokemon summons Electric Terrain for 5 turns, 10 if holding Terrain Extender.",
 	},
 	emergencyexit: {
 		name: "Emergency Exit",
@@ -489,7 +489,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	grassysurge: {
 		name: "Grassy Surge",
-		shortDesc: "On switch-in, this Pokemon summons Grassy Terrain.",
+		shortDesc: "On switch-in, this Pokemon summons Grassy Terrain for 5 turns, 10 if holding Terrain Extender.",
 	},
 	grimneigh: {
 		name: "Grim Neigh",
@@ -804,7 +804,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	mistysurge: {
 		name: "Misty Surge",
-		shortDesc: "On switch-in, this Pokemon summons Misty Terrain.",
+		shortDesc: "On switch-in, this Pokemon summons Misty Terrain for 5 turns, 10 if holding Terrain Extender.",
 	},
 	moldbreaker: {
 		name: "Mold Breaker",
@@ -1075,7 +1075,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	psychicsurge: {
 		name: "Psychic Surge",
-		shortDesc: "On switch-in, this Pokemon summons Psychic Terrain.",
+		shortDesc: "On switch-in, this Pokemon summons Psychic Terrain for 5 turns, 10 if holding Terrain Extender.",
 	},
 	punkrock: {
 		name: "Punk Rock",
@@ -1202,7 +1202,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	sandstream: {
 		name: "Sand Stream",
-		shortDesc: "On switch-in, this Pokemon summons Sandstorm.",
+		shortDesc: "On switch-in, this Pokemon summons Sandstorm for 5 turns, 10 if holding Smooth Rock.",
 	},
 	sandveil: {
 		name: "Sand Veil",
@@ -1324,7 +1324,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	snowwarning: {
 		name: "Snow Warning",
-		shortDesc: "On switch-in, this Pokemon summons Hail.",
+		shortDesc: "On switch-in, this Pokemon summons Hail for 5 turns, 10 if holding Icy Rock.",
 	},
 	solarpower: {
 		name: "Solar Power",
