@@ -7091,7 +7091,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	sporeshield: {
 		name: "Spore Shield",
 		desc: "The user is protected from most attacks made by other Pokemon during this turn, and Pokemon trying to make contact with the user have a 50% chance to fall asleep. Non-damaging moves go through this protection. This move has a 1/X chance of being successful, where X starts at 1 and triples each time this move is successfully used. X resets to 1 if this move fails, if the user's last move used is not Baneful Bunker, Detect, Endure, King's Shield, Max Guard, Obstruct, Protect, Quick Guard, Spiky Shield, or Wide Guard, or if it was one of those moves and the user's protection was broken. Fails if the user moves last this turn.",
-		shortDesc: "Protects from damaging attacks. Contact: 50% sleep.",
+		shortDesc: "Protect from damaging attacks. Contact: 50% sleep.",
 	},
 	electroburn: {
 		name: "Electroburn",
@@ -7170,6 +7170,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Ion Beam",
 		desc: "Has a 20% chance to paralyze the target. This move's type effectiveness against Ground is changed to be super effective no matter what this move's type is.",
 		shortDesc: "20% chance to paralyze. Super effective on Ground.",
+	},
+	lightningblast: {
+		name: "Lightning Blast",
+		desc: "Has a 20% chance to paralyze the target.",
+		shortDesc: "20% chance to paralyze the target.",
 	},
 	powersurge: {
 		name: "Power Surge",
@@ -7252,6 +7257,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Zen Slam",
 		desc: "Damage is calculated using the user's Special Defense stat as its Attack, including stat stage changes. Other effects that modify the Attack stat are used as normal.",
 		shortDesc: "Uses user's Sp Def stat as Atk in damage calculation.",
+	},
+	arcanepulse: {
+		name: "Arcane Pulse",
+		desc: "Has a 50% chance to create Psychic Terrain for 5 turns if this move hits. Lasts for 10 turns if the user is holding Terrain Extender.",
+		shortDesc: "50% chance to create Psychic Terrain for 5 turns.",
 	},
 	astrosphere: {
 		name: "Astro Sphere",

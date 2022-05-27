@@ -2779,7 +2779,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	
 	},
 	camerupt: {
-		randomBattleMoves: ["vaporize", "magmastorm", "earthpower", "stealthrock", "steameruption", "blazingshield", "conflagrate", "scorchedearth"],
+		randomBattleMoves: ["vaporize", "magmastorm", "earthpower", "stealthrock", "steameruption", "scorchedearth"],
 		randomBattleLevel: 84,
 		tier: "(PU)",
 	},
@@ -3366,7 +3366,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	
 	},
 	empoleon: {
-		randomBattleMoves: ["oceanswrath", "flashcannon", "icebeam", "blizzard", "surf", "grassknot", "stealthrock", "toxic", "defog", "roost"],
+		randomBattleMoves: ["oceanswrath", "flashcannon", "icebeam", "blizzard", "grassknot", "stealthrock", "toxic", "defog", "roost"],
 		randomBattleLevel: 84,
 		tier: "(PU)",
 	},

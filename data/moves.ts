@@ -20750,7 +20750,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		accuracy: 75,
 		basePower: 100,
 		category: "Physical",
-		name: "Root Strangle",
+		name: "Electrocute",
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
@@ -20974,6 +20974,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		onEffectiveness(typeMod, target, type) {
 			if (type === 'Ground') return 1;
 		},
+		ignoreImmunity: {'Electric': true},
 		secondary: {
 			chance: 10,
 			status: 'par',
@@ -20981,8 +20982,24 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Electric",
 	},
-	powersurge: {
+	lightningblast: {
 		num: 2067,
+		accuracy: 75,
+		basePower: 130,
+		category: "Special",
+		name: "Lightning Blast",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 20,
+			status: 'par',
+		},
+		target: "normal",
+		type: "Electric",
+	},
+	powersurge: {
+		num: 2068,
 		accuracy: 90,
 		basePower: 175,
 		category: "Special",
@@ -21001,7 +21018,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Electric",
 	},
 	shortcircuit: {
-		num: 2068,
+		num: 2069,
 		accuracy: 100,
 		basePower: 150,
 		category: "Special",
@@ -21026,7 +21043,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Electric",
 	},
 	quickjolt: {
-		num: 2069,
+		num: 2070,
 		accuracy: 100,
 		basePower: 50,
 		category: "Special",
@@ -21039,7 +21056,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Electric",
 	},
 	thundershield: {
-		num: 2073,
+		num: 2074,
 		accuracy: true,
 		basePower: 0,
 		category: "Status",
@@ -21095,7 +21112,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Electric",
 	},
 	turbocharge: {
-		num: 2074,
+		num: 2075,
 		accuracy: true,
 		basePower: 0,
 		category: "Status",
@@ -21112,7 +21129,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Electric",
 	},
 	esperwing: {
-		num: 2075,
+		num: 2076,
 		accuracy: 90,
 		basePower: 75,
 		category: "Physical",
@@ -21133,7 +21150,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Psychic",
 	},
 	psyshieldbash: {
-		num: 2076,
+		num: 2077,
 		accuracy: 80,
 		basePower: 70,
 		category: "Physical",
@@ -21154,7 +21171,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Psychic",
 	},
 	brainpress: {
-		num: 2077,
+		num: 2078,
 		accuracy: 100,
 		basePower: 100,
 		category: "Physical",
@@ -21169,7 +21186,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Psychic",
 	},
 	facingfears: {
-		num: 2088,
+		num: 2089,
 		accuracy: 100,
 		basePower: 70,
 		category: "Physical",
@@ -21184,7 +21201,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Psychic",
 	},
 	gravityslam: {
-		num: 2089,
+		num: 2090,
 		accuracy: true,
 		basePower: 70,
 		category: "Physical",
@@ -21200,7 +21217,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Psychic",
 	},
 	psyjab: {
-		num: 2090,
+		num: 2091,
 		accuracy: 100,
 		basePower: 40,
 		category: "Physical",
@@ -21216,7 +21233,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Psychic",
 	},
 	psypunch: {
-		num: 2091,
+		num: 2092,
 		accuracy: 100,
 		basePower: 65,
 		category: "Physical",
@@ -21236,7 +21253,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Psychic",
 	},
 	neuronsmash: {
-		num: 2092,
+		num: 2093,
 		accuracy: 100,
 		basePower: 80,
 		category: "Physical",
@@ -21254,10 +21271,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Psychic",
 	},
 	psyspikes: {
-		num: 2093,
+		num: 2094,
 		accuracy: 95,
 		basePower: 105,
-		category: "Special",
+		category: "Physical",
 		name: "Psy Spikes",
 		pp: 10,
 		priority: 0,
@@ -21270,7 +21287,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Psychic",
 	},
 	psychorush: {
-		num: 2094,
+		num: 2095,
 		accuracy: 100,
 		basePower: 120,
 		category: "Physical",
@@ -21287,7 +21304,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Psychic",
 	},
 	zenslam: {
-		num: 2095,
+		num: 2096,
 		accuracy: 95,
 		basePower: 90,
 		category: "Physical",
@@ -21301,7 +21318,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Psychic",
 	},
 	arcanepulse: {
-		num: 2098,
+		num: 2099,
 		accuracy: 90,
 		basePower: 80,
 		category: "Special",
@@ -21317,7 +21334,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Psychic",
 	},
 	astrosphere: {
-		num: 2099,
+		num: 2100,
 		accuracy: 90,
 		basePower: 90,
 		category: "Special",
@@ -21333,7 +21350,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Psychic",
 	},
 	instantcrush: {
-		num: 2100,
+		num: 2101,
 		accuracy: true,
 		basePower: 60,
 		category: "Special",
@@ -21346,7 +21363,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Psychic",
 	},
 	mindzap: {
-		num: 2102,
+		num: 2103,
 		accuracy: 100,
 		basePower: 85,
 		category: "Special",
@@ -21362,7 +21379,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Psychic",
 	},
 	perplex: {
-		num: 2103,
+		num: 2104,
 		accuracy: 100,
 		basePower: 75,
 		category: "Special",
@@ -21380,7 +21397,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Psychic",
 	},
 	psionicstorm: {
-		num: 2104,
+		num: 2105,
 		accuracy: 75,
 		basePower: 120,
 		category: "Special",
@@ -21398,7 +21415,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Psychic",
 	},
 	psypulse: {
-		num: 2105,
+		num: 2106,
 		accuracy: 100,
 		basePower: 45,
 		category: "Special",
@@ -21411,7 +21428,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Psychic",
 	},
 	totembeam: {
-		num: 2106,
+		num: 2107,
 		accuracy: 95,
 		basePower: 105,
 		category: "Special",
@@ -21426,7 +21443,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Psychic",
 	},
 	lunarblessing: {
-		num: 2107,
+		num: 2108,
 		accuracy: true,
 		basePower: 0,
 		category: "Status",
@@ -21443,7 +21460,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Psychic",
 	},
 	hyperfocus: {
-		num: 2108,
+		num: 2109,
 		accuracy: true,
 		basePower: 0,
 		category: "Status",
@@ -21460,7 +21477,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Psychic",
 	},
 	psychoshield: {
-		num: 2111,
+		num: 2112,
 		accuracy: true,
 		basePower: 0,
 		category: "Status",
@@ -21516,7 +21533,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Psychic",
 	},
 	zenrepose: {
-		num: 2114,
+		num: 2115,
 		accuracy: true,
 		basePower: 0,
 		category: "Status",
@@ -21526,7 +21543,15 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {snatch: 1, heal: 1},
 		onHit(pokemon) {
 			if (this.field.isTerrain('psychicterrain')) {
-				pokemon.clearBoosts();
+				const boosts: SparseBoostsTable = {};
+				let i: BoostID;
+				for (i in pokemon.boosts) {
+					if (pokemon.boosts[i] < 0) {
+						boosts[i] = 0;
+					}
+				}
+				pokemon.setBoost(boosts);
+				this.add('-clearnegativeboost', pokemon)
 			}
 			const success = !!this.heal(this.modify(pokemon.maxhp, 1/2));
 			return success;
