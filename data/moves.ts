@@ -552,7 +552,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {},
 		onHit(target) {
 			const noAssist = [
-				'assist', 'banefulbunker', 'beakblast', 'belch', 'bestow', 'bounce', 'celebrate', 'chatter', 'circlethrow', 'copycat', 'counter', 'covet', 'destinybond', 'detect', 'dig', 'dive', 'dragontail', 'endure', 'feint', 'fly', 'focuspunch', 'followme', 'helpinghand', 'holdhands', 'kingsshield', 'matblock', 'mefirst', 'metronome', 'mimic', 'mirrorcoat', 'mirrormove', 'naturepower', 'phantomforce', 'protect', 'ragepowder', 'roar', 'shadowforce', 'shelltrap', 'sketch', 'skydrop', 'sleeptalk', 'snatch', 'spikyshield', 'spotlight', 'struggle', 'switcheroo', 'thief', 'transform', 'trick', 'whirlwind',
+				'assist', 'banefulbunker', 'beakblast', 'belch', 'bestow', 'bounce', 'celebrate', 'chatter', 'circlethrow', 'copycat', 'counter', 'covet', 'destinybond', 'detect', 'dig', 'dive', 'dragontail', 'endure', 'feint', 'fly', 'focuspunch', 'followme', 'helpinghand', 'holdhands', 'kingsshield', 'matblock', 'mefirst', 'metronome', 'mimic', 'mirrorcoat', 'mirrormove', 'naturepower', 'phantomforce', 'protect', 'ragepowder', 'roar', 'shadowforce', 'shelltrap', 'sketch', 'skydrop', 'sleeptalk', 'snatch', 'spikyshield', 'spotlight', 'struggle', 'switcheroo', 'thief', 'transform', 'trick', 'whirlwind', 'blazingshield', 'sporeshield', 'thundershield', 'psychoshield'
 			];
 
 			const moves = [];
@@ -2484,7 +2484,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {},
 		onHit(pokemon) {
 			const noCopycat = [
-				'assist', 'banefulbunker', 'beakblast', 'behemothbash', 'behemothblade', 'belch', 'bestow', 'celebrate', 'chatter', 'circlethrow', 'copycat', 'counter', 'covet', 'craftyshield', 'destinybond', 'detect', 'dragontail', 'dynamaxcannon', 'endure', 'feint', 'focuspunch', 'followme', 'helpinghand', 'holdhands', 'kingsshield', 'matblock', 'mefirst', 'metronome', 'mimic', 'mirrorcoat', 'mirrormove', 'naturepower', 'obstruct', 'protect', 'ragepowder', 'roar', 'shelltrap', 'sketch', 'sleeptalk', 'snatch', 'spikyshield', 'spotlight', 'struggle', 'switcheroo', 'thief', 'transform', 'trick', 'whirlwind', 'blazingshield', 'sporeshield'
+				'assist', 'banefulbunker', 'beakblast', 'behemothbash', 'behemothblade', 'belch', 'bestow', 'celebrate', 'chatter', 'circlethrow', 'copycat', 'counter', 'covet', 'craftyshield', 'destinybond', 'detect', 'dragontail', 'dynamaxcannon', 'endure', 'feint', 'focuspunch', 'followme', 'helpinghand', 'holdhands', 'kingsshield', 'matblock', 'mefirst', 'metronome', 'mimic', 'mirrorcoat', 'mirrormove', 'naturepower', 'obstruct', 'protect', 'ragepowder', 'roar', 'shelltrap', 'sketch', 'sleeptalk', 'snatch', 'spikyshield', 'spotlight', 'struggle', 'switcheroo', 'thief', 'transform', 'trick', 'whirlwind', 'blazingshield', 'sporeshield', 'thundershield', 'psychoshield'
 			];
 			let move: Move | ActiveMove | null = this.lastMove;
 			if (!move) return;
@@ -4171,19 +4171,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 	electroball: {
 		num: 486,
 		accuracy: 100,
-		basePower: 0,
-		basePowerCallback(pokemon, target) {
-			let ratio = Math.floor(pokemon.getStat('spe') / target.getStat('spe'));
-			if (!isFinite(ratio)) ratio = 0;
-			const bp = [40, 60, 80, 120, 150][Math.min(ratio, 4)];
-			this.debug(`${bp} bp`);
-			return bp;
-		},
+		basePower: 80,
 		category: "Special",
 		name: "Electro Ball",
 		pp: 15,
 		priority: 0,
 		flags: {bullet: 1, protect: 1, mirror: 1},
+		overrideOffensiveStat: 'spe',
 		secondary: null,
 		target: "normal",
 		type: "Electric",
@@ -5624,6 +5618,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1, allyanim: 1, magic: 1},
+		volatileStatus: 'curse',
 		onHit(target) {
 			if (target.hasType('Grass')) return false;
 			if (!target.addType('Grass')) return false;
@@ -10074,6 +10069,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		onHit(target) {
 			if (target.getTypes().join() === 'Psychic' || !target.setType('Psychic')) return false;
 			this.add('-start', target, 'typechange', 'Psychic');
+		},
+		boosts: {
+			atk: -1,
 		},
 		secondary: null,
 		target: "normal",
@@ -20723,5 +20721,818 @@ export const Moves: {[moveid: string]: MoveData} = {
 		secondary: null,
 		target: "self",
 		type: "Grass",
+	},
+	electroburn: {
+		num: 2052,
+		accuracy: 90,
+		basePower: 95,
+		category: "Physical",
+		name: "Electroburn",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 30,
+			onHit(target, source) {
+				const result = this.random(2);
+				if (result === 0) {
+					target.trySetStatus('brn', source);
+				} else {
+					target.trySetStatus('par', source);
+				}
+			},
+		},
+		target: "normal",
+		type: "Electric",
+	},
+	electrocute: {
+		num: 2053,
+		accuracy: 75,
+		basePower: 100,
+		category: "Physical",
+		name: "Root Strangle",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		volatileStatus: 'partiallytrapped',
+		secondary: null,
+		target: "normal",
+		type: "Electric",
+	},
+	electroslash: {
+		num: 2054,
+		accuracy: 95,
+		basePower: 95,
+		category: "Physical",
+		name: "Electro Slash",
+		pp: 15,
+		priority: 0,
+		flags: {blade: 1, contact: 1, protect: 1, mirror: 1},
+		critRatio: 2,
+		secondary: null,
+		target: "normal",
+		type: "Electric",
+	},
+	lightninghammer: {
+		num: 2055,
+		accuracy: 75,
+		basePower: 120,
+		category: "Physical",
+		name: "Lightning Hammer",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 30,
+			status: 'par',
+		},
+		target: "normal",
+		type: "Electric",
+	},
+	lightningrush: {
+		num: 2056,
+		accuracy: 100,
+		basePower: 75,
+		category: "Physical",
+		name: "Lightning Rush",
+		pp: 15,
+		priority: 1,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		recoil: [1, 4],
+		secondary: null,
+		target: "normal",
+		type: "Electric",
+	},
+	prod: {
+		num: 2057,
+		accuracy: 90,
+		basePower: 55,
+		category: "Physical",
+		name: "Prod",
+		pp: 20,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			volatileStatus: 'taunt',
+		},
+		target: "normal",
+		type: "Electric",
+	},
+	shocktail: {
+		num: 2058,
+		accuracy: 75,
+		basePower: 60,
+		category: "Physical",
+		name: "Shock Tail",
+		pp: 20,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			status: 'par',
+		},
+		target: "normal",
+		type: "Electric",
+	},
+	staticbump: {
+		num: 2059,
+		accuracy: 100,
+		basePower: 40,
+		category: "Physical",
+		name: "Static Bump",
+		pp: 30,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 10,
+			status: 'par',
+		},
+		target: "normal",
+		type: "Electric",
+	},
+	stormcrash: {
+		num: 2060,
+		accuracy: 90,
+		basePower: 140,
+		category: "Physical",
+		name: "Storm Crash",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		self: {
+			boosts: {
+				atk: -2,
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Electric",
+	},
+	stormingfangs: {
+		num: 2061,
+		accuracy: 90,
+		basePower: 80,
+		category: "Physical",
+		name: "Storming Fangs",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, bite: 1, mirror: 1},
+		secondary: {
+			chance: 50,
+			terrain: 'electricterrain',
+		},
+		target: "normal",
+		type: "Electric",
+	},
+	thunderclap: {
+		num: 2062,
+		accuracy: 85,
+		basePower: 105,
+		category: "Physical",
+		name: "Thunderclap",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 30,
+			volatileStatus: 'flinch',
+		},
+		target: "normal",
+		type: "Electric",
+	},
+	wildboltstorm: {
+		num: 2063,
+		accuracy: 80,
+		basePower: 125,
+		category: "Special",
+		name: "Wildbolt Storm",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 30,
+			status: 'par',
+		},
+		target: "normal",
+		type: "Electric",
+	},
+	arclightning: {
+		num: 2064,
+		accuracy: 95,
+		basePower: 25,
+		category: "Special",
+		name: "Arc Lightning",
+		pp: 20,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, pulse: 1},
+		multihit: [2, 5],
+		secondary: null,
+		target: "allAdjacentFoes",
+		type: "Electric",
+	},
+	erraticshock: {
+		num: 2065,
+		accuracy: 95,
+		basePower: 0,
+		category: "Special",
+		name: "Erratic Shock",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onModifyMove(move, pokemon) {
+			const i = this.random(3);
+			if (i === 0) {
+				move.basePower = 25;
+				move.magnitude = 25;
+			} else if (i === 1) {
+				move.basePower = 100;
+				move.magnitude = 100;
+			} else {
+				move.basePower = 200;
+				move.magnitude = 200;
+			}
+		},
+		onUseMoveMessage(pokemon, target, move) {
+			this.add('-activate', pokemon, 'move: Voltage:', move.magnitude);
+		},
+		secondary: null,
+		target: "normal",
+		type: "Electric",
+		zMove: {basePower: 150},
+		maxMove: {basePower: 150},
+	},
+	ionbeam: {
+		num: 2066,
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		name: "Ion Beam",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Ground') return 1;
+		},
+		secondary: {
+			chance: 10,
+			status: 'par',
+		},
+		target: "normal",
+		type: "Electric",
+	},
+	powersurge: {
+		num: 2067,
+		accuracy: 90,
+		basePower: 175,
+		category: "Special",
+		name: "Power Surge",
+		pp: 5,
+		priority: 0,
+		flags: {recharge: 1, protect: 1, mirror: 1},
+		self: {
+			volatileStatus: 'mustrecharge',
+		},
+		secondary: {
+			chance: 40,
+			status: 'par',
+		},
+		target: "normal",
+		type: "Electric",
+	},
+	shortcircuit: {
+		num: 2068,
+		accuracy: 100,
+		basePower: 150,
+		category: "Special",
+		name: "Short Circuit",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onTryMove(pokemon, target, move) {
+			if (pokemon.hasType('Electric')) return;
+			this.add('-fail', pokemon, 'move: Short Circuit');
+			this.attrLastMove('[still]');
+			return null;
+		},
+		self: {
+			onHit(pokemon) {
+				pokemon.setType(pokemon.getTypes(true).map(type => type === "Electric" ? "???" : type));
+				this.add('-start', pokemon, 'typechange', pokemon.types.join('/'), '[from] move: Short Circuit');
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Electric",
+	},
+	quickjolt: {
+		num: 2069,
+		accuracy: 100,
+		basePower: 50,
+		category: "Special",
+		name: "Quick Jolt",
+		pp: 20,
+		priority: 1,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Electric",
+	},
+	thundershield: {
+		num: 2073,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Thunder Shield",
+		pp: 10,
+		priority: 4,
+		flags: {},
+		stallingMove: true,
+		volatileStatus: 'thundershield',
+		onPrepareHit(pokemon) {
+			return !!this.queue.willAct() && this.runEvent('StallMove', pokemon);
+		},
+		onHit(pokemon) {
+			pokemon.addVolatile('stall');
+		},
+		condition: {
+			duration: 1,
+			onStart(target) {
+				this.add('-singleturn', target, 'move: Protect');
+			},
+			onTryHitPriority: 3,
+			onTryHit(target, source, move) {
+				if (!move.flags['protect']) {
+					if (['gmaxoneblow', 'gmaxrapidflow'].includes(move.id)) return;
+					if (move.isZ || move.isMax) target.getMoveHitData(move).zBrokeProtect = true;
+					return;
+				}
+				if (move.smartTarget) {
+					move.smartTarget = false;
+				} else {
+					this.add('-activate', target, 'move: Protect');
+				}
+				const lockedmove = source.getVolatile('lockedmove');
+				if (lockedmove) {
+					// Outrage counter is reset
+					if (source.volatiles['lockedmove'].duration === 2) {
+						delete source.volatiles['lockedmove'];
+					}
+				}
+				if (this.checkMoveMakesContact(move, source, target)) {
+					source.trySetStatus('par', target);
+				}
+				return this.NOT_FAIL;
+			},
+			onHit(target, source, move) {
+				if (move.isZOrMaxPowered && this.checkMoveMakesContact(move, source, target)) {
+					source.trySetStatus('par', target);
+				}
+			},
+		},
+		secondary: null,
+		target: "self",
+		type: "Electric",
+	},
+	turbocharge: {
+		num: 2074,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Turbocharge",
+		pp: 20,
+		priority: 0,
+		flags: {snatch: 1},
+		boosts: {
+			spa: 1,
+			spe: 1,
+		},
+		secondary: null,
+		target: "self",
+		type: "Electric",
+	},
+	esperwing: {
+		num: 2075,
+		accuracy: 90,
+		basePower: 75,
+		category: "Physical",
+		name: "Esper Wing",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		critRatio: 2,
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					spe: 1,
+				},
+			},
+		},
+		target: "normal",
+		type: "Psychic",
+	},
+	psyshieldbash: {
+		num: 2076,
+		accuracy: 80,
+		basePower: 70,
+		category: "Physical",
+		name: "Psyshield Bash",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					def: 1,
+					spd: 1,
+				},
+			},
+		},
+		target: "normal",
+		type: "Psychic",
+	},
+	brainpress: {
+		num: 2077,
+		accuracy: 100,
+		basePower: 100,
+		category: "Physical",
+		name: "Brain Press",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		overrideOffensivePokemon: 'target',
+		overrideOffensiveStat: 'spa',
+		secondary: null,
+		target: "normal",
+		type: "Psychic",
+	},
+	facingfears: {
+		num: 2088,
+		accuracy: 100,
+		basePower: 70,
+		category: "Physical",
+		name: "Facing Fears",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onEffectiveness(typeMod, target, type) {
+			if (['Bug', 'Dark', 'Ghost', 'Dragon'].includes(type)) return 1;
+		},
+		target: "normal",
+		type: "Psychic",
+	},
+	gravityslam: {
+		num: 2089,
+		accuracy: true,
+		basePower: 70,
+		category: "Physical",
+		name: "Gravity Slam",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			pseudoWeather: 'gravity',
+		},
+		target: "normal",
+		type: "Psychic",
+	},
+	psyjab: {
+		num: 2090,
+		accuracy: 100,
+		basePower: 40,
+		category: "Physical",
+		name: "Psy Jab",
+		pp: 30,
+		priority: 0,
+		flags: {contact: 1, protect: 1, punch: 1, mirror: 1},
+		secondary: {
+			chance: 10,
+			volatileStatus: 'flinch',
+		},
+		target: "normal",
+		type: "Psychic",
+	},
+	psypunch: {
+		num: 2091,
+		accuracy: 100,
+		basePower: 65,
+		category: "Physical",
+		name: "Psy Punch",
+		pp: 20,
+		priority: 0,
+		flags: {contact: 1, protect: 1, punch: 1, mirror: 1},
+		secondary: {
+			chance: 30,
+			self: {
+				boosts: {
+					spd: 1,
+				},
+			},
+		},
+		target: "normal",
+		type: "Psychic",
+	},
+	neuronsmash: {
+		num: 2092,
+		accuracy: 100,
+		basePower: 80,
+		category: "Physical",
+		name: "Neuron Smash",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			boosts: {
+				def: -1,
+			},
+		},
+		target: "normal",
+		type: "Psychic",
+	},
+	psyspikes: {
+		num: 2093,
+		accuracy: 95,
+		basePower: 105,
+		category: "Special",
+		name: "Psy Spikes",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 10,
+			volatileStatus: 'confusion',
+		},
+		target: "normal",
+		type: "Psychic",
+	},
+	psychorush: {
+		num: 2094,
+		accuracy: 100,
+		basePower: 120,
+		category: "Physical",
+		name: "Psycho Rush",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		recoil: [33, 100],
+		secondary: {
+			chance: 10,
+			volatileStatus: 'confusion',
+		},
+		target: "normal",
+		type: "Psychic",
+	},
+	zenslam: {
+		num: 2095,
+		accuracy: 95,
+		basePower: 90,
+		category: "Physical",
+		name: "Zen Slam",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		overrideOffensiveStat: 'spd',
+		secondary: null,
+		target: "normal",
+		type: "Psychic",
+	},
+	arcanepulse: {
+		num: 2098,
+		accuracy: 90,
+		basePower: 80,
+		category: "Special",
+		name: "Arcane Pulse",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, pulse: 1, mirror: 1},
+		secondary: {
+			chance: 50,
+			terrain: 'psychicterrain',
+		},
+		target: "normal",
+		type: "Psychic",
+	},
+	astrosphere: {
+		num: 2099,
+		accuracy: 90,
+		basePower: 90,
+		category: "Special",
+		name: "Astro Sphere",
+		pp: 15,
+		priority: 0,
+		flags: {bullet: 1, protect: 1, pulse: 1, mirror: 1},
+		secondary: {
+			chance: 30,
+			volatileStatus: 'confusion',
+		},
+		target: "allAdjacentFoes",
+		type: "Psychic",
+	},
+	instantcrush: {
+		num: 2100,
+		accuracy: true,
+		basePower: 60,
+		category: "Special",
+		name: "Instant Crush",
+		pp: 10,
+		priority: 1,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Psychic",
+	},
+	mindzap: {
+		num: 2102,
+		accuracy: 100,
+		basePower: 85,
+		category: "Special",
+		name: "Mindzap",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 30,
+			status: 'par',
+		},
+		target: "normal",
+		type: "Psychic",
+	},
+	perplex: {
+		num: 2103,
+		accuracy: 100,
+		basePower: 75,
+		category: "Special",
+		name: "Perplex",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onBasePower(basePower, pokemon, target) {
+			if (target?.volatiles['confusion']) {
+				return this.chainModify(2);
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Psychic",
+	},
+	psionicstorm: {
+		num: 2104,
+		accuracy: 75,
+		basePower: 120,
+		category: "Special",
+		name: "Psionic Storm",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 20,
+			boosts: {
+				spd: -1,
+			},
+		},
+		target: "allAdjacentFoes",
+		type: "Psychic",
+	},
+	psypulse: {
+		num: 2105,
+		accuracy: 100,
+		basePower: 45,
+		category: "Special",
+		name: "Psy Pulse",
+		pp: 30,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, pulse: 1},
+		secondary: null,
+		target: "normal",
+		type: "Psychic",
+	},
+	totembeam: {
+		num: 2106,
+		accuracy: 95,
+		basePower: 105,
+		category: "Special",
+		name: "Totem Beam",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		ignoreAbility: true,
+		ignorePositiveDefensive: true,
+		secondary: null,
+		target: "normal",
+		type: "Psychic",
+	},
+	lunarblessing: {
+		num: 2107,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Lunar Blessing",
+		pp: 5,
+		priority: 0,
+		flags: {heal: 1},
+		onHit(pokemon) {
+			const success = !!this.heal(this.modify(pokemon.maxhp, 1/2));
+			return pokemon.cureStatus() || success;
+		},
+		secondary: null,
+		target: "self",
+		type: "Psychic",
+	},
+	hyperfocus: {
+		num: 2108,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Hyper Focus",
+		pp: 20,
+		priority: 0,
+		flags: {snatch: 1},
+		boosts: {
+			spa: 1,
+			accuracy: 1,
+		},
+		secondary: null,
+		target: "self",
+		type: "Psychic",
+	},
+	psychoshield: {
+		num: 2111,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Psycho Shield",
+		pp: 10,
+		priority: 4,
+		flags: {},
+		stallingMove: true,
+		volatileStatus: 'psychoshield',
+		onPrepareHit(pokemon) {
+			return !!this.queue.willAct() && this.runEvent('StallMove', pokemon);
+		},
+		onHit(pokemon) {
+			pokemon.addVolatile('stall');
+		},
+		condition: {
+			duration: 1,
+			onStart(target) {
+				this.add('-singleturn', target, 'move: Protect');
+			},
+			onTryHitPriority: 3,
+			onTryHit(target, source, move) {
+				if (!move.flags['protect']) {
+					if (['gmaxoneblow', 'gmaxrapidflow'].includes(move.id)) return;
+					if (move.isZ || move.isMax) target.getMoveHitData(move).zBrokeProtect = true;
+					return;
+				}
+				if (move.smartTarget) {
+					move.smartTarget = false;
+				} else {
+					this.add('-activate', target, 'move: Protect');
+				}
+				const lockedmove = source.getVolatile('lockedmove');
+				if (lockedmove) {
+					// Outrage counter is reset
+					if (source.volatiles['lockedmove'].duration === 2) {
+						delete source.volatiles['lockedmove'];
+					}
+				}
+				if (this.checkMoveMakesContact(move, source, target)) {
+					source.addVolatile('confusion', target);
+				}
+				return this.NOT_FAIL;
+			},
+			onHit(target, source, move) {
+				if (move.isZOrMaxPowered && this.checkMoveMakesContact(move, source, target)) {
+					source.addVolatile('confusion', target);
+				}
+			},
+		},
+		secondary: null,
+		target: "self",
+		type: "Psychic",
+	},
+	zenrepose: {
+		num: 2114,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Zen Repose",
+		pp: 10,
+		priority: 0,
+		flags: {snatch: 1, heal: 1},
+		onHit(pokemon) {
+			if (this.field.isTerrain('psychicterrain')) {
+				pokemon.clearBoosts();
+			}
+			const success = !!this.heal(this.modify(pokemon.maxhp, 1/2));
+			return success;
+		},
+		secondary: null,
+		target: "self",
+		type: "Psychic",
 	},
 };
