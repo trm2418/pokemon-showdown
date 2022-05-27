@@ -3074,9 +3074,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				if (attacker.gender === defender.gender) {
 					this.debug('Rivalry boost');
 					return this.chainModify(1.25);
-				} else {
-					this.debug('Rivalry weaken');
-					return this.chainModify(1);
 				}
 			}
 		},

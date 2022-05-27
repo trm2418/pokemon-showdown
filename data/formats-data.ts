@@ -412,7 +412,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "NFE",
 	},
 	vileplume: {
-		randomBattleMoves: ["aromatherapy", "gigadrain", "sleeppowder", "sludgebomb", "strengthsap", "sunblast", "solarpulse", "sporeblast"],
+		randomBattleMoves: ["aromatherapy", "gigadrain", "sleeppowder", "sludgebomb", "strengthsap", "sunblast", "solarpulse", "sporeburst"],
 		randomBattleLevel: 84,
 		randomDoubleBattleMoves: ["aromatherapy", "energyball", "pollenpuff", "sleeppowder", "sludgebomb", "strengthsap"],
 		randomDoubleBattleLevel: 88,
@@ -762,12 +762,12 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	magnezonesoran: {
 		randomBattleMoves: ["autotomize", "ironhead", "woodhammer", "earthquake", "growth"],
-		randomBattleLevel: 84,
+		randomBattleLevel: 82,
 		tier: "OU",
 	},
 	farfetchd: {
 		randomBattleMoves: ["bravebird", "closecombat", "knockoff", "leafblade", "swordsdance"],
-		randomBattleLevel: 90,
+		randomBattleLevel: 86,
 		randomDoubleBattleMoves: ["bravebird", "closecombat", "leafblade", "protect", "quickattack", "swordsdance"],
 		randomDoubleBattleLevel: 95,
 		tier: "(PU)",
@@ -1077,7 +1077,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	rhydon: {
 		tier: "NFE",
 		randomBattleMoves: ["earthquake", "megahorn", "stealthrock", "stoneedge", "toxic"],
-		randomBattleLevel: 92,
+		randomBattleLevel: 88,
 	},
 	rhyperior: {
 		randomBattleMoves: ["earthquake", "firepunch", "megahorn", "rockpolish", "stoneedge"],
@@ -1122,7 +1122,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		doublesTier: "(DUU)",
 	},
 	kangaskhan: {
-		randomBattleMoves: ["doubleedge", "earthquake", "fakeout", "hammerarm", "suckerpunch", "circlethrow"],
+		randomBattleMoves: ["doubleedge", "earthquake", "fakeout", "hammerarm", "suckerpunch"],
 		randomBattleLevel: 84,
 		randomDoubleBattleMoves: ["doubleedge", "drainpunch", "fakeout", "protect", "rockslide", "suckerpunch"],
 		randomDoubleBattleLevel: 88,
@@ -1248,7 +1248,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	jynx: {
 		randomBattleMoves: ["focusblast", "icebeam", "lovelykiss", "nastyplot", "trick", "psychoboost", "psystrike", "freezingglare"],
-		randomBattleLevel: 92,
+		randomBattleLevel: 88,
 		randomDoubleBattleMoves: ["focusblast", "icebeam", "lovelykiss", "nastyplot", "psychic"],
 		randomDoubleBattleLevel: 92,
 		tier: "(PU)",
@@ -1436,7 +1436,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		doublesTier: "(DUU)",
 	},
 	sylveon: {
-		randomBattleMoves: ["calmmind", "hypervoice", "mysticalfire", "protect", "psyshock", "shadowball", "wish"],
+		randomBattleMoves: ["calmmind", "hypervoice", "mysticalfire", "protect", "psyshock", "shadowball", "wish", "moonblast"],
 		randomBattleLevel: 84,
 		randomDoubleBattleMoves: ["calmmind", "hypervoice", "mysticalfire", "protect", "psyshock"],
 		randomDoubleBattleLevel: 80,
@@ -1772,7 +1772,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	eldralamp: {
 		randomBattleMoves: ["healbell", "icebeam", "scald", "thunderbolt", "toxic", "voltswitch", "clearrain"],
-		randomBattleLevel: 86,
+		randomBattleLevel: 80,
 		tier: "OU",
 	},
 	togepi: {
@@ -1955,7 +1955,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	mismagius: {
 		randomBattleMoves: ["eeriespell", "moonblast", "mysticalfire", "shadowball", "cursedflames"],
-		randomBattleLevel: 88,
+		randomBattleLevel: 82,
 		tier: "(PU)",
 	},
 	unown: {
@@ -1963,7 +1963,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	alphaglyph: {
 		randomBattleMoves: ["hiddenpowerfire", "cosmicpower", "storedpower", "recover"],
-		randomBattleLevel: 82,
+		randomBattleLevel: 76,
 		tier: "OU",
 	},
 	wynaut: {
@@ -1971,7 +1971,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	wobbuffet: {
 		randomBattleMoves: ["charm", "counter", "encore", "mirrorcoat"],
-		randomBattleLevel: 92,
+		randomBattleLevel: 90,
 		randomDoubleBattleMoves: ["charm", "counter", "encore", "mirrorcoat"],
 		randomDoubleBattleLevel: 100,
 		randomBattleNoDynamaxMoves: ["counter", "destinybond", "encore", "mirrorcoat"],
@@ -2308,7 +2308,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "OU",
 	},
 	lugia: {
-		randomBattleMoves: ["airslash", "earthquake", "roost", "substitute", "toxic"],
+		randomBattleMoves: ["airslash", "earthquake", "roost", "substitute", "toxic", "oceanswrath"],
 		randomBattleLevel: 74,
 		randomDoubleBattleMoves: ["aeroblast", "calmmind", "psyshock", "roost", "toxic"],
 		randomDoubleBattleLevel: 72,
@@ -3694,7 +3694,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	drapion: {
 		randomBattleMoves: ["aquatail", "earthquake", "wickedblow", "crosspoison", "swordsdance", "taunt", "toxicspikes"],
-		randomBattleLevel: 82,
+		randomBattleLevel: 76,
 		randomDoubleBattleMoves: ["knockoff", "poisonjab", "protect", "rockslide", "taunt"],
 		randomDoubleBattleLevel: 88,
 		tier: "OU",
@@ -3713,7 +3713,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	carnivine: {
 		randomBattleMoves: ["crunch", "powerwhip", "psychicfangs", "jawlock", "poisonfang", "leechlife"],
-		randomBattleLevel: 90,
+		randomBattleLevel: 84,
 		tier: "(PU)",
 	},
 	finneon: {
@@ -3724,12 +3724,12 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	lumineon: {
 		randomBattleMoves: ["tailglow", "hydropump", "icebeam", "signalbeam"],
-		randomBattleLevel: 90,
+		randomBattleLevel: 86,
 		tier: "(PU)",
 	},
 	lumineonsoran: {
 		randomBattleMoves: ["tailglow", "sludgewave", "icebeam", "signalbeam"],
-		randomBattleLevel: 90,
+		randomBattleLevel: 86,
 		tier: "(PU)",
 	},
 	snover: {
@@ -4041,7 +4041,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "LC",
 	},
 	watchog: {
-		randomBattleMoves: ["hypnosis", "dynamicpunch", "megakick", "irontail", "gunkshot"],
+		randomBattleMoves: ["hypnosis", "dynamicpunch", "megakick", "gunkshot"],
 		randomBattleLevel: 82,
 		tier: "RU",
 	},
@@ -4584,7 +4584,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "LC",
 	},
 	amoonguss: {
-		randomBattleMoves: ["clearsmog", "gigadrain", "sludgebomb", "spore", "synthesis", "toxic", "sporeblast"],
+		randomBattleMoves: ["clearsmog", "gigadrain", "sludgebomb", "spore", "synthesis", "toxic", "sporeburst"],
 		randomBattleLevel: 84,
 		randomDoubleBattleMoves: ["clearsmog", "pollenpuff", "protect", "ragepowder", "spore"],
 		randomDoubleBattleLevel: 81,
@@ -5602,7 +5602,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "NFE",
 	},
 	ribombee: {
-		randomBattleMoves: ["moonblast", "psychic", "stickyweb", "stunspore", "uturn", "sporeblast"],
+		randomBattleMoves: ["moonblast", "psychic", "stickyweb", "stunspore", "uturn", "sporeburst"],
 		randomBattleLevel: 82,
 		randomDoubleBattleMoves: ["helpinghand", "moonblast", "pollenpuff", "speedswap", "stickyweb", "tailwind"],
 		randomDoubleBattleLevel: 84,
@@ -5697,7 +5697,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "LC",
 	},
 	shiinotic: {
-		randomBattleMoves: ["energyball", "leechseed", "moonblast", "spore", "strengthsap", "sporeblast"],
+		randomBattleMoves: ["energyball", "leechseed", "moonblast", "spore", "strengthsap", "sporeburst"],
 		randomBattleLevel: 86,
 		randomDoubleBattleMoves: ["energyball", "moonblast", "protect", "spore", "strengthsap"],
 		randomDoubleBattleLevel: 88,
@@ -6083,7 +6083,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		doublesTier: "(DUU)",
 	},
 	pheromosa: {
-		randomBattleMoves: ["closecombat", "icebeam", "poisonjab", "throatchop", "uturn"],
+		randomBattleMoves: ["closecombat", "icebeam", "poisonjab", "throatchop", "uturn", "playrough"],
 		randomBattleLevel: 76,
 		randomDoubleBattleMoves: ["closecombat", "icebeam", "poisonjab", "protect", "throatchop", "uturn"],
 		randomDoubleBattleLevel: 78,
@@ -6360,7 +6360,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "LC",
 	},
 	eldegoss: {
-		randomBattleMoves: ["energyball", "leechseed", "pollenpuff", "rapidspin", "sleeppowder", "sporeblast"],
+		randomBattleMoves: ["energyball", "leechseed", "pollenpuff", "rapidspin", "sleeppowder", "sporeburst"],
 		randomBattleLevel: 90,
 		randomDoubleBattleMoves: ["charm", "energyball", "helpinghand", "pollenpuff", "protect", "sleeppowder"],
 		randomDoubleBattleLevel: 90,
