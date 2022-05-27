@@ -658,7 +658,7 @@ export const Conditions: {[k: string]: ConditionData} = {
 		duration: 5,
 		durationCallback(source, effect) {
 			var dur = 5;
-			if (source?.moveThisTurn === 'hail') {
+			if (source?.moveThisTurn === 'hail' || source?.moveThisTurn === 'frostburst') {
 				dur += 2;
 			}
 			if (source?.hasItem('icyrock')) {

@@ -552,7 +552,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {},
 		onHit(target) {
 			const noAssist = [
-				'assist', 'banefulbunker', 'beakblast', 'belch', 'bestow', 'bounce', 'celebrate', 'chatter', 'circlethrow', 'copycat', 'counter', 'covet', 'destinybond', 'detect', 'dig', 'dive', 'dragontail', 'endure', 'feint', 'fly', 'focuspunch', 'followme', 'helpinghand', 'holdhands', 'kingsshield', 'matblock', 'mefirst', 'metronome', 'mimic', 'mirrorcoat', 'mirrormove', 'naturepower', 'phantomforce', 'protect', 'ragepowder', 'roar', 'shadowforce', 'shelltrap', 'sketch', 'skydrop', 'sleeptalk', 'snatch', 'spikyshield', 'spotlight', 'struggle', 'switcheroo', 'thief', 'transform', 'trick', 'whirlwind', 'blazingshield', 'sporeshield', 'thundershield', 'psychoshield'
+				'assist', 'banefulbunker', 'beakblast', 'belch', 'bestow', 'bounce', 'celebrate', 'chatter', 'circlethrow', 'copycat', 'counter', 'covet', 'destinybond', 'detect', 'dig', 'dive', 'dragontail', 'endure', 'feint', 'fly', 'focuspunch', 'followme', 'helpinghand', 'holdhands', 'kingsshield', 'matblock', 'mefirst', 'metronome', 'mimic', 'mirrorcoat', 'mirrormove', 'naturepower', 'phantomforce', 'protect', 'ragepowder', 'roar', 'shadowforce', 'shelltrap', 'sketch', 'skydrop', 'sleeptalk', 'snatch', 'spikyshield', 'spotlight', 'struggle', 'switcheroo', 'thief', 'transform', 'trick', 'whirlwind', 'blazingshield', 'sporeshield', 'thundershield', 'psychoshield', 'frigidshield'
 			];
 
 			const moves = [];
@@ -1617,7 +1617,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	breakingswipe: {
 		num: 784,
-		accuracy: 80,
+		accuracy: 70,
 		basePower: 60,
 		category: "Physical",
 		name: "Breaking Swipe",
@@ -2484,7 +2484,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {},
 		onHit(pokemon) {
 			const noCopycat = [
-				'assist', 'banefulbunker', 'beakblast', 'behemothbash', 'behemothblade', 'belch', 'bestow', 'celebrate', 'chatter', 'circlethrow', 'copycat', 'counter', 'covet', 'craftyshield', 'destinybond', 'detect', 'dragontail', 'dynamaxcannon', 'endure', 'feint', 'focuspunch', 'followme', 'helpinghand', 'holdhands', 'kingsshield', 'matblock', 'mefirst', 'metronome', 'mimic', 'mirrorcoat', 'mirrormove', 'naturepower', 'obstruct', 'protect', 'ragepowder', 'roar', 'shelltrap', 'sketch', 'sleeptalk', 'snatch', 'spikyshield', 'spotlight', 'struggle', 'switcheroo', 'thief', 'transform', 'trick', 'whirlwind', 'blazingshield', 'sporeshield', 'thundershield', 'psychoshield'
+				'assist', 'banefulbunker', 'beakblast', 'behemothbash', 'behemothblade', 'belch', 'bestow', 'celebrate', 'chatter', 'circlethrow', 'copycat', 'counter', 'covet', 'craftyshield', 'destinybond', 'detect', 'dragontail', 'dynamaxcannon', 'endure', 'feint', 'focuspunch', 'followme', 'helpinghand', 'holdhands', 'kingsshield', 'matblock', 'mefirst', 'metronome', 'mimic', 'mirrorcoat', 'mirrormove', 'naturepower', 'obstruct', 'protect', 'ragepowder', 'roar', 'shelltrap', 'sketch', 'sleeptalk', 'snatch', 'spikyshield', 'spotlight', 'struggle', 'switcheroo', 'thief', 'transform', 'trick', 'whirlwind', 'blazingshield', 'sporeshield', 'thundershield', 'psychoshield', 'frigidshield'
 			];
 			let move: Move | ActiveMove | null = this.lastMove;
 			if (!move) return;
@@ -5667,8 +5667,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	freezeshock: {
 		num: 553,
-		accuracy: 90,
-		basePower: 140,
+		accuracy: 100,
+		basePower: 150,
 		category: "Physical",
 		name: "Freeze Shock",
 		pp: 5,
@@ -5686,7 +5686,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			return null;
 		},
 		secondary: {
-			chance: 30,
+			chance: 50,
 			status: 'par',
 		},
 		target: "normal",
@@ -8762,8 +8762,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	iceburn: {
 		num: 554,
-		accuracy: 90,
-		basePower: 140,
+		accuracy: 100,
+		basePower: 150,
 		category: "Special",
 		name: "Ice Burn",
 		pp: 5,
@@ -8781,7 +8781,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			return null;
 		},
 		secondary: {
-			chance: 30,
+			chance: 50,
 			status: 'brn',
 		},
 		target: "normal",
@@ -21559,5 +21559,435 @@ export const Moves: {[moveid: string]: MoveData} = {
 		secondary: null,
 		target: "self",
 		type: "Psychic",
+	},
+	mountaingale: {
+		num: 2116,
+		accuracy: 85,
+		basePower: 120,
+		category: "Physical",
+		name: "Mountain Gale",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 30,
+			volatileStatus: 'flinch',
+		},
+		target: "normal",
+		type: "Ice",
+	},
+	cryocrash: {
+		num: 2117,
+		accuracy: 100,
+		basePower: 120,
+		category: "Physical",
+		name: "Cryo Crash",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		recoil: [33, 100],
+		secondary: {
+			chance: 10,
+			status: 'frz',
+		},
+		target: "normal",
+		type: "Ice",
+	},
+	frostyjab: {
+		num: 2118,
+		accuracy: 100,
+		basePower: 45,
+		category: "Physical",
+		name: "Frosty Jab",
+		pp: 30,
+		priority: 0,
+		flags: {contact: 1, protect: 1, punch: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Ice",
+	},
+	frozenblade: {
+		num: 2119,
+		accuracy: 100,
+		basePower: 90,
+		category: "Physical",
+		name: "Frozen Blade",
+		pp: 15,
+		priority: 0,
+		flags: {blade: 1, contact: 1, protect: 1, mirror: 1},
+		critRatio: 2,
+		secondary: null,
+		target: "normal",
+		type: "Ice",
+	},
+	glaciercrush: {
+		num: 2120,
+		accuracy: 100,
+		basePower: 130,
+		category: "Physical",
+		name: "Glacier Crush",
+		pp: 10,
+		priority: 0,
+		flags: {charge: 1, protect: 1, mirror: 1},
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (['hail', 'sleet'].includes(attacker.effectiveWeather())) {
+				this.attrLastMove('[still]');
+				this.addMove('-anim', attacker, move.name, defender);
+				return;
+			}
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
+		onBasePower(basePower, pokemon, target) {
+			if (['raindance', 'primordialsea', 'sandstorm', 'sunnyday', 'desolateland'].includes(pokemon.effectiveWeather())) {
+				this.debug('weakened by weather');
+				return this.chainModify(0.5);
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Ice",
+	},
+	icedrill: {
+		num: 2121,
+		accuracy: 100,
+		basePower: 75,
+		basePowerCallback(pokemon, target, move) {
+			if (target.status === 'frz') return move.basePower * 2;
+			return move.basePower;
+		},
+		category: "Physical",
+		name: "Ice Drill",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Ice') return 1;
+		},
+		onHit(target) {
+			if (target.status === 'frz') target.cureStatus();
+		},
+		secondary: null,
+		target: "normal",
+		type: "Ice",
+	},
+	subzerofury: {
+		num: 2122,
+		accuracy: 95,
+		basePower: 135,
+		category: "Physical",
+		name: "Subzero Fury",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		self: {
+			boosts: {
+				atk: -2,
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Ice",
+	},
+	tusksmash: {
+		num: 2123,
+		accuracy: 90,
+		basePower: 55,
+		category: "Physical",
+		name: "Tusk Smash",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		multihit: 2,
+		secondary: null,
+		target: "normal",
+		type: "Ice",
+	},
+	creepingcold: {
+		num: 2124,
+		accuracy: 95,
+		basePower: 75,
+		basePowerCallback(source, target, move) {
+			if (['darkness'].includes(source.effectiveWeather())) {
+				if (!source.isAlly(target)) this.hint(`${move.name}'s BP 1.5x on target.`);
+				return move.basePower * 1.5;
+			}
+			return move.basePower;
+		},
+		category: "Special",
+		name: "Creeping Cold",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onModifyMove(move, pokemon) {
+			move.secondaries = [];
+			if (['darkness'].includes(pokemon.effectiveWeather())) {
+				move.secondaries.push({
+					chance: 30,
+					status: 'frz',
+				});
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Ice",
+	},
+	cryomancy: {
+		num: 2125,
+		accuracy: 100,
+		basePower: 85,
+		category: "Special",
+		name: "Cryomancy",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, magic: 1, mirror: 1},
+		secondary: {
+			chance: 30,
+			status: 'frz',
+		},
+		target: "normal",
+		type: "Ice",
+	},
+	frostblast: {
+		num: 2126,
+		accuracy: 80,
+		basePower: 115,
+		category: "Special",
+		name: "Frost Blast",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 20,
+			status: 'frz',
+		},
+		target: "normal",
+		type: "Ice",
+	},
+	frostbite: {
+		num: 2127,
+		accuracy: 100,
+		basePower: 85,
+		category: "Special",
+		name: "Frostbite",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 30,
+			onHit(target, source) {
+				const result = this.random(2);
+				if (result === 0) {
+					target.trySetStatus('brn', source);
+				} else {
+					target.trySetStatus('frz', source);
+				}
+			},
+		},
+		target: "normal",
+		type: "Ice",
+	},
+	slushball: {
+		num: 2128,
+		accuracy: 90,
+		basePower: 80,
+		basePowerCallback(source, target, move) {
+			if (['raindance', 'primordialsea'].includes(source.effectiveWeather())) {
+				if (!source.isAlly(target)) this.hint(`${move.name}'s BP 1.5x on target.`);
+				return move.basePower * 1.5;
+			}
+			return move.basePower;
+		},
+		category: "Special",
+		name: "Slush Ball",
+		pp: 15,
+		priority: 0,
+		flags: {bullet: 1, protect: 1, pulse: 1, mirror: 1},
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Fire') return 1;
+		},
+		target: "normal",
+		type: "Ice",
+	},
+	snowcannon: {
+		num: 2129,
+		accuracy: 90,
+		basePower: 100,
+		category: "Special",
+		name: "Snow Cannon",
+		pp: 10,
+		priority: 0,
+		flags: {bullet: 1, protect: 1, pulse: 1, mirror: 1},
+		secondary: {
+			chance: 20,
+			volatileStatus: 'flinch',
+		},
+		target: "normal",
+		type: "Ice",
+	},
+	snowstorm: {
+		num: 2130,
+		accuracy: 90,
+		basePower: 70,
+		category: "Special",
+		name: "Snow Storm",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			weather: 'hail',
+		},
+		target: "normal",
+		type: "Ice",
+	},
+	snowballvolley: {
+		num: 2131,
+		accuracy: 100,
+		basePower: 25,
+		category: "Special",
+		name: "Snowball Volley",
+		pp: 20,
+		priority: 0,
+		flags: {bullet: 1, protect: 1, mirror: 1, pulse: 1},
+		multihit: [2, 5],
+		secondary: null,
+		target: "normal",
+		type: "Ice",
+	},
+	whiteout: {
+		num: 2132,
+		accuracy: 90,
+		basePower: 175,
+		category: "Special",
+		name: "Whiteout",
+		pp: 5,
+		priority: 0,
+		flags: {recharge: 1, protect: 1, mirror: 1},
+		self: {
+			volatileStatus: 'mustrecharge',
+		},
+		secondary: {
+			chance: 30,
+			status: 'frz',
+		},
+		target: "normal",
+		type: "Ice",
+	},
+	frigidshield: {
+		num: 2134,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Frigid Shield",
+		pp: 5,
+		priority: 4,
+		flags: {},
+		stallingMove: true,
+		volatileStatus: 'frigidshield',
+		onPrepareHit(pokemon) {
+			return !!this.queue.willAct() && this.runEvent('StallMove', pokemon);
+		},
+		onHit(pokemon) {
+			pokemon.addVolatile('stall');
+		},
+		condition: {
+			duration: 1,
+			onStart(target) {
+				this.add('-singleturn', target, 'Protect');
+			},
+			onTryHitPriority: 3,
+			onTryHit(target, source, move) {
+				if (!move.flags['protect'] || move.category === 'Status') {
+					if (['gmaxoneblow', 'gmaxrapidflow'].includes(move.id)) return;
+					if (move.isZ || move.isMax) target.getMoveHitData(move).zBrokeProtect = true;
+					return;
+				}
+				if (move.smartTarget) {
+					move.smartTarget = false;
+				} else {
+					this.add('-activate', target, 'move: Protect');
+				}
+				const lockedmove = source.getVolatile('lockedmove');
+				if (lockedmove) {
+					// Outrage counter is reset
+					if (source.volatiles['lockedmove'].duration === 2) {
+						delete source.volatiles['lockedmove'];
+					}
+				}
+				if (this.checkMoveMakesContact(move, source, target)) {
+					if (this.randomChance(1,2)) {
+						source.trySetStatus('frz', target);
+					}
+				}
+				return this.NOT_FAIL;
+			},
+			onHit(target, source, move) {
+				if (this.randomChance(1,2)) {
+					source.trySetStatus('frz', target);
+				}
+			},
+		},
+		secondary: null,
+		target: "self",
+		type: "Ice",
+	},
+	frostburst: {
+		num: 2135,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Frost Burst",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		status: 'frz',
+		weather: 'hail',
+		selfdestruct: "always",
+		secondary: null,
+		target: "allAdjacentFoes",
+		type: "Ice",
+	},
+	shiver: {
+		num: 2136,
+		accuracy: 100,
+		basePower: 0,
+		category: "Status",
+		name: "Shiver",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, reflectable: 1, mirror: 1},
+		boosts: {
+			spe: -3,
+		},
+		secondary: null,
+		target: "normal",
+		type: "Ice",
+	},
+	wintrybreath: {
+		num: 2137,
+		accuracy: 60,
+		basePower: 0,
+		category: "Status",
+		name: "Wintry Breath",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, reflectable: 1, mirror: 1},
+		onModifyMove(move, pokemon) {
+			if (['hail', 'sleet'].includes(pokemon.effectiveWeather())) {
+				move.accuracy = 80;
+			};
+		},
+		status: 'frz',
+		secondary: null,
+		target: "normal",
+		type: "Ice",
 	},
 };

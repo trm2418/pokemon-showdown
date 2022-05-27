@@ -4469,7 +4469,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 2,
 		num: 1000,
 	},
-
 	amplifier: {
 		onBasePowerPriority: 7,
 		onBasePower(basePower, attacker, defender, move) {
@@ -4480,7 +4479,34 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		name: "Amplifier",
 		rating: 3.5,
-		num: 244,
+		num: 1001,
+	},
+	felingprowess: {
+		onModifySpAPriority: 5,
+		onModifySpA(spa) {
+			return this.chainModify(2);
+		},
+		name: "Feling Prowess",
+		rating: 5,
+		num: 1002,
+	},
+	infuriate: {
+		onDamagingHit(damage, target, source, effect) {
+			this.boost({atk: 1});
+		},
+		name: "Infuriate",
+		rating: 4,
+		num: 1003,
+	},
+	hubris: {
+		onSourceAfterFaint(length, target, source, effect) {
+			if (effect && effect.effectType === 'Move') {
+				this.boost({spa: length}, source);
+			}
+		},
+		name: "Hubris",
+		rating: 3,
+		num: 1004,
 	},
 
 	

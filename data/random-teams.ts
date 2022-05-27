@@ -40,11 +40,11 @@ type MoveEnforcementChecker = (
 
 // Moves that restore HP:
 const RecoveryMove = [
-	'healorder', 'milkdrink', 'moonlight', 'morningsun', 'recover', 'roost', 'shoreup', 'slackoff', 'softboiled', 'strengthsap', 'synthesis', 'clearrain',
+	'healorder', 'milkdrink', 'moonlight', 'morningsun', 'recover', 'roost', 'shoreup', 'slackoff', 'softboiled', 'strengthsap', 'synthesis', 'clearrain', 'zenrepose',
 ];
 // Moves that drop stats:
 const ContraryMoves = [
-	'closecombat', 'leafstorm', 'overheat', 'superpower', 'vcreate',
+	'closecombat', 'leafstorm', 'overheat', 'superpower', 'vcreate', 'subzerofury', 'stormcrash',
 ];
 // Moves that boost Attack:
 const PhysicalSetup = [
@@ -52,7 +52,7 @@ const PhysicalSetup = [
 ];
 // Moves which boost Special Attack:
 const SpecialSetup = [
-	'calmmind', 'chargebeam', 'geomancy', 'nastyplot', 'quiverdance', 'tailglow',
+	'calmmind', 'chargebeam', 'geomancy', 'nastyplot', 'quiverdance', 'tailglow', 'turbocharge', 'hyperfocus',
 ];
 // Moves that boost Attack AND Special Attack:
 const MixedSetup = [

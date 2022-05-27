@@ -585,8 +585,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	breakingswipe: {
 		name: "Breaking Swipe",
-		desc: "Has a 100% chance to lower the target's Attack by 1 stage.",
-		shortDesc: "100% chance to lower the foe(s) Attack by 1.",
+		desc: "Has a 100% chance to lower the target's Attack and Special Attack by 1 stage.",
+		shortDesc: "100% lower the foe(s) Attack and Sp Atk by 1.",
 	},
 	breakneckblitz: {
 		name: "Breakneck Blitz",
@@ -1361,8 +1361,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	dragonbreath: {
 		name: "Dragon Breath",
-		desc: "Has a 30% chance to paralyze the target.",
-		shortDesc: "30% chance to paralyze the target.",
+		desc: "Has a 50% chance to paralyze the target.",
+		shortDesc: "50% chance to paralyze the target.",
 	},
 	dragonclaw: {
 		name: "Dragon Claw",
@@ -1389,7 +1389,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	dragonpulse: {
 		name: "Dragon Pulse",
-		shortDesc: "No additional effect.",
+		desc: "Has a 10% chance to lower the target's Special Defense by 1 stage.",
+		shortDesc: "10% chance to lower the target's Sp. Def by 1.",
 	},
 	dragonrage: {
 		name: "Dragon Rage",
@@ -1397,8 +1398,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	dragonrush: {
 		name: "Dragon Rush",
-		desc: "Has a 20% chance to make the target flinch. Damage doubles and no accuracy check is done if the target has used Minimize while active.",
-		shortDesc: "20% chance to make the target flinch.",
+		desc: "Has a 30% chance to make the target flinch. Damage doubles and no accuracy check is done if the target has used Minimize while active.",
+		shortDesc: "30% chance to make the target flinch.",
 		gen5: {
 			desc: "Has a 20% chance to make the target flinch.",
 		},
@@ -2067,8 +2068,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	freezeshock: {
 		name: "Freeze Shock",
-		desc: "Has a 30% chance to paralyze the target. This attack charges on the first turn and executes on the second. If the user is holding a Power Herb, the move completes in one turn.",
-		shortDesc: "Charges turn 1. Hits turn 2. 30% paralyze.",
+		desc: "Has a 50% chance to paralyze the target. This attack charges on the first turn and executes on the second. If the user is holding a Power Herb, the move completes in one turn.",
+		shortDesc: "Charges turn 1. Hits turn 2. 50% paralyze.",
 
 		prepare: "  [POKEMON] became cloaked in a freezing light!",
 	},
@@ -2947,15 +2948,15 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	iceburn: {
 		name: "Ice Burn",
-		desc: "Has a 30% chance to burn the target. This attack charges on the first turn and executes on the second. If the user is holding a Power Herb, the move completes in one turn.",
-		shortDesc: "Charges turn 1. Hits turn 2. 30% burn.",
+		desc: "Has a 50% chance to burn the target. This attack charges on the first turn and executes on the second. If the user is holding a Power Herb, the move completes in one turn.",
+		shortDesc: "Charges turn 1. Hits turn 2. 50% burn.",
 
 		prepare: "  [POKEMON] became cloaked in freezing air!",
 	},
 	icefang: {
 		name: "Ice Fang",
-		desc: "Has a 10% chance to freeze the target and a 10% chance to make it flinch.",
-		shortDesc: "10% chance to freeze. 10% chance to flinch.",
+		desc: "Has a 20% chance to freeze the target and a 20% chance to make it flinch.",
+		shortDesc: "20% chance to freeze. 20% chance to flinch.",
 	},
 	icehammer: {
 		name: "Ice Hammer",
@@ -2964,8 +2965,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	icepunch: {
 		name: "Ice Punch",
-		desc: "Has a 10% chance to freeze the target.",
-		shortDesc: "10% chance to freeze the target.",
+		desc: "Has a 20% chance to freeze the target.",
+		shortDesc: "20% chance to freeze the target.",
 	},
 	iceshard: {
 		name: "Ice Shard",
@@ -6478,8 +6479,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	twister: {
 		name: "Twister",
-		desc: "Has a 20% chance to make the target flinch. Power doubles if the target is using Bounce, Fly, or Sky Drop, or is under the effect of Sky Drop.",
-		shortDesc: "20% chance to make the foe(s) flinch.",
+		desc: "Has a 10% chance to make the target flinch. Power doubles if the target is using Bounce, Fly, or Sky Drop, or is under the effect of Sky Drop.",
+		shortDesc: "10% chance to make the foe(s) flinch.",
 		gen4: {
 			desc: "Has a 20% chance to make the target flinch. Power doubles if the target is using Bounce or Fly.",
 		},
@@ -6964,7 +6965,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	knucklefins: {
 		name: "Knucklefins",
-		shortDesc: "Applies torment to the target.",
+		desc: "Applies Torment to the target if this hits.",
+		shortDesc: "Applies Torment to the target.",
 	},
 	maelstrom: {
 		name: "Maelstrom",
@@ -7075,7 +7077,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	solarpulse: {
 		name: "Solar Pulse",
-		desc: "Creates Sunny Day weather for 5 turns if this move hits. Lasts for 12 turns if the user is holding Heat Rock.",
+		desc: "Creates Sunny Day weather for 5 turns if this move hits. Lasts for 10 turns if the user is holding Heat Rock.",
 		shortDesc: "Creates Sunny Day weather for 5 turns.",
 	},
 	sporeburst: {
@@ -7122,7 +7124,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	prod: {
 		name: "Prod",
-		shortDesc: "Applies taunt to the target.",
+		desc: "Applies Taunt to the target if this hits.",
+		shortDesc: "Applies Taunt to the target.",
 	},
 	shocktail: {
 		name: "Shock Tail",
@@ -7311,7 +7314,227 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Zen Repose",
 		desc: "The user recovers 1/2 of its maximum HP, rounded half up. If the current terrain is Psychic Terrain, it resets all negative stat stages of this Pokemon to 0.",
 		shortDesc: "Heal 50%. Reset lowered stats in Psychic Terrain.",
-	}
+	},
+	mountaingale: {
+		name: "Mountain Gale",
+		desc: "Has a 30% chance to make the target flinch.",
+		shortDesc: "30% chance to make the target flinch.",
+	},
+	cryocrash: {
+		name: "Cryo Crash",
+		desc: "Has a 10% chance to freeze the target. If the target lost HP, the user takes recoil damage equal to 33% the HP lost by the target, rounded half up, but not less than 1 HP.",
+		shortDesc: "Has 33% recoil. 10% chance to freeze target.",
+	},
+	frostyjab: {
+		name: "Frosty Jab",
+		shortDesc: "No additional effect.",
+	},
+	frozenblade: {
+		name: "Frozen Blade",
+		desc: "Has a higher chance for a critical hit.",
+		shortDesc: "High critical hit ratio.",
+	},
+	glaciercrush: {
+		name: "Glacier Crush",
+		desc: "This attack charges on the first turn and executes on the second. Power is halved if the weather is Sunny Day, Desolate Land, Primordial Sea, Rain Dance, or Sandstorm and the user is not holding Utility Umbrella. If the user is holding a Power Herb or the weather is Hail or Sleet, the move completes in one turn. If the user is holding Utility Umbrella and the weather is Hail or Sleet, the move still requires a turn to charge.",
+		shortDesc: "Charges turn 1. Hits turn 2. No charge in hail.",
+
+		prepare: "#solarbeam",
+	},
+	icedrill: {
+		name: "Ice Drill",
+		desc: "This move's type effectiveness against Water is changed to be super effective no matter what this move's type is. Power doubles if the target is frozen. If the user has not fainted, the target is cured of freeze.",
+		shortDesc: "Super eff. on Ice. 2x power if target frozen, thaw.",
+	},
+	subzerofury: {
+		name: "Subzero Fury",
+		desc: "Lowers the user's Attack by 2 stages.",
+		shortDesc: "Lowers the user's Attack by 2.",
+	},
+	tusksmash: {
+		name: "Tusk Smash",
+		desc: "Hits twice. If the first hit breaks the target's substitute, it will take damage for the second hit.",
+		shortDesc: "Hits 2 times in one turn.",
+	},
+	creepingcold: {
+		name: "Creeping Cold",
+		desc: "1.5x power and 30% chance to freeze the target if the weather is Darkness.",
+		shortDesc: "1.5x power and 30% chance to freeze in darkness.",
+	},
+	cryomancy: {
+		name: "Cryomancy",
+		desc: "Has a 30% chance to freeze the target.",
+		shortDesc: "30% chance to freeze the target.",
+	},
+	frostblast: {
+		name: "Frost Blast",
+		desc: "Has a 20% chance to freeze the target.",
+		shortDesc: "20% chance to freeze the target.",
+	},
+	frostbite: {
+		name: "Frostbite",
+		desc: "Has a 30% chance to either burn or freeze the target.",
+		shortDesc: "30% chance to burn or freeze the target.",
+	},
+	slushball: {
+		name: "Slush Ball",
+		desc: "1.5x power if the weather is Rain Dance or Primordial Sea. This move's type effectiveness against Fire is changed to be super effective no matter what this move's type is.",
+		shortDesc: "Super effective on Fire. 1.5x power in rain.",
+	},
+	snowcannon: {
+		name: "Snow Cannon",
+		desc: "Has a 20% chance to make the target flinch.",
+		shortDesc: "20% chance to make the target flinch.",
+	},
+	snowstorm: {
+		name: "Snow Storm",
+		desc: "Creates Hail weather for 5 turns if this move hits. Lasts for 12 turns if the user is holding Icy Rock.",
+		shortDesc: "Creates Hail weather for 5 turns.",
+	},
+	snowballvolley: {
+		name: "Snowball Volley",
+		desc: "Hits two to five times. Has a 35% chance to hit two or three times and a 15% chance to hit four or five times. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit five times.",
+		shortDesc: "Hits 2-5 times in one turn.",
+	},
+	whiteout: {
+		name: "Whiteout",
+		desc: "30% chance to freeze. If this move is successful, the user must recharge on the following turn and cannot select a move.",
+		shortDesc: "30% freeze. User cannot move next turn.",
+	},
+	frigidshield: {
+		name: "Frigid Shield",
+		desc: "The user is protected from most attacks made by other Pokemon during this turn, and Pokemon trying to make contact with the user have a 50% chance to become frozen. Non-damaging moves go through this protection. This move has a 1/X chance of being successful, where X starts at 1 and triples each time this move is successfully used. X resets to 1 if this move fails, if the user's last move used is not Baneful Bunker, Detect, Endure, King's Shield, Max Guard, Obstruct, Protect, Quick Guard, Spiky Shield, or Wide Guard, or if it was one of those moves and the user's protection was broken. Fails if the user moves last this turn.",
+		shortDesc: "Protect from damaging attacks. Contact: 50% freeze.",
+	},
+	frostburst: {
+		name: "Frost Burst",
+		desc: "Freezes all enemies and creates Hail for 7 turn, or 12 if holding an Icy Rock. The user faints.",
+		shortDesc: "Freeze foe(s), creates Hail (7 turns). User faints.",
+	},
+	shiver: {
+		name: "Shiver",
+		desc: "Lowers the target's Speed by 3 stages.",
+		shortDesc: "Lowers the target's Speed by 3.",
+	},
+	wintrybreath: {
+		name: "Wintry Breath",
+		desc: "Freezes the target. Has 80% accuracy in Hail or Sleet.",
+		shortDesc: "Freezes the target. 80% accuracy in hail.",
+	},
+	devour: {
+		name: "Devour",
+		desc: "The user recovers 1/2 the HP lost by the target, rounded half up. If Big Root is held by the user, the HP recovered is 1.3x normal, rounded half down.",
+		shortDesc: "User recovers 50% of the damage dealt.",
+	},
+	dracocharge: {
+		name: "Draco Charge",
+		desc: "If the target lost HP, the user takes recoil damage equal to 33% the HP lost by the target, rounded half up, but not less than 1 HP.",
+		shortDesc: "Has 33% recoil.",
+	},
+	dracojet: {
+		name: "Draco Jet",
+		desc: "If the current terrain is Draconic Terrain, this move has its priority increased by 1.",
+		shortDesc: "User on Draconic Terrain: +1 priority.",
+	},
+	dragonlance: {
+		name: "Dragon Lance",
+		desc: "Has a higher chance for a critical hit.",
+		shortDesc: "High critical hit ratio.",
+	},
+	dragonmaw: {
+		name: "Dragon Maw",
+		desc: "Has a 20% chance to make the target flinch.",
+		shortDesc: "20% chance to make the target flinch.",
+	},
+	dragonwing: {
+		name: "Dragon Wing",
+		desc: "Has a 30% chance to raise the user's Attack and Special Attack by 1 stage.",
+		shortDesc: "30% raise the user's Atk and Sp Atk by 1.",
+	},
+	drakestrike: {
+		name: "Drake Strike",
+		desc: "Has a 10% chance to raise the user's Attack by 1 stage.",
+		shortDesc: "10% chance to raise the user's Attack by 1.",
+	},
+	radiantclaw: {
+		name: "Radiant Claw",
+		desc: "This move's type effectiveness against Fairy is changed to be super effective no matter what this move's type is. Deals damage to the target based on its Special Defense instead of Defense.",
+		shortDesc: "Super eff. on Fairy. Use target's Sp Def, not Def.",
+	},
+	wyrmblitz: {
+		name: "Wyrm Blitz",
+		desc: "Lowers the user's Defense and Special Defense by 1 stage.",
+		shortDesc: "Lowers the user's Defense and Sp. Def by 1.",
+	},
+	causticbreath: {
+		name: "Caustic Breath",
+		desc: "Has a 100% chance to lower the target's Defense and Special Defense by 1 stage.",
+		shortDesc: "100% lower the foe(s) Defense and Sp Def by 1.",
+	},
+	dragonflare: {
+		name: "Dragon Flare",
+		desc: "This move is always a critical hit unless the target is under the effect of Lucky Chant or has the Battle Armor or Shell Armor Abilities.",
+		shortDesc: "Always results in a critical hit.",
+	},
+	dragonfire: {
+		name: "Dragonfire",
+		desc: "Has a 30% chance to burn the target.",
+		shortDesc: "30% chance to burn the target.",
+	},
+	drakonvoice: {
+		name: "Drakon Voice",
+		shortDesc: "No additional effect.",
+	},
+	mysticbreath: {
+		name: "Mystic Breath",
+		desc: "If the current terrain is Draconic Terrain, the user raises a random stat by 1 stage as long as that stat is not already at stage 6.",
+		shortDesc: "User raises a random stat by 1 in Draconic Terrain.",
+	},
+	sealingbeam: {
+		name: "Sealing Beam",
+		desc: "Applies Imprison to the target if this hits.",
+		shortDesc: "Applies Imprison to the target.",
+	},
+	tempestbreath: {
+		name: "Tempest Breath",
+		desc: "Has a 30% chance to either burn or freeze the target.",
+		shortDesc: "30% chance to burn or freeze the target.",
+	},
+	wyvernbreath: {
+		name: "Wyvern Breath",
+		desc: "Has a 30% chance to paralyze the target.",
+		shortDesc: "30% chance to paralyze the target.",
+	},
+	ancientblessing: {
+		name: "Ancient Blessing",
+		desc: "Raises the user's Special Defense by 1 stage and restores 1/3 of its maximum HP, rounded half up.",
+		shortDesc: "Raises the user's Sp Def by 1. Heal 1/3 HP."
+	},
+	draconicterrain: {
+		name: "Draconic Terrain",
+		desc: "For 7 turns, the terrain becomes Grassy Terrain. During the effect, the power of Dragon-type attacks used by grounded and airborne Pokemon is multiplied by 1.3, all type immunities are lost and become resistances instead, and all Pokemon that are not Dragon type lose 1/16 of their maximum HP, rounded down, at the end of each turn, including the last turn. Camouflage transforms the user into a Dragon type and Nature Power becomes Dragon Pulse. Lasts for 12 turns if the user is holding Terrain Extender. Fails if the current terrain is Draconic Terrain.",
+		shortDesc: "7 turns. Ground and air: +Dragon power, no immune.",
+	},
+	dragonarmor: {
+		name: "Dragon Armor",
+		desc: "Raises the user's Defense and Special Defense by 1 stage and become immune to flinching for 2 turns.",
+		shortDesc: "Raises Def and Sp Def by 1. Flinch immune 2 turns.",
+	},
+	dragonroar: {
+		name: "Dragon Roar",
+		desc: "Lowers the target's Attack, Defense, Special Attack and Special Defense by 1 stage.",
+		shortDesc: "Lowers target's Atk, Def, Sp Atk and Sp Def by 1.",
+	},
+	draconify: {
+		name: "Draconify",
+		desc: "Causes the target to become a Dragon type and lowers their evasion by 1 stage. Fails if the target is an Arceus or a Silvally, or if the target is already purely Dragon type.",
+		shortDesc: "Changes target's type to Dragon and lower evasion.",
+	},
+	lurk: {
+		name: "Lurk",
+		desc: "The user's next attack will do 3x damage. This effect is cancelled if the user is hit by a damaging attack before it can execute its next move.",
+		shortDesc: "User's next attack 3x damage. Cancel if hit before.",
+	},
 };
 
 // shortDesc: "40% inflict Leech Seed. User cannot move next turn.",
