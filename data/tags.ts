@@ -74,17 +74,17 @@ export const Tags: {[id: string]: TagData} = {
 	},
 	fist: {
 		name: "Fist",
-		desc: "Boosted 1.2x by Iron Fist.",
+		desc: "Boosted 1.3x by Iron Fist.",
 		moveFilter: move => 'punch' in move.flags,
 	},
 	pulse: {
 		name: "Pulse",
-		desc: "Boosted 1.5x by Mega Launcher.",
+		desc: "Boosted 1.4x by Mega Launcher.",
 		moveFilter: move => 'pulse' in move.flags,
 	},
 	bite: {
 		name: "Bite",
-		desc: "Boosted 1.5x by Strong Jaw.",
+		desc: "Boosted 1.4x by Strong Jaw.",
 		moveFilter: move => 'bite' in move.flags,
 	},
 	ballistic: {
@@ -120,6 +120,21 @@ export const Tags: {[id: string]: TagData} = {
 	gmaxmove: {
 		name: "G-Max Move",
 		moveFilter: move => typeof move.isMax === 'string',
+	},
+	kick: {
+		name: "Kick",
+		desc: "Boosted 1.3x by Striker.",
+		moveFilter: move => 'kick' in move.flags,
+	},
+	magic: {
+		name: "Magic",
+		desc: "Boosted 1.3x by Sorcery.",
+		moveFilter: move => 'magic' in move.flags,
+	},
+	blade: {
+		name: "Blade",
+		desc: "Boosted 1.3x by Sharp Blades.",
+		moveFilter: move => 'blade' in move.flags,
 	},
 
 	// Tiers

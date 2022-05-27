@@ -320,13 +320,13 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	deepseascale: {
 		name: "Deep Sea Scale",
-		desc: "If held by a Clamperl, its Sp. Def is doubled. Evolves Clamperl into Gorebyss when traded.",
-		shortDesc: "If held by a Clamperl, its Sp. Def is doubled.",
+		desc: "If held by a Clamperl or Gorebyss, its Sp. Def is doubled. Evolves Clamperl into Gorebyss when traded.",
+		shortDesc: "If held by a Clamperl or Gorebyss, 2x Sp. Def.",
 	},
 	deepseatooth: {
 		name: "Deep Sea Tooth",
-		desc: "If held by a Clamperl, its Sp. Atk is doubled. Evolves Clamperl into Huntail when traded.",
-		shortDesc: "If held by a Clamperl, its Sp. Atk is doubled.",
+		desc: "If held by a Clamperl or Huntail, its Defense is doubled. Evolves Clamperl into Huntail when traded.",
+		shortDesc: "If held by a Clamperl or Huntail, 2x Sp. Atk.",
 	},
 	destinyknot: {
 		name: "Destiny Knot",

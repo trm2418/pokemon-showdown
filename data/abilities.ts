@@ -4525,6 +4525,42 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 4,
 		num: 1005,
 	},
+	striker: {
+		onBasePowerPriority: 23,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.flags['kick']) {
+				this.debug('Striker boost');
+				return this.chainModify([5325, 4096]);
+			}
+		},
+		name: "Striker",
+		rating: 4,
+		num: 1006,
+	},
+	sharpblades: {
+		onBasePowerPriority: 23,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.flags['blade']) {
+				this.debug('Sharp Blades boost');
+				return this.chainModify([5325, 4096]);
+			}
+		},
+		name: "Sharp Blades",
+		rating: 4,
+		num: 1007,
+	},
+	sorcery: {
+		onBasePowerPriority: 23,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.flags['magic']) {
+				this.debug('Sorcery boost');
+				return this.chainModify([5325, 4096]);
+			}
+		},
+		name: "Sorcery",
+		rating: 4,
+		num: 1008,
+	},
 
 	
 	// CAP

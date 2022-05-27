@@ -922,6 +922,9 @@ export class RandomTeams {
 				if (move.flags['bite']) counter.add('strongjaw');
 				if (move.flags['punch']) counter.add('ironfist');
 				if (move.flags['sound']) counter.add('sound');
+				if (move.flags['kick']) counter.add('striker');
+				if (move.flags['magic']) counter.add('sorcery');
+				if (move.flags['blade']) counter.add('sharpblades');
 				if (move.priority !== 0 || (moveid === 'grassyglide' && abilities.has('Grassy Surge'))) {
 					counter.add('priority');
 				}
@@ -1677,6 +1680,8 @@ export class RandomTeams {
 		if (species.name === 'Lopunny') return isDoubles ? 'Iron Ball' : 'Toxic Orb';
 		if (species.baseSpecies === 'Marowak') return 'Thick Club';
 		if (species.baseSpecies === 'Pikachu') return 'Light Ball';
+		if (species.baseSpecies === 'Gorebyss') return 'Deep Sea Scale';
+		if (species.baseSpecies === 'Huntail') return 'Deep Sea Tooth';
 		if (species.name === 'Regieleki' && !isDoubles) return 'Magnet';
 		if (species.name === 'Shedinja') {
 			const noSash = !teamDetails.defog && !teamDetails.rapidSpin && !isDoubles;
