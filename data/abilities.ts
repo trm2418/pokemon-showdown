@@ -4481,12 +4481,12 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3.5,
 		num: 1001,
 	},
-	felingprowess: {
+	felineprowess: {
 		onModifySpAPriority: 5,
 		onModifySpA(spa) {
 			return this.chainModify(2);
 		},
-		name: "Feling Prowess",
+		name: "Feline Prowess",
 		rating: 5,
 		num: 1002,
 	},
