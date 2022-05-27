@@ -10158,7 +10158,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		baseStats: {hp: 120, atk: 115, def: 140, spa: 40, spd: 75, spe: 55},
 		abilities: {0: "Swift Swim", 1: "Rock Head", H: "Sturdy", S: "Strong Jaw"},
 		heightm: 2,
-		weightkg: 118.8,
+		weightkg: 148.8,
 		color: "Gray",
 		prevo: "Relicanth",
 		evoLevel: 40,

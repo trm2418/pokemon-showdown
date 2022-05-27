@@ -2455,7 +2455,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			if (move.normalizeBoosted) return this.chainModify([6144, 4096]);
 		},
 		name: "Normalize",
-		rating: 0,
+		rating: 2,
 		num: 96,
 	},
 	oblivious: {
@@ -4507,6 +4507,23 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Hubris",
 		rating: 3,
 		num: 1004,
+	},
+	multipunch: {
+		onBasePowerPriority: 23,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.flags['punch']) {
+				return this.chainModify([2048, 4096]);
+			}
+		},
+		onModifyMovePriority: -2,
+		onModifyMove(move) {
+			if (move.flags['punch']) {
+				move.multihit = [2, 5];
+			}
+		},
+		name: "Multi Punch",
+		rating: 4,
+		num: 1005,
 	},
 
 	

@@ -44,7 +44,7 @@ const RecoveryMove = [
 ];
 // Moves that drop stats:
 const ContraryMoves = [
-	'closecombat', 'leafstorm', 'overheat', 'superpower', 'vcreate', 'subzerofury', 'stormcrash',
+	'closecombat', 'leafstorm', 'overheat', 'superpower', 'vcreate', 'subzerofury', 'stormcrash', 'psychoboost', 'dracometeor',
 ];
 // Moves that boost Attack:
 const PhysicalSetup = [
