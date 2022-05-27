@@ -787,7 +787,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "LC",
 	},
 	sirfetchd: {
-		randomBattleMoves: ["bravebird", "closecombat", "firstimpression", "knockoff", "swordsdance"],
+		randomBattleMoves: ["bravebird", "sacredsword", "firstimpression", "nightslash", "swordsdance"],
 		randomBattleLevel: 84,
 		randomDoubleBattleMoves: ["bravebird", "closecombat", "firstimpression", "knockoff", "poisonjab", "protect", "swordsdance"],
 		randomDoubleBattleLevel: 85,
@@ -2421,7 +2421,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "NFE",
 	},
 	sceptile: {
-		randomBattleMoves: ["earthquake", "focusblast", "gigadrain", "leafstorm", "leechseed", "rockslide", "substitute"],
+		randomBattleMoves: ["earthquake", "leafblade", "nightslash", "xscissor", "swordsdance"],
 		randomBattleLevel: 86,
 		randomDoubleBattleMoves: ["breakingswipe", "dragonpulse", "focusblast", "leafstorm", "protect"],
 		randomDoubleBattleLevel: 88,
@@ -2582,7 +2582,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "OU",
 	},
 	gallade: {
-		randomBattleMoves: ["closecombat", "knockoff", "shadowsneak", "swordsdance", "trick", "zenheadbutt"],
+		randomBattleMoves: ["sacredsword", "nightslash", "shadowsneak", "swordsdance", "psychocut", "electroslash"],
 		randomBattleLevel: 85,
 		randomDoubleBattleMoves: ["closecombat", "feint", "knockoff", "protect", "swordsdance", "tripleaxel", "zenheadbutt"],
 		randomDoubleBattleLevel: 86,
@@ -4642,7 +4642,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "LC",
 	},
 	escavalier: {
-		randomBattleMoves: ["closecombat", "drillrun", "doubleironbash", "knockoff", "megahorn", "swordsdance"],
+		randomBattleMoves: ["closecombat", "drillrun", "doubleironbash", "knockoff", "xscissor", "swordsdance"],
 		randomBattleLevel: 84,
 		randomDoubleBattleMoves: ["closecombat", "drillrun", "doubleironbash", "knockoff", "megahorn", "protect", "swordsdance"],
 		randomDoubleBattleLevel: 86,
@@ -5802,7 +5802,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "NFE",
 	},
 	tsareena: {
-		randomBattleMoves: ["highjumpkick", "knockoff", "powerwhip", "rapidspin", "synthesis", "tripleaxel", "uturn"],
+		randomBattleMoves: ["highjumpkick", "knockoff", "tropkick", "rapidspin", "synthesis", "tripleaxel", "uturn"],
 		randomBattleLevel: 84,
 		randomDoubleBattleMoves: ["highjumpkick", "knockoff", "playrough", "powerwhip", "rapidspin", "tripleaxel", "uturn"],
 		randomDoubleBattleLevel: 88,
@@ -6177,7 +6177,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		doublesTier: "DOU",
 	},
 	kartana: {
-		randomBattleMoves: ["knockoff", "leafblade", "sacredsword", "smartstrike", "swordsdance"],
+		randomBattleMoves: ["nightslash", "leafblade", "sacredsword", "smartstrike", "swordsdance"],
 		randomBattleLevel: 74,
 		randomDoubleBattleMoves: ["knockoff", "leafblade", "sacredsword", "smartstrike", "swordsdance"],
 		randomDoubleBattleLevel: 78,
