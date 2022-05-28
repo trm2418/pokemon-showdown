@@ -19964,11 +19964,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		onModifyMove(move, pokemon) {
-			if (!move.secondaries) {
-				move.secondaries = [];
-			}
 			
 			if (['sunnyday', 'desolateland'].includes(pokemon.effectiveWeather())) {
+				if (!move.secondaries) {
+					move.secondaries = [];
+				}
 				move.secondaries.push({
 					chance: 50,
 					status: 'brn',
@@ -22218,14 +22218,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		onModifyMove(move, pokemon) {
+		/*onModifyMove(move, pokemon) {
 			move.secondaries = [];
 			if (this.field.isTerrain('draconicterrain')) {
 				move.secondaries.push({
 					chance: 100,
 				});
 			}
-		},
+		},*/
 		secondary: null,
 		target: "normal",
 		type: "Dragon",
