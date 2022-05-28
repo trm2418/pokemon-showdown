@@ -2663,7 +2663,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "NFE",
 	},
 	exploud: {
-		randomBattleMoves: ["boomburst", "fireblast", "focusblast", "overdrive", "surf"],
+		randomBattleMoves: ["boomburst", "fireblast", "focusblast", "overdrive", "drakonvoice"],
 		randomBattleLevel: 84,
 		randomDoubleBattleMoves: ["boomburst", "fireblast", "focusblast", "hypervoice", "icywind", "protect"],
 		randomDoubleBattleLevel: 88,
