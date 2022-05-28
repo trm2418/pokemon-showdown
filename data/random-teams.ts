@@ -1662,6 +1662,8 @@ export class RandomTeams {
 			// any Pokémon which can take a SE hit via Solid Rock deserves to have
 			// its Shell Smash considered a good enough speed setup move for WP.
 			if (ability === 'Solid Rock') return 'Weakness Policy';
+			if (species.id === 'huntail') return 'Deep Sea Tooth';
+			if (species.id === 'gorebyss') return 'Deep Sea Scale';
 			return 'White Herb';
 		}
 		// Techno Blast should always be Water-type
