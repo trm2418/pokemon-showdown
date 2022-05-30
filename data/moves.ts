@@ -20678,7 +20678,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Spore Shield",
 		pp: 10,
 		priority: 4,
-		flags: {powder: 1},
+		flags: {},
 		stallingMove: true,
 		volatileStatus: 'sporeshield',
 		onPrepareHit(pokemon) {
