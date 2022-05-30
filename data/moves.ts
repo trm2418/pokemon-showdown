@@ -21721,7 +21721,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		accuracy: 95,
 		basePower: 75,
 		basePowerCallback(source, target, move) {
-			if (['hail'].includes(source.effectiveWeather())) {
+			if (['darkness'].includes(source.effectiveWeather())) {
 				if (!source.isAlly(target)) this.hint(`${move.name}'s BP 1.5x on target.`);
 				return move.basePower * 1.5;
 			}
@@ -21733,7 +21733,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		onModifyMove(move, pokemon) {
-			if (['hail'].includes(pokemon.effectiveWeather())) {
+			if (['darkness'].includes(pokemon.effectiveWeather())) {
 				if (!move.secondaries) {
 					move.secondaries = [];
 				}
@@ -22224,29 +22224,31 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		onModifyMove(move, pokemon) {
-			if (this.field.isTerrain('grassyterrain')) {
+			if (this.field.isTerrain('draconicterrain')) {
 				if (!move.secondaries) {
 					move.secondaries = [];
 				}
 				move.secondaries.push({
 					chance: 100,
-					onHit(source) {
-						const stats: BoostID[] = [];
-						let stat: BoostID;
-						for (stat in source.boosts) {
-							if (source.boosts[stat] < 6) {
-								stats.push(stat);
+					self: {
+						onHit(pokemon) {
+							const stats: BoostID[] = [];
+							let stat: BoostID;
+							for (stat in pokemon.boosts) {
+								if (pokemon.boosts[stat] < 6) {
+									stats.push(stat);
+								}
 							}
-						}
-						if (stats.length) {
-							const randomStat = this.sample(stats);
-							const boost: SparseBoostsTable = {};
-							boost[randomStat] = 1;
-							this.boost(boost);
-						} else {
-							return false;
-						}
-					},
+							if (stats.length) {
+								const randomStat = this.sample(stats);
+								const boost: SparseBoostsTable = {};
+								boost[randomStat] = 1;
+								this.boost(boost);
+							} else {
+								return false;
+							}
+						},
+					}
 				});
 			}
 		},
@@ -22275,7 +22277,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		accuracy: 95,
 		basePower: 90,
 		category: "Special",
-		name: "Prod",
+		name: "Sealing Beam",
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
@@ -22399,6 +22401,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		},
 		secondary: null,
 		target: "all",
-		type: "Draconic",
+		type: "Dragon",
 	},
 };
