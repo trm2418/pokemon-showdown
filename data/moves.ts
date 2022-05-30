@@ -18034,7 +18034,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			}
 		},
 		onModifyMove(move, pokemon) {
-			if (this.field.terrain && pokemon.isGrounded() && this.field.terrain != 'draconicterrain' && this.field.terrain != 'hiveterrain') {
+			if (this.field.terrain && (pokemon.isGrounded() || this.field.terrain === 'draconicterrain' || this.field.terrain === 'hiveterrain')) {
 				move.basePower *= 2;
 			}
 		},

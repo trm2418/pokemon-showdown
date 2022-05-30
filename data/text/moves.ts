@@ -7513,27 +7513,27 @@ export const MovesText: {[k: string]: MoveText} = {
 	draconicterrain: {
 		name: "Draconic Terrain",
 		desc: "For 7 turns, the terrain becomes Draconic Terrain. During the effect, the power of Dragon-type attacks used by grounded and airborne Pokemon is multiplied by 1.3, all type immunities are lost and become resistances instead, and all Pokemon that are not Dragon type lose 1/16 of their maximum HP, rounded down, at the end of each turn, including the last turn. Camouflage transforms the user into a Dragon type and Nature Power becomes Dragon Pulse. Lasts for 12 turns if the user is holding Terrain Extender. Fails if the current terrain is Draconic Terrain.",
-		shortDesc: "7 turns. Ground and air: +Dragon power, no immune.",
+		shortDesc: "7 turns. Ground + air: +Dragon power, no immune.",
 	},
 	dragonarmor: {
 		name: "Dragon Armor",
 		desc: "Raises the user's Defense and Special Defense by 1 stage and become immune to flinching for 2 turns.",
-		shortDesc: "Raises Def and Sp Def by 1. Flinch immune 2 turns.",
+		shortDesc: "Raises Def + Sp Def by 1. Flinch immune 2 turns.",
 	},
 	dragonroar: {
 		name: "Dragon Roar",
 		desc: "Lowers the target's Attack, Defense, Special Attack and Special Defense by 1 stage.",
-		shortDesc: "Lowers target's Atk, Def, Sp Atk and Sp Def by 1.",
+		shortDesc: "Lowers target Atk, Def, Sp Atk and Sp Def by 1.",
 	},
 	draconify: {
 		name: "Draconify",
 		desc: "Causes the target to become a Dragon type and lowers their evasion by 1 stage. Fails if the target is an Arceus or a Silvally, or if the target is already purely Dragon type.",
-		shortDesc: "Changes target's type to Dragon and lower evasion.",
+		shortDesc: "Changes target type to Dragon and lower evasion.",
 	},
 	lurk: {
 		name: "Lurk",
 		desc: "The user's next attack will do 3x damage. This effect is cancelled if the user is hit by a damaging attack before it can execute its next move.",
-		shortDesc: "User's next attack 3x damage. Cancel if hit before.",
+		shortDesc: "User's next attack 3x dmg. Cancel if hit before.",
 	},
 };
 
