@@ -338,6 +338,12 @@ export const DefaultText: {[k: string]: DefaultText} = {
 		activate: "  The draconic energy removed the immunity!",
 		damage: "  [POKEMON] is damaged by the draconic energy!",
 	},
+	hiveterrain: {
+		start: "  An insect hive grew on the battlefield and into the sky!",
+		end: "  The insect hive disappeared from the battlefield!",
+		activate: "  The insect hive boosted the attack!",
+		blockMove: "  The Fire-type attack blew up in [POKEMON]'s face!",
+	},
 
 	// field effects
 	gravity: {

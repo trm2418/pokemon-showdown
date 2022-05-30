@@ -1943,6 +1943,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		accuracy: true,
 		basePower: 0,
 		category: "Status",
+		isNonstandard: "Past",
 		name: "Camouflage",
 		pp: 20,
 		priority: 0,
@@ -11818,6 +11819,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 				move = 'moonblast';
 			} else if (this.field.isTerrain('psychicterrain')) {
 				move = 'psychic';
+			} else if (this.field.isTerrain('draconicterrain')) {
+				move = 'dragonpulse';
+			} else if (this.field.isTerrain('hiveterrain')) {
+				move = 'bugbuzz';
+			} else if (this.field.isTerrain('miasmaterrain')) {
+				move = 'sludgebomb';
+			} else if (this.field.isTerrain('auraterrain')) {
+				move = 'aurasphere';
 			}
 			this.actions.useMove(move, pokemon, target);
 			return null;
@@ -17996,7 +18005,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1, pulse: 1},
 		onModifyType(move, pokemon) {
-			if (!pokemon.isGrounded()) return;
+			if (!pokemon.isGrounded() && this.field.terrain != 'draconicterrain' && this.field.terrain != 'hiveterrain') return;
 			switch (this.field.terrain) {
 			case 'electricterrain':
 				move.type = 'Electric';
@@ -18010,10 +18019,22 @@ export const Moves: {[moveid: string]: MoveData} = {
 			case 'psychicterrain':
 				move.type = 'Psychic';
 				break;
+			case 'draconicterrain':
+				move.type = 'Dragon';
+				break;
+			case 'hiveterrain':
+				move.type = 'Bug';
+				break;
+			case 'miasmaterrain':
+				move.type = 'Poison';
+				break;
+			case 'auraterrain':
+				move.type = 'Fighting';
+				break;
 			}
 		},
 		onModifyMove(move, pokemon) {
-			if (this.field.terrain && pokemon.isGrounded()) {
+			if (this.field.terrain && pokemon.isGrounded() && this.field.terrain != 'draconicterrain' && this.field.terrain != 'hiveterrain') {
 				move.basePower *= 2;
 			}
 		},
