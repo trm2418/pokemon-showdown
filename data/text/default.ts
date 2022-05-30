@@ -332,6 +332,12 @@ export const DefaultText: {[k: string]: DefaultText} = {
 		end: "  The weirdness disappeared from the battlefield!",
 		block: "  [POKEMON] is protected by the Psychic Terrain!",
 	},
+	draconicterrain: {
+		start: "  Draconic energy enveloped the battlefield and sky!",
+		end: "  The draconic energy disappeared from the battlefield!",
+		activate: "  The draconic energy removed the immunity!",
+		damage: "  [POKEMON] is damaged by the draconic energy!",
+	},
 
 	// field effects
 	gravity: {

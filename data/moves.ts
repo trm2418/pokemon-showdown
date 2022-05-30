@@ -22371,14 +22371,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 				}
 				return dur;
 			},
-			/*
-			effect: {
-				onNegateImmunity: false,
-				onEffectivenessPriority: 1,
-				onEffectiveness(typeMod, target, type, move) {
-					if (move && !this.dex.getImmunity(move, type)) return - 1;
-				},
-			},*/
+			onNegateImmunity: false,
+			onEffectivenessPriority: 1,
+			onEffectiveness(typeMod, target, type, move) {
+				if (move && !this.dex.getImmunity(move, type)) return - 1;
+			},
 			onBasePowerPriority: 6,
 			onBasePower(basePower, attacker, defender, move) {
 				if (move.type === 'Dragon') {
