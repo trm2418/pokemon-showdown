@@ -2999,8 +2999,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	imprison: {
 		name: "Imprison",
-		desc: "The user prevents all opposing Pokemon from using any moves that the user also knows as long as the user remains active.",
-		shortDesc: "No foe can use any move known by the user.",
+		desc: "The user prevents all opposing Pokemon from using any moves that the user also knows as long as the user remains active. Normal types are immune to this effect.",
+		shortDesc: "Non Normal type foes can't use moves known by user.",
 		gen7: {
 			desc: "The user prevents all opposing Pokemon from using any moves that the user also knows as long as the user remains active. Z-Powered moves can still be selected and executed during this effect.",
 		},
@@ -7512,7 +7512,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	draconicterrain: {
 		name: "Draconic Terrain",
-		desc: "For 7 turns, the terrain becomes Grassy Terrain. During the effect, the power of Dragon-type attacks used by grounded and airborne Pokemon is multiplied by 1.3, all type immunities are lost and become resistances instead, and all Pokemon that are not Dragon type lose 1/16 of their maximum HP, rounded down, at the end of each turn, including the last turn. Camouflage transforms the user into a Dragon type and Nature Power becomes Dragon Pulse. Lasts for 12 turns if the user is holding Terrain Extender. Fails if the current terrain is Draconic Terrain.",
+		desc: "For 7 turns, the terrain becomes Draconic Terrain. During the effect, the power of Dragon-type attacks used by grounded and airborne Pokemon is multiplied by 1.3, all type immunities are lost and become resistances instead, and all Pokemon that are not Dragon type lose 1/16 of their maximum HP, rounded down, at the end of each turn, including the last turn. Camouflage transforms the user into a Dragon type and Nature Power becomes Dragon Pulse. Lasts for 12 turns if the user is holding Terrain Extender. Fails if the current terrain is Draconic Terrain.",
 		shortDesc: "7 turns. Ground and air: +Dragon power, no immune.",
 	},
 	dragonarmor: {

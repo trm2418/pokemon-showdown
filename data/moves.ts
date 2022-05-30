@@ -8929,8 +8929,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 			noCopy: true,
 			onStart(target) {
 				this.add('-start', target, 'move: Imprison');
+				this.hint("Imprison doesn't work against Normal types.");
 			},
 			onFoeDisableMove(pokemon) {
+				if (pokemon.hasType('Normal')) return;
 				for (const moveSlot of this.effectState.source.moveSlots) {
 					if (moveSlot.id === 'struggle') continue;
 					pokemon.disableMove(moveSlot.id, 'hidden');
@@ -8939,6 +8941,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			},
 			onFoeBeforeMovePriority: 4,
 			onFoeBeforeMove(attacker, defender, move) {
+				if (attacker.hasType('Normal')) return;
 				if (move.id !== 'struggle' && this.effectState.source.hasMove(move.id) && !move.isZ && !move.isMax) {
 					this.add('cant', attacker, 'move: Imprison', move);
 					return false;
@@ -22283,7 +22286,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {protect: 1, mirror: 1},
 		secondary: {
 			chance: 100,
-			volatileStatus: 'imprison',
+			self: {
+				volatileStatus: 'imprison',
+			}
 		},
 		target: "normal",
 		type: "Dragon",
