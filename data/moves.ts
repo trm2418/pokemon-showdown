@@ -4882,6 +4882,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			return 80;
 		},
 		category: "Special",
+		isNonstandard: "Past",
 		name: "Fire Pledge",
 		pp: 10,
 		priority: 0,
@@ -7099,6 +7100,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			return 80;
 		},
 		category: "Special",
+		isNonstandard: "Past",
 		name: "Grass Pledge",
 		pp: 10,
 		priority: 0,
@@ -19081,6 +19083,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			return 80;
 		},
 		category: "Special",
+		isNonstandard: "Past",
 		name: "Water Pledge",
 		pp: 10,
 		priority: 0,
@@ -20716,7 +20719,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				return this.NOT_FAIL;
 			},
 			onHit(target, source, move) {
-				if (this.randomChance(1,2)) {
+				if (move.isZOrMaxPowered && this.checkMoveMakesContact(move, source, target) && this.randomChance(1,2)) {
 					source.trySetStatus('slp', target);
 				}
 			},
@@ -21328,7 +21331,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Arcane Pulse",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, protect: 1, pulse: 1, mirror: 1},
+		flags: {protect: 1, pulse: 1, mirror: 1},
 		secondary: {
 			chance: 50,
 			terrain: 'psychicterrain',
@@ -21730,8 +21733,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		onModifyMove(move, pokemon) {
-			move.secondaries = [];
 			if (['darkness'].includes(pokemon.effectiveWeather())) {
+				if (!move.secondaries) {
+					move.secondaries = [];
+				}
 				move.secondaries.push({
 					chance: 30,
 					status: 'frz',
@@ -21933,7 +21938,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				return this.NOT_FAIL;
 			},
 			onHit(target, source, move) {
-				if (this.randomChance(1,2)) {
+				if (move.isZOrMaxPowered && this.checkMoveMakesContact(move, source, target) && this.randomChance(1,2)) {
 					source.trySetStatus('frz', target);
 				}
 			},
@@ -22151,7 +22156,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		num: 2147,
 		accuracy: 100,
 		basePower: 65,
-		category: "Physical",
+		category: "Special",
 		name: "Caustic Breath",
 		pp: 15,
 		priority: 0,
@@ -22218,16 +22223,182 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		/*onModifyMove(move, pokemon) {
-			move.secondaries = [];
-			if (this.field.isTerrain('draconicterrain')) {
+		onModifyMove(move, pokemon) {
+			if (this.field.isTerrain('grassyterrain')) {
+				if (!move.secondaries) {
+					move.secondaries = [];
+				}
 				move.secondaries.push({
 					chance: 100,
+					onHit(source) {
+						const stats: BoostID[] = [];
+						let stat: BoostID;
+						for (stat in source.boosts) {
+							if (source.boosts[stat] < 6) {
+								stats.push(stat);
+							}
+						}
+						if (stats.length) {
+							const randomStat = this.sample(stats);
+							const boost: SparseBoostsTable = {};
+							boost[randomStat] = 1;
+							this.boost(boost);
+						} else {
+							return false;
+						}
+					},
 				});
 			}
-		},*/
+		},
 		secondary: null,
 		target: "normal",
 		type: "Dragon",
+	},
+	regalroar: {
+		num: 2152,
+		accuracy: 90,
+		basePower: 80,
+		category: "Special",
+		name: "Regal Roar",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, sound: 1, mirror: 1},
+		secondary: {
+			chance: 50,
+			terrain: 'draconicterrain',
+		},
+		target: "normal",
+		type: "Dragon",
+	},
+	sealingbeam: {
+		num: 2153,
+		accuracy: 95,
+		basePower: 90,
+		category: "Special",
+		name: "Prod",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			volatileStatus: 'imprison',
+		},
+		target: "normal",
+		type: "Dragon",
+	},
+	tempestbreath: {
+		num: 2154,
+		accuracy: 100,
+		basePower: 100,
+		category: "Special",
+		name: "Tempest Breath",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 30,
+			onHit(target, source) {
+				const result = this.random(2);
+				if (result === 0) {
+					target.trySetStatus('brn', source);
+				} else {
+					target.trySetStatus('frz', source);
+				}
+			},
+		},
+		target: "normal",
+		type: "Dragon",
+	},
+	wyvernbreath: {
+		num: 2155,
+		accuracy: 100,
+		basePower: 85,
+		category: "Special",
+		name: "Wyvern Breath",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 30,
+			status: 'par',
+		},
+		target: "normal",
+		type: "Dragon",
+	},
+	ancientblessing: {
+		num: 2166,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Ancient Blessing",
+		pp: 10,
+		priority: 0,
+		flags: {heal: 1},
+		heal: [1, 3],
+		boosts: {
+			spd: 1,
+		},
+		secondary: null,
+		target: "self",
+		type: "Dragon",
+	},
+	draconicterrain: {
+		num: 2167,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Draconic Terrain",
+		pp: 20,
+		priority: 0,
+		flags: {},
+		terrain: 'draconicterrain',
+		condition: {
+			duration: 5,
+			durationCallback(source, effect) {
+				var dur = 5;
+				if (source?.moveThisTurn === 'draconicterrain') {
+					dur += 2;
+				}
+				if (source?.hasItem('terrainextender')) {
+					dur += 5;
+				}
+				return dur;
+			},
+			/*
+			effect: {
+				onNegateImmunity: false,
+				onEffectivenessPriority: 1,
+				onEffectiveness(typeMod, target, type, move) {
+					if (move && !this.dex.getImmunity(move, type)) return - 1;
+				},
+			},*/
+			onBasePowerPriority: 6,
+			onBasePower(basePower, attacker, defender, move) {
+				if (move.type === 'Dragon') {
+					this.debug('draconic terrain boost');
+					return this.chainModify([5325, 4096]);
+				}
+			},
+			onFieldStart(field, source, effect) {
+				if (effect?.effectType === 'Ability') {
+					this.add('-fieldstart', 'move: Draconic Terrain', '[from] ability: ' + effect.name, '[of] ' + source);
+				} else {
+					this.add('-fieldstart', 'move: Draconic Terrain');
+				}
+			},
+			onResidualOrder: 5,
+			onResidualSubOrder: 2,
+			onResidual(pokemon) {
+				this.damage(pokemon.baseMaxhp / 16, pokemon);
+			},
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 7,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Draconic Terrain');
+			},
+		},
+		secondary: null,
+		target: "all",
+		type: "Draconic",
 	},
 };
