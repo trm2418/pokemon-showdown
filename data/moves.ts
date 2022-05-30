@@ -21721,7 +21721,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		accuracy: 95,
 		basePower: 75,
 		basePowerCallback(source, target, move) {
-			if (['darkness'].includes(source.effectiveWeather())) {
+			if (['hail'].includes(source.effectiveWeather())) {
 				if (!source.isAlly(target)) this.hint(`${move.name}'s BP 1.5x on target.`);
 				return move.basePower * 1.5;
 			}
@@ -21733,7 +21733,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		onModifyMove(move, pokemon) {
-			if (['darkness'].includes(pokemon.effectiveWeather())) {
+			if (['hail'].includes(pokemon.effectiveWeather())) {
 				if (!move.secondaries) {
 					move.secondaries = [];
 				}
