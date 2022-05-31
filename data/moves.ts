@@ -20170,7 +20170,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {},
 		volatileStatus: 'kindle',
 		onHit(pokemon) {
-			this.add('-start', pokemon, 'move: Kindle');
+			this.add('-singlemove', pokemon, 'move: Kindle');
 		},
 		condition: {
 			duration: 2,
