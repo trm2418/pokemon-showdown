@@ -6937,6 +6937,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Burns the target and lower its Special Attack by 1 stage.",
 		shortDesc: "Burn and lower the target's Sp. Atk by 1.",
 	},
+	ignite: {
+		name: "Ignite",
+		desc: "For 6 turns, the user's Fire-type attacks do 2x damage and any contact with the user has a 30% chance to burn the other Pokemon.",
+		shortDesc: "6 turns, 2x Fire power, 30% burn from any contact."
+	},
 	kindle: {
 		name: "Kindle",
 		desc: "Raises the user's Special Defense by 1 stage. If the user uses a Fire-type attack on the next turn, its power will be 2.5x.",

@@ -20114,6 +20114,51 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Fire",
 	},
+	ignite: {
+		num: 2018,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Ignite",
+		pp: 15,
+		priority: 0,
+		flags: {},
+		volatileStatus: 'ignite',
+		onHit(pokemon) {
+			this.add('-activate', pokemon, 'move: Ignite');
+		},
+		condition: {
+			duration: 6,
+			onBasePowerPriority: 9,
+			onBasePower(basePower, attacker, defender, move) {
+				if (move.type === 'Fire') {
+					this.debug('ignite boost');
+					return this.chainModify(2);
+				}
+			},
+			onDamagingHit(damage, target, source, move) {
+				if (this.checkMoveMakesContact(move, source, target)) {
+					if (this.randomChance(3, 10)) {
+						source.trySetStatus('brn', target);
+					}
+				}
+			},
+			onModifyMove(move) {
+				if (!move?.flags['contact'] || move.target === 'self') return;
+				if (!move.secondaries) {
+					move.secondaries = [];
+				}
+				move.secondaries.push({
+					chance: 30,
+					status: 'brn',
+					ability: this.dex.abilities.get('poisontouch'),
+				});
+			},
+		},
+		secondary: null,
+		target: "self",
+		type: "Fire",
+	},
 	kindle: {
 		num: 2019,
 		accuracy: true,
@@ -20122,10 +20167,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Kindle",
 		pp: 20,
 		priority: 0,
-		flags: {snatch: 1},
+		flags: {},
 		volatileStatus: 'kindle',
 		onHit(pokemon) {
-			this.add('-activate', pokemon, 'move: Kindle');
+			this.add('-singlemove', pokemon, 'move: Kindle');
 		},
 		condition: {
 			duration: 2,
