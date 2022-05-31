@@ -1889,6 +1889,10 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				}
 				return null;
 			}
+			else if (move.id === 'healingcurrent') {
+				this.boost({spa: 1});
+				return null;
+			}
 		},
 		onAnyRedirectTarget(target, source, source2, move) {
 			if (move.type !== 'Electric' || ['firepledge', 'grasspledge', 'waterpledge'].includes(move.id)) return;
@@ -2230,6 +2234,10 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				if (!this.boost({spe: 1})) {
 					this.add('-immune', target, '[from] ability: Motor Drive');
 				}
+				return null;
+			}
+			else if (move.id === 'healingcurrent') {
+				this.boost({spe: 1});
 				return null;
 			}
 		},
@@ -4225,6 +4233,10 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				if (!this.heal(target.baseMaxhp / 4)) {
 					this.add('-immune', target, '[from] ability: Volt Absorb');
 				}
+				return null;
+			}
+			else if (move.id === 'healingcurrent') {
+				this.heal(target.baseMaxhp / 4);
 				return null;
 			}
 		},

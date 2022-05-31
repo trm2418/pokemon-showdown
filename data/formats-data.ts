@@ -2558,7 +2558,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "LC",
 	},
 	pelipper: {
-		randomBattleMoves: ["defog", "hurricane", "hydropump", "clearrain", "scald", "uturn"],
+		randomBattleMoves: ["defog", "hurricane", "hydropump", "clearrain", "scald"],
 		randomBattleLevel: 81,
 		randomDoubleBattleMoves: ["hurricane", "hydropump", "protect", "roost", "tailwind", "wideguard"],
 		randomDoubleBattleLevel: 83,
@@ -4298,7 +4298,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		doublesTier: "(DUU)",
 	},
 	sawksoran: {
-		randomBattleMoves: ["closecombat", "superpower", "stormcrash", "knockoff", "rest", "sleeptalk"],
+		randomBattleMoves: ["closecombat", "stormcrash", "knockoff", "rest", "sleeptalk"],
 		randomBattleLevel: 84,
 		tier: "PU",
 	},
@@ -5353,10 +5353,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	pangoro: {
 		randomBattleMoves: ["closecombat", "gunkshot", "icepunch", "wickedblow", "partingshot"],
-		randomBattleLevel: 84,
+		randomBattleLevel: 80,
 		randomDoubleBattleMoves: ["bulletpunch", "closecombat", "drainpunch", "gunkshot", "icepunch", "knockoff", "protect"],
 		randomDoubleBattleLevel: 88,
-		tier: "NUBL",
+		tier: "RU",
 		doublesTier: "(DUU)",
 	},
 	furfrou: {

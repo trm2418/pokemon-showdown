@@ -7196,6 +7196,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "No additional effect.",
 		shortDesc: "Usually goes first.",
 	},
+	healingcurrent: {
+		name: "Healing Current",
+		desc: "The user recovers 1/3 of its maximum HP or 1/2 if the current terrain is Electric Terrain. Also activates the abilities Lightning Rod, Motor Drive and Volt Absorb.",
+		shortDesc: "Heal 1/3, 1/2 Ele Terrain. Trigger some abilities.",
+	},
 	thundershield: {
 		name: "Thunder Shield",
 		desc: "The user is protected from most attacks made by other Pokemon during this turn, and Pokemon making contact with the user become paralyzed. This move has a 1/X chance of being successful, where X starts at 1 and triples each time this move is successfully used. X resets to 1 if this move fails, if the user's last move used is not Baneful Bunker, Detect, Endure, King's Shield, Max Guard, Obstruct, Protect, Quick Guard, Spiky Shield, or Wide Guard, or if it was one of those moves and the user's protection was broken. Fails if the user moves last this turn.",

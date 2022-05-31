@@ -21083,6 +21083,32 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Electric",
 	},
+	healingcurrent: {
+		num: 2071,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Healing Current",
+		pp: 5,
+		priority: 0,
+		flags: {heal: 1},
+		onHit(pokemon) {
+			let factor = 1/3;
+			if (this.field.isTerrain('electricterrain')) {
+				factor = 0.5;
+			}
+
+			const success = !!this.heal(this.modify(pokemon.maxhp, factor));
+			if (!success) {
+				this.add('-fail', pokemon, 'heal');
+				return this.NOT_FAIL;
+			}
+			return success;
+		},
+		secondary: null,
+		target: "self",
+		type: "Electric",
+	},
 	thundershield: {
 		num: 2074,
 		accuracy: true,

@@ -14779,7 +14779,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		forme: "Soran",
 		types: ["Ice", "Dark"],
 		baseStats: {hp: 71, atk: 90, def: 90, spa: 115, spd: 90, spe: 79},
-		abilities: {0: "Heatproof", 1: "Snow Cloak", H: "Weak Armor"},
+		abilities: {0: "Heatproof", 1: "Snow Warning", H: "Weak Armor"},
 		heightm: 1.3,
 		weightkg: 57.5,
 		color: "Black",
