@@ -1109,7 +1109,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		isBreakable: true,
 		name: "Flower Veil",
-		rating: 3,
+		rating: 2.5,
 		num: 166,
 	},
 	fluffy: {
@@ -2177,7 +2177,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			this.field.setTerrain('mistyterrain');
 		},
 		name: "Misty Surge",
-		rating: 3.5,
+		rating: 4,
 		num: 228,
 	},
 	moldbreaker: {
