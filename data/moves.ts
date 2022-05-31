@@ -20735,15 +20735,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 						delete source.volatiles['lockedmove'];
 					}
 				}
-				if (this.checkMoveMakesContact(move, source, target)) {
-					if (this.randomChance(1,2)) {
-						source.trySetStatus('slp', target);
-					}
+				if (this.checkMoveMakesContact(move, source, target) && this.randomChance(1,2) && source.runStatusImmunity('powder')) {
+					source.trySetStatus('slp', target);
 				}
 				return this.NOT_FAIL;
 			},
 			onHit(target, source, move) {
-				if (move.isZOrMaxPowered && this.checkMoveMakesContact(move, source, target) && this.randomChance(1,2)) {
+				if (move.isZOrMaxPowered && this.checkMoveMakesContact(move, source, target) && this.randomChance(1,2) && source.runStatusImmunity('powder')) {
 					source.trySetStatus('slp', target);
 				}
 			},
@@ -22414,7 +22412,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 			onResidualOrder: 5,
 			onResidualSubOrder: 2,
 			onResidual(pokemon) {
-				this.damage(pokemon.baseMaxhp / 16, pokemon);
+				if (!pokemon.hasType('Dragon')) {
+					this.damage(pokemon.baseMaxhp / 16, pokemon);
+				}
 			},
 			onFieldResidualOrder: 27,
 			onFieldResidualSubOrder: 7,
@@ -22424,6 +22424,81 @@ export const Moves: {[moveid: string]: MoveData} = {
 		},
 		secondary: null,
 		target: "all",
+		type: "Dragon",
+	},
+	dragonarmor: {
+		num: 2168,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Dragon Armor",
+		pp: 10,
+		priority: 0,
+		flags: {},
+		volatileStatus: 'dragonarmor',
+		condition: {
+			duration: 3,
+			onStart(target) {
+				this.add('-start', target, 'Dragon Armor');
+			},
+			onImmunity(type, pokemon) {
+				if (type === 'flinch') return false;
+			},
+			onResidualOrder: 18,
+			onEnd(target) {
+				this.add('-end', target, 'Dragon Armor');
+			},
+		},
+		boosts: {
+			def: 1,
+			spd: 1,
+		},
+		secondary: null,
+		target: "self",
+		type: "Dragon",
+	},
+	dragonroar: {
+		num: 2169,
+		accuracy: 100,
+		basePower: 0,
+		category: "Status",
+		name: "Dragon Roar",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, reflectable: 1, mirror: 1, sound: 1, bypasssub: 1},
+		boosts: {
+			atk: -1,
+			def: -1,
+			spa: -1,
+			spd: -1,
+		},
+		secondary: null,
+		target: "normal",
+		type: "Dragon",
+	},
+	draconify: {
+		num: 2170,
+		accuracy: 100,
+		basePower: 0,
+		category: "Status",
+		name: "Draconify",
+		pp: 20,
+		priority: 0,
+		flags: {protect: 1, reflectable: 1, mirror: 1, allyanim: 1},
+		onHit(target) {
+			if (target.getTypes().join() === 'Dragon' || !target.setType('Dragon')) {
+				// Draconify should animate even when it fails.
+				// Returning false would suppress the animation.
+				this.add('-fail', target);
+				return null;
+			}
+			this.add('-start', target, 'typechange', 'Dragon');
+		},
+		boosts: {
+			evasion: -1,
+		},
+		secondary: null,
+		target: "normal",
 		type: "Dragon",
 	},
 };

@@ -49,7 +49,6 @@ export const TypeChart: {[k: string]: TypeData} = {
 	},
 	dragon: {
 		damageTaken: {
-			draconicterrain: 3,
 			Bug: 0,
 			Dark: 0,
 			Dragon: 1,

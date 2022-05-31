@@ -2529,7 +2529,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	skuntank: {
-		randomBattleMoves: ["crunch", "defog", "fireblast", "poisonjab", "pursuit", "suckerpunch", "taunt"],
+		randomBattleMoves: ["crunch", "defog", "fireblast", "poisonjab", "pursuit", "suckerpunch", "taunt", "noretreat"],
 		randomDoubleBattleMoves: ["crunch", "fireblast", "poisonjab", "protect", "snarl", "suckerpunch", "taunt"],
 		tier: "PU",
 		doublesTier: "(DUU)",
