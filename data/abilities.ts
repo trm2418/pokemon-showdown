@@ -1891,7 +1891,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 			else if (move.id === 'healingcurrent') {
 				this.boost({spa: 1});
-				return null;
 			}
 		},
 		onAnyRedirectTarget(target, source, source2, move) {
@@ -2238,7 +2237,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 			else if (move.id === 'healingcurrent') {
 				this.boost({spe: 1});
-				return null;
 			}
 		},
 		isBreakable: true,
@@ -4237,7 +4235,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 			else if (move.id === 'healingcurrent') {
 				this.heal(target.baseMaxhp / 4);
-				return null;
 			}
 		},
 		isBreakable: true,

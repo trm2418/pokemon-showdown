@@ -5176,7 +5176,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		doublesTier: "(DUU)",
 	},
 	keldeoresolute: {
-		randomBattleMoves: ["airslash", "calmmind", "hydropump", "icywind", "scald", "secretsword", "substitute"],
+		randomBattleMoves: ["airslash", "calmmind", "hydropump", "hiddenpowerice", "scald", "secretsword", "substitute"],
 		randomBattleLevel: 79,
 	},
 	meloetta: {
