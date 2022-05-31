@@ -3223,7 +3223,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		num: 591,
 		accuracy: 95,
 		basePower: 100,
-		category: "Physical",
+		category: "Special",
 		name: "Diamond Storm",
 		pp: 5,
 		priority: 0,
@@ -21590,7 +21590,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	mountaingale: {
 		num: 2116,
-		accuracy: 85,
+		accuracy: 90,
 		basePower: 120,
 		category: "Physical",
 		name: "Mountain Gale",
@@ -22501,4 +22501,38 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Dragon",
 	},
+	/*
+	lurk: {
+		num: 2171,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Lurk",
+		pp: 15,
+		priority: 0,
+		flags: {},
+		volatileStatus: 'lurk',
+		onHit(pokemon) {
+			this.add('-activate', pokemon, 'move: Lurk');
+		},
+		condition: {
+			duration: 2,
+			onRestart(pokemon) {
+				this.effectState.duration = 2;
+			},
+			onHit(pokemon, source, move) {
+				if (move.category !== 'Status') {
+					pokemon.volatiles['lurk'].lostFocus = true;
+				}
+			},
+			onBasePowerPriority: 9,
+			onBasePower(basePower, attacker, defender, move) {
+				this.debug('lurk boost');
+				return this.chainModify(3);
+			},
+		},
+		secondary: null,
+		target: "self",
+		type: "Dragon",
+	},*/
 };
