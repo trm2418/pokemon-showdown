@@ -93,6 +93,7 @@ export const DefaultText: {[k: string]: DefaultText} = {
 		unboost: "  [POKEMON]'s [STAT] fell!",
 		unboost2: "  [POKEMON]'s [STAT] fell harshly!",
 		unboost3: "  [POKEMON]'s [STAT] fell severely!",
+		unboost4: "  [POKEMON]'s [STAT] fell devastatingly!",
 		unboost0: "  [POKEMON]'s [STAT] won't go any lower!",
 		unboostFromItem: "  The [ITEM] lowered [POKEMON]'s [STAT]!",
 		unboost2FromItem: "  The [ITEM] harshly lowered [POKEMON]'s [STAT]!",

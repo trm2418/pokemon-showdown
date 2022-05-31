@@ -20125,7 +20125,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {},
 		volatileStatus: 'ignite',
 		onHit(pokemon) {
-			this.add('-activate', pokemon, 'move: Ignite');
+			this.add('-start', pokemon, 'move: Ignite');
 		},
 		condition: {
 			duration: 6,
@@ -20170,7 +20170,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {},
 		volatileStatus: 'kindle',
 		onHit(pokemon) {
-			this.add('-activate', pokemon, 'move: Kindle');
+			this.add('-start', pokemon, 'Kindle');
 		},
 		condition: {
 			duration: 2,
