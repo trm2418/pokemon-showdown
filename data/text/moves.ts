@@ -6940,7 +6940,10 @@ export const MovesText: {[k: string]: MoveText} = {
 	ignite: {
 		name: "Ignite",
 		desc: "For 6 turns, the user's Fire-type attacks do 2x damage and any contact with the user has a 30% chance to burn the other Pokemon.",
-		shortDesc: "6 turns, 2x Fire power, 30% burn from any contact."
+		shortDesc: "6 turns, 2x Fire power, 30% burn from any contact.",
+
+		start: "  [POKEMON] ignited itself!",
+		end: "  [POKEMON] is no longer ignited!",
 	},
 	kindle: {
 		name: "Kindle",
@@ -7022,7 +7025,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Prevents the target from switching for four or five turns (seven turns if the user is holding Grip Claw). Causes damage to the target equal to 1/8 of its maximum HP (1/6 if the user is holding Binding Band), rounded down, at the end of each turn during effect. The target can still switch out if it is holding Shed Shell or uses Baton Pass, Flip Turn, Parting Shot, Teleport, U-turn, or Volt Switch. The effect ends if either the user or the target leaves the field, or if the target uses Rapid Spin or Substitute successfully. This effect is not stackable or reset by using this or another binding move.",
 		shortDesc: "Traps and damages the target for 4-5 turns.",
 
-		start: "  [POKEMON] became trapped by the Ocean's Wrath!",
+		start: "  [POKEMON] became trapped by the ocean's wrath!",
 	},
 	vortexblast: {
 		name: "Vortex Blast",
@@ -7529,6 +7532,9 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Dragon Armor",
 		desc: "Raises the user's Defense and Special Defense by 1 stage and become immune to flinching for 2 turns.",
 		shortDesc: "Raises Def + Sp Def by 1. Flinch immune 2 turns.",
+
+		start: "  [POKEMON] became coated in flinch-proof armor!",
+		end: "  [POKEMON] is no longer coated in flinch-proof armor!",
 	},
 	dragonroar: {
 		name: "Dragon Roar",
@@ -7544,6 +7550,9 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Lurk",
 		desc: "The user's next attack will do 3x damage. This effect is cancelled if the user is hit by a damaging attack before it can execute its next move.",
 		shortDesc: "User's next attack 3x dmg. Cancel if hit before.",
+
+		start: "  [POKEMON] began lurking!",
+		end: "  [POKEMON] was found out!",
 	},
 };
 
