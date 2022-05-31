@@ -1817,7 +1817,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "NFE",
 	},
 	widoweb: {
-		randomBattleMoves: ["stickyweb", "toxicspikes", "xscissor", "poisontail", "earthquake"],
+		randomBattleMoves: ["stickyweb", "toxicspikes", "xscissor", "poisontail", "earthquake", "toxicthread"],
 		randomBattleLevel: 83,
 		tier: "NU",
 	},

@@ -4566,6 +4566,13 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				return this.chainModify([5325, 4096]);
 			}
 		},
+		onSourceModifyDamage(damage, source, target, move) {
+			if (move.flags['magic']) {
+				this.debug('Sorcery weaken');
+				return this.chainModify(0.5);
+			}
+		},
+		isBreakable: true,
 		name: "Sorcery",
 		rating: 4,
 		num: 1008,
