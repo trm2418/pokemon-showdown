@@ -1,3 +1,5 @@
+import { isShorthandPropertyAssignment } from "typescript";
+
 export const MovesText: {[k: string]: MoveText} = {
 	"10000000voltthunderbolt": {
 		name: "10,000,000 Volt Thunderbolt",
@@ -562,6 +564,7 @@ export const MovesText: {[k: string]: MoveText} = {
 			desc: "Has a 30% chance to paralyze the target. This attack charges on the first turn and executes on the second. On the first turn, the user avoids all attacks other than Gust, Sky Uppercut, Thunder, and Twister, and Gust and Twister have doubled power when used against it.",
 		},
 
+		activate: "  It broke through [TARGET]'s protection!",
 		prepare: "[POKEMON] sprang up!",
 	},
 	bouncybubble: {
@@ -1041,8 +1044,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	crunch: {
 		name: "Crunch",
-		desc: "Has a 20% chance to lower the target's Defense by 1 stage.",
-		shortDesc: "20% chance to lower the target's Defense by 1.",
+		desc: "Has a 30% chance to lower the target's Defense by 1 stage.",
+		shortDesc: "30% chance to lower the target's Defense by 1.",
 		gen3: {
 			desc: "Has a 20% chance to lower the target's Special Defense by 1 stage.",
 			shortDesc: "20% chance to lower the target's Sp. Def by 1.",
@@ -1086,8 +1089,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	darkpulse: {
 		name: "Dark Pulse",
-		desc: "Has a 20% chance to make the target flinch.",
-		shortDesc: "20% chance to make the target flinch.",
+		desc: "Has a 30% chance to make the target flinch.",
+		shortDesc: "30% chance to make the target flinch.",
 	},
 	darkvoid: {
 		name: "Dark Void",
@@ -1210,6 +1213,7 @@ export const MovesText: {[k: string]: MoveText} = {
 			desc: "This attack charges on the first turn and executes on the second. On the first turn, the user avoids all attacks other than Bide, Swift, and Transform. If the user is fully paralyzed on the second turn, it continues avoiding attacks until it switches out or successfully executes the second turn of this move or Fly.",
 		},
 
+		activate: "  It broke through [TARGET]'s protection!",
 		prepare: "[POKEMON] burrowed its way under the ground!",
 	},
 	disable: {
@@ -1263,6 +1267,7 @@ export const MovesText: {[k: string]: MoveText} = {
 			desc: "This attack charges on the first turn and executes on the second. On the first turn, the user avoids all attacks other than Surf and Whirlpool, which have doubled power when used against it, and is also unaffected by weather.",
 		},
 
+		activate: "  It broke through [TARGET]'s protection!",
 		prepare: "[POKEMON] hid underwater!",
 	},
 	dizzypunch: {
@@ -1973,6 +1978,7 @@ export const MovesText: {[k: string]: MoveText} = {
 			desc: "This attack charges on the first turn and executes on the second. On the first turn, the user avoids all attacks other than Bide, Swift, and Transform. If the user is fully paralyzed on the second turn, it continues avoiding attacks until it switches out or successfully executes the second turn of this move or Dig.",
 		},
 
+		activate: "  It broke through [TARGET]'s protection!",
 		prepare: "[POKEMON] flew up high!",
 	},
 	flyingpress: {
@@ -2832,8 +2838,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	honeclaws: {
 		name: "Hone Claws",
-		desc: "Raises the user's Attack and accuracy by 1 stage.",
-		shortDesc: "Raises the user's Attack and accuracy by 1.",
+		desc: "Raises the user's Attack and accuracy by 1 stage. If the weather is Darkness, this move raises the user's Attack and accuracy by 2 stages.",
+		shortDesc: "Raises Attack and accuracy by 1. 2 in darkness.",
 	},
 	hornattack: {
 		name: "Horn Attack",
@@ -3638,8 +3644,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	memento: {
 		name: "Memento",
-		desc: "Lowers the target's Attack and Special Attack by 2 stages. The user faints unless this move misses or there is no target. Fails entirely if this move hits a substitute, but does not fail if the target's stats cannot be changed.",
-		shortDesc: "Lowers target's Attack, Sp. Atk by 2. User faints.",
+		desc: "Lowers the target's Attack and Special Attack by 4 stages. The user faints unless this move misses or there is no target. Fails entirely if this move hits a substitute, but does not fail if the target's stats cannot be changed.",
+		shortDesc: "Lowers target's Attack, Sp. Atk by 4. User faints.",
 		gen4: {
 			desc: "Lowers the target's Attack and Special Attack by 2 stages. The user faints, even if this move misses. This move can hit targets in the middle of a two-turn move. Fails entirely if there is no target, but does not fail if the target's stats cannot be changed.",
 		},
@@ -4271,8 +4277,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	playrough: {
 		name: "Play Rough",
-		desc: "Has a 10% chance to lower the target's Attack by 1 stage.",
-		shortDesc: "10% chance to lower the target's Attack by 1.",
+		desc: "Has a 20% chance to lower the target's Attack by 1 stage.",
+		shortDesc: "20% chance to lower the target's Attack by 1.",
 	},
 	pluck: {
 		name: "Pluck",
@@ -4519,8 +4525,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	punishment: {
 		name: "Punishment",
-		desc: "Power is equal to 60+(X*20), where X is the target's total stat stage changes that are greater than 0, but not more than 200 power.",
-		shortDesc: "60 power +20 for each of the target's stat boosts.",
+		desc: "Power is equal to 60+(X*30), where X is the target's total stat stage changes that are greater than 0. No maximum power.",
+		shortDesc: "60 power +30 for each of the target's stat boosts.",
 	},
 	purify: {
 		name: "Purify",
@@ -6019,7 +6025,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	switcheroo: {
 		name: "Switcheroo",
 		desc: "The user swaps its held item with the target's held item. Fails if either the user or the target is holding a Mail or Z-Crystal, if neither is holding an item, if the user is trying to give or take a Mega Stone to or from the species that can Mega Evolve with it, or if the user is trying to give or take a Blue Orb, a Red Orb, a Griseous Orb, a Plate, a Drive, or a Memory to or from a Kyogre, a Groudon, a Giratina, an Arceus, a Genesect, or a Silvally, respectively. The target is immune to this move if it has the Sticky Hold Ability.",
-		shortDesc: "User switches its held item with the target's.",
+		shortDesc: "Switch held item with target. Usually goes first.",
 		gen6: {
 			desc: "The user swaps its held item with the target's held item. Fails if either the user or the target is holding a Mail, if neither is holding an item, if the user is trying to give or take a Mega Stone to or from the species that can Mega Evolve with it, or if the user is trying to give or take a Blue Orb, a Red Orb, a Griseous Orb, a Plate, or a Drive to or from a Kyogre, a Groudon, a Giratina, an Arceus, or a Genesect, respectively. The target is immune to this move if it has the Sticky Hold Ability.",
 		},
@@ -7559,6 +7565,137 @@ export const MovesText: {[k: string]: MoveText} = {
 		start: "  [POKEMON] began lurking!",
 		end: "  [POKEMON] was found out!",
 	},
+	ceaselessedge: {
+		name: "Ceaseless Edge",
+		desc: "Has a higher chance for a critical hit. If this move is successful, it sets up a hazard on the opposing side of the field, damaging each opposing Pokemon that switches in. Foes lose 1/32, 1/16, 1/8, 1/4, or 1/2 of their maximum HP, rounded down, based on their weakness to the Dark type; 0.25x, 0.5x, neutral, 2x, or 4x, respectively. Can be removed from the opposing side if any opposing Pokemon uses Rapid Spin or Defog successfully, or is hit by Defog.",
+		shortDesc: "High crit. Sets a Dark-type Stealth Rock",
+	},
+	backstab: {
+		name: "Backstab",
+		desc: "This move is always a critical hit unless the target is under the effect of Lucky Chant or has the Battle Armor or Shell Armor Abilities. This attack charges on the first turn and executes on the second, breaking protection. On the first turn, the user avoids all attacks. If the user is holding a Power Herb, the move completes in one turn.",
+		shortDesc: "Hide turn 1, hit turn 2. Break protect. 100% crit.",
+
+		activate: "  It broke through [TARGET]'s protection!",
+		prepare: "[POKEMON] vanished from sight!",
+	},
+	blindside: {
+		name: "Blindside",
+		desc: "This move does not check accuracy.",
+		shortDesc: "This move does not check accuracy. Goes last.",
+	},
+	cheapblow: {
+		name: "Cheap Blow",
+		desc: "Has a 10% chance to make the target flinch.",
+		shortDesc: "10% chance to make the target flinch.",
+	},
+	cripplingstrike: {
+		name: "Crippling Strike",
+		desc: "Has a 10% chance to lower the target's Speed by 1 stage.",
+		shortDesc: "10% chance to lower the target's Speed by 1.",
+	},
+	darkmatter: {
+		name: "Dark Matter",
+		desc: "40% chance to lower the target's speed by 1 stage. If this move is successful, the user must recharge on the following turn and cannot select a move.",
+		shortDesc: "40% lower Speed by 1. User can't move next turn.",
+	},
+	demonclaw: {
+		name: "Demon Claw",
+		desc: "Has a 30% chance to Curse the target.",
+		shortDesc: "30% chance to Curse the target.",
+	},
+	drainlife: {
+		name: "Drain Life",
+		desc: "The user recovers 1/2 the HP lost by the target, rounded half up. If Big Root is held by the user, the HP recovered is 1.3x normal, rounded half down.",
+		shortDesc: "User recovers 50% of the damage dealt.",
+	},
+	faceslap: {
+		name: "Face Slap",
+		shortDesc: "Resets the target's positive stat stages to 0.",
+	},
+	blackhole: {
+		name: "Black Hole",
+		desc: "Prevents the target from switching for four or five turns (seven turns if the user is holding Grip Claw). Causes damage to the target equal to 1/8 of its maximum HP (1/6 if the user is holding Binding Band), rounded down, at the end of each turn during effect. The target can still switch out if it is holding Shed Shell or uses Baton Pass, Flip Turn, Parting Shot, Teleport, U-turn, or Volt Switch. The effect ends if either the user or the target leaves the field, or if the target uses Rapid Spin or Substitute successfully. This effect is not stackable or reset by using this or another binding move.",
+		shortDesc: "Traps and damages the target for 4-5 turns.",
+
+		start: "  [POKEMON] became trapped in a black hole!",
+	},
+	blackout: {
+		name: "Blackout",
+		desc: "Has a 20% chance to lower the target's Special Attack by 1 stage. This move's type effectiveness against Electric is changed to be super effective no matter what this move's type is.",
+		shortDesc: "20% lower Sp. Atk. Super effective on Electric.",
+	},
+	blackmagic: {
+		name: "Black Magic",
+		desc: "Has a 30% chance to confuse the target. This move's type effectiveness against Fairy is changed to be super effective no matter what this move's type is.",
+		shortDesc: "30% chance to confuse. Super effective on Fairy.",
+	},
+	corruptionbeam: {
+		name: "Corruption Beam",
+		desc: "For 2 turns, the target cannot heal.",
+		shortDesc: "For 2 turns, the target cannot heal.",
+
+		cant: "The effects of Corruption Beam prevent [POKEMON] from using certain moves!",
+	},
+	darkgaze: {
+		name: "Dark Gaze",
+		desc: "Has a 10% chance to lower the target's Special Defense by 1 stage.",
+		shortDesc: "10% chance to lower the target's Sp. Def by 1.",
+	},
+	darkshot: {
+		name: "Dark Shot",
+		shortDesc: "No additional effect.",
+	},
+	darknessblast: {
+		name: "Darkness Blast",
+		desc: "Has a 10% chance to cause the target to fall asleep.",
+		shortDesc: "10% chance to cause the target to fall asleep.",
+	},
+	darknessspin: {
+		name: "Darkness Spin",
+		desc: "Prevents the target from switching for four or five turns (seven turns if the user is holding Grip Claw). Causes damage to the target equal to 1/8 of its maximum HP (1/6 if the user is holding Binding Band), rounded down, at the end of each turn during effect. The target can still switch out if it is holding Shed Shell or uses Baton Pass, Flip Turn, Parting Shot, Teleport, U-turn, or Volt Switch. The effect ends if either the user or the target leaves the field, or if the target uses Rapid Spin or Substitute successfully. This effect is not stackable or reset by using this or another binding move.",
+		shortDesc: "Traps and damages the target for 4-5 turns.",
+
+		start: "  [POKEMON] became trapped in the dark vortex!",
+	},
+	lunarcannon: {
+		name: "Lunar Cannon",
+		desc: "This attack charges on the first turn and executes on the second. If the user is holding a Power Herb or the weather is Darkness, the move completes in one turn.",
+		shortDesc: "Charges turn 1. Hits turn 2. No charge in darkness.",
+
+		prepare: "  [POKEMON] absorbed moonlight!",
+	},
+	madnessbeam: {
+		name: "Madness Beam",
+		desc: "Completely random but positive effect. Possible effects include lowering the target's stats, raising the user's stats, inflicting a status condition, healing the user, changing the target's type, flinch, inflicting a volatile status (like Confuse, Curse, Taunt, etc), reducing the PP of the target's last move, trapping the target, creating an entry hazard or summoning a field effect like weather, terrain or screens.",
+		shortDesc: "Completely random positive effect.",
+	},
+	nightbringer: {
+		name: "Nightbringer",
+		desc: "Creates Darkness weather for 5 turns if this move hits. Lasts for 10 turns if the user is holding Dark Rock.",
+		shortDesc: "Creates Darkness weather for 5 turns.",
+	},
+	voidpush: {
+		name: "Void Push",
+		desc: "If both the user and the target have not fainted, the target is forced to switch out and be replaced with a random unfainted ally. This effect fails if the target used Ingrain previously, has the Suction Cups Ability, or this move hit a substitute.",
+		shortDesc: "Forces the target to switch to a random ally.",
+	},
+	corruption: {
+		name: "Corruption",
+		desc: "For 5 turns, the target can't heal and loses 1/6 of their maximum HP, rounded down, at the end of teach turn while it is active. If the target uses Baton Pass, the replacement will continue to be affected. Fails if there is no target or if the target is already affected. Dark-types are immune.",
+		shortDesc: "5 turns, can't heal and lose 1/6 HP each turn."
+	},
+	darknesscall: {
+		name: "Darkness Call",
+		desc: "For 7 turns, the weather becomes Darkness. The damage of Dark and Ghost-type attacks is multiplied by 1.35 and the damage of Fairy-type attacks is multiplied by 0.5 during the effect. Lasts for 12 turns if the user is holding Dark Rock. Fails if the current weather is Darkness.",
+		shortDesc: "For 7 turns, darkness powers Ghost and Dark moves.",
+	},
+	enchantedclaw: {
+		name: "Enchanted Claw",
+		desc: "Has a higher chance for a critical hit. Deals damage to the target based on its Special Defense instead of Defense.",
+		shortDesc: "High crit. Use target's Sp Def, not Def.",
+	},
 };
 
-// shortDesc: "40% inflict Leech Seed. User cannot move next turn.",
+/*
+shortDesc: "40% inflict Leech Seed. User cannot move next turn.",
+*/

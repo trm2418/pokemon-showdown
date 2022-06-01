@@ -552,7 +552,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {},
 		onHit(target) {
 			const noAssist = [
-				'assist', 'banefulbunker', 'beakblast', 'belch', 'bestow', 'bounce', 'celebrate', 'chatter', 'circlethrow', 'copycat', 'counter', 'covet', 'destinybond', 'detect', 'dig', 'dive', 'dragontail', 'endure', 'feint', 'fly', 'focuspunch', 'followme', 'helpinghand', 'holdhands', 'kingsshield', 'matblock', 'mefirst', 'metronome', 'mimic', 'mirrorcoat', 'mirrormove', 'naturepower', 'phantomforce', 'protect', 'ragepowder', 'roar', 'shadowforce', 'shelltrap', 'sketch', 'skydrop', 'sleeptalk', 'snatch', 'spikyshield', 'spotlight', 'struggle', 'switcheroo', 'thief', 'transform', 'trick', 'whirlwind', 'blazingshield', 'sporeshield', 'thundershield', 'psychoshield', 'frigidshield'
+				'assist', 'banefulbunker', 'beakblast', 'belch', 'bestow', 'bounce', 'celebrate', 'chatter', 'circlethrow', 'copycat', 'counter', 'covet', 'destinybond', 'detect', 'dig', 'dive', 'dragontail', 'voidpush', 'endure', 'feint', 'fly', 'focuspunch', 'followme', 'helpinghand', 'holdhands', 'kingsshield', 'matblock', 'mefirst', 'metronome', 'mimic', 'mirrorcoat', 'mirrormove', 'naturepower', 'phantomforce', 'protect', 'ragepowder', 'roar', 'shadowforce', 'shelltrap', 'sketch', 'skydrop', 'sleeptalk', 'snatch', 'spikyshield', 'spotlight', 'struggle', 'switcheroo', 'thief', 'transform', 'trick', 'whirlwind', 'blazingshield', 'sporeshield', 'thundershield', 'psychoshield', 'frigidshield'
 			];
 
 			const moves = [];
@@ -2485,7 +2485,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {},
 		onHit(pokemon) {
 			const noCopycat = [
-				'assist', 'banefulbunker', 'beakblast', 'behemothbash', 'behemothblade', 'belch', 'bestow', 'celebrate', 'chatter', 'circlethrow', 'copycat', 'counter', 'covet', 'craftyshield', 'destinybond', 'detect', 'dragontail', 'dynamaxcannon', 'endure', 'feint', 'focuspunch', 'followme', 'helpinghand', 'holdhands', 'kingsshield', 'matblock', 'mefirst', 'metronome', 'mimic', 'mirrorcoat', 'mirrormove', 'naturepower', 'obstruct', 'protect', 'ragepowder', 'roar', 'shelltrap', 'sketch', 'sleeptalk', 'snatch', 'spikyshield', 'spotlight', 'struggle', 'switcheroo', 'thief', 'transform', 'trick', 'whirlwind', 'blazingshield', 'sporeshield', 'thundershield', 'psychoshield', 'frigidshield'
+				'assist', 'banefulbunker', 'beakblast', 'behemothbash', 'behemothblade', 'belch', 'bestow', 'celebrate', 'chatter', 'circlethrow', 'copycat', 'counter', 'covet', 'craftyshield', 'destinybond', 'detect', 'dragontail', 'voidpush', 'dynamaxcannon', 'endure', 'feint', 'focuspunch', 'followme', 'helpinghand', 'holdhands', 'kingsshield', 'matblock', 'mefirst', 'metronome', 'mimic', 'mirrorcoat', 'mirrormove', 'naturepower', 'obstruct', 'protect', 'ragepowder', 'roar', 'shelltrap', 'sketch', 'sleeptalk', 'snatch', 'spikyshield', 'spotlight', 'struggle', 'switcheroo', 'thief', 'transform', 'trick', 'whirlwind', 'blazingshield', 'sporeshield', 'thundershield', 'psychoshield', 'frigidshield'
 			];
 			let move: Move | ActiveMove | null = this.lastMove;
 			if (!move) return;
@@ -2999,7 +2999,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	darkvoid: {
 		num: 464,
-		accuracy: 75,
+		accuracy: 80,
 		basePower: 0,
 		category: "Status",
 		name: "Dark Void",
@@ -7769,6 +7769,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 				if (source?.hasAbility('persistent')) {
 					this.add('-activate', source, 'ability: Persistent', effect);
 					return 7;
+				}
+				if (source?.moveThisTurn === 'corruptionbeam') {
+					return 2;
 				}
 				return 5;
 			},
@@ -20722,7 +20725,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Solar Pulse",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1, pulse: 1},
+		flags: {protect: 1, mirror: 1, pulse: 1},
 		secondary: {
 			chance: 100,
 			weather: 'sunnyday',
@@ -21680,7 +21683,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 					}
 				}
 				pokemon.setBoost(boosts);
-				this.add('-clearnegativeboost', pokemon)
+				this.add('-clearnegativeboost', pokemon);
 			}
 			const success = !!this.heal(this.modify(pokemon.maxhp, 1/2));
 			return success;
@@ -22636,4 +22639,537 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "self",
 		type: "Dragon",
 	},*/
+	ceaselessedge: {
+		num: 2154,
+		accuracy: 90,
+		basePower: 65,
+		category: "Physical",
+		name: "Ceaseless Edge",
+		pp: 15,
+		priority: 0,
+		flags: {blade: 1, contact: 1, protect: 1, mirror: 1},
+		critRatio: 2,
+		secondary: {
+			chance: 100,
+			sideCondition: 'stealthrock',
+		},
+		target: "normal",
+		type: "Dark",
+	},
+	backstab: {
+		num: 2155,
+		accuracy: 90,
+		basePower: 75,
+		category: "Physical",
+		name: "Backstab",
+		pp: 10,
+		priority: 0,
+		flags: {blade: 1, contact: 1, charge: 1, mirror: 1},
+		willCrit: true,
+		breaksProtect: true,
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
+		condition: {
+			duration: 2,
+			onInvulnerability: false,
+		},
+		secondary: null,
+		target: "normal",
+		type: "Dark",
+	},
+	blindside: {
+		num: 2156,
+		accuracy: true,
+		basePower: 105,
+		category: "Physical",
+		name: "Blindside",
+		pp: 10,
+		priority: -1,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Dark",
+	},
+	cheapblow: {
+		num: 2157,
+		accuracy: 100,
+		basePower: 40,
+		category: "Physical",
+		name: "Cheap Blow",
+		pp: 30,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 10,
+			volatileStatus: 'flinch',
+		},
+		target: "normal",
+		type: "Dark",
+	},
+	cripplingstrike: {
+		num: 2158,
+		accuracy: 100,
+		basePower: 95,
+		category: "Physical",
+		name: "Crippling Strike",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 10,
+			boosts: {
+				spe: -1,
+			},
+		},
+		target: "normal",
+		type: "Dark",
+	},
+	darkmatter: {
+		num: 2159,
+		accuracy: 90,
+		basePower: 175,
+		category: "Physical",
+		name: "Dark Matter",
+		pp: 5,
+		priority: 0,
+		flags: {recharge: 1, protect: 1, mirror: 1},
+		self: {
+			volatileStatus: 'mustrecharge',
+		},
+		secondary: {
+			chance: 40,
+			boosts: {
+				spe: -1,
+			}
+		},
+		target: "normal",
+		type: "Dark",
+	},
+	demonclaw: {
+		num: 2160,
+		accuracy: 90,
+		basePower: 105,
+		category: "Physical",
+		name: "Demon Claw",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 30,
+			volatileStatus: 'curse',
+		},
+		target: "normal",
+		type: "Dark",
+	},
+	drainlife: {
+		num: 2161,
+		accuracy: 100,
+		basePower: 80,
+		category: "Physical",
+		name: "Drain Life",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, heal: 1},
+		drain: [1, 2],
+		secondary: null,
+		target: "normal",
+		type: "Dark",
+	},
+	faceslap: {
+		num: 2162,
+		accuracy: 90,
+		basePower: 60,
+		category: "Physical",
+		name: "Face Slap",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, punch: 1, mirror: 1},
+		onHit(target) {
+			const boosts: SparseBoostsTable = {};
+			let i: BoostID;
+			for (i in target.boosts) {
+				if (target.boosts[i] > 0) {
+					boosts[i] = 0;
+				}
+			}
+			target.setBoost(boosts);
+			this.add('-clearpositiveboost', target);
+		},
+		secondary: null,
+		target: "normal",
+		type: "Dark",
+	},/*
+	vendetta: {
+		num: 2163,
+		accuracy: 100,
+		basePower: 60,
+		basePowerCallback(pokemon, target, move) {
+			return move.basePower + 20 * pokemon.positiveBoosts();
+		},
+		category: "Physical",
+		name: "Vendetta",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Dark",
+	},*/
+	blackhole: {
+		num: 2164,
+		accuracy: 75,
+		basePower: 100,
+		category: "Special",
+		name: "Root Strangle",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		volatileStatus: 'partiallytrapped',
+		secondary: null,
+		target: "normal",
+		type: "Dark",
+	},
+	blackout: {
+		num: 2165,
+		accuracy: 100,
+		basePower: 90,
+		category: "Special",
+		name: "Blackout",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Electric') return 1;
+		},
+		secondary: {
+			chance: 20,
+			boosts: {
+				spa: -1,
+			}
+		},
+		target: "normal",
+		type: "Dark",
+	},
+	blackmagic: {
+		num: 2166,
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		name: "Black Magic",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, magic: 1, mirror: 1},
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Fairy') return 1;
+		},
+		secondary: {
+			chance: 30,
+			volatileStatus: 'confuse',
+		},
+		target: "normal",
+		type: "Dark",
+	},
+	corruptionbeam: {
+		num: 2167,
+		accuracy: 100,
+		basePower: 90,
+		category: "Special",
+		name: "Corruption Beam",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			volatileStatus: 'healblock',
+		},
+		target: "normal",
+		type: "Dark",
+	},
+	darkgaze: {
+		num: 2168,
+		accuracy: 100,
+		basePower: 40,
+		category: "Special",
+		name: "Dark Gaze",
+		pp: 30,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 10,
+			boosts: {
+				spd: -1,
+			},
+		},
+		target: "normal",
+		type: "Dark",
+	},
+	darkshot: {
+		num: 2169,
+		accuracy: 100,
+		basePower: 70,
+		category: "Special",
+		name: "Dark Shot",
+		pp: 20,
+		priority: 0,
+		flags: {bullet: 1, protect: 1, mirror: 1, pulse: 1},
+		secondary: null,
+		target: "normal",
+		type: "Dark",
+	},
+	darknessblast: {
+		num: 2170,
+		accuracy: 100,
+		basePower: 95,
+		category: "Special",
+		name: "Darkness Blast",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 10,
+			status: 'slp',
+		},
+		target: "normal",
+		type: "Dark",
+	},
+	darkness: {
+		num: 2171,
+		accuracy: 90,
+		basePower: 50,
+		category: "Special",
+		name: "Darkness Spin",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		volatileStatus: 'partiallytrapped',
+		secondary: null,
+		target: "normal",
+		type: "Dark",
+	},
+	lunarcannon: {
+		num: 2172,
+		accuracy: 100,
+		basePower: 110,
+		category: "Special",
+		name: "Solar Beam",
+		pp: 10,
+		priority: 0,
+		flags: {charge: 1, protect: 1, pulse: 1, mirror: 1},
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (['darkness'].includes(attacker.effectiveWeather())) {
+				this.attrLastMove('[still]');
+				this.addMove('-anim', attacker, move.name, defender);
+				return;
+			}
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
+		secondary: null,
+		target: "normal",
+		type: "Dark",
+	},/*
+	madnessbeam: {
+		num: 2173,
+		accuracy: 100,
+		basePower: 75,
+		category: "Special",
+		name: "Madness Beam",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			onHit(target, source, move) {
+				// target.addVolatile('');
+				// target.trySetStatus('frz', source);
+				// if (source.isActive) target.addVolatile('trapped', source, move, 'trapper');
+				const result = this.random(30);
+				// lower a random stat of the target by 1-3
+				if (result === 0) {
+					const stats: BoostID[] = [];
+						let stat: BoostID;
+						for (stat in target.boosts) {
+							if (target.boosts[stat] > -6) {
+								stats.push(stat);
+							}
+						}
+						if (stats.length) {
+							const randomStat = this.sample(stats);
+							const boost: SparseBoostsTable = {};
+							boost[randomStat] = -1 * (this.random(3) + 1);
+							this.boost(boost);
+						} else {
+							return false;
+						}
+				} // raise a random stat of the user by 1-3
+				else if (result === 1) {
+					const stats: BoostID[] = [];
+						let stat: BoostID;
+						for (stat in source.boosts) {
+							if (source.boosts[stat] < 6) {
+								stats.push(stat);
+							}
+						}
+						if (stats.length) {
+							const randomStat = this.sample(stats);
+							const boost: SparseBoostsTable = {};
+							boost[randomStat] = 1;
+							this.boost(boost);
+						} else {
+							return false;
+						}
+				} 
+				else if (result === 2) {
+					return !!this.boost({atk: -1, spa: -1, spe: -1, def: -1, spd: -1}, target, source, move);
+				}
+				else if (result === 3) {
+					source.boost
+				}
+			},
+		},
+		target: "normal",
+		type: "Dark",
+	},*/
+	nightbringer: {
+		num: 2174,
+		accuracy: 90,
+		basePower: 70,
+		category: "Special",
+		name: "Nightbringer",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			weather: 'darkness',
+		},
+		target: "normal",
+		type: "Dark",
+	},
+	voidpush: {
+		num: 2175,
+		accuracy: 95,
+		basePower: 105,
+		category: "Special",
+		name: "Void Push",
+		pp: 10,
+		priority: -6,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		forceSwitch: true,
+		target: "normal",
+		type: "Dark",
+	},
+	corruption: {
+		num: 2176,
+		accuracy: 100,
+		basePower: 0,
+		category: "Status",
+		name: "Corruption",
+		pp: 20,
+		priority: 0,
+		flags: {protect: 1, reflectable: 1, mirror: 1},
+		volatileStatus: 'corruption',
+		condition: {
+			duration: 5,
+			durationCallback(target, source, effect) {
+				if (source?.hasAbility('persistent')) {
+					this.add('-activate', source, 'ability: Persistent', effect);
+					return 7;
+				}
+				if (source?.moveThisTurn === 'corruptionbeam') {
+					return 2;
+				}
+				return 5;
+			},
+			onStart(pokemon, source) {
+				this.add('-start', pokemon, 'move: Corruption');
+				source.moveThisTurnResult = true;
+			},
+			onDisableMove(pokemon) {
+				for (const moveSlot of pokemon.moveSlots) {
+					if (this.dex.moves.get(moveSlot.id).flags['heal']) {
+						pokemon.disableMove(moveSlot.id);
+					}
+				}
+			},
+			onBeforeMovePriority: 6,
+			onBeforeMove(pokemon, target, move) {
+				if (move.flags['heal'] && !move.isZ && !move.isMax) {
+					this.add('cant', pokemon, 'move: Corruption', move);
+					return false;
+				}
+			},
+			onModifyMove(move, pokemon, target) {
+				if (move.flags['heal'] && !move.isZ && !move.isMax) {
+					this.add('cant', pokemon, 'move: Corruption', move);
+					return false;
+				}
+			},
+			onResidualOrder: 12,
+			onResidual(pokemon) {
+				this.damage(pokemon.baseMaxhp / 6);
+			},
+			onEnd(pokemon) {
+				this.add('-end', pokemon, 'move: Corruption');
+			},
+			onTryHeal(damage, target, source, effect) {
+				if ((effect?.id === 'zpower') || this.effectState.isZ) return damage;
+				return false;
+			},
+			onRestart(target, source) {
+				this.add('-fail', target, 'move: Corruption'); // Succeeds to supress downstream messages
+				if (!source.moveThisTurnResult) {
+					source.moveThisTurnResult = false;
+				}
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Dark",
+	},
+	darknesscall: {
+		num: 2177,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Darkness Call",
+		pp: 20,
+		priority: 0,
+		flags: {},
+		weather: 'darkness',
+		secondary: null,
+		target: "all",
+		type: "Dark",
+	},
+	enchantedclaw: {
+		num: 2180,
+		accuracy: 100,
+		basePower: 85,
+		category: "Physical",
+		overrideDefensiveStat: 'spd',
+		name: "Enchanted Claw",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		critRatio: 2,
+		secondary: null,
+		target: "normal",
+		type: "Fairy",
+	},
 };

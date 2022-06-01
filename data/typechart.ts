@@ -26,6 +26,7 @@ export const TypeChart: {[k: string]: TypeData} = {
 	dark: {
 		damageTaken: {
 			prankster: 3,
+			corruption: 3,
 			Bug: 1,
 			Dark: 2,
 			Dragon: 0,

@@ -1,4 +1,125 @@
 {
+  "venusaur": {
+    "usage": 2,
+    "sets": [
+      {
+        "species": "Venusaur",
+        "item": ["Life Orb"],
+        "ability": ["Chlorophyll"],
+        "evs": {"spa": 252, "spd": 4, "spe": 252},
+        "ivs": {"atk": 0},
+        "nature": "Modest",
+        "moves": [["Solar Pulse"], ["Solar Beam"], ["Sunblast", "Weather Ball"], ["Growth", "Synthesis"]]
+      },
+      {
+        "species": "Venusaur",
+        "item": ["Black Sludge"],
+        "ability": ["Overgrow"],
+        "evs": {"spa": 252, "spd": 252, "def": 4},
+        "ivs": {"atk": 0},
+        "nature": "Modest",
+        "moves": [["Giga Drain"], ["Leech Seed"], ["Earth Power"], ["Sleep Powder", "Substitute"]]
+      },
+      {
+        "species": "Venusaur",
+        "item": ["Black Sludge"],
+        "ability": ["Overgrow"],
+        "evs": {"spa": 252, "spd": 252, "def": 4},
+        "ivs": {"atk": 0},
+        "nature": "Modest",
+        "moves": [["Toxic"], ["Venoshock"], ["Venom Drench", "Synthesis", "Leech Seed"], ["Sunblast", "Earth Power", "Root Strangle"]]
+      },
+      {
+        "species": "Venusaur",
+        "item": ["Choice Scarf"],
+        "ability": ["Overgrow"],
+        "evs": {"spa": 252, "spe": 252, "spd": 4},
+        "ivs": {"atk": 0},
+        "nature": "Modest",
+        "moves": [["Chloro Beam"], ["Sludge Bomb"], ["Earth Power"], ["Sunblast"]]
+      },
+      {
+        "species": "Venusaur",
+        "item": ["Choice Specs", "Life Orb"],
+        "ability": ["Overgrow"],
+        "evs": {"spa": 252, "spe": 252, "spd": 4},
+        "ivs": {"atk": 0},
+        "nature": "Timid",
+        "moves": [["Chloro Beam"], ["Sludge Bomb"], ["Earth Power"], ["Sunblast"]]
+      }
+    ]
+  },
+  "charizard": {
+    "usage": 2,
+    "sets": [
+      {
+        "species": "Charizard",
+        "item": ["Life Orb"],
+        "ability": ["Blaze"],
+        "evs": {"def": 4, "spa": 252, "spe": 252},
+        "ivs": {"atk": 0},
+        "nature": "Timid",
+        "moves": [["Searing Shot", "Vaporize", "Fire Blast"], ["Wind Blast"], ["Substitute"], ["Scorching Sands", "Focus Blast"]]
+      },
+      {
+        "species": "Charizard",
+        "item": ["Heavy-Duty Boots"],
+        "ability": ["Blaze"],
+        "evs": {"def": 4, "spa": 252, "spe": 252},
+        "ivs": {"atk": 0},
+        "nature": "Timid",
+        "moves": [["Searing Shot", "Vaporize"], ["Wind Blast"], ["Scorched Earth"], ["Scorching Sands", "Focus Blast", "Roost"]]
+      },
+      {
+        "species": "Charizard",
+        "item": ["Heavy-Duty Boots", "Life Orb"],
+        "ability": ["Blaze"],
+        "evs": {"atk": 252, "def": 4, "spe": 252},
+        "nature": "Adamant",
+        "moves": [["Flame Impact"], ["Flare Blitz", "Dragon Ascent", "Divebomb"], ["Swords Dance", "Roost"], ["Earthquake"]]
+      },
+      {
+        "species": "Charizard",
+        "item": ["Heavy-Duty Boots", "Life Orb"],
+        "ability": ["Blaze"],
+        "evs": {"atk": 252, "spa": 4, "spe": 252},
+        "nature": "Naughty",
+        "moves": [["Flame Impact"], ["Overheat"], ["Divebomb", "Dragon Ascent"], ["Earthquake"]]
+      },
+      {
+        "species": "Charizard",
+        "item": ["Heavy-Duty Boots", "Life Orb"],
+        "ability": ["Solar Power"],
+        "evs": {"def": 4, "spa": 252, "spe": 252},
+        "ivs": {"atk": 0},
+        "nature": "Timid",
+        "moves": [["Sunny Day"], ["Searing Shot", "Fire Blast"], ["Solar Beam"], ["Wind Blast"]]
+      }
+    ]
+  },
+  "blastoise": {
+    "usage": 2,
+    "sets": [
+      {
+        "species": "Blastoise",
+        "item": ["Damp Rock", "Leftovers"],
+        "ability": ["Rain Dish"],
+        "evs": {"hp": 252, "spd": 252, "spa": 4},
+        "ivs": {"atk": 0},
+        "nature": "Calm",
+        "moves": [["Rain Dance"], ["Surf", "Hydro Cannon", "Substitute", "Slush Ball", "Protect"], ["Ocean's Wrath", "Toxic"], ["Clear Rain", "Aqua Ring"]]
+      },
+      {
+        "species": "Blastoise",
+        "item": ["White Herb"],
+        "ability": ["Mega Launcher"],
+        "evs": {"spa": 252, "spd": 4, "spe": 252},
+        "ivs": {"atk": 0},
+        "nature": "Modest",
+        "moves": [["Hydro Pump"], ["Snow Cannon"], ["Aura Sphere", "Dark Pulse"], ["Shell Smash"]]
+      }
+    ]
+  },
   "cinderace": {
     "usage": 10,
     "sets": [
@@ -1706,30 +1827,6 @@
         "ivs": {"atk": 0},
         "nature": "Bold",
         "moves": [["Tri Attack"], ["Soft-Boiled"], ["Ice Beam", "Flamethrower", "Shadow Ball"], ["Calm Mind"]]
-      }
-    ]
-  },
-  "charizard": {
-    "usage": 2,
-    "sets": [
-      {
-        "species": "Charizard",
-        "gigantamax": true,
-        "item": ["Life Orb", "Heavy-Duty Boots"],
-        "ability": ["Blaze"],
-        "evs": {"def": 4, "spa": 252, "spe": 252},
-        "ivs": {"atk": 0},
-        "nature": "Timid",
-        "moves": [["Blast Burn"], ["Air Slash", "Hurricane"], ["Solar Beam"], ["Scorching Sands", "Dragon Pulse"]]
-      },
-      {
-        "species": "Charizard",
-        "item": ["Life Orb", "Heavy-Duty Boots"],
-        "ability": ["Solar Power"],
-        "evs": {"def": 4, "spa": 252, "spe": 252},
-        "ivs": {"atk": 0},
-        "nature": "Timid",
-        "moves": [["Fire Blast", "Flamethrower"], ["Air Slash"], ["Solar Beam"], ["Scorching Sands", "Dragon Pulse"]]
       }
     ]
   },

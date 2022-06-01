@@ -717,6 +717,47 @@ export const Conditions: {[k: string]: ConditionData} = {
 			this.add('-weather', 'none');
 		},
 	},
+	darkness: {
+		name: 'Darkness',
+		effectType: 'Weather',
+		duration: 5,
+		durationCallback(source, effect) {
+			var dur = 5;
+			if (source?.moveThisTurn === 'darknesscall') {
+				dur += 2;
+			}
+			if (source?.hasItem('darkrock')) {
+				dur += 5;
+			}
+			return dur;
+		},
+		onWeatherModifyDamage(damage, attacker, defender, move) {
+			if (move.type === 'Dark' || move.type === 'Ghost') {
+				this.debug('darkness dark/ghost boost');
+				return this.chainModify(1.35);
+			}
+			if (move.type === 'Fairy') {
+				this.debug('darkness fairy suppress');
+				return this.chainModify(0.5);
+			}
+		},
+		onFieldStart(field, source, effect) {
+			if (effect?.effectType === 'Ability') {
+				if (this.gen <= 5) this.effectState.duration = 0;
+				this.add('-weather', 'Darkness', '[from] ability: ' + effect.name, '[of] ' + source);
+			} else {
+				this.add('-weather', 'Darkness');
+			}
+		},
+		onFieldResidualOrder: 1,
+		onFieldResidual() {
+			this.add('-weather', 'Darkness', '[upkeep]');
+			this.eachEvent('Weather');
+		},
+		onFieldEnd() {
+			this.add('-weather', 'none');
+		},
+	},
 
 	dynamax: {
 		name: 'Dynamax',

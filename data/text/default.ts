@@ -311,6 +311,12 @@ export const DefaultText: {[k: string]: DefaultText} = {
 		activate: "  The mysterious strong winds weakened the attack!",
 		block: "  The mysterious strong winds blow on regardless!",
 	},
+	darkness: {
+		weatherName: "Darkness",
+		start: "  A shroud of darkness appeared!",
+		end: "  The shroud of darkness disappeared!",
+		upkeep: "  (The darkness persists.)",
+	},
 
 	// terrain
 	electricterrain: {
