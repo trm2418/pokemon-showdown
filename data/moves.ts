@@ -470,7 +470,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	aquatail: {
 		num: 401,
 		accuracy: 95,
-		basePower: 90,
+		basePower: 95,
 		category: "Physical",
 		name: "Aqua Tail",
 		pp: 15,
@@ -20151,7 +20151,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 				move.secondaries.push({
 					chance: 30,
 					status: 'brn',
-					ability: this.dex.abilities.get('poisontouch'),
 				});
 			},
 			onResidualOrder: 18,

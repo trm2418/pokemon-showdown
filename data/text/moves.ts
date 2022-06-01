@@ -6939,7 +6939,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	ignite: {
 		name: "Ignite",
-		desc: "For 6 turns, the user's Fire-type attacks do 2x damage and any contact with the user has a 30% chance to burn the other Pokemon.",
+		desc: "For 6 turns, the user's Fire-type attacks do 2x damage and any contact with the user has a 30% chance to burn the other Pokemon. The user's contact moves will be affected by Sheer Force.",
 		shortDesc: "6 turns, 2x Fire power, 30% burn from any contact.",
 
 		start: "  [POKEMON] ignited itself!",
