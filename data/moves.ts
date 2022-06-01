@@ -20124,11 +20124,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {},
 		volatileStatus: 'ignite',
-		onHit(pokemon) {
-			this.add('-start', pokemon, 'move: Ignite');
-		},
 		condition: {
 			duration: 6,
+			onStart(target) {
+				this.add('-start', target, 'Ignite');
+			},
 			onBasePowerPriority: 9,
 			onBasePower(basePower, attacker, defender, move) {
 				if (move.type === 'Fire') {
@@ -20154,6 +20154,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 					ability: this.dex.abilities.get('poisontouch'),
 				});
 			},
+			onResidualOrder: 18,
+			onEnd(target) {
+				this.add('-end', target, 'Ignite');
+			}
 		},
 		secondary: null,
 		target: "self",
