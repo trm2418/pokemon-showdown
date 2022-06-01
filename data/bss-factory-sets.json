@@ -1,6 +1,7 @@
 {
   "cinderace": {
     "usage": 10,
+    "level": 45,
     "sets": [
       {
         "species": "Cinderace",
@@ -33,6 +34,7 @@
   },
   "zapdos": {
     "usage": 10,
+    "level": 45,
     "sets": [
       {
         "species": "Zapdos",
@@ -64,6 +66,7 @@
   },
   "mimikyu": {
     "usage": 10,
+    "level": 45,
     "sets": [
       {
         "species": "Mimikyu",
@@ -101,6 +104,7 @@
   },
   "landorus": {
     "usage": 8,
+    "level": 45,
     "sets": [
       {
         "species": "Landorus-Therian",
@@ -122,6 +126,7 @@
   },
   "tapufini": {
     "usage": 9,
+    "level": 45,
     "sets": [
       {
         "species": "Tapu Fini",
@@ -145,6 +150,7 @@
   },
   "nihilego": {
     "usage": 6,
+    "level": 45,
     "sets": [
       {
         "species": "Nihilego",
@@ -168,6 +174,7 @@
   },
   "rillaboom": {
     "usage": 8,
+    "level": 45,
     "sets": [
       {
         "species": "Rillaboom",
@@ -191,6 +198,7 @@
   },
   "porygon2": {
     "usage": 9,
+    "level": 45,
     "sets": [
       {
         "species": "Porygon2",
@@ -222,6 +230,7 @@
   },
   "dracovish": {
     "usage": 8,
+    "level": 45,
     "sets": [
       {
         "species": "Dracovish",
@@ -243,6 +252,7 @@
   },
   "dracozolt": {
     "usage": 5,
+    "level": 45,
     "sets": [
       {
         "species": "Dracozolt",
@@ -264,6 +274,7 @@
   },
   "ferrothorn": {
     "usage": 8,
+    "level": 45,
     "sets": [
       {
         "species": "Ferrothorn",
@@ -296,6 +307,7 @@
   },
   "urshifu": {
     "usage": 8,
+    "level": 45,
     "sets": [
       {
         "species": "Urshifu-Rapid-Strike",
@@ -335,6 +347,7 @@
   },
   "dragapult": {
     "usage": 9,
+    "level": 45,
     "sets": [
       {
         "species": "Dragapult",
@@ -364,6 +377,7 @@
   },
   "celesteela": {
     "usage": 9,
+    "level": 45,
     "sets": [
       {
         "species": "Celesteela",
@@ -396,6 +410,7 @@
   },
   "dragonite": {
     "usage": 8,
+    "level": 45,
     "sets": [
       {
         "species": "Dragonite",

@@ -63,7 +63,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			if (move.aerilateBoosted) return this.chainModify([4506, 4096]);
 		},
 		name: "Aerilate",
-		rating: 4,
+		rating: 3,
 		num: 184,
 	},
 	aftermath: {

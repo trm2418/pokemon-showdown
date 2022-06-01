@@ -7545,7 +7545,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "RU",
 	},
 	pajantom: {
-		randomBattleMoves: ["spiritshackle", "outrage", "earthquake", "toxic", "icepunch"],
+		randomBattleMoves: ["spiritshackle", "outrage", "earthquake", "toxic", "icepunch", "facade"],
 		randomBattleLevel: 78,
 		tier: "UU",
 	},
