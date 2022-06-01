@@ -1,10 +1,10 @@
 {
   "cinderace": {
     "usage": 10,
-    "level": 45,
     "sets": [
       {
         "species": "Cinderace",
+        "level": 45,
         "gigantamax": true,
         "item": ["Focus Sash"],
         "ability": ["Libero"],
@@ -14,6 +14,7 @@
       },
       {
         "species": "Cinderace",
+        "level": 45,
         "gigantamax": true,
         "item": ["Choice Scarf"],
         "ability": ["Libero"],
@@ -23,6 +24,7 @@
       },
       {
         "species": "Cinderace",
+        "level": 45,
         "gigantamax": true,
         "item": ["Scope Lens"],
         "ability": ["Libero"],
@@ -34,10 +36,10 @@
   },
   "zapdos": {
     "usage": 10,
-    "level": 45,
     "sets": [
       {
         "species": "Zapdos",
+        "level": 45,
         "item": ["Sharp Beak"],
         "ability": ["Static"],
         "evs": {"spa": 252, "spd": 4, "spe": 252},
@@ -47,6 +49,7 @@
       },
       {
         "species": "Zapdos",
+        "level": 45,
         "item": ["Leftovers"],
         "ability": ["Pressure"],
         "evs": {"hp": 252, "spd": 252, "spe": 4},
@@ -56,6 +59,7 @@
       },
       {
         "species": "Zapdos-Galar",
+        "level": 45,
         "item": ["Weakness Policy", "Life Orb", "Sharp Beak", "Sitrus Berry"],
         "ability": ["Defiant"],
         "evs": {"atk": 252, "spd": 4, "spe": 252},
@@ -66,10 +70,10 @@
   },
   "mimikyu": {
     "usage": 10,
-    "level": 45,
     "sets": [
       {
         "species": "Mimikyu",
+        "level": 45,
         "item": ["Spell Tag"],
         "ability": ["Disguise"],
         "evs": {"atk": 252, "spd": 4, "spe": 252},
@@ -78,6 +82,7 @@
       },
       {
         "species": "Mimikyu",
+        "level": 45,
         "item": ["Kee Berry"],
         "ability": ["Disguise"],
         "evs": {"hp": 252, "atk": 252, "def": 4},
@@ -86,6 +91,7 @@
       },
       {
         "species": "Mimikyu",
+        "level": 45,
         "item": ["Babiri Berry"],
         "ability": ["Disguise"],
         "evs": {"hp": 252, "atk": 252, "def": 4},
@@ -94,6 +100,7 @@
       },
       {
         "species": "Mimikyu",
+        "level": 45,
         "item": ["Custap Berry", "Salac Berry", "Liechi Berry"],
         "ability": ["Disguise"],
         "evs": {"atk": 252, "spd": 4, "spe": 252},
@@ -104,10 +111,10 @@
   },
   "landorus": {
     "usage": 8,
-    "level": 45,
     "sets": [
       {
         "species": "Landorus-Therian",
+        "level": 45,
         "item": ["Sharp Beak", "Choice Scarf"],
         "ability": ["Intimidate"],
         "evs": {"atk": 252, "spd": 4, "spe": 252},
@@ -116,6 +123,7 @@
       },
       {
         "species": "Landorus-Therian",
+        "level": 45,
         "item": ["Focus Sash"],
         "ability": ["Intimidate"],
         "evs": {"atk": 252, "spd": 4, "spe": 252},
@@ -126,10 +134,10 @@
   },
   "tapufini": {
     "usage": 9,
-    "level": 45,
     "sets": [
       {
         "species": "Tapu Fini",
+        "level": 45,
         "item": ["Leftovers"],
         "ability": ["Misty Surge"],
         "evs": {"hp": 252, "def": 252, "spd": 4},
@@ -139,6 +147,7 @@
       },
       {
         "species": "Tapu Fini",
+        "level": 45,
         "item": ["Choice Scarf"],
         "ability": ["Misty Surge"],
         "evs": {"spa": 252, "spd": 4, "spe": 252},
@@ -150,10 +159,10 @@
   },
   "nihilego": {
     "usage": 6,
-    "level": 45,
     "sets": [
       {
         "species": "Nihilego",
+        "level": 45,
         "item": ["Power Herb"],
         "ability": ["Beast Boost"],
         "evs": {"def": 84, "spa": 172, "spe": 252},
@@ -163,6 +172,7 @@
       },
       {
         "species": "Nihilego",
+        "level": 45,
         "item": ["Focus Sash"],
         "ability": ["Beast Boost"],
         "evs": {"def": 84, "spa": 172, "spe": 252},
@@ -174,10 +184,10 @@
   },
   "rillaboom": {
     "usage": 8,
-    "level": 45,
     "sets": [
       {
         "species": "Rillaboom",
+        "level": 45,
         "gigantamax": true,
         "item": ["Choice Band"],
         "ability": ["Grassy Surge"],
@@ -187,6 +197,7 @@
       },
       {
         "species": "Rillaboom",
+        "level": 45,
         "gigantamax": true,
         "item": ["Grassy Seed"],
         "ability": ["Grassy Surge"],
@@ -198,7 +209,6 @@
   },
   "porygon2": {
     "usage": 9,
-    "level": 45,
     "sets": [
       {
         "species": "Porygon2",
@@ -230,7 +240,6 @@
   },
   "dracovish": {
     "usage": 8,
-    "level": 45,
     "sets": [
       {
         "species": "Dracovish",
@@ -252,7 +261,6 @@
   },
   "dracozolt": {
     "usage": 5,
-    "level": 45,
     "sets": [
       {
         "species": "Dracozolt",
@@ -274,7 +282,6 @@
   },
   "ferrothorn": {
     "usage": 8,
-    "level": 45,
     "sets": [
       {
         "species": "Ferrothorn",
@@ -307,7 +314,6 @@
   },
   "urshifu": {
     "usage": 8,
-    "level": 45,
     "sets": [
       {
         "species": "Urshifu-Rapid-Strike",
@@ -347,7 +353,6 @@
   },
   "dragapult": {
     "usage": 9,
-    "level": 45,
     "sets": [
       {
         "species": "Dragapult",
@@ -377,7 +382,6 @@
   },
   "celesteela": {
     "usage": 9,
-    "level": 45,
     "sets": [
       {
         "species": "Celesteela",
@@ -410,7 +414,6 @@
   },
   "dragonite": {
     "usage": 8,
-    "level": 45,
     "sets": [
       {
         "species": "Dragonite",
