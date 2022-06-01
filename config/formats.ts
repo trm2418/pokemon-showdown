@@ -2112,7 +2112,9 @@ export const Formats: FormatList = [
 		],
 
 		team: 'randomBSSFactory',
-		ruleset: ['Flat Rules'],
+		
+		ruleset: ['[Gen 8] Random Battle', 'Dynamax Clause'],
+		//ruleset: ['Flat Rules'],
 	},
 	{
 		name: "[Gen 8] Super Staff Bros 4",
