@@ -22829,7 +22829,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		accuracy: 75,
 		basePower: 100,
 		category: "Special",
-		name: "Root Strangle",
+		name: "Black Hole",
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
@@ -22941,7 +22941,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Dark",
 	},
-	darkness: {
+	darknessspin: {
 		num: 2171,
 		accuracy: 90,
 		basePower: 50,
@@ -22960,7 +22960,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		accuracy: 100,
 		basePower: 110,
 		category: "Special",
-		name: "Solar Beam",
+		name: "Lunar Cannon",
 		pp: 10,
 		priority: 0,
 		flags: {charge: 1, protect: 1, pulse: 1, mirror: 1},

@@ -1,6 +1,6 @@
 {
   "venusaur": {
-    "usage": 2,
+    "usage": 6,
     "sets": [
       {
         "species": "Venusaur",
@@ -50,7 +50,7 @@
     ]
   },
   "charizard": {
-    "usage": 2,
+    "usage": 6,
     "sets": [
       {
         "species": "Charizard",
@@ -98,7 +98,7 @@
     ]
   },
   "blastoise": {
-    "usage": 2,
+    "usage": 6,
     "sets": [
       {
         "species": "Blastoise",
