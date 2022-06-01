@@ -3967,7 +3967,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "OU",
 	},
 	cresselia: {
-		randomBattleMoves: ["calmmind", "moonblast", "moonlight", "psyshock", "thunderwave", "toxic"],
+		randomBattleMoves: ["calmmind", "moonblast", "lunarblessing", "psyshock", "thunderwave", "toxic"],
 		randomBattleLevel: 80,
 		randomDoubleBattleMoves: ["allyswitch", "helpinghand", "icywind", "moonlight", "psychic"],
 		randomDoubleBattleLevel: 83,

@@ -7037,6 +7037,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "The user restores 1/2 of its maximum HP if Delta Stream or no weather conditions are in effect or if the user is holding Utility Umbrella, 2/3 of its maximum HP if the weather is Primordial Sea or Rain Dance, and 1/4 of its maximum HP if the weather is Hail, Desolate Land, Sunny Day, or Sandstorm, all rounded half down.",
 		shortDesc: "Heals the user by a weather-dependent amount.",
 	},
+	compostbomb: {
+		name: "Compost Bomb",
+		desc: "Has a 30% chance to make the target flinch. Power doubles if the user has eaten a Berry, either by eating one that was held, stealing and eating one off another Pokemon with Bug Bite or Pluck, or eating one that was thrown at it with Fling. Once the condition is met, this move will have doubled power for the rest of the battle, even if the user gains or uses another item or switches out. Consuming a Berry with Natural Gift does not count for the purposes of eating one.",
+		shortDesc: "30% flinch. 2x power if user has eaten a berry.",
+	},
 	overgrownfist: {
 		name: "Overgrown Fist",
 		desc: "Has a 50% chance to create Grassy Terrain for 5 turns if this move hits. Lasts for 10 turns if the user is holding Terrain Extender.",

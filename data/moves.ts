@@ -11473,6 +11473,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 					this.debug('misty terrain weaken');
 					return this.chainModify(0.5);
 				}
+				else if (move.type === 'Fairy' && attacker.isGrounded() && !attacker.isSemiInvulnerable()) {
+					this.debug('Misty terrain boost');
+					return this.chainModify([4915, 4096]);
+				}
 			},
 			onFieldStart(field, source, effect) {
 				if (effect?.effectType === 'Ability') {
@@ -20511,8 +20515,31 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "self",
 		type: "Water",
 	},
-	overgrownfist: {
+	compostbomb: {
 		num: 2038,
+		accuracy: 85,
+		basePower: 65,
+		basePowerCallback(pokemon, target, move) {
+			if (pokemon.ateBerry) {
+				this.debug("Power doubled for eating berry");
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
+		category: "Physical",
+		name: "Compost Bomb",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1},
+		secondary: {
+			chance: 30,
+			volatileStatus: 'flinch',
+		},
+		target: "normal",
+		type: "Grass",
+	},
+	overgrownfist: {
+		num: 2039,
 		accuracy: 90,
 		basePower: 80,
 		category: "Physical",
@@ -20528,7 +20555,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Grass",
 	},
 	rootstrangle: {
-		num: 2039,
+		num: 2040,
 		accuracy: 75,
 		basePower: 100,
 		category: "Physical",
@@ -20542,7 +20569,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Grass",
 	},
 	spikedtail: {
-		num: 2040,
+		num: 2041,
 		accuracy: 80,
 		basePower: 95,
 		category: "Physical",
@@ -20558,7 +20585,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Grass",
 	},
 	timberfall: {
-		num: 2041,
+		num: 2042,
 		accuracy: 90,
 		basePower: 30,
 		basePowerCallback(pokemon, target, move) {
@@ -20602,7 +20629,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Grass",
 	},
 	woodthrow: {
-		num: 2042,
+		num: 2043,
 		accuracy: 90,
 		basePower: 75,
 		category: "Physical",
@@ -20618,7 +20645,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Grass",
 	},
 	chloroblast: {
-		num: 2043,
+		num: 2044,
 		accuracy: 95,
 		basePower: 150,
 		category: "Special",
@@ -20637,7 +20664,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Grass",
 	},
 	chlorobeam: {
-		num: 2044,
+		num: 2045,
 		accuracy: 85,
 		basePower: 115,
 		category: "Special",
@@ -20650,7 +20677,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Grass",
 	},
 	grassflurry: {
-		num: 2045,
+		num: 2046,
 		accuracy: 100,
 		basePower: 65,
 		basePowerCallback(source, target, move) {
@@ -20670,7 +20697,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Grass",
 	},
 	sapshot: {
-		num: 2046,
+		num: 2047,
 		accuracy: 90,
 		basePower: 60,
 		category: "Special",
@@ -20688,7 +20715,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Grass",
 	},
 	solarpulse: {
-		num: 2047,
+		num: 2048,
 		accuracy: 90,
 		basePower: 70,
 		category: "Special",
@@ -20704,7 +20731,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Grass",
 	},
 	sporeburst: {
-		num: 2048,
+		num: 2049,
 		accuracy: 100,
 		basePower: 80,
 		category: "Special",
@@ -20729,7 +20756,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Grass",
 	},
 	pepperpowder: {
-		num: 2050,
+		num: 2051,
 		accuracy: 75,
 		basePower: 0,
 		category: "Status",
@@ -20743,7 +20770,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Grass",
 	},
 	sporeshield: {
-		num: 2051,
+		num: 2052,
 		accuracy: true,
 		basePower: 0,
 		category: "Status",
@@ -20799,7 +20826,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Grass",
 	},
 	electroburn: {
-		num: 2052,
+		num: 2053,
 		accuracy: 90,
 		basePower: 95,
 		category: "Physical",
@@ -20822,7 +20849,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Electric",
 	},
 	electrocute: {
-		num: 2053,
+		num: 2054,
 		accuracy: 75,
 		basePower: 100,
 		category: "Physical",
@@ -20836,7 +20863,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Electric",
 	},
 	electroslash: {
-		num: 2054,
+		num: 2055,
 		accuracy: 95,
 		basePower: 95,
 		category: "Physical",
@@ -20850,7 +20877,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Electric",
 	},
 	lightninghammer: {
-		num: 2055,
+		num: 2056,
 		accuracy: 75,
 		basePower: 120,
 		category: "Physical",
@@ -20866,7 +20893,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Electric",
 	},
 	lightningrush: {
-		num: 2056,
+		num: 2057,
 		accuracy: 100,
 		basePower: 75,
 		category: "Physical",
@@ -20880,7 +20907,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Electric",
 	},
 	prod: {
-		num: 2057,
+		num: 2058,
 		accuracy: 90,
 		basePower: 55,
 		category: "Physical",
@@ -20896,7 +20923,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Electric",
 	},
 	shocktail: {
-		num: 2058,
+		num: 2059,
 		accuracy: 75,
 		basePower: 60,
 		category: "Physical",
@@ -20912,7 +20939,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Electric",
 	},
 	staticbump: {
-		num: 2059,
+		num: 2060,
 		accuracy: 100,
 		basePower: 40,
 		category: "Physical",
@@ -20928,7 +20955,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Electric",
 	},
 	stormcrash: {
-		num: 2060,
+		num: 2061,
 		accuracy: 90,
 		basePower: 140,
 		category: "Physical",
@@ -20946,7 +20973,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Electric",
 	},
 	stormingfangs: {
-		num: 2061,
+		num: 2062,
 		accuracy: 90,
 		basePower: 80,
 		category: "Physical",
@@ -20962,7 +20989,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Electric",
 	},
 	thunderclap: {
-		num: 2062,
+		num: 2063,
 		accuracy: 85,
 		basePower: 105,
 		category: "Physical",
@@ -20978,7 +21005,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Electric",
 	},
 	wildboltstorm: {
-		num: 2063,
+		num: 2064,
 		accuracy: 80,
 		basePower: 125,
 		category: "Special",
@@ -20994,7 +21021,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Electric",
 	},
 	arclightning: {
-		num: 2064,
+		num: 2065,
 		accuracy: 95,
 		basePower: 25,
 		category: "Special",
@@ -21008,7 +21035,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Electric",
 	},
 	erraticshock: {
-		num: 2065,
+		num: 2066,
 		accuracy: 95,
 		basePower: 0,
 		category: "Special",
@@ -21039,7 +21066,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		maxMove: {basePower: 150},
 	},
 	ionbeam: {
-		num: 2066,
+		num: 2067,
 		accuracy: 100,
 		basePower: 80,
 		category: "Special",
@@ -21059,7 +21086,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Electric",
 	},
 	lightningblast: {
-		num: 2067,
+		num: 2068,
 		accuracy: 75,
 		basePower: 130,
 		category: "Special",
@@ -21075,7 +21102,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Electric",
 	},
 	powersurge: {
-		num: 2068,
+		num: 2069,
 		accuracy: 90,
 		basePower: 175,
 		category: "Special",
@@ -21094,7 +21121,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Electric",
 	},
 	shortcircuit: {
-		num: 2069,
+		num: 2070,
 		accuracy: 100,
 		basePower: 150,
 		category: "Special",
@@ -21119,7 +21146,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Electric",
 	},
 	quickjolt: {
-		num: 2070,
+		num: 2071,
 		accuracy: 100,
 		basePower: 50,
 		category: "Special",
@@ -21132,7 +21159,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Electric",
 	},
 	healingcurrent: {
-		num: 2071,
+		num: 2072,
 		accuracy: true,
 		basePower: 0,
 		category: "Status",
@@ -21158,7 +21185,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Electric",
 	},
 	thundershield: {
-		num: 2074,
+		num: 2075,
 		accuracy: true,
 		basePower: 0,
 		category: "Status",
@@ -21214,7 +21241,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Electric",
 	},
 	turbocharge: {
-		num: 2075,
+		num: 2076,
 		accuracy: true,
 		basePower: 0,
 		category: "Status",
@@ -21231,7 +21258,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Electric",
 	},
 	esperwing: {
-		num: 2076,
+		num: 2077,
 		accuracy: 90,
 		basePower: 75,
 		category: "Physical",
@@ -21252,7 +21279,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Psychic",
 	},
 	psyshieldbash: {
-		num: 2077,
+		num: 2078,
 		accuracy: 80,
 		basePower: 70,
 		category: "Physical",
@@ -21273,7 +21300,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Psychic",
 	},
 	brainpress: {
-		num: 2078,
+		num: 2079,
 		accuracy: 100,
 		basePower: 100,
 		category: "Physical",
@@ -21288,7 +21315,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Psychic",
 	},
 	facingfears: {
-		num: 2089,
+		num: 2080,
 		accuracy: 100,
 		basePower: 70,
 		category: "Physical",
@@ -21303,7 +21330,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Psychic",
 	},
 	gravityslam: {
-		num: 2090,
+		num: 2081,
 		accuracy: true,
 		basePower: 70,
 		category: "Physical",
@@ -21319,7 +21346,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Psychic",
 	},
 	psyjab: {
-		num: 2091,
+		num: 2082,
 		accuracy: 100,
 		basePower: 40,
 		category: "Physical",
@@ -21335,7 +21362,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Psychic",
 	},
 	psypunch: {
-		num: 2092,
+		num: 2083,
 		accuracy: 100,
 		basePower: 65,
 		category: "Physical",
@@ -21355,7 +21382,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Psychic",
 	},
 	neuronsmash: {
-		num: 2093,
+		num: 2084,
 		accuracy: 100,
 		basePower: 80,
 		category: "Physical",
@@ -21373,7 +21400,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Psychic",
 	},
 	psyspikes: {
-		num: 2094,
+		num: 2085,
 		accuracy: 95,
 		basePower: 105,
 		category: "Physical",
@@ -21389,7 +21416,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Psychic",
 	},
 	psychorush: {
-		num: 2095,
+		num: 2086,
 		accuracy: 100,
 		basePower: 120,
 		category: "Physical",
@@ -21406,7 +21433,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Psychic",
 	},
 	zenslam: {
-		num: 2096,
+		num: 2087,
 		accuracy: 95,
 		basePower: 90,
 		category: "Physical",
@@ -21420,7 +21447,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Psychic",
 	},
 	arcanepulse: {
-		num: 2099,
+		num: 2090,
 		accuracy: 90,
 		basePower: 80,
 		category: "Special",
@@ -21436,7 +21463,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Psychic",
 	},
 	astrosphere: {
-		num: 2100,
+		num: 2091,
 		accuracy: 90,
 		basePower: 90,
 		category: "Special",
@@ -21452,7 +21479,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Psychic",
 	},
 	instantcrush: {
-		num: 2101,
+		num: 2092,
 		accuracy: true,
 		basePower: 60,
 		category: "Special",
@@ -21465,7 +21492,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Psychic",
 	},
 	mindzap: {
-		num: 2103,
+		num: 2094,
 		accuracy: 100,
 		basePower: 85,
 		category: "Special",
@@ -21481,7 +21508,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Psychic",
 	},
 	perplex: {
-		num: 2104,
+		num: 2095,
 		accuracy: 100,
 		basePower: 75,
 		category: "Special",
@@ -21499,7 +21526,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Psychic",
 	},
 	psionicstorm: {
-		num: 2105,
+		num: 2096,
 		accuracy: 75,
 		basePower: 120,
 		category: "Special",
@@ -21517,7 +21544,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Psychic",
 	},
 	psypulse: {
-		num: 2106,
+		num: 2097,
 		accuracy: 100,
 		basePower: 45,
 		category: "Special",
@@ -21530,7 +21557,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Psychic",
 	},
 	totembeam: {
-		num: 2107,
+		num: 2098,
 		accuracy: 95,
 		basePower: 105,
 		category: "Special",
@@ -21545,7 +21572,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Psychic",
 	},
 	lunarblessing: {
-		num: 2108,
+		num: 2099,
 		accuracy: true,
 		basePower: 0,
 		category: "Status",
@@ -21562,7 +21589,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Psychic",
 	},
 	hyperfocus: {
-		num: 2109,
+		num: 2101,
 		accuracy: true,
 		basePower: 0,
 		category: "Status",
@@ -21579,7 +21606,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Psychic",
 	},
 	psychoshield: {
-		num: 2112,
+		num: 2104,
 		accuracy: true,
 		basePower: 0,
 		category: "Status",
@@ -21635,7 +21662,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Psychic",
 	},
 	zenrepose: {
-		num: 2115,
+		num: 2107,
 		accuracy: true,
 		basePower: 0,
 		category: "Status",
@@ -21663,7 +21690,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Psychic",
 	},
 	mountaingale: {
-		num: 2116,
+		num: 2108,
 		accuracy: 90,
 		basePower: 120,
 		category: "Physical",
@@ -21679,7 +21706,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Ice",
 	},
 	cryocrash: {
-		num: 2117,
+		num: 2109,
 		accuracy: 100,
 		basePower: 120,
 		category: "Physical",
@@ -21696,7 +21723,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Ice",
 	},
 	frostyjab: {
-		num: 2118,
+		num: 2110,
 		accuracy: 100,
 		basePower: 45,
 		category: "Physical",
@@ -21709,7 +21736,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Ice",
 	},
 	frozenblade: {
-		num: 2119,
+		num: 2111,
 		accuracy: 100,
 		basePower: 90,
 		category: "Physical",
@@ -21723,7 +21750,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Ice",
 	},
 	glaciercrush: {
-		num: 2120,
+		num: 2112,
 		accuracy: 100,
 		basePower: 130,
 		category: "Physical",
@@ -21758,7 +21785,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Ice",
 	},
 	icedrill: {
-		num: 2121,
+		num: 2113,
 		accuracy: 100,
 		basePower: 75,
 		basePowerCallback(pokemon, target, move) {
@@ -21781,7 +21808,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Ice",
 	},
 	subzerofury: {
-		num: 2122,
+		num: 2114,
 		accuracy: 95,
 		basePower: 135,
 		category: "Physical",
@@ -21799,7 +21826,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Ice",
 	},
 	tusksmash: {
-		num: 2123,
+		num: 2115,
 		accuracy: 90,
 		basePower: 55,
 		category: "Physical",
@@ -21813,7 +21840,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Ice",
 	},
 	creepingcold: {
-		num: 2124,
+		num: 2116,
 		accuracy: 95,
 		basePower: 75,
 		basePowerCallback(source, target, move) {
@@ -21844,7 +21871,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Ice",
 	},
 	cryomancy: {
-		num: 2125,
+		num: 2117,
 		accuracy: 100,
 		basePower: 85,
 		category: "Special",
@@ -21860,7 +21887,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Ice",
 	},
 	frostblast: {
-		num: 2126,
+		num: 2118,
 		accuracy: 80,
 		basePower: 115,
 		category: "Special",
@@ -21876,7 +21903,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Ice",
 	},
 	frostbite: {
-		num: 2127,
+		num: 2119,
 		accuracy: 100,
 		basePower: 85,
 		category: "Special",
@@ -21899,7 +21926,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Ice",
 	},
 	slushball: {
-		num: 2128,
+		num: 2120,
 		accuracy: 90,
 		basePower: 80,
 		basePowerCallback(source, target, move) {
@@ -21921,7 +21948,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Ice",
 	},
 	snowcannon: {
-		num: 2129,
+		num: 2121,
 		accuracy: 90,
 		basePower: 100,
 		category: "Special",
@@ -21937,7 +21964,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Ice",
 	},
 	snowstorm: {
-		num: 2130,
+		num: 2122,
 		accuracy: 90,
 		basePower: 70,
 		category: "Special",
@@ -21953,7 +21980,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Ice",
 	},
 	snowballvolley: {
-		num: 2131,
+		num: 2123,
 		accuracy: 100,
 		basePower: 25,
 		category: "Special",
@@ -21967,7 +21994,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Ice",
 	},
 	whiteout: {
-		num: 2132,
+		num: 2124,
 		accuracy: 90,
 		basePower: 175,
 		category: "Special",
@@ -21986,7 +22013,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Ice",
 	},
 	frigidshield: {
-		num: 2134,
+		num: 2126,
 		accuracy: true,
 		basePower: 0,
 		category: "Status",
@@ -22044,7 +22071,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Ice",
 	},
 	frostburst: {
-		num: 2135,
+		num: 2127,
 		accuracy: true,
 		basePower: 0,
 		category: "Status",
@@ -22060,7 +22087,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Ice",
 	},
 	shiver: {
-		num: 2136,
+		num: 2128,
 		accuracy: 100,
 		basePower: 0,
 		category: "Status",
@@ -22076,7 +22103,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Ice",
 	},
 	wintrybreath: {
-		num: 2137,
+		num: 2129,
 		accuracy: 60,
 		basePower: 0,
 		category: "Status",
@@ -22095,7 +22122,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Ice",
 	},
 	devour: {
-		num: 2138,
+		num: 2130,
 		accuracy: 100,
 		basePower: 80,
 		category: "Physical",
@@ -22109,7 +22136,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Dragon",
 	},
 	dracocharge: {
-		num: 2139,
+		num: 2131,
 		accuracy: 90,
 		basePower: 135,
 		category: "Physical",
@@ -22123,7 +22150,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Dragon",
 	},
 	dracojet: {
-		num: 2140,
+		num: 2132,
 		accuracy: 80,
 		basePower: 100,
 		category: "Physical",
@@ -22141,7 +22168,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Dragon",
 	},
 	dragonlance: {
-		num: 2141,
+		num: 2133,
 		accuracy: 90,
 		basePower: 105,
 		category: "Physical",
@@ -22155,7 +22182,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Dragon",
 	},
 	dragonmaw: {
-		num: 2142,
+		num: 2134,
 		accuracy: 95,
 		basePower: 85,
 		category: "Physical",
@@ -22171,7 +22198,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Dragon",
 	},
 	dragonwing: {
-		num: 2143,
+		num: 2135,
 		accuracy: 90,
 		basePower: 90,
 		category: "Physical",
@@ -22192,7 +22219,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Dragon",
 	},
 	drakestrike: {
-		num: 2144,
+		num: 2136,
 		accuracy: 100,
 		basePower: 40,
 		category: "Physical",
@@ -22212,7 +22239,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Dragon",
 	},
 	radiantclaw: {
-		num: 2145,
+		num: 2137,
 		accuracy: 100,
 		basePower: 85,
 		category: "Physical",
@@ -22230,7 +22257,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Dragon",
 	},
 	wyrmblitz: {
-		num: 2146,
+		num: 2138,
 		accuracy: 100,
 		basePower: 120,
 		category: "Physical",
@@ -22249,7 +22276,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Dragon",
 	},
 	causticbreath: {
-		num: 2147,
+		num: 2139,
 		accuracy: 100,
 		basePower: 65,
 		category: "Special",
@@ -22268,7 +22295,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Dragon",
 	},
 	dragonflare: {
-		num: 2148,
+		num: 2140,
 		accuracy: 90,
 		basePower: 70,
 		category: "Special",
@@ -22282,7 +22309,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Dragon",
 	},
 	dragonfire: {
-		num: 2149,
+		num: 2141,
 		accuracy: 95,
 		basePower: 95,
 		category: "Special",
@@ -22298,7 +22325,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Dragon",
 	},
 	drakonvoice: {
-		num: 2150,
+		num: 2142,
 		accuracy: 85,
 		basePower: 120,
 		category: "Special",
@@ -22311,7 +22338,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Dragon",
 	},
 	mysticbreath: {
-		num: 2151,
+		num: 2143,
 		accuracy: 100,
 		basePower: 80,
 		category: "Special",
@@ -22353,7 +22380,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Dragon",
 	},
 	regalroar: {
-		num: 2152,
+		num: 2144,
 		accuracy: 90,
 		basePower: 80,
 		category: "Special",
@@ -22369,7 +22396,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Dragon",
 	},
 	sealingbeam: {
-		num: 2153,
+		num: 2145,
 		accuracy: 95,
 		basePower: 90,
 		category: "Special",
@@ -22387,7 +22414,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Dragon",
 	},
 	tempestbreath: {
-		num: 2154,
+		num: 2146,
 		accuracy: 100,
 		basePower: 100,
 		category: "Special",
@@ -22410,7 +22437,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Dragon",
 	},
 	wyvernbreath: {
-		num: 2155,
+		num: 2147,
 		accuracy: 100,
 		basePower: 85,
 		category: "Special",
@@ -22426,7 +22453,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Dragon",
 	},
 	ancientblessing: {
-		num: 2166,
+		num: 2148,
 		accuracy: true,
 		basePower: 0,
 		category: "Status",
@@ -22443,7 +22470,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Dragon",
 	},
 	draconicterrain: {
-		num: 2167,
+		num: 2149,
 		accuracy: true,
 		basePower: 0,
 		category: "Status",
@@ -22501,7 +22528,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Dragon",
 	},
 	dragonarmor: {
-		num: 2168,
+		num: 2150,
 		accuracy: true,
 		basePower: 0,
 		category: "Status",
@@ -22532,7 +22559,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Dragon",
 	},
 	dragonroar: {
-		num: 2169,
+		num: 2151,
 		accuracy: 100,
 		basePower: 0,
 		category: "Status",
@@ -22551,7 +22578,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Dragon",
 	},
 	draconify: {
-		num: 2170,
+		num: 2152,
 		accuracy: 100,
 		basePower: 0,
 		category: "Status",
@@ -22577,7 +22604,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	/*
 	lurk: {
-		num: 2171,
+		num: 2153,
 		accuracy: true,
 		basePower: 0,
 		category: "Status",
