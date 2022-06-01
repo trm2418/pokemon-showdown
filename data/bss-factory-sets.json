@@ -120,6 +120,143 @@
       }
     ]
   },
+  "butterfree": {
+    "usage": 3,
+    "sets": [
+      {
+        "species": "Butterfree",
+        "item": ["Heavy-Duty Boots"],
+        "ability": ["Compound Eyes"],
+        "evs": {"spa": 252, "spe": 252, "def": 4},
+        "ivs": {"atk": 0},
+        "nature": "Modest",
+        "moves": [["Quiver Dance"], ["Sleep Powder"], ["Hurricane"], ["Chloro Beam", "Swarm Barrage"]]
+      },
+      {
+        "species": "Butterfree",
+        "item": ["Heavy-Duty Boots"],
+        "ability": ["Tinted Lens"],
+        "evs": {"spa": 252, "spe": 252, "def": 4},
+        "ivs": {"atk": 0},
+        "nature": "Modest",
+        "moves": [["Quiver Dance"], ["Bug Buzz"], ["Wind Blast"], ["Energy Ball", "Psychic"]]
+      }
+    ]
+  },
+  "beedrill": {
+    "usage": 4,
+    "sets": [
+      {
+        "species": "Beedrill",
+        "item": ["Heavy-Duty Boots", "Life Orb"],
+        "ability": ["Technician"],
+        "evs": {"atk": 252, "spe": 252, "def": 4},
+        "ivs": {"spa": 0},
+        "nature": "Jolly",
+        "moves": [["Twineedle"], ["Swords Dance", "Fell Stinger"], ["Knock Off", "Rock Smash"], ["Barb Barrage"]]
+      },
+      {
+        "species": "Beedrill",
+        "item": ["Choice Scarf"],
+        "ability": ["Technician"],
+        "evs": {"atk": 252, "spe": 252, "def": 4},
+        "ivs": {"spa": 0},
+        "nature": "Adamant",
+        "moves": [["Twineedle"], ["Knock Off"], ["Rock Smash"], ["Barb Barrage"]]
+      }
+    ]
+  },
+  "pidgeot": {
+    "usage": 3,
+    "sets": [
+      {
+        "species": "Pidgeot",
+        "item": ["Heavy-Duty Boots", "Life Orb"],
+        "ability": ["Keen Eye"],
+        "evs": {"atk": 252, "spe": 252, "def": 4},
+        "ivs": {"spa": 0},
+        "nature": "Jolly",
+        "moves": [["Divebomb"], ["Defog", "Roost", "Rejuvenate"], ["Daring Dash", "Double-Edge", "Quick Attack"], ["U-turn", "Fury Strike", "Wild Charge"]]
+      },
+      {
+        "species": "Pidgeot",
+        "item": ["Choice Band"],
+        "ability": ["Keen Eye"],
+        "evs": {"atk": 252, "spe": 252, "def": 4},
+        "ivs": {"spa": 0},
+        "nature": "Jolly",
+        "moves": [["Divebomb"], ["Double-Edge"], ["U-turn"], ["Quick Attack", "Fury Strike", "Wild Charge"]]
+      }
+    ]
+  },
+  "raticate": {
+    "usage": 3,
+    "sets": [
+      {
+        "species": "Raticate",
+        "item": ["Life Orb"],
+        "ability": ["Strong Jaw"],
+        "evs": {"atk": 252, "spe": 252, "def": 4},
+        "ivs": {"spa": 0},
+        "nature": "Jolly",
+        "moves": [["Swords Dance"], ["Hyper Fang"], ["Crunch"], ["Poison Fang", "Psychic Fangs", "Thunder Fang", "Fire Fang"]]
+      },
+      {
+        "species": "Raticate",
+        "item": ["Choice Band"],
+        "ability": ["Strong Jaw"],
+        "evs": {"atk": 252, "spe": 252, "def": 4},
+        "ivs": {"spa": 0},
+        "nature": "Jolly",
+        "moves": [["Poison Fang", "Psychic Fangs"], ["Hyper Fang"], ["Crunch"], ["Thunder Fang", "Fire Fang"]]
+      },
+      {
+        "species": "Raticate",
+        "item": ["Choice Scarf"],
+        "ability": ["Strong Jaw"],
+        "evs": {"atk": 252, "spe": 252, "def": 4},
+        "ivs": {"spa": 0},
+        "nature": "Adamant",
+        "moves": [["Poison Fang", "Psychic Fangs"], ["Hyper Fang"], ["Crunch"], ["Thunder Fang", "Fire Fang"]]
+      },
+      {
+        "species": "Raticate",
+        "item": ["Flame Orb"],
+        "ability": ["Guts"],
+        "evs": {"atk": 252, "spe": 252, "def": 4},
+        "ivs": {"spa": 0},
+        "nature": "Jolly",
+        "moves": [["Swords Dance"], ["Double-Edge", "Strength", "Take Down"], ["Stomping Tantrum", "Fury Strike"], ["Crippling Strike"]]
+      },
+      {
+        "species": "Raticate",
+        "item": ["Life Orb"],
+        "ability": ["Hustle"],
+        "evs": {"atk": 252, "spe": 252, "def": 4},
+        "ivs": {"spa": 0},
+        "nature": "Adamant",
+        "moves": [["Swords Dance"], ["Double-Edge", "Strength", "Take Down"], ["Stomping Tantrum", "Fury Strike", "Quick Attack"], ["Crippling Strike"]]
+      },
+      {
+        "species": "Raticate",
+        "item": ["Choice Band"],
+        "ability": ["Hustle"],
+        "evs": {"atk": 252, "spe": 252, "def": 4},
+        "ivs": {"spa": 0},
+        "nature": "Adamant",
+        "moves": [["Quick Attack"], ["Double-Edge", "Strength", "Take Down"], ["Stomping Tantrum", "Fury Strike"], ["Crippling Strike"]]
+      },
+      {
+        "species": "Raticate",
+        "item": ["Choice Scarf"],
+        "ability": ["Hustle"],
+        "evs": {"atk": 252, "spe": 252, "def": 4},
+        "ivs": {"spa": 0},
+        "nature": "Adamant",
+        "moves": [["U-turn"], ["Double-Edge", "Strength", "Take Down"], ["Stomping Tantrum", "Fury Strike"], ["Crippling Strike"]]
+      }
+    ]
+  },
   "cinderace": {
     "usage": 10,
     "sets": [
