@@ -40,7 +40,7 @@ type MoveEnforcementChecker = (
 
 // Moves that restore HP:
 const RecoveryMove = [
-	'healorder', 'milkdrink', 'moonlight', 'morningsun', 'recover', 'roost', 'shoreup', 'slackoff', 'softboiled', 'strengthsap', 'synthesis', 'clearrain', 'zenrepose',
+	'healorder', 'milkdrink', 'moonlight', 'morningsun', 'recover', 'roost', 'shoreup', 'slackoff', 'softboiled', 'strengthsap', 'synthesis', 'clearrain', 'zenrepose', 'healingcurrent', 'lunarblessing'
 ];
 // Moves that drop stats:
 const ContraryMoves = [
@@ -1477,7 +1477,7 @@ export class RandomTeams {
 		// case 'Bulletproof': case 'Overcoat':
 		// 	return !!counter.setupType;
 		case 'Chlorophyll':
-			return (species.baseStats.spe > 100 || !counter.get('Fire') && !moves.has('sunnyday') && !teamDetails.sun);
+			return (species.baseStats.spe > 100 || !counter.get('Fire') && !moves.has('sunnyday') && !moves.has('solarpulse') && !teamDetails.sun);
 		case 'Cloud Nine':
 			return (!isNoDynamax || species.id !== 'golduck');
 		case 'Competitive':
@@ -2512,17 +2512,17 @@ export class RandomTeams {
 			}
 
 			// Track what the team has
-			if (set.ability === 'Drizzle' || set.moves.includes('raindance')) teamDetails.rain = 1;
-			if (set.ability === 'Drought' || set.moves.includes('sunnyday')) teamDetails.sun = 1;
-			if (set.ability === 'Sand Stream') teamDetails.sand = 1;
-			if (set.ability === 'Snow Warning') teamDetails.hail = 1;
-			if (set.moves.includes('spikes')) teamDetails.spikes = (teamDetails.spikes || 0) + 1;
+			if (set.ability === 'Drizzle' || set.moves.includes('raindance') || set.moves.includes('squall')) teamDetails.rain = 1;
+			if (set.ability === 'Drought' || set.moves.includes('sunnyday') || set.moves.includes('solarpulse')) teamDetails.sun = 1;
+			if (set.ability === 'Sand Stream' || set.ability === 'Sand Spit' || set.moves.includes('sandstorm') || set.moves.includes('sandflurry')) teamDetails.sand = 1;
+			if (set.ability === 'Snow Warning' || set.moves.includes('hail') || set.moves.includes('snowstorm') || set.moves.includes('frostburst')) teamDetails.hail = 1;
+			if (set.moves.includes('spikes') || set.moves.includes('spikedtail')) teamDetails.spikes = (teamDetails.spikes || 0) + 1;
 			if (set.moves.includes('stealthrock')) teamDetails.stealthRock = 1;
 			if (set.moves.includes('stickyweb')) teamDetails.stickyWeb = 1;
 			if (set.moves.includes('toxicspikes')) teamDetails.toxicSpikes = 1;
-			if (set.moves.includes('defog')) teamDetails.defog = 1;
-			if (set.moves.includes('rapidspin')) teamDetails.rapidSpin = 1;
-			if (set.moves.includes('auroraveil') || (set.moves.includes('reflect') && set.moves.includes('lightscreen'))) {
+			if (set.moves.includes('defog') || set.moves.includes('scorchedearth')) teamDetails.defog = 1;
+			if (set.moves.includes('rapidspin') || set.moves.includes('engulf')) teamDetails.rapidSpin = 1;
+			if (set.moves.includes('auroraveil') || set.moves.includes('rainbowwall') ||(set.moves.includes('reflect') && set.moves.includes('lightscreen'))) {
 				teamDetails.screens = 1;
 			}
 
@@ -2665,6 +2665,7 @@ export class RandomTeams {
 			drought: 'sunnyday',
 			snowwarning: 'hail',
 			sandstream: 'sandstorm',
+			sandspit: 'sandstorm',
 		};
 		const resistanceAbilities: {[k: string]: string[]} = {
 			waterabsorb: ['Water'],

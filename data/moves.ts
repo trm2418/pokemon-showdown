@@ -8144,7 +8144,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	hiddenpowerdragon: {
 		num: 237,
 		accuracy: 100,
-		basePower: 60,
+		basePower: 75,
 		category: "Special",
 		realMove: "Hidden Power",
 		name: "Hidden Power Dragon",

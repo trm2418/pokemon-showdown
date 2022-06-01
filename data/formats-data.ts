@@ -3400,7 +3400,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "NFE",
 	},
 	torterra: {
-		randomBattleMoves: ["woodhammer", "earthquake", "stoneedge", "synthesis", "stealthrock", "shellsmash", "spikedtail"],
+		randomBattleMoves: ["woodhammer", "earthquake", "stoneedge", "synthesis", "stealthrock", "shellsmash", "spikedtail", "headsmash"],
 		randomBattleLevel: 84,
 		tier: "(PU)",
 	},
@@ -4113,11 +4113,11 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "LC",
 	},
 	liepard: {
-		randomBattleMoves: ["copycat", "encore", "knockoff", "playrough", "thunderwave", "uturn"],
-		randomBattleLevel: 86,
+		randomBattleMoves: ["copycat", "encore", "darkpulse", "dazzlinggleam", "thunderwave", "uturn", "grassknot", "nastyplot"],
+		randomBattleLevel: 80,
 		randomDoubleBattleMoves: ["copycat", "encore", "fakeout", "foulplay", "snarl", "taunt", "thunderwave"],
 		randomDoubleBattleLevel: 88,
-		tier: "(PU)",
+		tier: "RU",
 		doublesTier: "(DUU)",
 	},
 	pansage: {
@@ -4688,7 +4688,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "LC",
 	},
 	escavalier: {
-		randomBattleMoves: ["closecombat", "drillrun", "doubleironbash", "knockoff", "xscissor", "swordsdance"],
+		randomBattleMoves: ["closecombat", "drillrun", "doubleironbash", "nightslash", "xscissor", "swordsdance", "dragonlance"],
 		randomBattleLevel: 84,
 		randomDoubleBattleMoves: ["closecombat", "drillrun", "doubleironbash", "knockoff", "megahorn", "protect", "swordsdance"],
 		randomDoubleBattleLevel: 86,
@@ -6586,7 +6586,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "NFE",
 	},
 	cinderace: {
-		randomBattleMoves: ["courtchange", "gunkshot", "highjumpkick", "pyroball", "uturn", "zenheadbutt", "flameimpact"],
+		randomBattleMoves: ["courtchange", "gunkshot", "highjumpkick", "pyroball", "uturn", "zenheadbutt", "flameimpact", "thunderouskick"],
 		randomBattleLevel: 74,
 		randomDoubleBattleMoves: ["courtchange", "gunkshot", "highjumpkick", "protect", "pyroball", "suckerpunch", "uturn"],
 		randomDoubleBattleLevel: 80,
@@ -7525,8 +7525,8 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	naviathan: {
 		randomBattleMoves: ["dragondance", "waterfall", "facade", "slackoff", "iciclecrash"],
-		randomBattleLevel: 76,
-		tier: "OU",
+		randomBattleLevel: 81,
+		tier: "RU",
 	},
 	crucibelle: {
 		randomBattleMoves: ["stoneedge", "trick", "uturn", "gunkshot"],
