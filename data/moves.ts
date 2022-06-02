@@ -23827,8 +23827,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {powder: 1, protect: 1, reflectable: 1, mirror: 1},
 		onHit(target, source) {
-			// do nothing if target is immune to all statuses
-			if (!target.runStatusImmunity('psn') && !target.runStatusImmunity('brn') && !target.runStatusImmunity('par') && !target.runStatusImmunity('frz') && !target.runStatusImmunity('slp')) return;
+			// fail if target is immune to all statuses
+			if (!target.runStatusImmunity('psn') && !target.runStatusImmunity('brn') && !target.runStatusImmunity('par') && !target.runStatusImmunity('frz') && !target.runStatusImmunity('slp')) return false;
+
+			// fail if target already has a status
+			if (target.status) return false;
 
 			let result = this.random(5);
 
