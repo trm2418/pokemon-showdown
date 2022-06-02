@@ -23827,11 +23827,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {powder: 1, protect: 1, reflectable: 1, mirror: 1},
 		onHit(target, source) {
+			/*
 			// fail if target is immune to all statuses
 			if (!target.runStatusImmunity('psn') && !target.runStatusImmunity('brn') && !target.runStatusImmunity('par') && !target.runStatusImmunity('frz') && !target.runStatusImmunity('slp')) return false;
 
 			// fail if target already has a status
-			if (target.status) return false;
+			if (target.status || target.hasAbility('comatose')) return false;
 
 			let result = this.random(5);
 
@@ -23855,7 +23856,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 				target.trySetStatus('frz', source);
 			} else {
 				target.trySetStatus('slp', source);
-			}
+			}*/
+
+			let statuses = ['psn', 'brn', 'par', 'frz', 'slp'];
+			while (statuses.length) if (target.trySetStatus(statuses.splice(this.random(statuses.length), 1)[0], source)) break;
 		},
 		secondary: null,
 		target: "normal",
