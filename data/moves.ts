@@ -20794,7 +20794,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Spore Shield",
 		pp: 10,
 		priority: 4,
-		flags: {},
+		flags: {powder: 1},
 		stallingMove: true,
 		volatileStatus: 'sporeshield',
 		onPrepareHit(pokemon) {
@@ -23512,7 +23512,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1, magic: 1},
 		onBasePower(basePower, pokemon, target) {
-			if (target?.volatiles['taunt'] || target?.volatiles['disable'] || target?.volatiles['confuse'] || target?.volatiles['curse'] || target?.volatiles['embargo'] || target?.volatiles['encore'] || target?.volatiles['healblock'] || target?.volatiles['attract'] || target?.volatiles['corruption']) {
+			if (target?.volatiles['taunt'] || target?.volatiles['disable'] || target?.volatiles['confusion'] || target?.volatiles['curse'] || target?.volatiles['embargo'] || target?.volatiles['encore'] || target?.volatiles['healblock'] || target?.volatiles['attract'] || target?.volatiles['corruption']) {
 				return this.chainModify(2);
 			}
 		},
@@ -23730,7 +23730,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Fairy Jinx",
 		pp: 15,
 		priority: 0,
-		flags: {},
+		flags: {protect: 1, reflectable: 1, mirror: 1},
 		onHit(target) {
 			const stats: BoostID[] = [];
 			let stat: BoostID;
@@ -23827,7 +23827,21 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {powder: 1, protect: 1, reflectable: 1, mirror: 1},
 		onHit(target, source) {
-			const result = this.random(5);
+			// do nothing if target is immune to all statuses
+			if (!target.runStatusImmunity('psn') && !target.runStatusImmunity('brn') && !target.runStatusImmunity('par') && !target.runStatusImmunity('frz') && !target.runStatusImmunity('slp')) return;
+
+			let result = this.random(5);
+
+			// keep picking until a status that won't fail is found
+			while (result === 0 && !target.runStatusImmunity('psn') ||
+			result === 1 && !target.runStatusImmunity('brn') ||
+			result === 2 && !target.runStatusImmunity('par') ||
+			result === 3 && !target.runStatusImmunity('frz') ||
+			result === 4 && !target.runStatusImmunity('slp')) {
+				result = this.random(5);
+			}
+
+			// set the status
 			if (result === 0) {
 				target.trySetStatus('psn', source);
 			} else if (result === 1) {

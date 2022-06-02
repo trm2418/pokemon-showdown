@@ -7102,7 +7102,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	sporeburst: {
 		name: "Spore Burst",
-		desc: "Has a 50% chance to inflict the target with either poison, paralyze or sleep. This counts as a powder move so Pokemon with the Grass type, the ability Overcoat or the item Safety Goggles are immune.",
+		desc: "Has a 50% chance to inflict the target with either poison, paralyze or sleep.",
 		shortDesc: "50% chance to inflict poison, paralysis or sleep.",
 	},
 	pepperpowder: {
@@ -7862,6 +7862,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		start: "  [POKEMON] surrounded itself with pixie power!",
 		heal: "  The pixie boost restored [POKEMON]'s HP!",
 		end: "  [POKEMON]'s pixie boost wore off!",
+	},
+	pixiedust: {
+		name: "Pixie Dust",
+		desc: "Poisons, burns, paralyzes, freezes or puts the target to sleep. Will not pick a status that the target is immune to. Fails if the target is immune to all status conditions.",
+		shortDesc: "Inflict poison, burn, paralyze, freeze or sleep.",
 	},
 	rainbowwall: {
 		name: "Rainbow Wall",
