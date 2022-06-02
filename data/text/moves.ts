@@ -7569,7 +7569,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	ceaselessedge: {
 		name: "Ceaseless Edge",
 		desc: "Has a higher chance for a critical hit. If this move is successful, it sets up a hazard on the opposing side of the field, damaging each opposing Pokemon that switches in. Foes lose 1/32, 1/16, 1/8, 1/4, or 1/2 of their maximum HP, rounded down, based on their weakness to the Dark type; 0.25x, 0.5x, neutral, 2x, or 4x, respectively. Can be removed from the opposing side if any opposing Pokemon uses Rapid Spin, Engulf, Defog, or Scorched Earth successfully, or is hit by Defog or Scorched Earth.",
-		shortDesc: "High crit. Sets a Dark-type Stealth Rock",
+		shortDesc: "High crit. Sets a Dark-type Stealth Rock.",
 	},
 	backstab: {
 		name: "Backstab",
@@ -7683,12 +7683,12 @@ export const MovesText: {[k: string]: MoveText} = {
 	corruption: {
 		name: "Corruption",
 		desc: "For 5 turns, the target can't heal and loses 1/6 of their maximum HP, rounded down, at the end of teach turn while it is active. If the target uses Baton Pass, the replacement will continue to be affected. Fails if there is no target or if the target is already affected. Dark-types are immune.",
-		shortDesc: "5 turns, can't heal and lose 1/6 HP each turn."
+		shortDesc: "5 turns: can't heal and lose 1/6 HP each turn."
 	},
 	darknesscall: {
 		name: "Darkness Call",
 		desc: "For 7 turns, the weather becomes Darkness. The damage of Dark and Ghost-type attacks is multiplied by 1.35 and the damage of Fairy-type attacks is multiplied by 0.5 during the effect. Lasts for 12 turns if the user is holding Dark Rock. Fails if the current weather is Darkness.",
-		shortDesc: "For 7 turns, darkness powers Ghost and Dark moves.",
+		shortDesc: "For 7 turns, darkness powers Ghost & Dark moves.",
 	},
 	enchantedclaw: {
 		name: "Enchanted Claw",

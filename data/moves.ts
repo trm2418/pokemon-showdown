@@ -691,7 +691,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 				}
 			},
 			onEnd(pokemon) {
-				this.add('-end', pokemon, 'Attract', '[silent]');
+				//this.add('-end', pokemon, 'Attract', '[silent]');
+				this.add('end', pokemon, 'Attract');
 			},
 		},
 		secondary: null,
