@@ -23512,7 +23512,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1, magic: 1},
 		onBasePower(basePower, pokemon, target) {
-			if (target?.volatiles['taunt' || 'disable' || 'confuse' || 'curse' || 'embargo' || 'encore' || 'healblock' || 'attract' || 'corruption']) {
+			if (target?.volatiles['taunt'] || target?.volatiles['disable'] || target?.volatiles['confuse'] || target?.volatiles['curse'] || target?.volatiles['embargo'] || target?.volatiles['encore'] || target?.volatiles['healblock'] || target?.volatiles['attract'] || target?.volatiles['corruption']) {
 				return this.chainModify(2);
 			}
 		},
