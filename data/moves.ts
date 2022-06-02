@@ -691,8 +691,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				}
 			},
 			onEnd(pokemon) {
-				//this.add('-end', pokemon, 'Attract', '[silent]');
-				this.add('end', pokemon, 'Attract');
+				this.add('-end', pokemon, 'Attract', '[silent]');
 			},
 		},
 		secondary: null,
@@ -23484,16 +23483,22 @@ export const Moves: {[moveid: string]: MoveData} = {
 					}
 				})
 			}
-		},
-		secondary: {
-			chance: 30,
-			self: {
-				boosts: {
-					spa: 1,
-					spd: 1,
+			else {
+				if (!move.secondaries) {
+					move.secondaries = [];
 				}
+				move.secondaries.push({
+					chance: 30,
+					self: {
+						boosts: {
+							spa: 1,
+							spd: 1,
+						}
+					}
+				})
 			}
 		},
+		secondary: null,
 		target: "normal",
 		type: "Fairy",
 	},
@@ -23513,7 +23518,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		},
 		secondary: null,
 		target: "normal",
-		type: "Psychic",
+		type: "Fairy",
 	},
 	enchantment: {
 		num: 2198,

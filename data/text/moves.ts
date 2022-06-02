@@ -7772,7 +7772,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	springtidestorm: {
 		name: "Springtide Storm",
 		desc: "Has a 30% chance to raise the user's Special Attack and Special Defense by 1 stage. If the user is Enamorus in Therian forme, this attack has a 30% chance to lower the target's Special Attack and Special Defense by 1 stage instead.",
-		shortDesc: "I: 30% raise SpA+SpD; T: 30% lower target SpA+SpD.",
+		shortDesc: "I: 30% user +SpA +SpD; T: 30% target -SpA -SpD.",
 	},
 	bewitch: {
 		name: "Perplex",
