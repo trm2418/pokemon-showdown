@@ -1,9 +1,10 @@
 {
   "venusaur": {
-    "usage": 6,
+    "usage": 5,
     "sets": [
       {
         "species": "Venusaur",
+        "level": 52,
         "item": ["Life Orb"],
         "ability": ["Chlorophyll"],
         "evs": {"spa": 252, "spd": 4, "spe": 252},
@@ -13,6 +14,7 @@
       },
       {
         "species": "Venusaur",
+        "level": 52,
         "item": ["Black Sludge"],
         "ability": ["Overgrow"],
         "evs": {"spa": 252, "spd": 252, "def": 4},
@@ -22,6 +24,7 @@
       },
       {
         "species": "Venusaur",
+        "level": 52,
         "item": ["Black Sludge"],
         "ability": ["Overgrow"],
         "evs": {"spa": 252, "spd": 252, "def": 4},
@@ -31,6 +34,7 @@
       },
       {
         "species": "Venusaur",
+        "level": 52,
         "item": ["Choice Scarf"],
         "ability": ["Overgrow"],
         "evs": {"spa": 252, "spe": 252, "spd": 4},
@@ -40,6 +44,7 @@
       },
       {
         "species": "Venusaur",
+        "level": 52,
         "item": ["Choice Specs", "Life Orb"],
         "ability": ["Overgrow"],
         "evs": {"spa": 252, "spe": 252, "spd": 4},
@@ -50,10 +55,11 @@
     ]
   },
   "charizard": {
-    "usage": 6,
+    "usage": 5,
     "sets": [
       {
         "species": "Charizard",
+        "level": 53,
         "item": ["Life Orb"],
         "ability": ["Blaze"],
         "evs": {"def": 4, "spa": 252, "spe": 252},
@@ -63,6 +69,7 @@
       },
       {
         "species": "Charizard",
+        "level": 53,
         "item": ["Heavy-Duty Boots"],
         "ability": ["Blaze"],
         "evs": {"def": 4, "spa": 252, "spe": 252},
@@ -72,6 +79,7 @@
       },
       {
         "species": "Charizard",
+        "level": 53,
         "item": ["Heavy-Duty Boots", "Life Orb"],
         "ability": ["Blaze"],
         "evs": {"atk": 252, "def": 4, "spe": 252},
@@ -80,6 +88,7 @@
       },
       {
         "species": "Charizard",
+        "level": 53,
         "item": ["Heavy-Duty Boots", "Life Orb"],
         "ability": ["Blaze"],
         "evs": {"atk": 252, "spa": 4, "spe": 252},
@@ -88,6 +97,7 @@
       },
       {
         "species": "Charizard",
+        "level": 53,
         "item": ["Heavy-Duty Boots", "Life Orb"],
         "ability": ["Solar Power"],
         "evs": {"def": 4, "spa": 252, "spe": 252},
@@ -98,7 +108,7 @@
     ]
   },
   "blastoise": {
-    "usage": 6,
+    "usage": 5,
     "sets": [
       {
         "species": "Blastoise",
@@ -121,10 +131,11 @@
     ]
   },
   "butterfree": {
-    "usage": 3,
+    "usage": 5,
     "sets": [
       {
         "species": "Butterfree",
+        "level": 57,
         "item": ["Heavy-Duty Boots"],
         "ability": ["Compound Eyes"],
         "evs": {"spa": 252, "spe": 252, "def": 4},
@@ -134,6 +145,7 @@
       },
       {
         "species": "Butterfree",
+        "level": 57,
         "item": ["Heavy-Duty Boots"],
         "ability": ["Tinted Lens"],
         "evs": {"spa": 252, "spe": 252, "def": 4},
@@ -144,10 +156,11 @@
     ]
   },
   "beedrill": {
-    "usage": 4,
+    "usage": 5,
     "sets": [
       {
         "species": "Beedrill",
+        "level": 55,
         "item": ["Heavy-Duty Boots", "Life Orb"],
         "ability": ["Technician"],
         "evs": {"atk": 252, "spe": 252, "def": 4},
@@ -157,6 +170,7 @@
       },
       {
         "species": "Beedrill",
+        "level": 55,
         "item": ["Choice Scarf"],
         "ability": ["Technician"],
         "evs": {"atk": 252, "spe": 252, "def": 4},
@@ -167,10 +181,11 @@
     ]
   },
   "pidgeot": {
-    "usage": 3,
+    "usage": 5,
     "sets": [
       {
         "species": "Pidgeot",
+        "level": 57,
         "item": ["Heavy-Duty Boots", "Life Orb"],
         "ability": ["Keen Eye"],
         "evs": {"atk": 252, "spe": 252, "def": 4},
@@ -180,6 +195,7 @@
       },
       {
         "species": "Pidgeot",
+        "level": 57,
         "item": ["Choice Band"],
         "ability": ["Keen Eye"],
         "evs": {"atk": 252, "spe": 252, "def": 4},
@@ -190,10 +206,11 @@
     ]
   },
   "raticate": {
-    "usage": 3,
+    "usage": 5,
     "sets": [
       {
         "species": "Raticate",
+        "level": 55,
         "item": ["Life Orb"],
         "ability": ["Strong Jaw"],
         "evs": {"atk": 252, "spe": 252, "def": 4},
@@ -203,6 +220,7 @@
       },
       {
         "species": "Raticate",
+        "level": 55,
         "item": ["Choice Band"],
         "ability": ["Strong Jaw"],
         "evs": {"atk": 252, "spe": 252, "def": 4},
@@ -212,6 +230,7 @@
       },
       {
         "species": "Raticate",
+        "level": 55,
         "item": ["Choice Scarf"],
         "ability": ["Strong Jaw"],
         "evs": {"atk": 252, "spe": 252, "def": 4},
@@ -221,6 +240,7 @@
       },
       {
         "species": "Raticate",
+        "level": 55,
         "item": ["Flame Orb"],
         "ability": ["Guts"],
         "evs": {"atk": 252, "spe": 252, "def": 4},
@@ -230,6 +250,7 @@
       },
       {
         "species": "Raticate",
+        "level": 55,
         "item": ["Life Orb"],
         "ability": ["Hustle"],
         "evs": {"atk": 252, "spe": 252, "def": 4},
@@ -239,6 +260,7 @@
       },
       {
         "species": "Raticate",
+        "level": 55,
         "item": ["Choice Band"],
         "ability": ["Hustle"],
         "evs": {"atk": 252, "spe": 252, "def": 4},
@@ -248,12 +270,152 @@
       },
       {
         "species": "Raticate",
+        "level": 55,
         "item": ["Choice Scarf"],
         "ability": ["Hustle"],
         "evs": {"atk": 252, "spe": 252, "def": 4},
         "ivs": {"spa": 0},
         "nature": "Adamant",
         "moves": [["U-turn"], ["Double-Edge", "Strength", "Take Down"], ["Stomping Tantrum", "Fury Strike"], ["Crippling Strike"]]
+      },
+      {
+        "species": "Raticate-Alola",
+        "level": 58,
+        "item": ["Life Orb"],
+        "ability": ["Hustle"],
+        "evs": {"atk": 252, "def": 4, "spe": 252},
+        "nature": "Adamant",
+        "moves": [["Sucker Punch"], ["Double-Edge", "Take Down", "Strength"], ["Knock Off", "U-turn"], ["Swords Dance"]]
+      },
+      {
+        "species": "Raticate-Alola",
+        "level": 58,
+        "item": ["Choice Band"],
+        "ability": ["Hustle"],
+        "evs": {"atk": 252, "def": 4, "spe": 252},
+        "nature": "Adamant",
+        "moves": [["Sucker Punch"], ["Double-Edge", "Take Down", "Strength"], ["Knock Off"], ["U-turn"]]
+      },
+      {
+        "species": "Raticate-Alola",
+        "level": 58,
+        "item": ["Leftovers"],
+        "ability": ["Thick Fat"],
+        "evs": {"hp": 252, "def": 128, "spd": 128},
+        "nature": "Impish",
+        "moves": [["Super Fang"], ["Strength", "Slack Off"], ["Knock Off"], ["Toxic"]]
+      },
+      {
+        "species": "Raticate-Alola",
+        "level": 58,
+        "item": ["Choice Band"],
+        "ability": ["Thick Fat"],
+        "evs": {"hp": 252, "def": 128, "spd": 128},
+        "nature": "Impish",
+        "moves": [["Super Fang"], ["Strength", "Slack Off", "Crippling Strike"], ["Switcheroo"], ["Toxic"]]
+      }
+    ]
+  },
+  "fearow": {
+    "usage": 5,
+    "sets": [
+      {
+        "species": "Fearow",
+        "level": 52,
+        "item": ["Life Orb"],
+        "ability": ["Technician"],
+        "evs": {"atk": 252, "spe": 252, "def": 4},
+        "ivs": {"spa": 0},
+        "nature": "Jolly",
+        "moves": [["Talon Gash"], ["Fury Attack"], ["Swords Dance", "U-turn"], ["Fury Strike", "Drill Run", "Quick Attack"]]
+      },
+      {
+        "species": "Fearow",
+        "level": 52,
+        "item": ["Choice Band"],
+        "ability": ["Technician"],
+        "evs": {"atk": 252, "spe": 252, "def": 4},
+        "ivs": {"spa": 0},
+        "nature": "Jolly",
+        "moves": [["Talon Gash"], ["Fury Attack", "Quick Attack"], ["U-turn"], ["Fury Strike", "Drill Run"]]
+      },
+      {
+        "species": "Fearow",
+        "level": 52,
+        "item": ["Choice Scarf"],
+        "ability": ["Technician"],
+        "evs": {"atk": 252, "spe": 252, "def": 4},
+        "ivs": {"spa": 0},
+        "nature": "Adamant",
+        "moves": [["Talon Gash"], ["Fury Attack", "Quick Attack"], ["U-turn"], ["Fury Strike", "Drill Run"]]
+      }
+    ]
+  },
+  "thunderoc": {
+    "usage": 5,
+    "sets": [
+      {
+        "species": "Thunderoc",
+        "level": 50,
+        "item": ["Life Orb"],
+        "ability": ["Stormbringer"],
+        "evs": {"spa": 252, "spe": 252, "def": 4},
+        "ivs": {"atk": 0},
+        "nature": "Modest",
+        "moves": [["Turbocharge"], ["Thunder"], ["Hurricane"], ["Hidden Power Water"]]
+      },
+      {
+        "species": "Thunderoc",
+        "level": 50,
+        "item": ["Choice Scarf"],
+        "ability": ["Stormbringer"],
+        "evs": {"spa": 252, "spe": 252, "def": 4},
+        "nature": "Modest",
+        "moves": [["Focus Blast", "U-turn"], ["Thunder"], ["Hurricane"], ["Hidden Power Water"]]
+      },
+      {
+        "species": "Thunderoc",
+        "level": 50,
+        "item": ["Choice Specs"],
+        "ability": ["Stormbringer"],
+        "evs": {"spa": 252, "spe": 252, "def": 4},
+        "nature": "Timid",
+        "moves": [["Focus Blast", "U-turn"], ["Thunder"], ["Hurricane"], ["Hidden Power Water"]]
+      }
+    ]
+  },
+  "arbok": {
+    "usage": 5,
+    "sets": [
+      {
+        "species": "Arbok",
+        "level": 53,
+        "item": ["Black Sludge"],
+        "ability": ["Intimidate"],
+        "evs": {"atk": 252, "spe": 252, "def": 4},
+        "ivs": {"spa": 0},
+        "nature": "Adamant",
+        "moves": [["Coil"], ["Gunk Shot"], ["Earthquake"], ["Sucker Punch"]]
+      },
+      {
+        "species": "Arbok",
+        "level": 53,
+        "item": ["Life Orb"],
+        "ability": ["Shed Skin"],
+        "evs": {"atk": 252, "spe": 252, "def": 4},
+        "ivs": {"spa": 0},
+        "nature": "Jolly",
+        "moves": [["Coil"], ["Gunk Shot"], ["Earthquake"], ["Rest"]]
+      },
+      {
+        "species": "Arbok",
+        "level": 53,
+        "item": ["Black Sludge"],
+        "ability": ["Merciless"],
+        "evs": {"atk": 252, "spe": 252, "def": 4},
+        "ivs": {"spa": 0},
+        "nature": "Jolly",
+        "moves": [["Coil"], ["Gunk Shot"], ["Earthquake"], ["Toxic"]]
       }
     ]
   },

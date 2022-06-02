@@ -9076,7 +9076,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			const lastMove = target.lastMove;
 			const moveIndex = target.moves.indexOf(lastMove.id);
 			const noInstruct = [
-				'assist', 'beakblast', 'belch', 'bide', 'celebrate', 'copycat', 'dynamaxcannon', 'focuspunch', 'iceball', 'instruct', 'kingsshield', 'mefirst', 'metronome', 'mimic', 'mirrormove', 'naturepower', 'obstruct', 'outrage', 'ragingfury', 'petaldance', 'rollout', 'timberfall', 'shelltrap', 'sketch', 'sleeptalk', 'struggle', 'thrash', 'transform', 'uproar',
+				'assist', 'beakblast', 'belch', 'bide', 'celebrate', 'copycat', 'dynamaxcannon', 'focuspunch', 'iceball', 'instruct', 'kingsshield', 'mefirst', 'metronome', 'mimic', 'mirrormove', 'naturepower', 'obstruct', 'outrage', 'ragingfury', 'petaldance', 'reveldance', 'rollout', 'timberfall', 'shelltrap', 'sketch', 'sleeptalk', 'struggle', 'thrash', 'transform', 'uproar',
 			];
 			if (
 				noInstruct.includes(lastMove.id) || lastMove.isZ || lastMove.isMax ||
@@ -11546,14 +11546,17 @@ export const Moves: {[moveid: string]: MoveData} = {
 		onHit(pokemon) {
 			let factor = 0.5;
 			switch (pokemon.effectiveWeather()) {
-			case 'sunnyday':
-			case 'desolateland':
+			case 'darkness':
 				factor = 0.667;
 				break;
+			case 'sunnyday':
+			case 'desolateland':
 			case 'raindance':
 			case 'primordialsea':
+			case 'thunderstorm':
 			case 'sandstorm':
 			case 'hail':
+			case 'sleet':
 				factor = 0.25;
 				break;
 			}
@@ -13192,7 +13195,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			for (i in target.boosts) {
 				source.boosts[i] = target.boosts[i];
 			}
-			const volatilesToCopy = ['focusenergy', 'gmaxchistrike', 'laserfocus'];
+			const volatilesToCopy = ['focusenergy', 'gmaxchistrike', 'laserfocus', 'pixieboost'];
 			for (const volatile of volatilesToCopy) {
 				if (target.volatiles[volatile]) {
 					source.addVolatile(volatile);
@@ -21251,7 +21254,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Turbocharge",
 		pp: 20,
 		priority: 0,
-		flags: {snatch: 1},
+		flags: {},
 		boosts: {
 			spa: 1,
 			spe: 1,
@@ -21457,7 +21460,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Arcane Pulse",
 		pp: 10,
 		priority: 0,
-		flags: {protect: 1, pulse: 1, mirror: 1},
+		flags: {protect: 1, pulse: 1, mirror: 1, magic: 1},
 		secondary: {
 			chance: 50,
 			terrain: 'psychicterrain',
@@ -23166,7 +23169,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Enchanted Claw",
 		pp: 15,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, magic: 1},
 		critRatio: 2,
 		secondary: null,
 		target: "normal",
@@ -23187,6 +23190,679 @@ export const Moves: {[moveid: string]: MoveData} = {
 		},
 		secondary: null,
 		target: "normal",
+		type: "Fairy",
+	},
+	fairytale: {
+		num: 2182,
+		accuracy: 90,
+		basePower: 85,
+		category: "Physical",
+		name: "Fairy Tale",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 50,
+			boosts: {
+				evasion: -2,
+			},
+		},
+		target: "normal",
+		type: "Fairy",
+	},
+	flutterjump: {
+		num: 2183,
+		accuracy: 100,
+		basePower: 40,
+		category: "Physical",
+		name: "Flutter Jump",
+		pp: 30,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
+		secondary: {
+			chance: 10,
+			volatileStatus: 'flinch',
+		},
+		target: "normal",
+		type: "Fairy",
+	},
+	glitzblitz: {
+		num: 2184,
+		accuracy: 100,
+		basePower: 120,
+		category: "Physical",
+		name: "Glitz Blitz",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		self: {
+			boosts: {
+				def: -1,
+				spd: -1,
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Fairy",
+	},
+	heartbreaker: {
+		num: 2185,
+		accuracy: 100,
+		basePower: 85,
+		category: "Physical",
+		name: "Heartbreaker",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onBasePower(basePower, pokemon, target) {
+			if (target?.volatiles['attract']) {
+				return this.chainModify(2);
+			}
+		},
+		onHit(target) {
+			if (target?.volatiles['attract']) target.removeVolatile('attract');
+		},
+		secondary: null,
+		target: "normal",
+		type: "Fairy",
+	},
+	mercystrike: {
+		num: 2186,
+		accuracy: 100,
+		basePower: 80,
+		category: "Physical",
+		name: "Mercy Strike",
+		pp: 30,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onDamagePriority: -20,
+		onDamage(damage, target, source, effect) {
+			if (damage >= target.hp) return target.hp - 1;
+		},
+		secondary: null,
+		target: "normal",
+		type: "Fairy",
+	},
+	moonhammer: {
+		num: 2187,
+		accuracy: 85,
+		basePower: 110,
+		category: "Physical",
+		name: "Moon Hammer",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 20,
+			self: {
+				boosts: {
+					spd: 1,
+				},
+			},
+		},
+		target: "normal",
+		type: "Fairy",
+	},
+	pirouette: {
+		num: 2188,
+		accuracy: 100,
+		basePower: 50,
+		category: "Physical",
+		name: "Pirouette",
+		pp: 25,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
+		secondary: {
+			chance: 20,
+			volatileStatus: 'confusion',
+		},
+		target: "normal",
+		type: "Fairy",
+	},
+	pixiefangs: {
+		num: 2189,
+		accuracy: 100,
+		basePower: 65,
+		category: "Physical",
+		name: "Pixie Fangs",
+		pp: 20,
+		priority: 0,
+		flags: {bite: 1, contact: 1, protect: 1, mirror: 1},
+		secondaries: [
+			{
+				chance: 20,
+				boosts: {
+					evasion: -2,
+				}
+			}, {
+				chance: 20,
+				volatileStatus: 'flinch',
+			},
+		],
+		target: "normal",
+		type: "Fairy",
+	},
+	pixiepunch: {
+		num: 2190,
+		accuracy: 100,
+		basePower: 70,
+		category: "Physical",
+		name: "Pixie Punch",
+		pp: 20,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+		secondary: {
+			chance: 50,
+			self: {
+				boosts: {
+					spd: 1,
+				},
+			},
+		},
+		target: "normal",
+		type: "Fairy",
+	},
+	reveldance: {
+		num: 2191,
+		accuracy: 100,
+		basePower: 120,
+		category: "Physical",
+		name: "Revel Dance",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, dance: 1},
+		self: {
+			volatileStatus: 'lockedmove',
+		},
+		onAfterMove(pokemon) {
+			if (pokemon.volatiles['lockedmove'] && pokemon.volatiles['lockedmove'].duration === 1) {
+				pokemon.removeVolatile('lockedmove');
+			}
+		},
+		secondary: null,
+		target: "randomNormal",
+		type: "Fairy",
+	},
+	silverblade: {
+		num: 2192,
+		accuracy: 100,
+		basePower: 90,
+		category: "Physical",
+		name: "Silver Blade",
+		pp: 15,
+		priority: 0,
+		flags: {blade: 1, contact: 1, protect: 1, mirror: 1},
+		critRatio: 2,
+		secondary: null,
+		target: "normal",
+		type: "Fairy",
+	},
+	smite: {
+		num: 2193,
+		accuracy: 100,
+		basePower: 85,
+		category: "Physical",
+		name: "Smite",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+		secondary: {
+			chance: 30,
+			volatileStatus: 'flinch',
+		},
+		target: "normal",
+		type: "Fairy",
+	},
+	unihorn: {
+		num: 2194,
+		accuracy: 85,
+		basePower: 120,
+		category: "Physical",
+		name: "Unihorn",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Fairy",
+	},
+	whirlingdance: {
+		num: 2195,
+		accuracy: 100,
+		basePower: 55,
+		category: "Physical",
+		name: "Whirling Dance",
+		pp: 15,
+		priority: 0,
+		flags: {dance: 1, contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			boosts: {
+				atk: -1,
+			},
+		},
+		target: "normal",
+		type: "Fairy",
+	},
+	springtidestorm: {
+		num: 2196,
+		accuracy: 80,
+		basePower: 125,
+		category: "Special",
+		name: "Springtide Storm",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onModifyMove(move, pokemon) {
+			if (pokemon.species.name === 'Enamorus-Therian') {
+				if (!move.secondaries) {
+					move.secondaries = [];
+				}
+				move.secondaries.push({
+					chance: 30,
+					boosts: {
+						spa: -1,
+						spd: -1,
+					}
+				})
+			}
+		},
+		secondary: {
+			chance: 30,
+			self: {
+				boosts: {
+					spa: 1,
+					spd: 1,
+				}
+			}
+		},
+		target: "normal",
+		type: "Fairy",
+	},
+	bewitch: {
+		num: 2197,
+		accuracy: 100,
+		basePower: 70,
+		category: "Special",
+		name: "Bewitch",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, magic: 1},
+		onBasePower(basePower, pokemon, target) {
+			if (target?.volatiles['taunt' || 'disable' || 'confuse' || 'curse' || 'embargo' || 'encore' || 'healblock' || 'attract' || 'corruption']) {
+				return this.chainModify(2);
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Psychic",
+	},
+	enchantment: {
+		num: 2198,
+		accuracy: 100,
+		basePower: 85,
+		category: "Special",
+		name: "Enchantment",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, magic: 1},
+		secondary: {
+			chance: 50,
+			volatileStatus: 'attract',
+		},
+		target: "normal",
+		type: "Fairy",
+	},
+	faebeam: {
+		num: 2199,
+		accuracy: 95,
+		basePower: 65,
+		category: "Special",
+		name: "Fae Beam",
+		pp: 20,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 50,
+			boosts: {
+				spa: -1,
+			},
+		},
+		target: "normal",
+		type: "Fairy",
+	},
+	fairyblast: {
+		num: 2200,
+		accuracy: 85,
+		basePower: 120,
+		category: "Special",
+		name: "Fairy Blast",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Fairy",
+	},
+	fairyring: {
+		num: 2201,
+		accuracy: 90,
+		basePower: 50,
+		category: "Special",
+		name: "Fairy Ring",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		volatileStatus: 'partiallytrapped',
+		secondary: null,
+		target: "normal",
+		type: "Fairy",
+	},
+	glitterbomb: {
+		num: 2202,
+		accuracy: 90,
+		basePower: 65,
+		category: "Special",
+		name: "Glitter Bomb",
+		pp: 20,
+		priority: 0,
+		flags: {bullet: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			boosts: {
+				evasion: -2,
+			},
+		},
+		target: "normal",
+		type: "Fairy",
+	},
+	peekaboo: {
+		num: 2203,
+		accuracy: 100,
+		basePower: 50,
+		category: "Special",
+		name: "Peekaboo",
+		pp: 20,
+		priority: 1,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Fairy",
+	},
+	pixiepulse: {
+		num: 2204,
+		accuracy: 90,
+		basePower: 80,
+		category: "Special",
+		name: "Pixie Pulse",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, pulse: 1, mirror: 1},
+		secondary: {
+			chance: 50,
+			terrain: 'mistyterrain',
+		},
+		target: "normal",
+		type: "Fairy",
+	},
+	shimmershot: {
+		num: 2205,
+		accuracy: 100,
+		basePower: 40,
+		category: "Special",
+		name: "Shimmer Shot",
+		pp: 20,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					spa: 1,
+				},
+			},
+		},
+		target: "normal",
+		type: "Fairy",
+	},
+	sparklebeam: {
+		num: 2206,
+		accuracy: 95,
+		basePower: 90,
+		category: "Special",
+		name: "Sparkle Beam",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 30,
+			boosts: {
+				evasion: -2,
+			},
+		},
+		target: "normal",
+		type: "Fairy",
+	},
+	spellbind: {
+		num: 2207,
+		accuracy: 95,
+		basePower: 95,
+		category: "Special",
+		name: "Spellbind",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, magic: 1},
+		secondary: {
+			chance: 30,
+			volatileStatus: 'disable',
+		},
+		target: "normal",
+		type: "Fairy",
+	},
+	starstorm: {
+		num: 2208,
+		accuracy: 70,
+		basePower: 110,
+		category: "Special",
+		name: "Starstorm",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onModifyMove(move) {
+			if (this.field.isTerrain('mistyterrain')) move.accuracy = true;
+		},
+		secondary: {
+			chance: 30,
+			self: {
+				boosts: {
+					spd: 1,
+				},
+			},
+		},
+		target: "normal",
+		type: "Fairy",
+	},
+	fairydance: {
+		num: 2209,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Fairy Dance",
+		pp: 20,
+		priority: 0,
+		flags: {},
+		boosts: {
+			spa: 1,
+			spe: 1,
+		},
+		secondary: null,
+		target: "self",
+		type: "Fairy",
+	},
+	fairyjinx: {
+		num: 2210,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Fairy Jinx",
+		pp: 15,
+		priority: 0,
+		flags: {},
+		onHit(target) {
+			const stats: BoostID[] = [];
+			let stat: BoostID;
+			for (stat in target.boosts) {
+				if (target.boosts[stat] > -6) {
+					stats.push(stat);
+				}
+			}
+			if (stats.length) {
+				const randomStat = this.sample(stats);
+				const boost: SparseBoostsTable = {};
+				boost[randomStat] = -3;
+				this.boost(boost);
+			} else {
+				return false;
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Fairy",
+	},
+	healingcircle: {
+		num: 2211,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Healing Circle",
+		pp: 15,
+		priority: 0,
+		flags: {},
+		sideCondition: 'healingcircle',
+		condition: {
+			// this is a side condition
+			onSideStart(side) {
+				this.add('-sidestart', side, 'move: Healing Circle');
+			},
+			onSwitchIn(pokemon) {
+				let factor = 1/8;
+				if (pokemon.hasType('Dragon')) {
+					factor /= 2;
+				}
+				if (pokemon.hasType('Fairy')) {
+					factor *= 2;
+				}
+				this.heal(pokemon.maxhp * factor)
+			},
+		},
+		secondary: null,
+		target: "allySide",
+		type: "Fairy",
+	},
+	pixieboost: {
+		num: 2212,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Pixie Boost",
+		pp: 20,
+		priority: 0,
+		flags: {},
+		volatileStatus: 'pixieboost',
+		condition: {
+			duration: 5,
+			onStart(target, source, effect) {
+				if (effect && (['imposter', 'psychup', 'transform'].includes(effect.id))) {
+					this.add('-start', target, 'Pixie Boost', '[silent]');
+				} else {
+					this.add('-start', target, 'Pixie Boost');
+				}
+			},
+			onModifyCritRatio(critRatio) {
+				return critRatio + 1;
+			},
+			onResidualOrder: 6,
+			onResidual(pokemon) {
+				this.heal(pokemon.baseMaxhp / 8);
+			},
+			onEnd(target) {
+				this.add('-end', target, 'Pixie Boost');
+			}
+		},
+		secondary: null,
+		target: "self",
+		type: "Fairy",
+	},
+	pixiedust: {
+		num: 2213,
+		accuracy: 90,
+		basePower: 0,
+		category: "Status",
+		name: "Pixie Dust",
+		pp: 20,
+		priority: 0,
+		flags: {powder: 1, protect: 1, reflectable: 1, mirror: 1},
+		onHit(target, source) {
+			const result = this.random(5);
+			if (result === 0) {
+				target.trySetStatus('psn', source);
+			} else if (result === 1) {
+				target.trySetStatus('brn', source);
+			} else if (result == 2) {
+				target.trySetStatus('par', source);
+			} else if (result == 3) {
+				target.trySetStatus('frz', source);
+			} else {
+				target.trySetStatus('slp', source);
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Fairy",
+	},
+	rainbowwall: {
+		num: 2215,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Rainbow Wall",
+		pp: 20,
+		priority: 0,
+		flags: {},
+		sideCondition: 'rainbowwall',
+		condition: {
+			duration: 5,
+			durationCallback(target, source, effect) {
+				if (source?.hasItem('lightclay')) {
+					return 8;
+				}
+				return 5;
+			},
+			onAnyModifyDamage(damage, source, target, move) {
+				if (target !== source && this.effectState.target.hasAlly(target)) {
+					if ((target.side.getSideCondition('reflect') && this.getCategory(move) === 'Physical') ||
+							(target.side.getSideCondition('lightscreen') && this.getCategory(move) === 'Special') ||
+							target.side.getSideCondition('auroraveil')) {
+						return;
+					}
+					if (!target.getMoveHitData(move).crit && !move.infiltrates) {
+						this.debug('Rainbow Wall weaken');
+						if (this.activePerHalf > 1) return this.chainModify([3413, 4096]); //3186
+						return this.chainModify(0.25); //1/3
+					}
+				}
+			},
+			onSideStart(side) {
+				this.add('-sidestart', side, 'move: Rainbow Wall');
+			},
+			onSideResidualOrder: 26,
+			onSideResidualSubOrder: 10,
+			onSideEnd(side) {
+				this.add('-sideend', side, 'move: Rainbow Wall');
+			},
+		},
+		secondary: null,
+		target: "allySide",
 		type: "Fairy",
 	},
 };
