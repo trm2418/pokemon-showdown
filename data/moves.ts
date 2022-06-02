@@ -23858,8 +23858,20 @@ export const Moves: {[moveid: string]: MoveData} = {
 				target.trySetStatus('slp', source);
 			}*/
 
+			let success = false;
+			//if (target.status || target.hasAbility('comatose')) return false;
+
 			let statuses = ['psn', 'brn', 'par', 'frz', 'slp'];
-			while (statuses.length) if (target.trySetStatus(statuses.splice(this.random(statuses.length), 1)[0], source)) break;
+			while (statuses.length) {
+				if (target.trySetStatus(statuses.splice(this.random(statuses.length), 1)[0], source)) {
+					success = true;
+					break;
+				}
+			}
+			if (!success) {
+				return false;
+			}
+			// while (statuses.length) if (target.trySetStatus(statuses.splice(this.random(statuses.length), 1)[0], source)) break;
 		},
 		secondary: null,
 		target: "normal",
