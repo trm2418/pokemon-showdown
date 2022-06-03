@@ -24289,7 +24289,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 					let i: BoostID;
 					for (i in pokemon.boosts) {
 						if (pokemon.boosts[i] < 0) {
-							//boosts[i] = boosts[i]! + 1;
+							boosts[i] = pokemon.boosts[i] + 1;
 						}
 					}
 					pokemon.setBoost(boosts);

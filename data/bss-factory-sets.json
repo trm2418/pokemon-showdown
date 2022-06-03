@@ -430,7 +430,57 @@
         "evs": {"spa": 252, "spe": 252, "def": 4},
         "ivs": {"atk": 0},
         "nature": "Modest",
-        "moves": [["Nasty Plot", "Volt Switch"], ["Thunderbolt"], ["Focus Blast", "Surf", "Grass Knot"], ["Focus Blast", "Surf", "Grass Knot"]]
+        "moves": [["Nasty Plot"], ["Thunderbolt"], ["Focus Blast"], ["Surf", "Grass Knot"]]
+      },
+      {
+        "species": "Raichu",
+        "level": 53,
+        "item": ["Choice Specs"],
+        "ability": ["Lightning Rod"],
+        "evs": {"spa": 252, "spe": 252, "def": 4},
+        "ivs": {"atk": 0},
+        "nature": "Timid",
+        "moves": [["Volt Switch", "Quick Jolt"], ["Thunderbolt", "Ion Beam"], ["Focus Blast"], ["Surf", "Grass Knot"]]
+      },
+      {
+        "species": "Raichu",
+        "level": 53,
+        "item": ["Magnet"],
+        "ability": ["Lightning Rod"],
+        "evs": {"spa": 252, "spe": 252, "def": 4},
+        "ivs": {"atk": 0},
+        "nature": "Modest",
+        "moves": [["Volt Switch", "Quick Jolt"], ["Ion Beam"], ["Nasty Plot"], ["Short Circuit"]]
+      },
+      {
+        "species": "Raichu-Alola",
+        "level": 52,
+        "item": ["Life Orb"],
+        "ability": ["Surge Surfer"],
+        "evs": {"spa": 252, "spe": 252, "def": 4},
+        "ivs": {"atk": 0},
+        "nature": "Modest",
+        "moves": [["Nasty Plot"], ["Thunderbolt"], ["Psychic", "Psyshock"], ["Surf", "Grass Knot"]]
+      },
+      {
+        "species": "Raichu-Alola",
+        "level": 52,
+        "item": ["Choice Specs"],
+        "ability": ["Surge Surfer"],
+        "evs": {"spa": 252, "spe": 252, "def": 4},
+        "ivs": {"atk": 0},
+        "nature": "Timid",
+        "moves": [["Volt Switch", "Quick Jolt"], ["Thunderbolt", "Ion Beam"], ["Psychic", "Psyshock"], ["Surf", "Grass Knot"]]
+      },
+      {
+        "species": "Raichu-Alola",
+        "level": 52,
+        "item": ["Focus Sash"],
+        "ability": ["Surge Surfer"],
+        "evs": {"spa": 252, "def": 252, "hp": 4},
+        "ivs": {"atk": 0},
+        "nature": "Modest",
+        "moves": [["Electric Terrain"], ["Rising Voltage"], ["Psychic", "Psyshock"], ["Surf", "Grass Knot"]]
       }
     ]
   },
