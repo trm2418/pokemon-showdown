@@ -4469,7 +4469,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 80,
 		category: "Special",
 		name: "Expanding Force",
-		pp: 10,
+		pp: 20,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		onBasePower(basePower, source) {
@@ -11004,7 +11004,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Meteor Assault",
 		pp: 5,
 		priority: 0,
-		flags: {protect: 1, recharge: 1, mirror: 1},
+		flags: {blade: 1, protect: 1, recharge: 1, mirror: 1},
 		self: {
 			volatileStatus: 'mustrecharge',
 		},
@@ -13270,7 +13270,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			duration: 5,
 			durationCallback(source, effect) {
 				var dur = 5;
-				if (source?.moveThisTurn === 'grassyterrain') {
+				if (source?.moveThisTurn === 'psychicterrain') {
 					dur += 2;
 				}
 				if (source?.hasItem('terrainextender')) {
@@ -15748,6 +15748,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Flying') return 1;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Fighting",
@@ -23713,7 +23716,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Fairy Dance",
 		pp: 20,
 		priority: 0,
-		flags: {},
+		flags: {dance: 1},
 		boosts: {
 			spa: 1,
 			spe: 1,
@@ -23730,7 +23733,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Fairy Jinx",
 		pp: 15,
 		priority: 0,
-		flags: {protect: 1, reflectable: 1, mirror: 1},
+		flags: {protect: 1, reflectable: 1, mirror: 1, magic: 1},
 		onHit(target) {
 			const stats: BoostID[] = [];
 			let stat: BoostID;
@@ -23827,39 +23830,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {powder: 1, protect: 1, reflectable: 1, mirror: 1},
 		onHit(target, source) {
-			/*
-			// fail if target is immune to all statuses
-			if (!target.runStatusImmunity('psn') && !target.runStatusImmunity('brn') && !target.runStatusImmunity('par') && !target.runStatusImmunity('frz') && !target.runStatusImmunity('slp')) return false;
-
-			// fail if target already has a status
-			if (target.status || target.hasAbility('comatose')) return false;
-
-			let result = this.random(5);
-
-			// keep picking until a status that won't fail is found
-			while (result === 0 && !target.runStatusImmunity('psn') ||
-			result === 1 && !target.runStatusImmunity('brn') ||
-			result === 2 && !target.runStatusImmunity('par') ||
-			result === 3 && !target.runStatusImmunity('frz') ||
-			result === 4 && !target.runStatusImmunity('slp')) {
-				result = this.random(5);
-			}
-
-			// set the status
-			if (result === 0) {
-				target.trySetStatus('psn', source);
-			} else if (result === 1) {
-				target.trySetStatus('brn', source);
-			} else if (result == 2) {
-				target.trySetStatus('par', source);
-			} else if (result == 3) {
-				target.trySetStatus('frz', source);
-			} else {
-				target.trySetStatus('slp', source);
-			}*/
-
 			let success = false;
-			//if (target.status || target.hasAbility('comatose')) return false;
 
 			let statuses = ['psn', 'brn', 'par', 'frz', 'slp'];
 			while (statuses.length) {
@@ -23871,7 +23842,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 			if (!success) {
 				return false;
 			}
-			// while (statuses.length) if (target.trySetStatus(statuses.splice(this.random(statuses.length), 1)[0], source)) break;
 		},
 		secondary: null,
 		target: "normal",
@@ -23905,7 +23875,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 					if (!target.getMoveHitData(move).crit && !move.infiltrates) {
 						this.debug('Rainbow Wall weaken');
 						if (this.activePerHalf > 1) return this.chainModify([3413, 4096]); //3186
-						return this.chainModify(0.25); //1/3
+						return this.chainModify(0.75); //1/3
 					}
 				}
 			},
@@ -23922,4 +23892,479 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "allySide",
 		type: "Fairy",
 	},
+	triplearrows: {
+		num: 2216,
+		accuracy: 100,
+		basePower: 50,
+		category: "Physical",
+		name: "Triple Arrows",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondaries: [
+			{
+				chance: 100,
+				self: {
+					volatileStatus: 'focusenergy',
+				}
+			}, {
+				chance: 100,
+				boosts: {
+					def: -1,
+				},
+			},
+		],
+		target: "normal",
+		type: "Fighting",
+	},
+	alloutrampage: {
+		num: 2217,
+		accuracy: 90,
+		basePower: 130,
+		category: "Physical",
+		name: "All Out Rampage",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		mindBlownRecoil: true,
+		onAfterMove(pokemon, target, move) {
+			if (move.mindBlownRecoil && !move.multihit) {
+				this.damage(Math.round(pokemon.maxhp / 3), pokemon, pokemon, this.dex.conditions.get('All Out Rampage'), true);
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Fighting",
+	},
+	aurafist: {
+		num: 2218,
+		accuracy: 90,
+		basePower: 80,
+		category: "Physical",
+		name: "Aura Fist",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, punch: 1, mirror: 1},
+		secondary: {
+			chance: 50,
+			terrain: 'auraterrain',
+		},
+		target: "normal",
+		type: "Fighting",
+	},
+	furystrike: {
+		num: 2219,
+		accuracy: 100,
+		basePower: 90,
+		category: "Physical",
+		name: "Fury Strike",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+		secondary: {
+			chance: 10,
+			self: {
+				boosts: {
+					atk: 1,
+				},
+			},
+		},
+		target: "normal",
+		type: "Fighting",
+	},
+	goldenfist: {
+		num: 2220,
+		accuracy: 100,
+		basePower: 100,
+		category: "Physical",
+		name: "Golden Fist",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+		onHit() {
+			this.add('-fieldactivate', 'move: Golden Fist');
+		},
+		secondary: null,
+		target: "normal",
+		type: "Fighting",
+	},
+	gutjab: {
+		num: 2221,
+		accuracy: 100,
+		basePower: 85,
+		category: "Physical",
+		name: "Gut Jab",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, punch: 1, mirror: 1},
+		secondary: {
+			chance: 30,
+			volatileStatus: 'flinch',
+		},
+		target: "normal",
+		type: "Fighting",
+	},
+	haymaker: {
+		num: 2222,
+		accuracy: 75,
+		basePower: 90,
+		category: "Physical",
+		name: "Haymaker",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, punch: 1, mirror: 1},
+		onMoveFail(target, source, move) {
+			this.boost({def: -1, evasion: -1}, source, source, this.dex.getActiveMove("Haymaker"));
+		},
+		secondary: {
+			chance: 50,
+			status: 'slp',
+		},
+		target: "normal",
+		type: "Fighting",
+	},
+	lariat: {
+		num: 2223,
+		accuracy: 100,
+		basePower: 95,
+		category: "Physical",
+		name: "Lariat",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onHit(target) {
+			let remove = ['lockedmove', 'twoturnmove', 'rollout', 'iceball', 'timberfall'];
+			for (let i = 0; i < remove.length; i++) {
+				if (target?.volatiles[remove[i]]) {
+					target.removeVolatile(remove[i]);
+					return;
+				}
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Fighting",
+	},
+	pressurepoint: {
+		num: 2224,
+		accuracy: 90,
+		basePower: 40,
+		category: "Physical",
+		name: "Pressure Point",
+		pp: 20,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onModifyMove(move, pokemon, target) {
+			if (target?.getMoveHitData(move).crit) {
+				if (!move.secondaries) {
+					move.secondaries = [];
+				}
+				move.secondaries.push({
+					chance: 30,
+					volatileStatus: 'flinch',
+				});
+			}
+		},
+		onBasePower(basePower, pokemon, target, move) {
+			if (target.getMoveHitData(move).crit) {
+				this.debug('Pressure Point boost');
+				return this.chainModify(3);
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Fighting",
+	},
+	supremesmash: {
+		num: 2225,
+		accuracy: 90,
+		basePower: 175,
+		category: "Special",
+		name: "Supreme Smash",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, punch: 1, recharge: 1, protect: 1, mirror: 1},
+		self: {
+			volatileStatus: 'mustrecharge',
+		},
+		secondary: {
+			chance: 40,
+			volatileStatus: 'flinch',
+		},
+		target: "normal",
+		type: "Fighting",
+	},
+	aurastorm: {
+		num: 2226,
+		accuracy: 90,
+		basePower: 145,
+		category: "Special",
+		name: "Aura Storm",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		self: {
+			boosts: {
+				spa: -2,
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Fighting",
+	},
+	aurawave: {
+		num: 2227,
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		name: "Aura Wave",
+		pp: 20,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onBasePower(basePower, source) {
+			if (this.field.isTerrain('auraterrain') && source.isGrounded()) {
+				this.debug('terrain buff');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifyMove(move, source, target) {
+			if (this.field.isTerrain('auraterrain') && source.isGrounded()) {
+				move.target = 'allAdjacentFoes';
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Fighting",
+	},
+	chiblast: {
+		num: 2228,
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		name: "Chi Blast",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, pulse: 1},
+		secondary: {
+			chance: 100,
+			boosts: {
+				spd: -1,
+			},
+		},
+		target: "normal",
+		type: "Fighting",
+	},
+	chishot: {
+		num: 2229,
+		accuracy: 100,
+		basePower: 40,
+		category: "Special",
+		name: "Chi Shot",
+		pp: 30,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, pulse: 1},
+		secondary: {
+			chance: 10,
+			boosts: {
+				spd: -1,
+			},
+		},
+		target: "normal",
+		type: "Fighting",
+	},
+	focusbeam: {
+		num: 2230,
+		accuracy: 100,
+		basePower: 90,
+		category: "Special",
+		name: "Focus Beam",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		critRatio: 2,
+		secondary: null,
+		target: "normal",
+		type: "Fighting",
+	},
+	spiritpunch: {
+		num: 2231,
+		accuracy: 95,
+		basePower: 80,
+		category: "Special",
+		name: "Spirit Punch",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, punch: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 30,
+			self: {
+				boosts: {
+					atk: 1,
+					spa: 1,
+				},
+			},
+		},
+		target: "normal",
+		type: "Fighting",
+	},
+	aurarush: {
+		num: 2232,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Aura Rush",
+		pp: 15,
+		priority: 0,
+		flags: {},
+		onModifyMove(move, source, target) {
+			if (this.field.isTerrain('auraterrain') && source.isGrounded()) move.boosts = {spe: 2, atk: 1, spa: 1};
+		},
+		boosts: {
+			spe: 2,
+		},
+		secondary: null,
+		target: "self",
+		type: "Fighting",
+	},
+	auraterrain: {
+		num: 2233,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Aura Terrain",
+		pp: 20,
+		priority: 0,
+		flags: {nonsky: 1},
+		terrain: 'auraterrain',
+		condition: {
+			duration: 5,
+			durationCallback(source, effect) {
+				var dur = 5;
+				if (source?.moveThisTurn === 'auraterrain') {
+					dur += 2;
+				}
+				if (source?.hasItem('terrainextender')) {
+					dur += 5;
+				}
+				return dur;
+			},
+			onBasePowerPriority: 6,
+			onBasePower(basePower, attacker, defender, move) {
+				if (move.type === 'Fighting' && attacker.isGrounded() && !attacker.isSemiInvulnerable()) {
+					this.debug('aura terrain boost');
+					return this.chainModify([5325, 4096]);
+				}
+				if (attacker.hasType('Fighting') && attacker.isGrounded && !attacker.isSemiInvulnerable()) {
+					this.debug('aura terrain aura boost');
+
+					let boost = 1;
+					const ratio = attacker.hp / attacker.maxhp;
+
+					if (ratio <= 0.2) {
+						return this.chainModify(5);//1.3);
+					}
+					if (ratio <= 0.4) {
+						return this.chainModify(4);//1.225);
+					}
+					if (ratio <= 0.6) {
+						return this.chainModify(3);//1.15);
+					}
+					if (ratio <= 0.8) {
+						return this.chainModify(2);//1.075);
+					}
+					return this.chainModify(1);
+				}
+			},
+			onFieldStart(field, source, effect) {
+				if (effect?.effectType === 'Ability') {
+					this.add('-fieldstart', 'move: Aura Terrain', '[from] ability: ' + effect.name, '[of] ' + source);
+				} else {
+					this.add('-fieldstart', 'move: Aura Terrain');
+				}
+			},
+			onResidualOrder: 5,
+			onResidualSubOrder: 2,
+			onResidual(pokemon) {
+				if (pokemon.isGrounded() && !pokemon.isSemiInvulnerable()) {
+					const boosts: SparseBoostsTable = {};
+					let i: BoostID;
+					for (i in pokemon.boosts) {
+						if (pokemon.boosts[i] < 0) {
+							boosts[i]!++;
+						}
+					}
+					pokemon.setBoost(boosts);
+					this.add('-clearnegativeboost', pokemon);
+				}
+			},
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 7,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Aura Terrain');
+			},
+		},
+		secondary: null,
+		target: "all",
+		type: "Fighting",
+	},
+	berserk: {
+		num: 2234,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Berserk",
+		pp: 5,
+		priority: 0,
+		flags: {},
+		volatileStatus: 'berserk',
+		onTry(source, target, move) {
+			if (source.volatiles['berserk']) return false;
+			if (source.volatiles['trapped']) {
+				delete move.volatileStatus;
+			}
+		},
+		condition: {
+			duration: 3,
+			onStart(pokemon) {
+				this.add('-start', pokemon, 'move: Berserk');
+			},
+			onResidualOrder: 15,
+			onEnd(pokemon) {
+				this.add('end', pokemon, 'move: Berserk');
+			},
+			onDisableMove(pokemon) {
+				for (const moveSlot of pokemon.moveSlots) {
+					const move = this.dex.moves.get(moveSlot.id);
+					if (move.category === 'Status' && move.id !== 'mefirst') {
+						pokemon.disableMove(moveSlot.id);
+					}
+				}
+			},
+			onBeforeMovePriority: 5,
+			onBeforeMove(attacker, defender, move) {
+				if (!move.isZ && !move.isMax && move.category === 'Status' && move.id !== 'mefirst') {
+					this.add('cant', attacker, 'move: Berserk', move);
+					return false;
+				}
+			},
+			onTrapPokemon(pokemon) {
+				pokemon.tryTrap();
+			},
+		},
+		boosts: {
+			atk: 3,
+		},
+		secondary: null,
+		target: "self",
+		type: "Fighting",
+	},
 };
+
+// bullet: barb barrage, quickdraw, apian bomb, honey bomb, web ball, bullseye, infernal parade, fusillade, wrecking ball, chrome shot, spike cannon
+// punch: fume punch, phantom fist, fearless blow
+// pulse: ectolaser, chrome shot, laser pulse, mega blast
+// sound: mach turn, ancient roar, eerie wail, clangor, wild roar
+// bite: slumber fang, rock cruncher, rockjaw, cursed fang, lead fang, metal cruncher
+// dance: macabre dance
+// blade: earthen blade, stone axe, stone slice, shadow blade, shadow scythes, blade slash, brutal lash, knight sword
+// magic: cursed fang, curse bolt, final curse, mantra, necromancy, wither, knight sword, mystical power

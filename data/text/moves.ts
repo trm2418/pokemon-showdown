@@ -31,7 +31,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	acid: {
 		name: "Acid",
 		desc: "Has a 10% chance to lower the target's Special Defense by 1 stage.",
-		shortDesc: "10% chance to lower the foe(s) Sp. Def by 1.",
+		shortDesc: "10% chance to lower the foe(s) Sp Def by 1.",
 		gen3: {
 			desc: "Has a 10% chance to lower the target's Defense by 1 stage.",
 			shortDesc: "10% chance to lower the foe(s) Defense by 1.",
@@ -56,7 +56,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	acidspray: {
 		name: "Acid Spray",
 		desc: "Has a 100% chance to lower the target's Special Defense by 2 stages.",
-		shortDesc: "100% chance to lower the target's Sp. Def by 2.",
+		shortDesc: "100% chance to lower the target's Sp Def by 2.",
 	},
 	acrobatics: {
 		name: "Acrobatics",
@@ -117,7 +117,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	amnesia: {
 		name: "Amnesia",
 		desc: "Raises the user's Special Defense by 2 stages.",
-		shortDesc: "Raises the user's Sp. Def by 2.",
+		shortDesc: "Raises the user's Sp Def by 2.",
 		gen1: {
 			desc: "Raises the user's Special by 2 stages.",
 			shortDesc: "Raises the user's Special by 2.",
@@ -139,7 +139,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	appleacid: {
 		name: "Apple Acid",
 		desc: "Has a 100% chance to lower the target's Special Defense by 1 stage.",
-		shortDesc: "100% chance to lower the target's Sp. Def by 1.",
+		shortDesc: "100% chance to lower the target's Sp Def by 1.",
 	},
 	aquajet: {
 		name: "Aqua Jet",
@@ -182,7 +182,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	aromaticmist: {
 		name: "Aromatic Mist",
 		desc: "Raises the target's Special Defense by 2 stages.",
-		shortDesc: "Raises the target's Sp. Def by 2.",
+		shortDesc: "Raises the target's Sp Def by 2.",
 	},
 	assist: {
 		name: "Assist",
@@ -656,7 +656,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	bugbuzz: {
 		name: "Bug Buzz",
 		desc: "Has a 10% chance to lower the target's Special Defense by 1 stage.",
-		shortDesc: "10% chance to lower the target's Sp. Def by 1.",
+		shortDesc: "10% chance to lower the target's Sp Def by 1.",
 	},
 	bulkup: {
 		name: "Bulk Up",
@@ -704,7 +704,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	calmmind: {
 		name: "Calm Mind",
 		desc: "Raises the user's Special Attack and Special Defense by 1 stage.",
-		shortDesc: "Raises the user's Sp. Atk and Sp. Def by 1.",
+		shortDesc: "Raises the user's Sp Atk and Sp Def by 1.",
 	},
 	camouflage: {
 		name: "Camouflage",
@@ -728,7 +728,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	captivate: {
 		name: "Captivate",
 		desc: "Lowers the target's Special Attack by 2 stages. The target is unaffected if both the user and the target are the same gender, or if either is genderless. Pokemon with the Oblivious Ability are immune.",
-		shortDesc: "Lowers the foe(s) Sp. Atk by 2 if opposite gender.",
+		shortDesc: "Lowers the foe(s) Sp Atk by 2 if opposite gender.",
 	},
 	catastropika: {
 		name: "Catastropika",
@@ -754,7 +754,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	chargebeam: {
 		name: "Charge Beam",
 		desc: "Has a 70% chance to raise the user's Special Attack by 1 stage.",
-		shortDesc: "70% chance to raise the user's Sp. Atk by 1.",
+		shortDesc: "70% chance to raise the user's Sp Atk by 1.",
 	},
 	charm: {
 		name: "Charm",
@@ -831,12 +831,12 @@ export const MovesText: {[k: string]: MoveText} = {
 	closecombat: {
 		name: "Close Combat",
 		desc: "Lowers the user's Defense and Special Defense by 1 stage.",
-		shortDesc: "Lowers the user's Defense and Sp. Def by 1.",
+		shortDesc: "Lowers the user's Defense and Sp Def by 1.",
 	},
 	coaching: {
 		name: "Coaching",
-		desc: "Raises the target's Attack and Defense by 1 stage. Fails if there is no ally adjacent to the user.",
-		shortDesc: "Raises an ally's Attack and Defense by 1.",
+		desc: "Raises the target's Attack, Defense and Speed by 1 stage. Fails if there is no ally adjacent to the user.",
+		shortDesc: "Raises an ally's Attack, Defense and Speed by 1.",
 	},
 	coil: {
 		name: "Coil",
@@ -860,7 +860,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	confide: {
 		name: "Confide",
 		desc: "Lowers the target's Special Attack by 1 stage.",
-		shortDesc: "Lowers the target's Sp. Atk by 1.",
+		shortDesc: "Lowers the target's Sp Atk by 1.",
 	},
 	confuseray: {
 		name: "Confuse Ray",
@@ -962,7 +962,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	cosmicpower: {
 		name: "Cosmic Power",
 		desc: "Raises the user's Defense and Special Defense by 1 stage.",
-		shortDesc: "Raises the user's Defense and Sp. Def by 1.",
+		shortDesc: "Raises the user's Defense and Sp Def by 1.",
 	},
 	cottonguard: {
 		name: "Cotton Guard",
@@ -1048,7 +1048,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		shortDesc: "30% chance to lower the target's Defense by 1.",
 		gen3: {
 			desc: "Has a 20% chance to lower the target's Special Defense by 1 stage.",
-			shortDesc: "20% chance to lower the target's Sp. Def by 1.",
+			shortDesc: "20% chance to lower the target's Sp Def by 1.",
 		},
 	},
 	crushclaw: {
@@ -1112,12 +1112,12 @@ export const MovesText: {[k: string]: MoveText} = {
 	decorate: {
 		name: "Decorate",
 		desc: "Raises the target's Attack and Special Attack by 2 stages.",
-		shortDesc: "Raises the target's Attack and Sp. Atk by 2.",
+		shortDesc: "Raises the target's Attack and Sp Atk by 2.",
 	},
 	defendorder: {
 		name: "Defend Order",
 		desc: "Raises the user's Defense and Special Defense by 1 stage.",
-		shortDesc: "Raises the user's Defense and Sp. Def by 1.",
+		shortDesc: "Raises the user's Defense and Sp Def by 1.",
 	},
 	defensecurl: {
 		name: "Defense Curl",
@@ -1355,12 +1355,12 @@ export const MovesText: {[k: string]: MoveText} = {
 	dracometeor: {
 		name: "Draco Meteor",
 		desc: "Lowers the user's Special Attack by 2 stages.",
-		shortDesc: "Lowers the user's Sp. Atk by 2.",
+		shortDesc: "Lowers the user's Sp Atk by 2.",
 	},
 	dragonascent: {
 		name: "Dragon Ascent",
 		desc: "Lowers the user's Defense and Special Defense by 1 stage.",
-		shortDesc: "Lowers the user's Defense and Sp. Def by 1.",
+		shortDesc: "Lowers the user's Defense and Sp Def by 1.",
 
 		megaNoItem: "  [TRAINER]'s fervent wish has reached [POKEMON]!",
 	},
@@ -1395,7 +1395,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	dragonpulse: {
 		name: "Dragon Pulse",
 		desc: "Has a 10% chance to lower the target's Special Defense by 1 stage.",
-		shortDesc: "10% chance to lower the target's Sp. Def by 1.",
+		shortDesc: "10% chance to lower the target's Sp Def by 1.",
 	},
 	dragonrage: {
 		name: "Dragon Rage",
@@ -1443,7 +1443,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	drillpeck: {
 		name: "Drill Peck",
-		shortDesc: "No additional effect.",
+		desc: "Has a 30% chance to make the target flinch.",
+		shortDesc: "30% chance to make the target flinch.",
 	},
 	drillrun: {
 		name: "Drill Run",
@@ -1477,7 +1478,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	earthpower: {
 		name: "Earth Power",
 		desc: "Has a 10% chance to lower the target's Special Defense by 1 stage.",
-		shortDesc: "10% chance to lower the target's Sp. Def by 1.",
+		shortDesc: "10% chance to lower the target's Sp Def by 1.",
 	},
 	earthquake: {
 		name: "Earthquake",
@@ -1503,7 +1504,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	eerieimpulse: {
 		name: "Eerie Impulse",
 		desc: "Lowers the target's Special Attack by 3 stages.",
-		shortDesc: "Lowers the target's Sp. Atk by 3.",
+		shortDesc: "Lowers the target's Sp Atk by 3.",
 	},
 	eeriespell: {
 		name: "Eerie Spell",
@@ -1534,7 +1535,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	electroball: {
 		name: "Electro Ball",
 		desc: "Damage is calculated using the user's Speed stat as its Special Attack, including stat stage changes. Other effects that modify the Special Attack stat are used as normal.",
-		shortDesc: "Uses Speed stat as Sp. Atk in damage calculation.",
+		shortDesc: "Uses Speed stat as Sp Atk in damage calculation.",
 		gen5: {
 			desc: "The power of this move depends on (user's current Speed / target's current Speed), rounded down. Power is equal to 150 if the result is 4 or more, 120 if 3, 80 if 2, 60 if 1, 40 if less than 1. If the target's current Speed is 0, it is treated as 1 instead.",
 		},
@@ -1616,7 +1617,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	energyball: {
 		name: "Energy Ball",
 		desc: "Has a 20% chance to lower the target's Special Defense by 1 stage.",
-		shortDesc: "20% chance to lower the target's Sp. Def by 1.",
+		shortDesc: "20% chance to lower the target's Sp Def by 1.",
 	},
 	entrainment: {
 		name: "Entrainment",
@@ -1717,7 +1718,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	faketears: {
 		name: "Fake Tears",
 		desc: "Lowers the target's Special Defense by 2 stages.",
-		shortDesc: "Lowers the target's Sp. Def by 2.",
+		shortDesc: "Lowers the target's Sp Def by 2.",
 	},
 	falsesurrender: {
 		name: "False Surrender",
@@ -1766,7 +1767,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	fierydance: {
 		name: "Fiery Dance",
 		desc: "Has a 50% chance to raise the user's Special Attack by 1 stage.",
-		shortDesc: "50% chance to raise the user's Sp. Atk by 1.",
+		shortDesc: "50% chance to raise the user's Sp Atk by 1.",
 	},
 	fierywrath: {
 		name: "Fiery Wrath",
@@ -1915,17 +1916,17 @@ export const MovesText: {[k: string]: MoveText} = {
 	flashcannon: {
 		name: "Flash Cannon",
 		desc: "Has a 10% chance to lower the target's Special Defense by 1 stage.",
-		shortDesc: "10% chance to lower the target's Sp. Def by 1.",
+		shortDesc: "10% chance to lower the target's Sp Def by 1.",
 	},
 	flatter: {
 		name: "Flatter",
 		desc: "Raises the target's Special Attack by 1 stage and confuses it.",
-		shortDesc: "Raises the target's Sp. Atk by 1 and confuses it.",
+		shortDesc: "Raises the target's Sp Atk by 1 and confuses it.",
 	},
 	fleurcannon: {
 		name: "Fleur Cannon",
 		desc: "Lowers the user's Special Attack by 2 stages.",
-		shortDesc: "Lowers the user's Sp. Atk by 2.",
+		shortDesc: "Lowers the user's Sp Atk by 2.",
 	},
 	fling: {
 		name: "Fling",
@@ -1989,8 +1990,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	focusblast: {
 		name: "Focus Blast",
-		desc: "Has a 10% chance to lower the target's Special Defense by 1 stage.",
-		shortDesc: "10% chance to lower the target's Sp. Def by 1.",
+		desc: "Has a 30% chance to lower the target's Special Defense by 1 stage.",
+		shortDesc: "30% chance to lower the target's Sp Def by 1.",
 	},
 	focusenergy: {
 		name: "Focus Energy",
@@ -2183,7 +2184,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	gearup: {
 		name: "Gear Up",
 		desc: "Raises the Attack and Special Attack of Pokemon on the user's side with the Plus or Minus Abilities by 1 stage.",
-		shortDesc: "Raises Atk, Sp. Atk of allies with Plus/Minus by 1.",
+		shortDesc: "Raises Atk, Sp Atk of allies with Plus/Minus by 1.",
 	},
 	genesissupernova: {
 		name: "Genesis Supernova",
@@ -2492,7 +2493,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	growth: {
 		name: "Growth",
 		desc: "Raises the user's Attack and Special Attack by 1 stage. If the weather is Sunny Day or Desolate Land, this move raises the user's Attack and Special Attack by 2 stages. If the user is holding Utility Umbrella, this move will only raise the user's Attack and Special Attack by 1 stage, even if the weather is Sunny Day or Desolate Land.",
-		shortDesc: "Raises user's Attack and Sp. Atk by 1; 2 in Sun.",
+		shortDesc: "Raises user's Attack and Sp Atk by 1; 2 in Sun.",
 		gen7: {
 			desc: "Raises the user's Attack and Special Attack by 1 stage. If the weather is Sunny Day or Desolate Land, this move raises the user's Attack and Special Attack by 2 stages.",
 		},
@@ -2501,7 +2502,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		},
 		gen4: {
 			desc: "Raises the user's Special Attack by 1 stage.",
-			shortDesc: "Raises the user's Sp. Atk by 1.",
+			shortDesc: "Raises the user's Sp Atk by 1.",
 		},
 		gen1: {
 			desc: "Raises the user's Special by 1 stage.",
@@ -2524,14 +2525,14 @@ export const MovesText: {[k: string]: MoveText} = {
 	guardsplit: {
 		name: "Guard Split",
 		desc: "The user and the target have their Defense and Special Defense stats set to be equal to the average of the user and the target's Defense and Special Defense stats, respectively, rounded down. Stat stage changes are unaffected.",
-		shortDesc: "Averages Defense and Sp. Def stats with target.",
+		shortDesc: "Averages Defense and Sp Def stats with target.",
 
 		activate: "  [POKEMON] shared its guard with the target!",
 	},
 	guardswap: {
 		name: "Guard Swap",
 		desc: "The user swaps its Defense and Special Defense stat stage changes with the target.",
-		shortDesc: "Swaps Defense and Sp. Def changes with target.",
+		shortDesc: "Swaps Defense and Sp Def changes with target.",
 	},
 	guillotine: {
 		name: "Guillotine",
@@ -3224,7 +3225,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	leafstorm: {
 		name: "Leaf Storm",
 		desc: "Lowers the user's Special Attack by 2 stages.",
-		shortDesc: "Lowers the user's Sp. Atk by 2.",
+		shortDesc: "Lowers the user's Sp Atk by 2.",
 	},
 	leaftornado: {
 		name: "Leaf Tornado",
@@ -3299,7 +3300,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		},
 		gen2: {
 			desc: "For 5 turns, the user and its party members have their Special Defense doubled. Critical hits ignore this effect. Fails if the effect is already active on the user's side.",
-			shortDesc: "For 5 turns, the user's party has doubled Sp. Def.",
+			shortDesc: "For 5 turns, the user's party has doubled Sp Def.",
 		},
 		gen1: {
 			desc: "While the user remains active, its Special is doubled when taking damage. Critical hits ignore this effect. If any Pokemon uses Haze, this effect ends.",
@@ -3313,7 +3314,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	lightthatburnsthesky: {
 		name: "Light That Burns the Sky",
 		desc: "This move becomes a physical attack if the user's Attack is greater than its Special Attack, including stat stage changes. This move and its effects ignore the Abilities of other Pokemon.",
-		shortDesc: "Physical if user's Atk > Sp. Atk. Ignores Abilities.",
+		shortDesc: "Physical if user's Atk > Sp Atk. Ignores Abilities.",
 	},
 	liquidation: {
 		name: "Liquidation",
@@ -3382,7 +3383,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	lusterpurge: {
 		name: "Luster Purge",
 		desc: "Has a 50% chance to lower the target's Special Defense by 1 stage.",
-		shortDesc: "50% chance to lower the target's Sp. Def by 1.",
+		shortDesc: "50% chance to lower the target's Sp Def by 1.",
 	},
 	machpunch: {
 		name: "Mach Punch",
@@ -3451,7 +3452,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	magneticflux: {
 		name: "Magnetic Flux",
 		desc: "Raises the Defense and Special Defense of Pokemon on the user's side with the Plus or Minus Abilities by 1 stage.",
-		shortDesc: "Raises Def, Sp. Def of allies with Plus/Minus by 1.",
+		shortDesc: "Raises Def, Sp Def of allies with Plus/Minus by 1.",
 	},
 	magnetrise: {
 		name: "Magnet Rise",
@@ -3498,7 +3499,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	maxdarkness: {
 		name: "Max Darkness",
 		desc: "Power is equal to the base move's Max Move power. If this move is successful, the Special Defense of each Pokemon on the opposing side is lowered by 1 stage, even if they have a substitute. This effect does not happen if the user is not Dynamaxed. If this move is used as a base move, it deals damage with a power of 0.",
-		shortDesc: "Base move affects power. Foes: -1 Sp. Def.",
+		shortDesc: "Base move affects power. Foes: -1 Sp Def.",
 	},
 	maxflare: {
 		name: "Max Flare",
@@ -3508,7 +3509,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	maxflutterby: {
 		name: "Max Flutterby",
 		desc: "Power is equal to the base move's Max Move power. If this move is successful, the Special Attack of each Pokemon on the opposing side is lowered by 1 stage, even if they have a substitute. This effect does not happen if the user is not Dynamaxed. If this move is used as a base move, it deals damage with a power of 0.",
-		shortDesc: "Base move affects power. Foes: -1 Sp. Atk.",
+		shortDesc: "Base move affects power. Foes: -1 Sp Atk.",
 	},
 	maxgeyser: {
 		name: "Max Geyser",
@@ -3545,7 +3546,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	maxooze: {
 		name: "Max Ooze",
 		desc: "Power is equal to the base move's Max Move power. If this move is successful, the Special Attack of each Pokemon on the user's side is raised by 1 stage, even if they have a substitute. This effect does not happen if the user is not Dynamaxed. If this move is used as a base move, it deals damage with a power of 0.",
-		shortDesc: "Base move affects power. Allies: +1 Sp. Atk.",
+		shortDesc: "Base move affects power. Allies: +1 Sp Atk.",
 	},
 	maxovergrowth: {
 		name: "Max Overgrowth",
@@ -3560,7 +3561,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	maxquake: {
 		name: "Max Quake",
 		desc: "Power is equal to the base move's Max Move power. If this move is successful, the Special Defense of each Pokemon on the user's side is raised by 1 stage, even if they have a substitute. This effect does not happen if the user is not Dynamaxed. If this move is used as a base move, it deals damage with a power of 0.",
-		shortDesc: "Base move affects power. Allies: +1 Sp. Def.",
+		shortDesc: "Base move affects power. Allies: +1 Sp Def.",
 	},
 	maxrockfall: {
 		name: "Max Rockfall",
@@ -3646,7 +3647,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	memento: {
 		name: "Memento",
 		desc: "Lowers the target's Attack and Special Attack by 4 stages. The user faints unless this move misses or there is no target. Fails entirely if this move hits a substitute, but does not fail if the target's stats cannot be changed.",
-		shortDesc: "Lowers target's Attack, Sp. Atk by 4. User faints.",
+		shortDesc: "Lowers target's Attack, Sp Atk by 4. User faints.",
 		gen4: {
 			desc: "Lowers the target's Attack and Special Attack by 2 stages. The user faints, even if this move misses. This move can hit targets in the middle of a two-turn move. Fails entirely if there is no target, but does not fail if the target's stats cannot be changed.",
 		},
@@ -3680,17 +3681,17 @@ export const MovesText: {[k: string]: MoveText} = {
 	metalsound: {
 		name: "Metal Sound",
 		desc: "Lowers the target's Special Defense by 2 stages.",
-		shortDesc: "Lowers the target's Sp. Def by 2.",
+		shortDesc: "Lowers the target's Sp Def by 2.",
 	},
 	meteorassault: {
 		name: "Meteor Assault",
-		desc: "If this move is successful, the user must recharge on the following turn and cannot select a move.",
-		shortDesc: "User cannot move next turn.",
+		desc: "Has a higher chance for a critical hit. If this move is successful, the user must recharge on the following turn and cannot select a move.",
+		shortDesc: "High crit ratio. User cannot move next turn.",
 	},
 	meteorbeam: {
 		name: "Meteor Beam",
 		desc: "This attack charges on the first turn and executes on the second. Raises the user's Special Attack by 1 stage on the first turn. If the user is holding a Power Herb, the move completes in one turn.",
-		shortDesc: "Raises user's Sp. Atk by 1 on turn 1. Hits turn 2.",
+		shortDesc: "Raises user's Sp Atk by 1 on turn 1. Hits turn 2.",
 
 		prepare: "[POKEMON] is overflowing with space power!",
 	},
@@ -3875,12 +3876,12 @@ export const MovesText: {[k: string]: MoveText} = {
 	mistball: {
 		name: "Mist Ball",
 		desc: "Has a 50% chance to lower the target's Special Attack by 1 stage.",
-		shortDesc: "50% chance to lower the target's Sp. Atk by 1.",
+		shortDesc: "50% chance to lower the target's Sp Atk by 1.",
 	},
 	mistyexplosion: {
 		name: "Misty Explosion",
 		desc: "If the current terrain is Misty Terrain and the user is grounded, this move's power is multiplied by 1.5. The user faints after using this move, even if this move fails for having no target. This move is prevented from executing if any active Pokemon has the Damp Ability. This move becomes a physical attack if the user's Attack is greater than its Special Attack, including stat stage changes.",
-		shortDesc: "Faint. Misty Terrain: 1.5x. Phys if Atk > Sp.Atk.",
+		shortDesc: "Faint. Misty Terrain: 1.5x. Phys if Atk > Sp Atk.",
 	},
 	mistyterrain: {
 		name: "Misty Terrain",
@@ -3893,7 +3894,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	moonblast: {
 		name: "Moonblast",
 		desc: "Has a 30% chance to lower the target's Special Attack by 1 stage.",
-		shortDesc: "30% chance to lower the target's Sp. Atk by 1.",
+		shortDesc: "30% chance to lower the target's Sp Atk by 1.",
 	},
 	moongeistbeam: {
 		name: "Moongeist Beam",
@@ -3975,12 +3976,12 @@ export const MovesText: {[k: string]: MoveText} = {
 	mysticalfire: {
 		name: "Mystical Fire",
 		desc: "Has a 100% chance to lower the target's Special Attack by 1 stage.",
-		shortDesc: "100% chance to lower the target's Sp. Atk by 1.",
+		shortDesc: "100% chance to lower the target's Sp Atk by 1.",
 	},
 	nastyplot: {
 		name: "Nasty Plot",
 		desc: "Raises the user's Special Attack by 2 stages.",
-		shortDesc: "Raises the user's Sp. Atk by 2.",
+		shortDesc: "Raises the user's Sp Atk by 2.",
 	},
 	naturalgift: {
 		name: "Natural Gift",
@@ -4059,7 +4060,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	nobleroar: {
 		name: "Noble Roar",
 		desc: "Lowers the target's Attack and Special Attack by 1 stage.",
-		shortDesc: "Lowers the target's Attack and Sp. Atk by 1.",
+		shortDesc: "Lowers the target's Attack and Sp Atk by 1.",
 	},
 	noretreat: {
 		name: "No Retreat",
@@ -4145,7 +4146,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	overheat: {
 		name: "Overheat",
 		desc: "Lowers the user's Special Attack by 2 stages.",
-		shortDesc: "Lowers the user's Sp. Atk by 2.",
+		shortDesc: "Lowers the user's Sp Atk by 2.",
 	},
 	painsplit: {
 		name: "Pain Split",
@@ -4167,7 +4168,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	partingshot: {
 		name: "Parting Shot",
 		desc: "Lowers the target's Attack and Special Attack by 1 stage. If this move is successful, the user switches out even if it is trapped and is replaced immediately by a selected party member. The user does not switch out if the target's Attack and Special Attack stat stages were both unchanged, or if there are no unfainted party members.",
-		shortDesc: "Lowers target's Atk, Sp. Atk by 1. User switches.",
+		shortDesc: "Lowers target's Atk, Sp Atk by 1. User switches.",
 		gen6: {
 			desc: "Lowers the target's Attack and Special Attack by 1 stage. If this move is successful, the user switches out even if it is trapped and is replaced immediately by a selected party member. The user does not switch out if there are no unfainted party members.",
 		},
@@ -4245,7 +4246,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	photongeyser: {
 		name: "Photon Geyser",
 		desc: "This move becomes a physical attack if the user's Attack is greater than its Special Attack, including stat stage changes. This move and its effects ignore the Abilities of other Pokemon.",
-		shortDesc: "Physical if user's Atk > Sp. Atk. Ignores Abilities.",
+		shortDesc: "Physical if user's Atk > Sp Atk. Ignores Abilities.",
 	},
 	pikapapow: {
 		name: "Pika Papow",
@@ -4373,14 +4374,14 @@ export const MovesText: {[k: string]: MoveText} = {
 	powersplit: {
 		name: "Power Split",
 		desc: "The user and the target have their Attack and Special Attack stats set to be equal to the average of the user and the target's Attack and Special Attack stats, respectively, rounded down. Stat stage changes are unaffected.",
-		shortDesc: "Averages Attack and Sp. Atk stats with target.",
+		shortDesc: "Averages Attack and Sp Atk stats with target.",
 
 		activate: "  [POKEMON] shared its power with the target!",
 	},
 	powerswap: {
 		name: "Power Swap",
 		desc: "The user swaps its Attack and Special Attack stat stage changes with the target.",
-		shortDesc: "Swaps Attack and Sp. Atk stat stages with target.",
+		shortDesc: "Swaps Attack and Sp Atk stat stages with target.",
 	},
 	powertrick: {
 		name: "Power Trick",
@@ -4464,7 +4465,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	psychic: {
 		name: "Psychic",
 		desc: "Has a 10% chance to lower the target's Special Defense by 1 stage.",
-		shortDesc: "10% chance to lower the target's Sp. Def by 1.",
+		shortDesc: "10% chance to lower the target's Sp Def by 1.",
 		gen1: {
 			desc: "Has a 33% chance to lower the target's Special by 1 stage.",
 			shortDesc: "33% chance to lower the target's Special by 1.",
@@ -4486,7 +4487,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	psychoboost: {
 		name: "Psycho Boost",
 		desc: "Lowers the user's Special Attack by 2 stages.",
-		shortDesc: "Lowers the user's Sp. Atk by 2.",
+		shortDesc: "Lowers the user's Sp Atk by 2.",
 	},
 	psychocut: {
 		name: "Psycho Cut",
@@ -4501,12 +4502,12 @@ export const MovesText: {[k: string]: MoveText} = {
 	psyshock: {
 		name: "Psyshock",
 		desc: "Deals damage to the target based on its Defense instead of Special Defense.",
-		shortDesc: "Damages target based on Defense, not Sp. Def.",
+		shortDesc: "Damages target based on Defense, not Sp Def.",
 	},
 	psystrike: {
 		name: "Psystrike",
 		desc: "Deals damage to the target based on its Defense instead of Special Defense.",
-		shortDesc: "Damages target based on Defense, not Sp. Def.",
+		shortDesc: "Damages target based on Defense, not Sp Def.",
 	},
 	psywave: {
 		name: "Psywave",
@@ -4595,7 +4596,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	quiverdance: {
 		name: "Quiver Dance",
 		desc: "Raises the user's Special Attack, Special Defense, and Speed by 1 stage.",
-		shortDesc: "Raises the user's Sp. Atk, Sp. Def, Speed by 1.",
+		shortDesc: "Raises the user's Sp Atk, Sp Def, Speed by 1.",
 	},
 	rage: {
 		name: "Rage",
@@ -4867,8 +4868,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	rocksmash: {
 		name: "Rock Smash",
-		desc: "Has a 50% chance to lower the target's Defense by 1 stage.",
-		shortDesc: "50% chance to lower the target's Defense by 1.",
+		desc: "Has a 100% chance to lower the target's Defense by 1 stage.",
+		shortDesc: "100% chance to lower the target's Defense by 1.",
 	},
 	rockthrow: {
 		name: "Rock Throw",
@@ -4908,8 +4909,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	rollingkick: {
 		name: "Rolling Kick",
-		desc: "Has a 30% chance to make the target flinch.",
-		shortDesc: "30% chance to make the target flinch.",
+		desc: "Has a 40% chance to make the target flinch.",
+		shortDesc: "40% chance to make the target flinch.",
 	},
 	rollout: {
 		name: "Rollout",
@@ -4932,7 +4933,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	rototiller: {
 		name: "Rototiller",
 		desc: "Raises the Attack and Special Attack of all grounded Grass-type Pokemon on the field by 1 stage.",
-		shortDesc: "Raises Atk/Sp. Atk of grounded Grass types by 1.",
+		shortDesc: "Raises Atk/Sp Atk of grounded Grass types by 1.",
 	},
 	round: {
 		name: "Round",
@@ -5075,7 +5076,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	secretsword: {
 		name: "Secret Sword",
 		desc: "Deals damage to the target based on its Defense instead of Special Defense.",
-		shortDesc: "Damages target based on Defense, not Sp. Def.",
+		shortDesc: "Damages target based on Defense, not Sp Def.",
 	},
 	seedbomb: {
 		name: "Seed Bomb",
@@ -5085,7 +5086,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	seedflare: {
 		name: "Seed Flare",
 		desc: "Has a 40% chance to lower the target's Special Defense by 2 stages.",
-		shortDesc: "40% chance to lower the target's Sp. Def by 2.",
+		shortDesc: "40% chance to lower the target's Sp Def by 2.",
 	},
 	seismictoss: {
 		name: "Seismic Toss",
@@ -5117,7 +5118,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	shadowball: {
 		name: "Shadow Ball",
 		desc: "Has a 20% chance to lower the target's Special Defense by 1 stage.",
-		shortDesc: "20% chance to lower the target's Sp. Def by 1.",
+		shortDesc: "20% chance to lower the target's Sp Def by 1.",
 	},
 	shadowbone: {
 		name: "Shadow Bone",
@@ -5284,7 +5285,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	skittersmack: {
 		name: "Skitter Smack",
 		desc: "Has a 100% chance to lower the target's Special Attack by 1 stage.",
-		shortDesc: "100% chance to lower target's Sp. Atk by 1.",
+		shortDesc: "100% chance to lower target's Sp Atk by 1.",
 	},
 	skullbash: {
 		name: "Skull Bash",
@@ -5329,8 +5330,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	skyuppercut: {
 		name: "Sky Uppercut",
-		desc: "This move can hit a target using Bounce, Fly, or Sky Drop, or is under the effect of Sky Drop.",
-		shortDesc: "Can hit Pokemon using Bounce, Fly, or Sky Drop.",
+		desc: "This move's type effectiveness against Flying is changed to be super effective no matter what this move's type is. This move can hit a target using Bounce, Fly, or Sky Drop, or is under the effect of Sky Drop.",
+		shortDesc: "Super eff. on Flying. Can hit Pokemon in the sky.",
 		gen4: {
 			desc: "This move can hit a target using Bounce or Fly.",
 			shortDesc: "Can hit Pokemon using Bounce or Fly.",
@@ -5442,7 +5443,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	snarl: {
 		name: "Snarl",
 		desc: "Has a 100% chance to lower the target's Special Attack by 1 stage.",
-		shortDesc: "100% chance to lower the foe(s) Sp. Atk by 1.",
+		shortDesc: "100% chance to lower the foe(s) Sp Atk by 1.",
 	},
 	snatch: {
 		name: "Snatch",
@@ -5468,7 +5469,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	soak: {
 		name: "Soak",
 		desc: "Causes the target to become a Water type and lowers their Special Defense by 1 stage. Fails if the target is an Arceus or a Silvally, or if the target is already purely Water type.",
-		shortDesc: "Changes target's type to Water and lower Sp. Def.",
+		shortDesc: "Changes target's type to Water and lower Sp Def.",
 		gen6: {
 			desc: "Causes the target to become a Water type. Fails if the target is an Arceus, or if the target is already purely Water type.",
 		},
@@ -5635,7 +5636,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	spiritbreak: {
 		name: "Spirit Break",
 		desc: "Has a 100% chance to lower the target's Special Attack by 1 stage.",
-		shortDesc: "100% chance to lower the target's Sp. Atk by 1.",
+		shortDesc: "100% chance to lower the target's Sp Atk by 1.",
 	},
 	spiritshackle: {
 		name: "Spirit Shackle",
@@ -5750,7 +5751,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	stockpile: {
 		name: "Stockpile",
 		desc: "Raises the user's Defense and Special Defense by 1 stage. The user's Stockpile count increases by 1. Fails if the user's Stockpile count is 3. The user's Stockpile count is reset to 0 when it is no longer active.",
-		shortDesc: "Raises user's Defense, Sp. Def by 1. Max 3 uses.",
+		shortDesc: "Raises user's Defense, Sp Def by 1. Max 3 uses.",
 		gen3: {
 			desc: "The user's Stockpile count increases by 1. Fails if the user's Stockpile count is 3. The user's Stockpile count is reset to 0 when it is no longer active.",
 			shortDesc: "Raises user's Stockpile count by 1. Max 3 uses.",
@@ -5855,7 +5856,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	strugglebug: {
 		name: "Struggle Bug",
 		desc: "Has a 100% chance to lower the target's Special Attack by 1 stage.",
-		shortDesc: "100% chance to lower the foe(s) Sp. Atk by 1.",
+		shortDesc: "100% chance to lower the foe(s) Sp Atk by 1.",
 	},
 	stuffcheeks: {
 		name: "Stuff Cheeks",
@@ -6073,10 +6074,10 @@ export const MovesText: {[k: string]: MoveText} = {
 	tailglow: {
 		name: "Tail Glow",
 		desc: "Raises the user's Special Attack by 3 stages.",
-		shortDesc: "Raises the user's Sp. Atk by 3.",
+		shortDesc: "Raises the user's Sp Atk by 3.",
 		gen4: {
 			desc: "Raises the user's Special Attack by 2 stages.",
-			shortDesc: "Raises the user's Sp. Atk by 2.",
+			shortDesc: "Raises the user's Sp Atk by 2.",
 		},
 	},
 	tailslap: {
@@ -6154,7 +6155,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	tearfullook: {
 		name: "Tearful Look",
 		desc: "Lowers the target's Attack and Special Attack by 1 stage.",
-		shortDesc: "Lowers the target's Attack and Sp. Atk by 1.",
+		shortDesc: "Lowers the target's Attack and Sp Atk by 1.",
 	},
 	teatime: {
 		name: "Teatime",
@@ -6439,7 +6440,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	triplekick: {
 		name: "Triple Kick",
-		desc: "Hits three times. Power increases to 20 for the second hit and 30 for the third. This move checks accuracy for each hit, and the attack ends if the target avoids a hit. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit three times.",
+		desc: "Hits three times. Power increases to 40 for the second hit and 60 for the third. This move checks accuracy for each hit, and the attack ends if the target avoids a hit. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit three times.",
 		shortDesc: "Hits 3 times. Each hit can miss, but power rises.",
 		gen4: {
 			desc: "Hits three times. Power increases to 20 for the second hit and 30 for the third. This move checks accuracy for each hit, and the attack ends if the target avoids a hit. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the target has a Focus Sash and had full HP when this move started, it will not be knocked out regardless of the number of hits.",
@@ -6539,7 +6540,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	vcreate: {
 		name: "V-create",
 		desc: "Lowers the user's Speed, Defense, and Special Defense by 1 stage.",
-		shortDesc: "Lowers the user's Defense, Sp. Def, Speed by 1.",
+		shortDesc: "Lowers the user's Defense, Sp Def, Speed by 1.",
 	},
 	veeveevolley: {
 		name: "Veevee Volley",
@@ -6549,7 +6550,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	venomdrench: {
 		name: "Venom Drench",
 		desc: "Lowers the target's Attack, Special Attack, and Speed by 1 stage if the target is poisoned. Fails if the target is not poisoned.",
-		shortDesc: "Lowers Atk/Sp. Atk/Speed of poisoned foes by 1.",
+		shortDesc: "Lowers Atk/Sp Atk/Speed of poisoned foes by 1.",
 	},
 	venoshock: {
 		name: "Venoshock",
@@ -6758,7 +6759,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	wonderroom: {
 		name: "Wonder Room",
 		desc: "For 5 turns, all active Pokemon have their Defense and Special Defense stats swapped. Stat stage changes are unaffected. If this move is used during the effect, the effect ends.",
-		shortDesc: "For 5 turns, all Defense and Sp. Def stats switch.",
+		shortDesc: "For 5 turns, all Defense and Sp Def stats switch.",
 	},
 	woodhammer: {
 		name: "Wood Hammer",
@@ -6772,7 +6773,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	workup: {
 		name: "Work Up",
 		desc: "Raises the user's Attack and Special Attack by 1 stage.",
-		shortDesc: "Raises the user's Attack and Sp. Atk by 1.",
+		shortDesc: "Raises the user's Attack and Sp Atk by 1.",
 	},
 	worryseed: {
 		name: "Worry Seed",
@@ -6942,7 +6943,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	fierycharm: {
 		name: "Fiery Charm",
 		desc: "Burns the target and lower its Special Attack by 1 stage.",
-		shortDesc: "Burn and lower the target's Sp. Atk by 1.",
+		shortDesc: "Burn and lower the target's Sp Atk by 1.",
 	},
 	ignite: {
 		name: "Ignite",
@@ -7025,7 +7026,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	hydroshock: {
 		name: "Hydroshock",
 		desc: "Deals damage to the target based on its Defense instead of Special Defense.",
-		shortDesc: "Damages target based on Defense, not Sp. Def.",
+		shortDesc: "Damages target based on Defense, not Sp Def.",
 	},
 	oceanswrath: {
 		name: "Ocean's Wrath",
@@ -7037,7 +7038,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	vortexblast: {
 		name: "Vortex Blast",
 		desc: "Lowers the user's Special Attack by 2 stages.",
-		shortDesc: "Lowers the user's Sp. Atk by 2.",
+		shortDesc: "Lowers the user's Sp Atk by 2.",
 	},
 	clearrain: {
 		name: "Clear Rain",
@@ -7489,7 +7490,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	wyrmblitz: {
 		name: "Wyrm Blitz",
 		desc: "Lowers the user's Defense and Special Defense by 1 stage.",
-		shortDesc: "Lowers the user's Defense and Sp. Def by 1.",
+		shortDesc: "Lowers the user's Defense and Sp Def by 1.",
 	},
 	causticbreath: {
 		name: "Caustic Breath",
@@ -7623,7 +7624,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	blackout: {
 		name: "Blackout",
 		desc: "Has a 20% chance to lower the target's Special Attack by 1 stage. This move's type effectiveness against Electric is changed to be super effective no matter what this move's type is.",
-		shortDesc: "20% lower Sp. Atk. Super effective on Electric.",
+		shortDesc: "20% lower Sp Atk. Super effective on Electric.",
 	},
 	blackmagic: {
 		name: "Black Magic",
@@ -7640,7 +7641,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	darkgaze: {
 		name: "Dark Gaze",
 		desc: "Has a 10% chance to lower the target's Special Defense by 1 stage.",
-		shortDesc: "10% chance to lower the target's Sp. Def by 1.",
+		shortDesc: "10% chance to lower the target's Sp Def by 1.",
 	},
 	darkshot: {
 		name: "Dark Shot",
@@ -7698,7 +7699,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	faetality: {
 		name: "Faetality",
 		desc: "This move becomes a special attack and doesn't make contact if the user's Special Attack is greater than its Attack, including stat stage changes.",
-		shortDesc: "Special + no contact if user's Sp. Atk > Atk.",
+		shortDesc: "Special + no contact if user's Sp Atk > Atk.",
 	},
 	fairytail: {
 		name: "Fairy Tail",
@@ -7713,7 +7714,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	glitzblitz: {
 		name: "Glitz Blitz",
 		desc: "Lowers the user's Defense and Special Defense by 1 stage.",
-		shortDesc: "Lowers the user's Defense and Sp. Def by 1.",
+		shortDesc: "Lowers the user's Defense and Sp Def by 1.",
 	},
 	heartbreaker: {
 		name: "Heartbreaker",
@@ -7728,7 +7729,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	moonhammer: {
 		name: "Moon Hammer",
 		desc: "Has a 20% chance to raise the user's Special Defense by 1 stage.",
-		shortDesc: "20% chance to raise the user's Sp. Def by 1.",
+		shortDesc: "20% chance to raise the user's Sp Def by 1.",
 	},
 	pirouette: {
 		name: "Pirouette",
@@ -7743,7 +7744,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	pixiepunch: {
 		name: "Pixie Punch",
 		desc: "Has a 50% chance to raise the user's Special Defense by 1 stage.",
-		shortDesc: "50% chance to raise the user's Sp. Def by 1.",
+		shortDesc: "50% chance to raise the user's Sp Def by 1.",
 	},
 	reveldance: {
 		name: "Revel Dance",
@@ -7787,7 +7788,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	faebeam: {
 		name: "Fae Beam",
 		desc: "Has a 50% chance to lower the target's Special Attack by 1 stage.",
-		shortDesc: "50% chance to lower the target's Sp. Atk by 1.",
+		shortDesc: "50% chance to lower the target's Sp Atk by 1.",
 	},
 	fairyblast: {
 		name: "Fairy Blast",
@@ -7818,7 +7819,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	shimmershot: {
 		name: "Shimmer Shot",
 		desc: "Has a 100% chance to raise the user's Special Attack by 1 stage.",
-		shortDesc: "100% chance to raise the user's Sp. Atk by 1.",
+		shortDesc: "100% chance to raise the user's Sp Atk by 1.",
 	},
 	sparklebeam: {
 		name: "Sparkle Beam",
@@ -7833,7 +7834,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	starstorm: {
 		name: "Starstorm",
 		desc: "Has a 30% chance to raise the user's Special Defense by 1 stage. If the current terrain is Misty Terrain, this move does not check accuracy.",
-		shortDesc: "30% raise Sp. Def. Can't miss in Misty Terrain.",
+		shortDesc: "30% raise Sp Def. Can't miss in Misty Terrain.",
 	},
 	fairydance: {
 		name: "Fairy Dance",
@@ -7871,10 +7872,114 @@ export const MovesText: {[k: string]: MoveText} = {
 	rainbowwall: {
 		name: "Rainbow Wall",
 		desc: "For 5 turns, the user and its party members take 0.75x damage from physical and special attacks, or 5/6 damage if in a Double Battle; does not reduce damage further with Reflect, Light Screen or Aurora Veil. Critical hits ignore this protection. It is removed from the user's side if the user or an ally is successfully hit by Brick Break, Psychic Fangs, Defog, or Scorched Earth. Brick Break and Psychic Fangs remove the effect before damage is calculated. Lasts for 8 turns if the user is holding Light Clay.",
-		shortDesc: "For 5 turns, damage to allies is halved. Hail only.",
+		shortDesc: "For 5 turns, damage to allies is 0.75x.",
 
-		start: "  Aurora Veil made [TEAM] stronger against physical and special moves!",
-		end: "  [TEAM]'s Aurora Veil wore off!",
+		start: "  Rainbow Wall made [TEAM] stronger against physical and special moves!",
+		end: "  [TEAM]'s Rainbow Wall wore off!",
+	},
+	alloutrampage: {
+		name: "All Out Rampage",
+		desc: "Whether or not this move is successful and even if it would cause fainting, the user loses 1/3 of its maximum HP, rounded up, unless the user has the Magic Guard Ability.",
+		shortDesc: "User loses 1/3 max HP.",
+	},
+	triplearrows: {
+		name: "Triple Arrows",
+		desc: "If this move is successful, the user gains the Focus Energy effect (+2 critical hit ratio). Also lowers the target's Defense by 1 stage.",
+		shortDesc: "User gains Focus Energy. 100% lower target Def.",
+	},
+	aurafist: {
+		name: "Aura Fist",
+		desc: "Has a 50% chance to create Aura Terrain for 5 turns if this move hits. Lasts for 10 turns if the user is holding Terrain Extender.",
+		shortDesc: "50% chance to create Aura Terrain for 5 turns.",
+	},
+	furystrike: {
+		name: "Fury Strike",
+		desc: "Has a 10% chance to raise the user's Attack by 1 stage.",
+		shortDesc: "10% chance to raise the user's Attack by 1.",
+	},
+	goldenfist: {
+		name: "Golden Fist",
+		desc: "No additional effect.",
+		shortDesc: "Scatters coins.",
+
+		activate: "  Coins were scattered everywhere!",
+	},
+	gutjab: {
+		name: "Gut Jab",
+		desc: "Has a 30% chance to make the target flinch.",
+		shortDesc: "30% chance to make the target flinch.",
+	},
+	haymaker: {
+		name: "Haymaker",
+		desc: "Has a 50% chance to cause the target to fall asleep. If this attack is not successful, the user's Defense and evasion are lowered by 1 stage.",
+		shortDesc: "50% sleep. Miss: lower user Def and evasion by 1.",
+	},
+	lariat: {
+		name: "Lariat",
+		desc: "If the target is in the middle of a multi-turn move, it is cancelled if this move hits.",
+		shortDesc: "Cancels the target's multi-turn moves.",
+	},
+	pressurepoint: {
+		name: "Pressure Point",
+		desc: "If this move will result in a critical hit, it becomes 120 power and has a 30% chance to flinch in addition to the critical hit damage boost.",
+		shortDesc: "A crit from this move has 120 power + 30% flinch.",
+	},
+	supremesmash: {
+		name: "Supreme Smash",
+		desc: "Has a 40% chance to make the target flinch. If this move is successful, the user must recharge on the following turn and cannot select a move.",
+		shortDesc: "40% flinch. User cannot move next turn.",
+	},
+	aurastorm: {
+		name: "Aura Storm",
+		desc: "Lowers the user's Special Attack by 2 stages.",
+		shortDesc: "Lowers the user's Sp Atk by 2.",
+	},
+	aurawave: {
+		name: "Aura Wave",
+		desc: "If the current terrain is Aura Terrain and the user is grounded, this move hits all opposing Pokemon and has its power multiplied by 1.5.",
+		shortDesc: "User on Aura Terrain: 1.5x power, hits foes.",
+	},
+	chiblast: {
+		name: "Chi Blast",
+		desc: "Has a 100% chance to lower the target's Special Defense by 1 stage.",
+		shortDesc: "100% chance to lower the target's Sp Def by 1.",
+	},
+	chishot: {
+		name: "Chi Shot",
+		desc: "Has a 10% chance to lower the target's Special Defense by 1 stage.",
+		shortDesc: "10% chance to lower the target's Sp Def by 1.",
+	},
+	focusbeam: {
+		name: "Focus Beam",
+		desc: "Has a higher chance for a critical hit.",
+		shortDesc: "High critical hit ratio.",
+	},
+	spiritpunch: {
+		name: "Spirit Punch",
+		desc: "Has a 30% chance to raise the user's Attack and Special Attack by 1 stage.",
+		shortDesc: "30% raise the user's Atk and Sp Atk by 1.",
+	},
+	victorydance: {
+		name: "Victory Dance",
+		desc: "Raises the user's Attack, Defense, and Speed by 1 stage.",
+		shortDesc: "Raises the user's Attack, Defense and Speed by 1.",
+	},
+	aurarush: {
+		name: "Aura Rush",
+		desc: "Raises the user's Speed by 2 stages. If the current terrain is Aura Terrain and the user is grounded, this move also raises the user's Attack and Special Attack by 1 stage.",
+		shortDesc: "+2 Speed. Aura Terrain: +1 Atk and Sp Atk too.",
+	},
+	auraterrain: {
+		name: "Aura Terrain",
+		desc: "For 7 turns, the terrain becomes Aura Terrain. During the effect, the power of Fighting-type attacks made by grounded Pokemon is multiplied by 1.3, grounded Pokemon have their negative stat stage changes raised by 1 each at the end of each turn, and grounded Fighting-type Pokemon do increased damage the lower their HP percentage is. Camouflage transforms the user into a Fighting type and Nature Power becomes Aura Sphere. Lasts for 12 turns if the user is holding Terrain Extender. Fails if the current terrain is Aura Terrain.",
+		shortDesc: "Land: +Fight dmg, fix -stats, Fight: -HP = +dmg.",
+	},
+	berserk: {
+		name: "Berserk",
+		desc: "Raises the user's Attack by 3 stages, but it becomes prevented from switching out and using status moves for 4 turns. The user can still switch out if it uses Flip Turn, U-turn, or Volt Switch. Fails if the user already has this effect. The Attack boost stays after the effect expires.",
+		shortDesc: "Raise Atk by 3. Trap user and only allow attacks.",
+
+		start: "  [POKEMON] went Berserk and can no longer escape or use status moves!",
 	},
 };
 
