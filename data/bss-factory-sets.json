@@ -419,6 +419,21 @@
       }
     ]
   },
+  "raichu": {
+    "usage": 10,
+    "sets": [
+      {
+        "species": "Raichu",
+        "level": 53,
+        "item": ["Life Orb"],
+        "ability": ["Lightning Rod"],
+        "evs": {"spa": 252, "spe": 252, "def": 4},
+        "ivs": {"atk": 0},
+        "nature": "Modest",
+        "moves": [["Nasty Plot", "Volt Switch"], ["Thunderbolt"], ["Focus Blast", "Surf", "Grass Knot"], ["Focus Blast", "Surf", "Grass Knot"]]
+      }
+    ]
+  },
   "cinderace": {
     "usage": 10,
     "sets": [

@@ -24451,8 +24451,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			},
 		},
 		target: "normal",
-		type: "Normal",
-		contestType: "Beautiful",
+		type: "Bug",
 	},
 };
 
