@@ -3419,6 +3419,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	simple: {
 		onBoost(boost, target, source, effect) {
 			if (effect && effect.id === 'zpower') return;
+			if (effect && effect.id === 'auraterrain') return;
 			let i: BoostID;
 			for (i in boost) {
 				boost[i]! *= 2;

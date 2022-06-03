@@ -24287,9 +24287,20 @@ export const Moves: {[moveid: string]: MoveData} = {
 				if (pokemon.isGrounded() && !pokemon.isSemiInvulnerable()) {
 					const stats: BoostID[] = [];
 					let stat: BoostID;
-					for (stat in pokemon.boosts) {
-						if (pokemon.boosts[stat] < 0) {
-							stats.push(stat);
+
+					if (pokemon.hasAbility('contrary')) {
+						for (stat in pokemon.boosts) {
+							// this prevents a pokemon with a -6 stat from having that stat lowered again
+							if (pokemon.boosts[stat] < 0 && pokemon.boosts[stat] > -6) {
+								stats.push(stat);
+							}
+						}
+					}
+					else {
+						for (stat in pokemon.boosts) {
+							if (pokemon.boosts[stat] < 0) {
+								stats.push(stat);
+							}
 						}
 					}
 					if (stats.length) {
@@ -24300,16 +24311,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 					} else {
 						return false;
 					}
-					/*
-					const boosts: SparseBoostsTable = {};
-					let i: BoostID;
-					for (i in pokemon.boosts) {
-						if (pokemon.boosts[i] < 0) {
-							boosts[i] = pokemon.boosts[i] + 1;
-						}
-					}
-					pokemon.setBoost(boosts);
-					//this.add('-clearnegativeboost', pokemon);*/
 				}
 			},
 			onFieldResidualOrder: 27,
