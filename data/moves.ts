@@ -24417,7 +24417,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				if (move.realMove) continue;
 				if (move.isZ || move.isMax || move.isNonstandard) continue;
 				if (effect.noMetronome!.includes(move.name)) continue;
-				if (move.type !== 'Fighting') continue;
+				//if (move.type !== 'Fighting') continue;
 				moves.push(move);
 			}
 			let randomMove = '';
