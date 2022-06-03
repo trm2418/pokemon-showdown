@@ -7981,6 +7981,13 @@ export const MovesText: {[k: string]: MoveText} = {
 
 		start: "  [POKEMON] went Berserk and can no longer escape or use status moves!",
 	},
+	combo: {
+		name: "combo",
+		desc: "Uses 2 random Fighting-type moves. Does not include Counter, Focus Punch, Detect, Mat Block, Quick Guard or Combo.",
+		shortDesc: "Uses 2 random Fighting-type moves.",
+
+		//move: "Waggling a finger let it use [MOVE]!",
+	},
 };
 
 /*

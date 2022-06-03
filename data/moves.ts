@@ -24206,6 +24206,24 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Fighting",
 	},
+	victorydance: {
+		num: 2232,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Victory Dance",
+		pp: 10,
+		priority: 0,
+		flags: {dance: 1},
+		boosts: {
+			atk: 1,
+			def: 1,
+			spe: 1,
+		},
+		secondary: null,
+		target: "self",
+		type: "Fighting",
+	},
 	aurarush: {
 		num: 2233,
 		accuracy: true,
@@ -24370,6 +24388,49 @@ export const Moves: {[moveid: string]: MoveData} = {
 		boosts: {
 			atk: 3,
 		},
+		secondary: null,
+		target: "self",
+		type: "Fighting",
+	},
+	combo: {
+		num: 2236,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Combo",
+		pp: 20,
+		priority: 0,
+		flags: {},
+		noMetronome: [
+			"Counter", "Focus Punch", "Detect", "Mat Block", "Quick Guard", "Combo",
+		],
+		onTryMove(pokemon) {
+			this.attrLastMove('[still]');
+		},
+		onPrepareHit(target, source) {
+			this.add('-anim', source, "Metronome", source);
+		},
+		onHit(target, source, effect) {
+			const moves: MoveData[] = [];
+			for (const id in Moves) {
+				const move = Moves[id];
+				if (move.realMove) continue;
+				if (move.isZ || move.isMax || move.isNonstandard) continue;
+				if (effect.noMetronome!.includes(move.name)) continue;
+				if (move.type !== 'Fighting') continue;
+				moves.push(move);
+			}
+			let randomMove = '';
+			if (moves.length) {
+				moves.sort((a, b) => a.num! - b.num!);
+				randomMove = this.sample(moves).name;
+			} 
+			if (!randomMove) {
+				return false;
+			}
+			this.actions.useMove(randomMove, target);
+		},
+		multihit: [2],
 		secondary: null,
 		target: "self",
 		type: "Fighting",
