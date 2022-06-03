@@ -24207,7 +24207,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fighting",
 	},
 	aurarush: {
-		num: 2232,
+		num: 2233,
 		accuracy: true,
 		basePower: 0,
 		category: "Status",
@@ -24226,7 +24226,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fighting",
 	},
 	auraterrain: {
-		num: 2233,
+		num: 2234,
 		accuracy: true,
 		basePower: 0,
 		category: "Status",
@@ -24289,7 +24289,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 					let i: BoostID;
 					for (i in pokemon.boosts) {
 						if (pokemon.boosts[i] < 0) {
-							boosts[i] = boosts[i]! + 1;
+							boosts[i] = boosts[i]!.valueOf() + 1;
 						}
 					}
 					pokemon.setBoost(boosts);
@@ -24307,7 +24307,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fighting",
 	},
 	berserk: {
-		num: 2234,
+		num: 2235,
 		accuracy: true,
 		basePower: 0,
 		category: "Status",
