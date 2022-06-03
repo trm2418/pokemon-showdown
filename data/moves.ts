@@ -24411,21 +24411,19 @@ export const Moves: {[moveid: string]: MoveData} = {
 			this.add('-anim', source, "Metronome", source);
 		},
 		onHit(target, source, effect) {
-			const moves: MoveData[] = [];
-			for (const id in Moves) {
-				const move = Moves[id];
+			const moves = [];
+			for (const id in this.dex.data.Moves) {
+				const move = this.dex.moves.get(id);
 				if (move.realMove) continue;
 				if (move.isZ || move.isMax || move.isNonstandard) continue;
 				if (effect.noMetronome!.includes(move.name)) continue;
-				//if (move.type !== 'Fighting') continue;
-				moves.push(move);
+				if (move.type !== 'Fighting') continue;
+				moves.push(move.name);
 			}
-			let randomMove = '';
+			let randomMove: string;
 			if (moves.length) {
-				moves.sort((a, b) => a.num! - b.num!);
-				randomMove = this.sample(moves).name;
-			} 
-			if (!randomMove) {
+				randomMove = this.sample(moves);
+			} else {
 				return false;
 			}
 			this.actions.useMove(randomMove, target);
