@@ -24293,7 +24293,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 						}
 					}
 					pokemon.setBoost(boosts);
-					this.add('-clearnegativeboost', pokemon);
+					//this.add('-clearnegativeboost', pokemon);
 				}
 			},
 			onFieldResidualOrder: 27,
