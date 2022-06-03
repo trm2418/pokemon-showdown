@@ -23926,9 +23926,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		mindBlownRecoil: true,
 		onAfterMove(pokemon, target, move) {
-			if (move.mindBlownRecoil && !move.multihit) {
+			if (!move.multihit) {
 				this.damage(Math.round(pokemon.maxhp / 3), pokemon, pokemon, this.dex.conditions.get('All Out Rampage'), true);
 			}
 		},
@@ -24079,7 +24078,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		num: 2225,
 		accuracy: 90,
 		basePower: 175,
-		category: "Special",
+		category: "Physical",
 		name: "Supreme Smash",
 		pp: 5,
 		priority: 0,
@@ -24261,16 +24260,16 @@ export const Moves: {[moveid: string]: MoveData} = {
 					const ratio = attacker.hp / attacker.maxhp;
 
 					if (ratio <= 0.2) {
-						return this.chainModify(5);//1.3);
+						return this.chainModify(1.3);
 					}
 					if (ratio <= 0.4) {
-						return this.chainModify(4);//1.225);
+						return this.chainModify(1.225);
 					}
 					if (ratio <= 0.6) {
-						return this.chainModify(3);//1.15);
+						return this.chainModify(1.15);
 					}
 					if (ratio <= 0.8) {
-						return this.chainModify(2);//1.075);
+						return this.chainModify(1.075);
 					}
 					return this.chainModify(1);
 				}
@@ -24290,7 +24289,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 					let i: BoostID;
 					for (i in pokemon.boosts) {
 						if (pokemon.boosts[i] < 0) {
-							boosts[i]!++;
+							boosts[i] = boosts[i]! + 1;
 						}
 					}
 					pokemon.setBoost(boosts);
@@ -24324,13 +24323,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 			}
 		},
 		condition: {
-			duration: 3,
+			duration: 4,
 			onStart(pokemon) {
 				this.add('-start', pokemon, 'move: Berserk');
 			},
 			onResidualOrder: 15,
 			onEnd(pokemon) {
-				this.add('end', pokemon, 'move: Berserk');
+				this.add('-end', pokemon, 'move: Berserk');
 			},
 			onDisableMove(pokemon) {
 				for (const moveSlot of pokemon.moveSlots) {
