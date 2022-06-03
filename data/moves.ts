@@ -24297,6 +24297,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 						const boost: SparseBoostsTable = {};
 						boost[randomStat] = 1;
 						this.boost(boost);
+					} else {
+						return false;
 					}
 					/*
 					const boosts: SparseBoostsTable = {};
