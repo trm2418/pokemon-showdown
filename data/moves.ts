@@ -24357,9 +24357,106 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "self",
 		type: "Fighting",
 	},
+	divebomb: {
+		num: 3000,
+		accuracy: 90,
+		basePower: 130,
+		category: "Physical",
+		name: "Divebomb",
+		pp: 10,
+		priority: 0,
+		flags: {bullet: 1, contact: 1, protect: 1, mirror: 1, gravity: 1},
+		hasCrashDamage: true,
+		onMoveFail(target, source, move) {
+			this.damage(source.baseMaxhp / 2, source, source, this.dex.conditions.get('Divebomb'));
+		},
+		secondary: null,
+		target: "normal",
+		type: "Flying",
+	},
+	talongash: {
+		num: 30001,
+		accuracy: 100,
+		basePower: 45,
+		category: "Physical",
+		name: "Talon Gash",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		critRatio: 2,
+		multihit: 2,
+		secondary: null,
+		target: "normal",
+		type: "Flying",
+	},
+	windblast: {
+		num: 3002,
+		accuracy: 100,
+		basePower: 90,
+		category: "Special",
+		name: "Wind Blast",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 10,
+			volatileStatus: 'confusion',
+		},
+		target: "normal",
+		type: "Flying",
+	},
+	barbbarrage: {
+		num: 3003,
+		accuracy: 100,
+		basePower: 65,
+		category: "Physical",
+		name: "Barb Barrage",
+		pp: 15,
+		priority: 0,
+		flags: {bullet: 1, protect: 1, mirror: 1},
+		onBasePower(basePower, pokemon, target) {
+			if (target.status || target.hasAbility('comatose')) {
+				return this.chainModify(2);
+			}
+		},
+		secondary: {
+			chance: 30,
+			status: 'psn',
+		},
+		target: "normal",
+		type: "Poison",
+	},
+	swarmbarrage: {
+		num: 3004,
+		accuracy: 80,
+		basePower: 120,
+		category: "Special",
+		name: "Swarm Barrage",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 30,
+			onHit(target, source) {
+				const result = this.random(4);
+				if (result === 0) {
+					target.trySetStatus('psn', source);
+				} else if (result === 1) {
+					target.trySetStatus('par', source);
+				} else if (result === 2) {
+					target.addVolatile('flinch');
+				} else {
+					this.boost({spd: -1});
+				}
+			},
+		},
+		target: "normal",
+		type: "Normal",
+		contestType: "Beautiful",
+	},
 };
 
-// bullet: barb barrage, quickdraw, apian bomb, honey bomb, web ball, bullseye, infernal parade, fusillade, wrecking ball, chrome shot, spike cannon
+// bullet: quickdraw, apian bomb, honey bomb, web ball, bullseye, infernal parade, fusillade, wrecking ball, chrome shot, spike cannon
 // punch: fume punch, phantom fist, fearless blow
 // pulse: ectolaser, chrome shot, laser pulse, mega blast
 // sound: mach turn, ancient roar, eerie wail, clangor, wild roar

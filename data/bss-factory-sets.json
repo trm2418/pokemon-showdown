@@ -151,7 +151,7 @@
         "evs": {"spa": 252, "spe": 252, "def": 4},
         "ivs": {"atk": 0},
         "nature": "Modest",
-        "moves": [["Quiver Dance"], ["Bug Buzz"], ["Wind Blast"], ["Energy Ball", "Psychic"]]
+        "moves": [["Quiver Dance"], ["Bug Buzz"], ["Wind Blast"], ["Energy Ball"]]
       }
     ]
   },
