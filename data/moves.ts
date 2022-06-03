@@ -24285,6 +24285,20 @@ export const Moves: {[moveid: string]: MoveData} = {
 			onResidualSubOrder: 2,
 			onResidual(pokemon) {
 				if (pokemon.isGrounded() && !pokemon.isSemiInvulnerable()) {
+					const stats: BoostID[] = [];
+					let stat: BoostID;
+					for (stat in pokemon.boosts) {
+						if (pokemon.boosts[stat] < 0) {
+							stats.push(stat);
+						}
+					}
+					if (stats.length) {
+						const randomStat = this.sample(stats);
+						const boost: SparseBoostsTable = {};
+						boost[randomStat] = 1;
+						this.boost(boost);
+					}
+					/*
 					const boosts: SparseBoostsTable = {};
 					let i: BoostID;
 					for (i in pokemon.boosts) {
@@ -24293,7 +24307,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 						}
 					}
 					pokemon.setBoost(boosts);
-					//this.add('-clearnegativeboost', pokemon);
+					//this.add('-clearnegativeboost', pokemon);*/
 				}
 			},
 			onFieldResidualOrder: 27,
