@@ -1335,7 +1335,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		onModifyMove(move) {
-			if (this.field.isWeather('hail')) move.accuracy = true;
+			if (this.field.isWeather('hail') || this.field.isWeather('sleet')) move.accuracy = true;
 		},
 		secondary: {
 			chance: 10,
@@ -5747,7 +5747,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		},
 		secondary: {
 			chance: 40,
-			volatileStatus: 'leechseed',
+			onHit(target, source) {
+				if (target.hasType('Grass')) return null;
+				target.addVolatile('leechseed', source);
+			},
 		},
 		target: "normal",
 		type: "Grass",
@@ -8519,6 +8522,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			switch (target?.effectiveWeather()) {
 			case 'raindance':
 			case 'primordialsea':
+			case 'thunderstorm':
 				move.accuracy = true;
 				break;
 			case 'sunnyday':
@@ -13848,10 +13852,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 	razorwind: {
 		num: 13,
 		accuracy: 100,
-		basePower: 80,
+		basePower: 95,
 		category: "Special",
 		name: "Razor Wind",
-		pp: 10,
+		pp: 15,
 		priority: 0,
 		flags: {charge: 1, protect: 1, mirror: 1},
 		onTryMove(attacker, defender, move) {
@@ -13859,6 +13863,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				return;
 			}
 			this.add('-prepare', attacker, move.name);
+			this.boost({spe: 2}, attacker, attacker, move);
 			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
 				return;
 			}
@@ -13868,7 +13873,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		critRatio: 2,
 		secondary: null,
 		target: "allAdjacentFoes",
-		type: "Normal",
+		type: "Flying",
 		contestType: "Cool",
 	},
 	recover: {
@@ -18224,6 +18229,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			switch (target?.effectiveWeather()) {
 			case 'raindance':
 			case 'primordialsea':
+			case 'thunderstorm':
 				move.accuracy = true;
 				break;
 			case 'sunnyday':
@@ -21616,7 +21622,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Hyper Focus",
 		pp: 20,
 		priority: 0,
-		flags: {snatch: 1},
+		flags: {},
 		boosts: {
 			spa: 1,
 			accuracy: 1,
@@ -24428,13 +24434,31 @@ export const Moves: {[moveid: string]: MoveData} = {
 			}
 			this.actions.useMove(randomMove, target);
 		},
-		multihit: [2],
+		multihit: 2,
 		secondary: null,
 		target: "self",
 		type: "Fighting",
 	},
+	beaksmash: {
+		num: 2237,
+		accuracy: 100,
+		basePower: 90,
+		category: "Physical",
+		name: "Beak Smash",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 20,
+			boosts: {
+				def: -1,
+			},
+		},
+		target: "normal",
+		type: "Flying",
+	},
 	divebomb: {
-		num: 3000,
+		num: 2238,
 		accuracy: 90,
 		basePower: 130,
 		category: "Physical",
@@ -24450,8 +24474,42 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Flying",
 	},
+	featherblast: {
+		num: 2239,
+		accuracy: 100,
+		basePower: 25,
+		category: "Physical",
+		name: "Feather Blast",
+		pp: 20,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		multihit: [2, 5],
+		secondary: null,
+		target: "normal",
+		type: "Flying",
+	},
+	nosedive: {
+		num: 2240,
+		accuracy: 100,
+		basePower: 65,
+		category: "Physical",
+		name: "Nosedive",
+		pp: 20,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					spe: 1,
+				},
+			},
+		},
+		target: "normal",
+		type: "Flying",
+	},
 	talongash: {
-		num: 30001,
+		num: 2241,
 		accuracy: 100,
 		basePower: 45,
 		category: "Physical",
@@ -24465,10 +24523,119 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Flying",
 	},
-	windblast: {
-		num: 3002,
+	bleakwindstorm: {
+		num: 2242,
+		accuracy: 80,
+		basePower: 125,
+		category: "Special",
+		name: "Bleakwind Storm",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 30,
+			status: 'frz',
+		},
+		target: "normal",
+		type: "Flying",
+	},
+	machturn: {
+		num: 2243,
+		accuracy: 100,
+		basePower: 40,
+		category: "Special",
+		name: "Mach Turn",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		overrideOffensiveStat: 'spe',
+		multihit: 2,
+		secondary: null,
+		target: "normal",
+		type: "Flying",
+	},
+	skyfall: {
+		num: 2244,
+		accuracy: 100,
+		basePower: 100,
+		category: "Special",
+		name: "Sky Fall",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 30,
+			status: 'par',
+		},
+		target: "normal",
+		type: "Flying",
+	},
+	squall: {
+		num: 2245,
+		accuracy: 90,
+		basePower: 70,
+		category: "Special",
+		name: "Squall",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			weather: 'raindance',
+		},
+		target: "normal",
+		type: "Flying",
+	},
+	tempest: {
+		num: 2246,
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		name: "Tempest",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onBasePower(basePower, source, target, move) {
+			if (this.field.terrain || this.field.weather) {
+				return this.chainModify(1.5);
+			}
+		},
+		onHit() {
+			this.field.clearTerrain();
+			if (!['deltastream', 'desolateland', 'primordialsea', 'sleet'].includes(this.field.weather)) {
+				this.field.clearWeather();
+			}
+		},
+		onAfterSubDamage() {
+			this.field.clearTerrain();
+			if (!['deltastream', 'desolateland', 'primordialsea', 'sleet'].includes(this.field.weather)) {
+				this.field.clearWeather();
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Flying",
+	},
+	vacuumdrain: {
+		num: 2247,
 		accuracy: 100,
 		basePower: 90,
+		category: "Special",
+		name: "Vacuum Drain",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Fire') return 1;
+		},
+		secondary: null,
+		target: "normal",
+		type: "Flying",
+	},
+	windblast: {
+		num: 2248,
+		accuracy: 100,
+		basePower: 95,
 		category: "Special",
 		name: "Wind Blast",
 		pp: 15,
@@ -24481,8 +24648,62 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Flying",
 	},
+	windstorm: {
+		num: 2249,
+		accuracy: 100,
+		basePower: 130,
+		category: "Special",
+		name: "Windstorm",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		self: {
+			boosts: {
+				spa: -2,
+			},
+		},
+		secondary: null,
+		target: "allAdjacent",
+		type: "Flying",
+	},
+	eagleeye: {
+		num: 2250,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Eagle Eye",
+		pp: 10,
+		priority: 0,
+		flags: {},
+		volatileStatus: 'eagleeye',
+		condition: {
+			onStart(pokemon, source, effect) {
+				if (effect && (['imposter', 'psychup', 'transform'].includes(effect.id))) {
+					this.add('-start', pokemon, 'move: Eagle Eye', '[silent]');
+				} else {
+					this.add('-start', pokemon, 'move: Eagle Eye');
+				}
+			},
+			onModifyCritRatio(critRatio) {
+				return 5;
+			},
+			onAfterMove(pokemon, target, move) {
+				pokemon.removeVolatile('eagleeye');
+				//this.add('-end', pokemon, 'move: Eagle Eye', '[silent]');
+			},
+			onEnd(pokemon) {
+				this.add('-end', pokemon, 'move: Eagle Eye', '[silent]');
+			},
+		},
+		boosts: {
+			accuracy: 3,
+		},
+		secondary: null,
+		target: "self",
+		type: "Flying",
+	},
 	barbbarrage: {
-		num: 3003,
+		num: 2251,
 		accuracy: 100,
 		basePower: 65,
 		category: "Physical",
@@ -24500,6 +24721,460 @@ export const Moves: {[moveid: string]: MoveData} = {
 			status: 'psn',
 		},
 		target: "normal",
+		type: "Poison",
+	},
+	direclaw: {
+		num: 2252,
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		name: "Dire Claw",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		critRatio: 2,
+		secondary: {
+			chance: 50,
+			onHit(target, source) {
+				const result = this.random(3);
+				if (result === 0) {
+					target.trySetStatus('psn', source);
+				} else if (result === 1) {
+					target.trySetStatus('par', source);
+				} else {
+					target.trySetStatus('slp', source);
+				}
+			},
+		},
+		target: "normal",
+		type: "Poison",
+	},
+	fumepunch: {
+		num: 2253,
+		accuracy: 90,
+		basePower: 80,
+		category: "Physical",
+		name: "Fume Punch",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, punch: 1, mirror: 1},
+		secondary: {
+			chance: 50,
+			terrain: 'miasmaterrain',
+		},
+		target: "normal",
+		type: "Poison",
+	},
+	neurotoxin: {
+		num: 2254,
+		accuracy: 95,
+		basePower: 75,
+		category: "Physical",
+		name: "Neurotoxin",
+		pp: 20,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 50,
+			status: 'par',
+		},
+		target: "normal",
+		type: "Poison",
+	},
+	slumberfang: {
+		num: 2255,
+		accuracy: 85,
+		basePower: 75,
+		category: "Physical",
+		name: "Slumber Fang",
+		pp: 15,
+		priority: 0,
+		flags: {bite: 1, contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			onHit(target) {
+				if (target.status || !target.runStatusImmunity('slp')) return;
+				target.addVolatile('yawn');
+			},
+		},
+		target: "normal",
+		type: "Poison",
+	},
+	toxictackle: {
+		num: 2256,
+		accuracy: 100,
+		basePower: 50,
+		category: "Physical",
+		name: "Toxic Tackle",
+		pp: 25,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 30,
+			status: 'tox',
+		},
+		target: "normal",
+		type: "Poison",
+	},
+	venomslam: {
+		num: 2257,
+		accuracy: 95,
+		basePower: 100,
+		category: "Physical",
+		name: "Venom Slam",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 10,
+			volatileStatus: 'flinch',
+		},
+		target: "normal",
+		type: "Poison",
+	},
+	viralstrike: {
+		num: 2258,
+		accuracy: 100,
+		basePower: 85,
+		category: "Physical",
+		name: "Viral Strike",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onBasePower(basePower, source, target, move) {
+			if (!source.status) return;
+			if (target.trySetStatus(source.status)) {
+				return this.chainModify(1.5);
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Poison",
+	},
+	virugait: {
+		num: 2259,
+		accuracy: 100,
+		basePower: 75,
+		category: "Physical",
+		name: "Virugait",
+		pp: 20,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					spe: 1,
+				},
+			},
+		},
+		target: "normal",
+		type: "Poison",
+	},
+	acidrain: {
+		num: 2260,
+		accuracy: 70,
+		basePower: 110,
+		category: "Special",
+		name: "Acid Rain",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onModifyMove(move, pokemon, target) {
+			switch (target?.effectiveWeather()) {
+			case 'raindance':
+			case 'primordialsea':
+			case 'thunderstorm':
+				move.accuracy = true;
+				break;
+			case 'sunnyday':
+			case 'desolateland':
+				move.accuracy = 50;
+				break;
+			}
+		},
+		secondary: {
+			chance: 50,
+			boosts: {
+				spd: -1,
+			},
+		},
+		target: "allAdjacent",
+		type: "Poison",
+	},
+	chemthrower: {
+		num: 2261,
+		accuracy: 100,
+		basePower: 85,
+		category: "Special",
+		name: "Chemthrower",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 30,
+			status: 'brn',
+		},
+		target: "normal",
+		type: "Poison",
+	},
+	corrosiveacid: {
+		num: 2262,
+		accuracy: 100,
+		basePower: 85,
+		category: "Special",
+		name: "Corrosive Acid",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Steel') return 1;
+		},
+		ignoreImmunity: {'Poison': true},
+		secondary: null,
+		target: "normal",
+		type: "Poison",
+	},
+	homingtoxins: {
+		num: 2263,
+		accuracy: true,
+		basePower: 80,
+		category: "Special",
+		name: "Homing Toxins",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onModifyMove(move, pokemon) {
+			
+			if (this.field.isTerrain('miasmaterrain') && pokemon.isGrounded()) {
+				if (!move.secondaries) {
+					move.secondaries = [];
+				}
+				move.secondaries.push({
+					chance: 100,
+					status: 'psn',
+				});
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Poison",
+	},/*
+	malodor: {
+		num: 2264,
+		accuracy: 100,
+		basePower: 70,
+		category: "Special",
+		name: "Malodor",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 40,
+			onHit(target, source, move) {
+				if ()
+			}
+		}
+		forceSwitch: true,
+		target: "normal",
+		type: "Dragon",
+		contestType: "Tough",
+	},*/
+	parasiticwaste: {
+		num: 2265,
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		name: "Parasitic Waste",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, heal: 1},
+		drain: [1, 2],
+		secondary: null,
+		target: "normal",
+		type: "Poison",
+	},
+	pesticide: {
+		num: 2266,
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		name: "Pesticide",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Bug') return 1;
+		},
+		secondary: {
+			chance: 50,
+			status: 'psn',
+		},
+		target: "normal",
+		type: "Poison",
+	},
+	plaguebreath: {
+		num: 2267,
+		accuracy: 90,
+		basePower: 90,
+		category: "Special",
+		name: "Plague Breath",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 50,
+			boosts: {
+				atk: -1,
+			},
+		},
+		target: "normal",
+		type: "Poison",
+	},
+	poisonfury: {
+		num: 2268,
+		accuracy: 100,
+		basePower: 25,
+		category: "Special",
+		name: "Poison Fury",
+		pp: 20,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		multihit: [2, 5],
+		secondary: null,
+		target: "normal",
+		type: "Poison",
+	},
+	sludgestorm: {
+		num: 2269,
+		accuracy: 100,
+		basePower: 150,
+		basePowerCallback(pokemon, target, move) {
+			return move.basePower * pokemon.hp / pokemon.maxhp;
+		},
+		category: "Special",
+		name: "Sludge Storm",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "allAdjacentFoes",
+		type: "Poison",
+	},
+	toxifume: {
+		num: 2270,
+		accuracy: 100,
+		basePower: 75,
+		category: "Special",
+		name: "Toxifume",
+		pp: 10,
+		priority: 0,
+		flags: {charge: 1, protect: 1, mirror: 1},
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			this.boost({spa: 1}, attacker, attacker, move);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
+		secondary: {
+			chance: 100,
+			status: 'tox',
+		},
+		target: "normal",
+		type: "Poison",
+	},
+	miasmaterrain: {
+		num: 2271,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Miasma Terrain",
+		pp: 20,
+		priority: 0,
+		flags: {nonsky: 1},
+		terrain: 'miasmaterrain',
+		condition: {
+			duration: 5,
+			durationCallback(source, effect) {
+				var dur = 5;
+				if (source?.moveThisTurn === 'miasmaterrain') {
+					dur += 2;
+				}
+				if (source?.hasItem('terrainextender')) {
+					dur += 5;
+				}
+				return dur;
+			},
+			onBasePowerPriority: 6,
+			onBasePower(basePower, attacker, defender, move) {
+				if (move.type === 'Poison' && attacker.isGrounded() && !attacker.isSemiInvulnerable()) {
+					this.debug('miasma terrain boost');
+					return this.chainModify([5325, 4096]);
+				}
+			},
+			onModifyAccuracy(accuracy, target, source, move) {
+				if (source.isGrounded() && !source.isSemiInvulnerable()) {
+					return this.chainModify(0.8);
+				}
+			},
+			onDamagePriority: 1,
+			onDamage(damage, target, source, effect) {
+				if ((effect.id === 'psn' || effect.id === 'tox') && target.isGrounded() && !target.isSemiInvulnerable()) {
+					return damage * 2;
+				}
+			},
+			onFieldStart(field, source, effect) {
+				if (effect?.effectType === 'Ability') {
+					this.add('-fieldstart', 'move: Miasma Terrain', '[from] ability: ' + effect.name, '[of] ' + source);
+				} else {
+					this.add('-fieldstart', 'move: Miasma Terrain');
+				}
+			},
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 7,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Miasma Terrain');
+			},
+		},
+		secondary: null,
+		target: "all",
+		type: "Poison",
+	},
+	miasmicgas: {
+		num: 2272,
+		accuracy: 100,
+		basePower: 0,
+		category: "Status",
+		name: "Miasmic Gas",
+		pp: 10,
+		priority: 0,
+		flags: {heal: 1, protect: 1, mirror: 1},
+		onHit(target, source) {
+			let success = false;
+
+			let miasma = this.field.isTerrain('miasmaterrain') && target.isGrounded();
+
+			if (target.hasType('Poison')) {
+				let factor = miasma ? 1/4 : 1/8;
+				success = !!this.heal(this.modify(target.baseMaxhp, factor));
+			} else {
+				let status = miasma ? 'tox' : 'psn';
+				success = !!target.trySetStatus(status, source);
+			}
+			if (!success) {
+				this.add('-fail', target, 'heal', '[silent]');
+				return this.NOT_FAIL;
+			}
+			return success;
+		},
+		secondary: null,
+		target: "all",
 		type: "Poison",
 	},
 	swarmbarrage: {

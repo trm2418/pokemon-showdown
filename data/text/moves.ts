@@ -456,7 +456,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	blizzard: {
 		name: "Blizzard",
-		desc: "Has a 10% chance to freeze the target. If the weather is Hail, this move does not check accuracy.",
+		desc: "Has a 10% chance to freeze the target. If the weather is Hail or Sleet, this move does not check accuracy.",
 		shortDesc: "10% chance to freeze foe(s). Can't miss in hail.",
 		gen3: {
 			desc: "Has a 10% chance to freeze the target.",
@@ -1039,8 +1039,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	crosspoison: {
 		name: "Cross Poison",
-		desc: "Has a 10% chance to poison the target and a higher chance for a critical hit.",
-		shortDesc: "High critical hit ratio. 10% chance to poison.",
+		desc: "Has a 10% chance to badly poison the target and a higher chance for a critical hit.",
+		shortDesc: "High critical hit ratio. 10% badly poison.",
 	},
 	crunch: {
 		name: "Crunch",
@@ -2875,8 +2875,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	hurricane: {
 		name: "Hurricane",
-		desc: "Has a 30% chance to confuse the target. This move can hit a target using Bounce, Fly, or Sky Drop, or is under the effect of Sky Drop. If the weather is Primordial Sea or Rain Dance, this move does not check accuracy. If the weather is Desolate Land or Sunny Day, this move's accuracy is 50%. If this move is used against a Pokemon holding Utility Umbrella, this move's accuracy remains at 70%.",
-		shortDesc: "30% chance to confuse target. Can't miss in rain.",
+		desc: "Has a 30% chance to confuse the target. This move can hit a target using Bounce, Fly, or Sky Drop, or is under the effect of Sky Drop. If the weather is Primordial Sea, Rain Dance or Thunderstorm, this move does not check accuracy. If the weather is Desolate Land or Sunny Day, this move's accuracy is 50%. If this move is used against a Pokemon holding Utility Umbrella, this move's accuracy remains at 70%.",
+		shortDesc: "30% chance to confuse foe(s). Can't miss in rain.",
 		gen7: {
 			desc: "Has a 30% chance to confuse the target. This move can hit a target using Bounce, Fly, or Sky Drop, or is under the effect of Sky Drop. If the weather is Primordial Sea or Rain Dance, this move does not check accuracy. If the weather is Desolate Land or Sunny Day, this move's accuracy is 50%.",
 		},
@@ -4321,8 +4321,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	poisonsting: {
 		name: "Poison Sting",
-		desc: "Has a 30% chance to poison the target.",
-		shortDesc: "30% chance to poison the target.",
+		desc: "Has a 50% chance to poison the target.",
+		shortDesc: "50% chance to poison the target.",
 		gen1: {
 			desc: "Has a 20% chance to poison the target.",
 			shortDesc: "20% chance to poison the target.",
@@ -4330,8 +4330,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	poisontail: {
 		name: "Poison Tail",
-		desc: "Has a 10% chance to poison the target and a higher chance for a critical hit.",
-		shortDesc: "High critical hit ratio. 10% chance to poison.",
+		desc: "Has a 30% chance to poison the target and a 30% chance to make it flinch.",
+		shortDesc: "30% chance to poison. 30% chance to flinch.",
 	},
 	pollenpuff: {
 		name: "Pollen Puff",
@@ -4532,8 +4532,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	purify: {
 		name: "Purify",
-		desc: "The target is cured if it has a non-volatile status condition. If the target was cured, the user restores 1/2 of its maximum HP, rounded down.",
-		shortDesc: "Cures target's status; heals user 1/2 max HP if so.",
+		desc: "The target is cured if it has a non-volatile status condition. If the target was cured, the user restores 3/4 of its maximum HP, rounded down.",
+		shortDesc: "Cures target's status; heals user 3/4 max HP if so.",
 	},
 	pursuit: {
 		name: "Pursuit",
@@ -4666,8 +4666,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	razorwind: {
 		name: "Razor Wind",
-		desc: "Has a higher chance for a critical hit. This attack charges on the first turn and executes on the second. If the user is holding a Power Herb, the move completes in one turn.",
-		shortDesc: "Charges, then hits foe(s) turn 2. High crit ratio.",
+		desc: "This attack charges on the first turn and executes on the second. Raises the user's Speed by 2 stages on the first turn. If the user is holding a Power Herb, the move completes in one turn. Has a higher chance for a critical hit.",
+		shortDesc: "+2 Speed turn 1. Hits foe(s) turn 2. High crit.",
 		gen4: {
 			desc: "Has a higher chance for a critical hit. This attack charges on the first turn and executes on the second.",
 		},
@@ -6270,7 +6270,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	thunder: {
 		name: "Thunder",
-		desc: "Has a 30% chance to paralyze the target. This move can hit a target using Bounce, Fly, or Sky Drop, or is under the effect of Sky Drop. If the weather is Primordial Sea or Rain Dance, this move does not check accuracy. If the weather is Desolate Land or Sunny Day, this move's accuracy is 50%. If this move is used against a Pokemon holding Utility Umbrella, this move's accuracy remains at 70%.",
+		desc: "Has a 30% chance to paralyze the target. This move can hit a target using Bounce, Fly, or Sky Drop, or is under the effect of Sky Drop. If the weather is Primordial Sea, Rain Dance or Thunderstorm, this move does not check accuracy. If the weather is Desolate Land or Sunny Day, this move's accuracy is 50%. If this move is used against a Pokemon holding Utility Umbrella, this move's accuracy remains at 70%.",
 		shortDesc: "30% chance to paralyze. Can't miss in rain.",
 		gen7: {
 			desc: "Has a 30% chance to paralyze the target. This move can hit a target using Bounce, Fly, or Sky Drop, or is under the effect of Sky Drop. If the weather is Primordial Sea or Rain Dance, this move does not check accuracy. If the weather is Desolate Land or Sunny Day, this move's accuracy is 50%.",
@@ -6369,8 +6369,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	toxicthread: {
 		name: "Toxic Thread",
-		desc: "Lowers the target's Speed by 1 stage and poisons it.",
-		shortDesc: "Lowers the target's Speed by 1 and poisons it.",
+		desc: "Lowers the target's Speed by 2 stage and badly poisons it.",
+		shortDesc: "Lowers target's Speed by 2 and badly poisons it.",
 	},
 	transform: {
 		name: "Transform",
@@ -6549,8 +6549,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	venomdrench: {
 		name: "Venom Drench",
-		desc: "Lowers the target's Attack, Special Attack, and Speed by 1 stage if the target is poisoned. Fails if the target is not poisoned.",
-		shortDesc: "Lowers Atk/Sp Atk/Speed of poisoned foes by 1.",
+		desc: "Lowers the target's Attack, Defense, Special Attack, Special Defense and Speed by 1 stage if the target is poisoned. Fails if the target is not poisoned.",
+		shortDesc: "Lower Atk/Def/Sp Atk/Sp Def/Speed of poisoned foes.",
 	},
 	venoshock: {
 		name: "Venoshock",
@@ -7987,6 +7987,192 @@ export const MovesText: {[k: string]: MoveText} = {
 		shortDesc: "Uses 2 random Fighting-type moves.",
 
 		//move: "Waggling a finger let it use [MOVE]!",
+	},
+	beaksmash: {
+		name: "Beak Smash",
+		desc: "Has a 20% chance to lower the target's Defense by 1 stage.",
+		shortDesc: "20% chance to lower the target's Defense by 1.",
+	},
+	divebomb: {
+		name: "Divebomb",
+		desc: "If this attack is not successful, the user loses half of its maximum HP, rounded down, as crash damage. Pokemon with the Magic Guard Ability are unaffected by crash damage.",
+		shortDesc: "User is hurt by 50% of its max HP if it misses.",
+
+		damage: "#crash",
+	},
+	featherblast: {
+		name: "Feather Blast",
+		desc: "Hits two to five times. Has a 35% chance to hit two or three times and a 15% chance to hit four or five times. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit five times.",
+		shortDesc: "Hits 2-5 times in one turn.",
+	},
+	nosedive: {
+		name: "Nosedive",
+		desc: "Has a 100% chance to raise the user's Speed by 1 stage.",
+		shortDesc: "100% chance to raise the user's Speed by 1.",
+	},
+	talongash: {
+		name: "Talon Gash",
+		desc: "Has a high critical hit ratio. Hits twice. If the first hit breaks the target's substitute, it will take damage for the second hit.",
+		shortDesc: "High critical hit ratio. Hits 2 times in one turn.",
+	},
+	bleakwindstorm: {
+		name: "Bleakwind Storm",
+		desc: "Has a 30% chance to freeze the target.",
+		shortDesc: "30% chance to freeze the target.",
+	},
+	machturn: {
+		name: "Mach Turn",
+		desc: "Hits twice. Damage is calculated using the user's Speed stat as its Special Attack, including stat stage changes. Other effects that modify the Special Attack stat are used as normal.",
+		shortDesc: "Hits twice. Uses Speed stat as Sp Atk.",
+	},
+	skyfall: {
+		name: "Sky Fall",
+		desc: "Has a 30% chance to paralyze the target.",
+		shortDesc: "30% chance to paralyze the target.",
+	},
+	squall: {
+		name: "Squall",
+		desc: "Creates Rain Dance weather for 5 turns if this move hits. Lasts for 10 turns if the user is holding Damp Rock.",
+		shortDesc: "Creates Rain Dance weather for 5 turns.",
+	},
+	tempest: {
+		name: "Tempest",
+		desc: "If there is weather or terrain active, this move ends it and this move's power is multiplied by 1.5. Will do increased damage but will not remove Delta Stream, Desolate Land, Primordial Sea or Sleet.",
+		shortDesc: "Remove weather/terrain. 1.5x damage if removed.",
+	},
+	vacuumdrain: {
+		name: "Vacuum Drain",
+		desc: "This move's type effectiveness against Fire is changed to be super effective no matter what this move's type is.",
+		shortDesc: "Super effective on Fire.",
+	},
+	windblast: {
+		name: "Wind Blast",
+		desc: "Has a 10% chance to confuse the target.",
+		shortDesc: "10% chance to confuse the target.",
+	},
+	windshear: {
+		name: "Wind Shear",
+		desc: "No additional effect.",
+		shortDesc: "Usually goes first.",
+	},
+	windstorm: {
+		name: "Windstorm",
+		desc: "Lowers the user's Special Attack by 2 stages.",
+		shortDesc: "Lowers the user's Sp Atk by 2.",
+	},
+	eagleeye: {
+		name: "Eagle Eye",
+		desc: "Raises the user's accuracy by 3 stages. Your next attack is guaranteed to be a critical hit.",
+		shortDesc: "Raise accuracy by 3. Next attack guaranteed crit.",
+
+		start: "  [POKEMON] is ready to strike!",
+	},
+	barbbarrage: {
+		name: "Barb Barrage",
+		desc: "Has a 30% chance to poison the target. Power doubles if the target has a non-volatile status condition.",
+		shortDesc: "30% poison. 2x power if target has status ailment.",
+	},
+	direclaw: {
+		name: "Dire Claw",
+		desc: "Has a higher chance for a critical hit and a 50% chance to either poison, paralyze, or put the target to sleep.",
+		shortDesc: "High crit. 50% poison, paralyze or sleep.",
+	},
+	fumepunch: {
+		name: "Fume Punch",
+		desc: "Has a 50% chance to create Miasma Terrain for 5 turns if this move hits. Lasts for 10 turns if the user is holding Terrain Extender.",
+		shortDesc: "50% chance to create Miasma Terrain for 5 turns.",
+	},
+	neurotoxin: {
+		name: "Neurotoxin",
+		desc: "Has a 50% chance to paralyze the target.",
+		shortDesc: "50% chance to paralyze the target.",
+	},
+	slumberfang: {
+		name: "Slumber Fang",
+		desc: "If this move is successful, there is a 50% chance the effect of Yawn begins on the target.",
+		shortDesc: "50% chance to inflict Yawn on the target.",
+	},
+	toxictackle: {
+		name: "Toxic Tackle",
+		desc: "Has a 30% chance to badly poison the target.",
+		shortDesc: "30% chance to badly poison the target.",
+	},
+	venomslam: {
+		name: "Venom Slam",
+		desc: "Has a 10% chance to make the target flinch.",
+		shortDesc: "10% chance to make the target flinch.",
+	},
+	viralstrike: {
+		name: "Viral Strike",
+		desc: "The user's non-volatile status condition is transferred to the target. If the status condition is successfully transfered, this move's power is multiplied by 1.5.",
+		shortDesc: "Inflicts user's status. 1.5x damage if successful.",
+	},
+	virugait: {
+		name: "Virugait",
+		desc: "Has a 100% chance to raise the user's Speed by 1 stage.",
+		shortDesc: "100% chance to raise the user's Speed by 1.",
+	},
+	acidrain: {
+		name: "Acid Rain",
+		desc: "Has a 50% chance to lower the target's Special Defense by 1 stage. This move can hit a target using Bounce, Fly, or Sky Drop, or is under the effect of Sky Drop. If the weather is Primordial Sea, Rain Dance or Thunderstorm, this move does not check accuracy. If the weather is Desolate Land or Sunny Day, this move's accuracy is 50%. If this move is used against a Pokemon holding Utility Umbrella, this move's accuracy remains at 70%.",
+		shortDesc: "50% lower foe(s) Sp Def. Can't miss in rain.",
+	},
+	chemthrower: {
+		name: "Chemthrower",
+		desc: "Has a 30% chance to burn the target.",
+		shortDesc: "30% chance to burn the target.",
+	},
+	corrosiveacid: {
+		name: "Corrosive Acid",
+		desc: "This move's type effectiveness against Steel is changed to be super effective no matter what this move's type is.",
+		shortDesc: "Super effective on Steel.",
+	},
+	homingtoxins: {
+		name: "Homing Toxins",
+		desc: "If the current terrain is Miasma Terrain and the user is grounded, this move has a 100% chance to poison the target.",
+		shortDesc: "Always hits. User on Miasma Terrain: 100% poison.",
+	},
+	parasiticwaste: {
+		name: "Parasitic Waste",
+		desc: "The user recovers 1/2 the HP lost by the target, rounded half up. If Big Root is held by the user, the HP recovered is 1.3x normal, rounded half down.",
+		shortDesc: "User recovers 50% of the damage dealt.",
+	},
+	pesticide: {
+		name: "Pesticide",
+		desc: "Has a 50% chance to poison the target. This move's type effectiveness against Bug is changed to be super effective no matter what this move's type is.",
+		shortDesc: "50% chance to poison. Super effective on Bug.",
+	},
+	plaguebreath: {
+		name: "Plague Breath",
+		desc: "Has a 50% chance to lower the target's Attack by 1 stage.",
+		shortDesc: "50% chance to lower the target's Attack by 1.",
+	},
+	poisonfury: {
+		name: "Poison Fury",
+		desc: "Hits two to five times. Has a 35% chance to hit two or three times and a 15% chance to hit four or five times. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit five times.",
+		shortDesc: "Hits 2-5 times in one turn.",
+	},
+	sludgestorm: {
+		name: "Sludge Storm",
+		desc: "Power is equal to (user's current HP * 150 / user's maximum HP), rounded down, but not less than 1.",
+		shortDesc: "Less power as user's HP decreases. Hits foe(s).",
+	},
+	toxifume: {
+		name: "Toxifume",
+		desc: "This attack charges on the first turn and executes on the second. Raises the user's Special Attack by 1 stage on the first turn. Has a 100% chance to badly poison the target on the second turn if the attack hits. If the user is holding a Power Herb, the move completes in one turn.",
+		shortDesc: "Raise Sp Atk turn 1. Hits + badly poison turn 2.",
+
+		prepare: "[POKEMON] is preparing to unleash toxic fumes!",
+	},
+	miasmaterrain: {
+		name: "Miasma Terrain",
+		desc: "For 7 turns, the terrain becomes Miasma Terrain. During the effect, the power of Poison-type attacks made by grounded Pokemon is multiplied by 1.3, grounded Pokemon have their accuracy multiplied by 0.8, and grounded Pokemon take double damage from the poison and toxic status conditions. Grounded poisoned Pokemon with the Toxic Heal ability heal double the normal amount. Camouflage transforms the user into a Poison type and Nature Power becomes Sludge Bomb. Lasts for 12 turns if the user is holding Terrain Extender. Fails if the current terrain is Miasma Terrain.",
+		shortDesc: "Grounded: +Poison power, 0.8x acc, 2x psn + tox.",
+	},
+	miasmicgas: {
+		name: "Miasmic Gas",
+		desc: "Poison-type Pokemon restore 1/4 of their maximum HP or 1/2 if affected by Miasma Terrain. Other Pokemon are poisoned or badly poisoned if affected by Miasma Terrain.",
+		shortDesc: "Hits all. Heal or Poison. 2x in Miasma Terrain.",
 	},
 };
 

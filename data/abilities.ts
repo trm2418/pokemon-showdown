@@ -2714,7 +2714,12 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onDamagePriority: 1,
 		onDamage(damage, target, source, effect) {
 			if (effect.id === 'psn' || effect.id === 'tox') {
-				this.heal(target.baseMaxhp / 8);
+				if (this.field.isTerrain('miasmaterrain')) {
+					this.heal(target.baseMaxhp / 4);
+				}
+				else {
+					this.heal(target.baseMaxhp / 8);
+				}
 				return false;
 			}
 		},

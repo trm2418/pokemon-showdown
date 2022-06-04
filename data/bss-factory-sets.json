@@ -284,6 +284,7 @@
         "item": ["Life Orb"],
         "ability": ["Hustle"],
         "evs": {"atk": 252, "def": 4, "spe": 252},
+        "ivs": {"spa": 0},
         "nature": "Adamant",
         "moves": [["Sucker Punch"], ["Double-Edge", "Take Down", "Strength"], ["Knock Off", "U-turn"], ["Swords Dance"]]
       },
@@ -293,6 +294,7 @@
         "item": ["Choice Band"],
         "ability": ["Hustle"],
         "evs": {"atk": 252, "def": 4, "spe": 252},
+        "ivs": {"spa": 0},
         "nature": "Adamant",
         "moves": [["Sucker Punch"], ["Double-Edge", "Take Down", "Strength"], ["Knock Off"], ["U-turn"]]
       },
@@ -302,6 +304,7 @@
         "item": ["Leftovers"],
         "ability": ["Thick Fat"],
         "evs": {"hp": 252, "def": 128, "spd": 128},
+        "ivs": {"spa": 0},
         "nature": "Impish",
         "moves": [["Super Fang"], ["Strength", "Slack Off"], ["Knock Off"], ["Toxic"]]
       },
@@ -311,6 +314,7 @@
         "item": ["Choice Band"],
         "ability": ["Thick Fat"],
         "evs": {"hp": 252, "def": 128, "spd": 128},
+        "ivs": {"spa": 0},
         "nature": "Impish",
         "moves": [["Super Fang"], ["Strength", "Slack Off", "Crippling Strike"], ["Switcheroo"], ["Toxic"]]
       }
@@ -347,7 +351,7 @@
         "evs": {"atk": 252, "spe": 252, "def": 4},
         "ivs": {"spa": 0},
         "nature": "Adamant",
-        "moves": [["Talon Gash"], ["Fury Attack", "Quick Attack"], ["U-turn"], ["Fury Strike", "Drill Run"]]
+        "moves": [["Talon Gash"], ["Fury Attack"], ["U-turn"], ["Fury Strike", "Drill Run"]]
       }
     ]
   },
@@ -420,7 +424,7 @@
     ]
   },
   "raichu": {
-    "usage": 10,
+    "usage": 5,
     "sets": [
       {
         "species": "Raichu",
@@ -481,6 +485,80 @@
         "ivs": {"atk": 0},
         "nature": "Modest",
         "moves": [["Electric Terrain"], ["Rising Voltage"], ["Psychic", "Psyshock"], ["Surf", "Grass Knot"]]
+      }
+    ]
+  },
+  "nidoqueen": {
+    "usage": 5,
+    "sets": [
+      {
+        "species": "Nidoqueen",
+        "level": 52,
+        "item": ["Life Orb"],
+        "ability": ["Sheer Force"],
+        "evs": {"def": 4, "atk": 252, "spe": 252},
+        "ivs": {"spa": 0},
+        "nature": "Jolly",
+        "moves": [["Venom Slam"], ["High Horsepower"], ["Ice Punch"], ["Fire Punch", "Thunder Punch", "Sucker Punch", "Stealth Rock", "Toxic Spikes"]]
+      }
+    ]
+  },
+  "nidoking": {
+    "usage": 5,
+    "sets": [
+      {
+        "species": "Nidoking",
+        "item": ["Life Orb"],
+        "ability": ["Sheer Force"],
+        "evs": {"def": 4, "atk": 252, "spe": 252},
+        "ivs": {"spa": 0},
+        "nature": "Jolly",
+        "moves": [["Venom Slam"], ["High Horsepower"], ["Ice Punch"], ["Fire Punch", "Thunder Punch", "Sucker Punch"]]
+      }
+    ]
+  },
+  "clefable": {
+    "usage": 5,
+    "sets": [
+      {
+        "species": "Clefable",
+        "level": 51,
+        "item": ["Leftovers"],
+        "ability": ["Unaware"],
+        "evs": {"hp": 252, "def": 252, "spd": 4},
+        "nature": "Bold",
+        "ivs": {"atk": 0},
+        "moves": [["Moonblast"], ["Calm Mind", "Cosmic Power"], ["Moonlight"], ["Stored Power"]]
+      },
+      {
+        "species": "Clefable",
+        "level": 51,
+        "item": ["Flame Orb", "Toxic Orb"],
+        "ability": ["Magic Guard"],
+        "evs": {"hp": 252, "def": 252, "spd": 4},
+        "nature": "Bold",
+        "ivs": {"atk": 0},
+        "moves": [["Moonblast"], ["Trick"], ["Stealth Rock", "Healing Circle"], ["Moonlight"]]
+      },
+      {
+        "species": "Clefable",
+        "level": 51,
+        "item": ["Life Orb"],
+        "ability": ["Magic Guard"],
+        "evs": {"hp": 252, "spa": 252, "spd": 4},
+        "nature": "Modest",
+        "ivs": {"atk": 0},
+        "moves": [["Moonblast"], ["Fire Blast"], ["Thunderbolt"], ["Calm Mind"]]
+      },
+      {
+        "species": "Clefable",
+        "level": 51,
+        "item": ["Life Orb"],
+        "ability": ["Magic Guard"],
+        "evs": {"hp": 252, "spa": 252, "spd": 4},
+        "nature": "Modest",
+        "ivs": {"atk": 0},
+        "moves": [["Fairy Blast"], ["Fire Blast", "Blizzard"], ["Focus Blast"], ["Hyper Focus"]]
       }
     ]
   },
@@ -2010,38 +2088,6 @@
       }
     ]
   },
-  "clefable": {
-    "usage": 5,
-    "sets": [
-      {
-        "species": "Clefable",
-        "item": ["Kee Berry"],
-        "ability": ["Unaware"],
-        "evs": {"hp": 252, "def": 252, "spd": 4},
-        "nature": "Bold",
-        "ivs": {"atk": 0},
-        "moves": [["Moonblast"], ["Calm Mind", "Cosmic Power", "Minimize"], ["Moonlight"], ["Stored Power"]]
-      },
-      {
-        "species": "Clefable",
-        "item": ["Flame Orb"],
-        "ability": ["Magic Guard"],
-        "evs": {"hp": 252, "def": 252, "spd": 4},
-        "nature": "Bold",
-        "ivs": {"atk": 0},
-        "moves": [["Moonblast"], ["Trick"], ["Stealth Rock"], ["Moonlight"]]
-      },
-      {
-        "species": "Clefable",
-        "item": ["Life Orb", "Power Herb"],
-        "ability": ["Magic Guard"],
-        "evs": {"hp": 252, "spa": 252, "spd": 4},
-        "nature": "Modest",
-        "ivs": {"atk": 0},
-        "moves": [["Moonblast"], ["Fire Blast"], ["Thunderbolt"], ["Meteor Beam"]]
-      }
-    ]
-  },
   "quagsire": {
     "usage": 2,
     "sets": [
@@ -2642,28 +2688,6 @@
         "ivs": {"atk": 0},
         "nature": "Timid",
         "moves": [["Psychic"], ["Reflect"], ["Light Screen"], ["Yawn"]]
-      }
-    ]
-  },
-  "nidoking": {
-    "usage": 2,
-    "sets": [
-      {
-        "species": "Nidoking",
-        "item": ["Focus Sash", "Life Orb"],
-        "ability": ["Sheer Force"],
-        "evs": {"def": 4, "spa": 252, "spe": 252},
-        "nature": "Timid",
-        "moves": [["Sludge Wave"], ["Earth Power"], ["Ice Beam"], ["Flamethrower", "Thunderbolt", "Sucker Punch"]]
-      },
-      {
-        "species": "Nidoking",
-        "item": ["Choice Scarf"],
-        "ability": ["Sheer Force"],
-        "evs": {"def": 4, "spa": 252, "spe": 252},
-        "nature": "Timid",
-        "ivs": {"atk": 0},
-        "moves": [["Sludge Wave"], ["Earth Power"], ["Ice Beam"], ["Flamethrower", "Thunderbolt"]]
       }
     ]
   },
