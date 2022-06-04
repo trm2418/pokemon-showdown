@@ -25338,7 +25338,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				if (pokemon.hasType('Poison')) {
 					let factor = miasma ? 1/4 : 1/8;
 
-					this.heal(this.modify(pokemon.baseMaxhp, factor));
+					pokemon.heal(this.modify(pokemon.baseMaxhp, factor));
 				} else {
 					let status = miasma ? 'tox' : 'psn';
 
