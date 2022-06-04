@@ -20144,6 +20144,47 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Fire",
 	},
+	flamecaller: {
+		num: 2017,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Flamecaller",
+		pp: 20,
+		priority: 0,
+		flags: {},
+		noMetronome: [
+			"Raging Fury", "Shell Trap", "Blazing Shield", "Flamecaller",
+		],
+		onTryMove(pokemon) {
+			this.attrLastMove('[still]');
+		},
+		onPrepareHit(target, source) {
+			this.add('-anim', source, "Metronome", source);
+		},
+		onHit(target, source, effect) {
+			const moves = [];
+			for (const id in this.dex.data.Moves) {
+				const move = this.dex.moves.get(id);
+				if (move.realMove) continue;
+				if (move.isZ || move.isMax || move.isNonstandard) continue;
+				if (effect.noMetronome!.includes(move.name)) continue;
+				if (move.type !== 'Fire') continue;
+				moves.push(move.name);
+			}
+			let randomMove: string;
+			if (moves.length) {
+				randomMove = this.sample(moves);
+			} else {
+				return false;
+			}
+			this.actions.useMove(randomMove, target);
+		},
+		multihit: 2,
+		secondary: null,
+		target: "self",
+		type: "Fire",
+	},
 	ignite: {
 		num: 2018,
 		accuracy: true,
@@ -20779,6 +20820,47 @@ export const Moves: {[moveid: string]: MoveData} = {
 			},
 		},
 		target: "normal",
+		type: "Grass",
+	},
+	natureswrath: {
+		num: 2050,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Nature's Wrath",
+		pp: 20,
+		priority: 0,
+		flags: {},
+		noMetronome: [
+			"Solar Blade", "Timberfall", "Petal Dance", "Solar Beam", "Spiky Shield", "Nature's Wrath", "Spore Shield",
+		],
+		onTryMove(pokemon) {
+			this.attrLastMove('[still]');
+		},
+		onPrepareHit(target, source) {
+			this.add('-anim', source, "Metronome", source);
+		},
+		onHit(target, source, effect) {
+			const moves = [];
+			for (const id in this.dex.data.Moves) {
+				const move = this.dex.moves.get(id);
+				if (move.realMove) continue;
+				if (move.isZ || move.isMax || move.isNonstandard) continue;
+				if (effect.noMetronome!.includes(move.name)) continue;
+				if (move.type !== 'Grass') continue;
+				moves.push(move.name);
+			}
+			let randomMove: string;
+			if (moves.length) {
+				randomMove = this.sample(moves);
+			} else {
+				return false;
+			}
+			this.actions.useMove(randomMove, target);
+		},
+		multihit: 2,
+		secondary: null,
+		target: "self",
 		type: "Grass",
 	},
 	pepperpowder: {
@@ -23180,6 +23262,47 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "all",
 		type: "Dark",
 	},
+	evilscheme: {
+		num: 2178,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Evil Scheme",
+		pp: 20,
+		priority: 0,
+		flags: {},
+		noMetronome: [
+			"Backstab", "Lunar Cannon", "Obstruct", "Parting Shot", "Quash", "Evil Scheme",
+		],
+		onTryMove(pokemon) {
+			this.attrLastMove('[still]');
+		},
+		onPrepareHit(target, source) {
+			this.add('-anim', source, "Metronome", source);
+		},
+		onHit(target, source, effect) {
+			const moves = [];
+			for (const id in this.dex.data.Moves) {
+				const move = this.dex.moves.get(id);
+				if (move.realMove) continue;
+				if (move.isZ || move.isMax || move.isNonstandard) continue;
+				if (effect.noMetronome!.includes(move.name)) continue;
+				if (move.type !== 'Dark') continue;
+				moves.push(move.name);
+			}
+			let randomMove: string;
+			if (moves.length) {
+				randomMove = this.sample(moves);
+			} else {
+				return false;
+			}
+			this.actions.useMove(randomMove, target);
+		},
+		multihit: 2,
+		secondary: null,
+		target: "self",
+		type: "Dark",
+	},
 	enchantedclaw: {
 		num: 2180,
 		accuracy: 100,
@@ -23851,6 +23974,47 @@ export const Moves: {[moveid: string]: MoveData} = {
 		},
 		secondary: null,
 		target: "normal",
+		type: "Fairy",
+	},
+	pixiepower: {
+		num: 2214,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Pixie Power",
+		pp: 20,
+		priority: 0,
+		flags: {},
+		noMetronome: [
+			"Revel Dance", "Crafty Shield", "Geomancy", "Pixie Power",
+		],
+		onTryMove(pokemon) {
+			this.attrLastMove('[still]');
+		},
+		onPrepareHit(target, source) {
+			this.add('-anim', source, "Metronome", source);
+		},
+		onHit(target, source, effect) {
+			const moves = [];
+			for (const id in this.dex.data.Moves) {
+				const move = this.dex.moves.get(id);
+				if (move.realMove) continue;
+				if (move.isZ || move.isMax || move.isNonstandard) continue;
+				if (effect.noMetronome!.includes(move.name)) continue;
+				if (move.type !== 'Fairy') continue;
+				moves.push(move.name);
+			}
+			let randomMove: string;
+			if (moves.length) {
+				randomMove = this.sample(moves);
+			} else {
+				return false;
+			}
+			this.actions.useMove(randomMove, target);
+		},
+		multihit: 2,
+		secondary: null,
+		target: "self",
 		type: "Fairy",
 	},
 	rainbowwall: {
@@ -24648,8 +24812,21 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Flying",
 	},
-	windstorm: {
+	windshear: {
 		num: 2249,
+		accuracy: 100,
+		basePower: 50,
+		category: "Special",
+		name: "Wind Shear",
+		pp: 20,
+		priority: 1,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Flying",
+	},
+	windstorm: {
+		num: 2250,
 		accuracy: 100,
 		basePower: 130,
 		category: "Special",
@@ -24667,7 +24844,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Flying",
 	},
 	eagleeye: {
-		num: 2250,
+		num: 2251,
 		accuracy: true,
 		basePower: 0,
 		category: "Status",
@@ -24703,7 +24880,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Flying",
 	},
 	barbbarrage: {
-		num: 2251,
+		num: 2252,
 		accuracy: 100,
 		basePower: 65,
 		category: "Physical",
@@ -24724,7 +24901,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Poison",
 	},
 	direclaw: {
-		num: 2252,
+		num: 2253,
 		accuracy: 100,
 		basePower: 60,
 		category: "Physical",
@@ -24750,7 +24927,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Poison",
 	},
 	fumepunch: {
-		num: 2253,
+		num: 2254,
 		accuracy: 90,
 		basePower: 80,
 		category: "Physical",
@@ -24766,7 +24943,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Poison",
 	},
 	neurotoxin: {
-		num: 2254,
+		num: 2255,
 		accuracy: 95,
 		basePower: 75,
 		category: "Physical",
@@ -24782,7 +24959,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Poison",
 	},
 	slumberfang: {
-		num: 2255,
+		num: 2256,
 		accuracy: 85,
 		basePower: 75,
 		category: "Physical",
@@ -24801,7 +24978,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Poison",
 	},
 	toxictackle: {
-		num: 2256,
+		num: 2257,
 		accuracy: 100,
 		basePower: 50,
 		category: "Physical",
@@ -24817,7 +24994,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Poison",
 	},
 	venomslam: {
-		num: 2257,
+		num: 2258,
 		accuracy: 95,
 		basePower: 100,
 		category: "Physical",
@@ -24833,7 +25010,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Poison",
 	},
 	viralstrike: {
-		num: 2258,
+		num: 2259,
 		accuracy: 100,
 		basePower: 85,
 		category: "Physical",
@@ -24852,7 +25029,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Poison",
 	},
 	virugait: {
-		num: 2259,
+		num: 2260,
 		accuracy: 100,
 		basePower: 75,
 		category: "Physical",
@@ -24872,7 +25049,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Poison",
 	},
 	acidrain: {
-		num: 2260,
+		num: 2261,
 		accuracy: 70,
 		basePower: 110,
 		category: "Special",
@@ -24903,7 +25080,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Poison",
 	},
 	chemthrower: {
-		num: 2261,
+		num: 2262,
 		accuracy: 100,
 		basePower: 85,
 		category: "Special",
@@ -24919,7 +25096,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Poison",
 	},
 	corrosiveacid: {
-		num: 2262,
+		num: 2263,
 		accuracy: 100,
 		basePower: 85,
 		category: "Special",
@@ -24936,7 +25113,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Poison",
 	},
 	homingtoxins: {
-		num: 2263,
+		num: 2264,
 		accuracy: true,
 		basePower: 80,
 		category: "Special",
@@ -24961,7 +25138,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Poison",
 	},/*
 	malodor: {
-		num: 2264,
+		num: 2265,
 		accuracy: 100,
 		basePower: 70,
 		category: "Special",
@@ -24981,7 +25158,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},*/
 	parasiticwaste: {
-		num: 2265,
+		num: 2266,
 		accuracy: 100,
 		basePower: 80,
 		category: "Special",
@@ -24995,7 +25172,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Poison",
 	},
 	pesticide: {
-		num: 2266,
+		num: 2267,
 		accuracy: 100,
 		basePower: 80,
 		category: "Special",
@@ -25014,7 +25191,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Poison",
 	},
 	plaguebreath: {
-		num: 2267,
+		num: 2268,
 		accuracy: 90,
 		basePower: 90,
 		category: "Special",
@@ -25032,7 +25209,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Poison",
 	},
 	poisonfury: {
-		num: 2268,
+		num: 2269,
 		accuracy: 100,
 		basePower: 25,
 		category: "Special",
@@ -25046,7 +25223,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Poison",
 	},
 	sludgestorm: {
-		num: 2269,
+		num: 2270,
 		accuracy: 100,
 		basePower: 150,
 		basePowerCallback(pokemon, target, move) {
@@ -25062,7 +25239,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Poison",
 	},
 	toxifume: {
-		num: 2270,
+		num: 2271,
 		accuracy: 100,
 		basePower: 75,
 		category: "Special",
@@ -25090,7 +25267,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Poison",
 	},
 	miasmaterrain: {
-		num: 2271,
+		num: 2272,
 		accuracy: true,
 		basePower: 0,
 		category: "Status",
@@ -25147,7 +25324,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Poison",
 	},
 	miasmicgas: {
-		num: 2272,
+		num: 2273,
 		accuracy: 100,
 		basePower: 0,
 		category: "Status",
@@ -25175,6 +25352,47 @@ export const Moves: {[moveid: string]: MoveData} = {
 		},
 		secondary: null,
 		target: "all",
+		type: "Poison",
+	},
+	poisonassault: {
+		num: 2274,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Poison Assault",
+		pp: 20,
+		priority: 0,
+		flags: {},
+		noMetronome: [
+			"Belch", "Toxifume", "Baneful Bunker", "Poison Assault",
+		],
+		onTryMove(pokemon) {
+			this.attrLastMove('[still]');
+		},
+		onPrepareHit(target, source) {
+			this.add('-anim', source, "Metronome", source);
+		},
+		onHit(target, source, effect) {
+			const moves = [];
+			for (const id in this.dex.data.Moves) {
+				const move = this.dex.moves.get(id);
+				if (move.realMove) continue;
+				if (move.isZ || move.isMax || move.isNonstandard) continue;
+				if (effect.noMetronome!.includes(move.name)) continue;
+				if (move.type !== 'Poison') continue;
+				moves.push(move.name);
+			}
+			let randomMove: string;
+			if (moves.length) {
+				randomMove = this.sample(moves);
+			} else {
+				return false;
+			}
+			this.actions.useMove(randomMove, target);
+		},
+		multihit: 2,
+		secondary: null,
+		target: "self",
 		type: "Poison",
 	},
 	swarmbarrage: {

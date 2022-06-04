@@ -6550,7 +6550,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	venomdrench: {
 		name: "Venom Drench",
 		desc: "Lowers the target's Attack, Defense, Special Attack, Special Defense and Speed by 1 stage if the target is poisoned. Fails if the target is not poisoned.",
-		shortDesc: "Lower Atk/Def/Sp Atk/Sp Def/Speed of poisoned foes.",
+		shortDesc: "Lower all stats of poisoned foes (not acc/eva).",
 	},
 	venoshock: {
 		name: "Venoshock",
