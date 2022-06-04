@@ -25339,16 +25339,18 @@ export const Moves: {[moveid: string]: MoveData} = {
 
 			if (target.hasType('Poison')) {
 				let factor = miasma ? 1/4 : 1/8;
-				success = !!this.heal(this.modify(target.baseMaxhp, factor));
+				//success = !!
+				this.heal(this.modify(target.baseMaxhp, factor));
 			} else {
 				let status = miasma ? 'tox' : 'psn';
-				success = !!target.trySetStatus(status, source);
-			}
+				//uccess = !!
+				target.trySetStatus(status, source);
+			}/*
 			if (!success) {
 				this.add('-fail', target, 'heal', '[silent]');
 				return this.NOT_FAIL;
 			}
-			return success;
+			return success;*/
 		},
 		secondary: null,
 		target: "all",
