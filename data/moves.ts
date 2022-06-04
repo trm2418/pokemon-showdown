@@ -25332,6 +25332,20 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {heal: 1, protect: 1, mirror: 1},
+		onHitField() {
+			for (const pokemon of this.getAllActive()) {
+				let miasma = this.field.isTerrain('miasmaterrain') && pokemon.isGrounded();
+				if (pokemon.hasType('Poison')) {
+					let factor = miasma ? 1/4 : 1/8;
+
+					this.heal(this.modify(pokemon.baseMaxhp, factor));
+				} else {
+					let status = miasma ? 'tox' : 'psn';
+
+					pokemon.trySetStatus(status);
+				}
+			}
+		},/*
 		onHit(target, source) {
 			let success = false;
 
@@ -25345,13 +25359,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 				let status = miasma ? 'tox' : 'psn';
 				//uccess = !!
 				target.trySetStatus(status, source);
-			}/*
+			}
 			if (!success) {
 				this.add('-fail', target, 'heal', '[silent]');
 				return this.NOT_FAIL;
 			}
-			return success;*/
-		},
+			return success;
+		},*/
 		secondary: null,
 		target: "all",
 		type: "Poison",
