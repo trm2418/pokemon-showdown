@@ -20,7 +20,7 @@
         "evs": {"spa": 252, "spd": 252, "def": 4},
         "ivs": {"atk": 0},
         "nature": "Modest",
-        "moves": [["Giga Drain"], ["Leech Seed"], ["Earth Power"], ["Sleep Powder", "Substitute"]]
+        "moves": [["Giga Drain"], ["Leech Seed"], ["Earth Power", "Corrosive Acid"], ["Sleep Powder", "Substitute"]]
       },
       {
         "species": "Venusaur",
@@ -40,7 +40,7 @@
         "evs": {"spa": 252, "spe": 252, "spd": 4},
         "ivs": {"atk": 0},
         "nature": "Modest",
-        "moves": [["Chloro Beam"], ["Sludge Bomb"], ["Earth Power"], ["Sunblast"]]
+        "moves": [["Chloro Beam"], ["Sludge Bomb", "Corrosive Acid"], ["Earth Power"], ["Sunblast"]]
       },
       {
         "species": "Venusaur",
@@ -50,7 +50,7 @@
         "evs": {"spa": 252, "spe": 252, "spd": 4},
         "ivs": {"atk": 0},
         "nature": "Timid",
-        "moves": [["Chloro Beam"], ["Sludge Bomb"], ["Earth Power"], ["Sunblast"]]
+        "moves": [["Chloro Beam"], ["Sludge Bomb", "Corrosive Acid"], ["Earth Power"], ["Sunblast"]]
       }
     ]
   },
@@ -393,7 +393,7 @@
     "sets": [
       {
         "species": "Arbok",
-        "level": 53,
+        "level": 55,
         "item": ["Black Sludge"],
         "ability": ["Intimidate"],
         "evs": {"atk": 252, "spe": 252, "def": 4},
@@ -403,7 +403,7 @@
       },
       {
         "species": "Arbok",
-        "level": 53,
+        "level": 55,
         "item": ["Life Orb"],
         "ability": ["Shed Skin"],
         "evs": {"atk": 252, "spe": 252, "def": 4},
@@ -413,7 +413,7 @@
       },
       {
         "species": "Arbok",
-        "level": 53,
+        "level": 55,
         "item": ["Black Sludge"],
         "ability": ["Merciless"],
         "evs": {"atk": 252, "spe": 252, "def": 4},
@@ -499,7 +499,7 @@
         "evs": {"def": 4, "atk": 252, "spe": 252},
         "ivs": {"spa": 0},
         "nature": "Jolly",
-        "moves": [["Venom Slam"], ["High Horsepower"], ["Ice Punch"], ["Fire Punch", "Thunder Punch", "Sucker Punch", "Stealth Rock", "Toxic Spikes"]]
+        "moves": [["Venom Slam"], ["High Horsepower"], ["Ice Punch", "Rock Slide"], ["Fire Punch", "Thunder Punch", "Sucker Punch", "Stealth Rock", "Toxic Spikes"]]
       }
     ]
   },
@@ -513,7 +513,7 @@
         "evs": {"def": 4, "atk": 252, "spe": 252},
         "ivs": {"spa": 0},
         "nature": "Jolly",
-        "moves": [["Venom Slam"], ["High Horsepower"], ["Ice Punch"], ["Fire Punch", "Thunder Punch", "Sucker Punch"]]
+        "moves": [["Venom Slam"], ["High Horsepower"], ["Ice Punch", "Rock Slide"], ["Fire Punch", "Thunder Punch", "Sucker Punch"]]
       }
     ]
   },
@@ -600,6 +600,205 @@
         "evs": {"spa": 252, "spd": 4, "spe": 252},
         "nature": "Timid",
         "moves": [["Power Gem", "Focus Blast", "Dazzling Gleam"], ["Surf"], ["Ice Beam"], ["Psychic", "Psyshock"]]
+      }
+    ]
+  },
+  "cloyster": {
+    "usage": 5,
+    "sets": [
+      {
+        "species": "Cloyster",
+        "level": 52,
+        "item": ["Focus Sash", "King's Rock", "White Herb", "Life Orb"],
+        "ability": ["Skill Link"],
+        "evs": {"atk": 252, "spd": 4, "spe": 252},
+        "nature": "Adamant",
+        "moves": [["Shell Smash"], ["Icicle Spear"], ["Rock Blast"], ["Pin Missile", "Fusillade", "Spike Cannon", "Fury Attack", "Razor Shell"]]
+      },
+      {
+        "species": "Cloyster",
+        "level": 52,
+        "item": ["Focus Sash", "King's Rock", "White Herb", "Life Orb"],
+        "ability": ["Skill Link"],
+        "evs": {"spa": 252, "spd": 4, "spe": 252},
+        "nature": "Modest",
+        "moves": [["Shell Smash"], ["Water Shuriken"], ["Snowball Volley"], ["Body Press", "Spirit Volley", "Poison Fury"]]
+      },
+      {
+        "species": "Cloyster",
+        "level": 52,
+        "item": ["King's Rock"],
+        "ability": ["Skill Link"],
+        "evs": {"spa": 252, "spd": 4, "atk": 252},
+        "nature": "Mild",
+        "moves": [["Shell Smash"], ["Water Shuriken"], ["Snowball Volley", "Icicle Spear"], ["Fusillade"]]
+      },
+      {
+        "species": "Cloyster",
+        "level": 52,
+        "item": ["Leftovers"],
+        "ability": ["Shell Armor"],
+        "evs": {"hp": 4, "def": 252, "spd": 252},
+        "nature": "Bold",
+        "moves": [["Body Press"], ["Iron Defense"], ["Water Shuriken"], ["Clear Rain", "Rejuvenate"]]
+      },
+      {
+        "species": "Cloyster",
+        "level": 52,
+        "item": ["Mental Herb", "Focus Sash", "Custap Berry"],
+        "ability": ["Filter"],
+        "evs": {"hp": 4, "def": 252, "spd": 252},
+        "nature": "Bold",
+        "moves": [["Prod", "Body Press", "Steel Roller", "Rapid Spin"], ["Black Ice"], ["Toxic Spikes", "Spikes", "Stealth Rock", "Sturdy Spikes"], ["Frost Burst", "Memento", "Destiny Bond", "Explosion"]]
+      }
+    ]
+  },
+  "gigakarp": {
+    "usage": 5,
+    "sets": [
+      {
+        "species": "Gigakarp",
+        "item": ["Life Orb"],
+        "ability": ["Swift Swim"],
+        "evs": {"spa": 252, "spd": 4, "spe": 252},
+        "nature": "Modest",
+        "moves": [["Squall", "Rain Dance"], ["Hydro Pump", "Ocean's Wrath", "Surf", "Hydroshock"], ["Thunder", "Hurricane", "Clear Rain", "Acid Rain"], ["Slush Ball"]]
+      },
+      {
+        "species": "Gigakarp",
+        "item": ["Leftovers"],
+        "ability": ["Multiscale"],
+        "evs": {"hp": 252, "spa": 4, "spd": 252},
+        "nature": "Calm",
+        "moves": [["Recover", "Ancient Blessing"], ["Ocean's Wrath", "Scald"], ["Frost Blast", "Ice Beam", "Moonblast", "Aura Sphere", "Plague Breath"], ["Substitute"]]
+      },
+      {
+        "species": "Gigakarp",
+        "item": ["Leftovers"],
+        "ability": ["Multiscale"],
+        "evs": {"hp": 252, "spa": 4, "spd": 252},
+        "nature": "Calm",
+        "moves": [["Stockpile"], ["Spit Up"], ["Swallow"], ["Hydroshock", "Scald", "Surf", "Hydro Pump", "Ocean's Wrath"]]
+      },
+      {
+        "species": "Gigakarp",
+        "item": ["Choice Scarf"],
+        "ability": ["Hubris"],
+        "evs": {"spa": 252, "spd": 4, "spe": 252},
+        "nature": "Timid",
+        "moves": [["Hydro Pump", "Surf"], ["Thunderbolt", "Moonblast", "Aura Sphere"], ["Ice Beam", "Frost Blast"], ["Plague Breath"]]
+      },
+      {
+        "species": "Gigakarp",
+        "item": ["Leftovers"],
+        "ability": ["Hubris"],
+        "evs": {"spa": 252, "spd": 4, "spe": 252},
+        "nature": "Timid",
+        "moves": [["Surf"], ["Thunderbolt", "Moonblast", "Aura Sphere"], ["Ice Beam", "Plague Breath"], ["Fairy Dance"]]
+      }
+    ]
+  },
+  "swellow": {
+    "usage": 5,
+    "sets": [
+      {
+        "species": "Swellow",
+        "level": 53,
+        "item": ["Life Orb", "Focus Sash"],
+        "ability": ["Adaptability"],
+        "evs": {"atk": 252, "spd": 4, "spe": 252},
+        "nature": "Adamant",
+        "moves": [["Divebomb", "Talon Gash"], ["Fury Strike"], ["Extreme Speed"], ["Swords Dance"]]
+      },
+      {
+        "species": "Swellow",
+        "level": 53,
+        "item": ["Choice Band"],
+        "ability": ["Adaptability"],
+        "evs": {"atk": 252, "spd": 4, "spe": 252},
+        "nature": "Adamant",
+        "moves": [["Divebomb", "Talon Gash"], ["Fury Strike"], ["Extreme Speed"], ["U-turn"]]
+      },
+      {
+        "species": "Swellow",
+        "level": 53,
+        "item": ["Life Orb", "Focus Sash"],
+        "ability": ["Adaptability"],
+        "evs": {"spa": 252, "spd": 4, "spe": 252},
+        "nature": "Modest",
+        "moves": [["Wind Blast"], ["Boomburst"], ["Heat Wave"], ["Nasty Plot"]]
+      },
+      {
+        "species": "Swellow",
+        "level": 53,
+        "item": ["Choice Specs"],
+        "ability": ["Adaptability"],
+        "evs": {"spa": 252, "spd": 4, "spe": 252},
+        "nature": "Modest",
+        "moves": [["Wind Blast"], ["Boomburst"], ["Heat Wave"], ["Electro Ball", "Vacuum Wave", "Hidden Power Fighting"]]
+      },
+      {
+        "species": "Swellow",
+        "level": 53,
+        "item": ["Choice Scarf"],
+        "ability": ["Adaptability"],
+        "evs": {"spa": 252, "spd": 4, "spe": 252},
+        "nature": "Timid",
+        "moves": [["Mach Turn"], ["Boomburst"], ["Heat Wave", "Hidden Power Fighting"], ["Electro Ball"]]
+      },
+      {
+        "species": "Swellow",
+        "level": 53,
+        "item": ["Flame Orb"],
+        "ability": ["Flare Boost"],
+        "evs": {"atk": 252, "spd": 4, "spe": 252},
+        "nature": "Adamant",
+        "moves": [["Divebomb", "Talon Gash"], ["Facade"], ["Protect", "Substitute"], ["Flare Blitz", "Facing Fears", "Fury Strike", "U-turn"]]
+      },
+      {
+        "species": "Swellow",
+        "level": 53,
+        "item": ["Flame Orb"],
+        "ability": ["Flare Boost"],
+        "evs": {"spa": 252, "spd": 4, "spe": 252},
+        "nature": "Modest",
+        "moves": [["Wind Blast"], ["Boomburst"], ["Protect", "Substitute"], ["Heat Wave"]]
+      },
+      {
+        "species": "Swellow",
+        "level": 53,
+        "item": ["Flame Orb"],
+        "ability": ["Flare Boost"],
+        "evs": {"atk": 252, "spa": 4, "spe": 252},
+        "nature": "Lonely",
+        "moves": [["Windstorm"], ["Boomburst", "Facade"], ["Fly"], ["Fury Strike"]]
+      },
+      {
+        "species": "Swellow",
+        "level": 53,
+        "item": ["Life Orb"],
+        "ability": ["Speed Boost"],
+        "evs": {"spa": 252, "spd": 4, "spe": 252},
+        "nature": "Timid",
+        "moves": [["Mach Turn"], ["Electro Ball"], ["Agility", "Protect", "Rejuvenate", "Roost"], ["Overheat"]]
+      },
+      {
+        "species": "Swellow",
+        "level": 53,
+        "item": ["Life Orb"],
+        "ability": ["Speed Boost"],
+        "evs": {"spa": 252, "atk": 4, "spe": 252},
+        "nature": "Mild",
+        "moves": [["Mach Turn"], ["Electro Ball"], ["Flame Charge", "Agility", "Protect", "Rejuvenate", "Roost"], ["Extreme Speed"]]
+      },
+      {
+        "species": "Swellow",
+        "level": 53,
+        "item": ["Heavy-Duty Boots"],
+        "ability": ["Adaptability"],
+        "evs": {"atk": 252, "spd": 4, "spe": 252},
+        "nature": "Adamant",
+        "moves": [["Momentum Strike"], ["U-turn"], ["Defog"], ["Extreme Speed", "Roost", "Divebomb"]]
       }
     ]
   },
@@ -2652,19 +2851,6 @@
         "nature": "Modest",
         "ivs": {"atk": 0},
         "moves": [["Psyshock", "Eerie Spell"], ["Sludge Bomb"], ["Flamethrower"], ["Ice Beam"]]
-      }
-    ]
-  },
-  "cloyster": {
-    "usage": 3,
-    "sets": [
-      {
-        "species": "Cloyster",
-        "item": ["Focus Sash", "King's Rock"],
-        "ability": ["Skill Link"],
-        "evs": {"atk": 252, "def": 4, "spe": 252},
-        "nature": "Jolly",
-        "moves": [["Shell Smash"], ["Icicle Spear"], ["Rock Blast"], ["Ice Shard"]]
       }
     ]
   },
