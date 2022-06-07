@@ -988,7 +988,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	flareboost: {
 		onBasePowerPriority: 19,
 		onBasePower(basePower, attacker, defender, move) {
-			if (attacker.status === 'brn' && move.category === 'Special') {
+			if (attacker.status === 'brn') {
 				return this.chainModify(1.5);
 			}
 		},
