@@ -562,6 +562,79 @@
       }
     ]
   },
+  "golduck": {
+    "usage": 5,
+    "sets": [
+      {
+        "species": "Golduck",
+        "level": 52,
+        "item": ["Expert Belt", "Life Orb"],
+        "ability": ["Neuroforce"],
+        "evs": {"spa": 252, "spd": 4, "spe": 252},
+        "nature": "Timid",
+        "moves": [["Calm Mind", "Power Gem", "Focus Blast", "Dazzling Gleam"], ["Surf"], ["Ice Beam"], ["Psychic", "Psyshock"]]
+      },
+      {
+        "species": "Golduck",
+        "level": 52,
+        "item": ["Expert Belt", "Life Orb"],
+        "ability": ["Neuroforce"],
+        "evs": {"spa": 252, "spd": 4, "spe": 252},
+        "nature": "Timid",
+        "moves": [["Hyper Focus"], ["Hydro Pump"], ["Frost Blast"], ["Psionic Storm", "Focus Blast"]]
+      },
+      {
+        "species": "Golduck",
+        "level": 52,
+        "item": ["Choice Scarf"],
+        "ability": ["Neuroforce"],
+        "evs": {"spa": 252, "spd": 4, "spe": 252},
+        "nature": "Modest",
+        "moves": [["Power Gem", "Focus Blast", "Dazzling Gleam"], ["Surf"], ["Ice Beam"], ["Psychic", "Psyshock"]]
+      },
+      {
+        "species": "Golduck",
+        "level": 52,
+        "item": ["Choice Specs"],
+        "ability": ["Neuroforce"],
+        "evs": {"spa": 252, "spd": 4, "spe": 252},
+        "nature": "Timid",
+        "moves": [["Power Gem", "Focus Blast", "Dazzling Gleam"], ["Surf"], ["Ice Beam"], ["Psychic", "Psyshock"]]
+      }
+    ]
+  },
+  "klinklang": {
+    "usage": 5,
+    "sets": [
+      {
+        "species": "Klinklang",
+        "level": 52,
+        "item": ["Sitrus Berry", "Wide Lens", "Muscle Band"],
+        "ability": ["Reckless"],
+        "evs": {"atk": 252, "spd": 4, "spe": 252},
+        "nature": "Adamant",
+        "moves": [["Shift Gear"], ["Gear Grind", "Mow Down"], ["Volt Tackle"], ["Double-Edge", "Earthquake"]]
+      },
+      {
+        "species": "Klinklang",
+        "level": 52,
+        "item": ["Life Orb", "Leftovers"],
+        "ability": ["Steelworker"],
+        "evs": {"atk": 252, "spd": 4, "spe": 252},
+        "nature": "Adamant",
+        "moves": [["Shift Gear"], ["Gear Grind"], ["Volt Tackle"], ["Earthquake"]]
+      },
+      {
+        "species": "Klinklang",
+        "level": 52,
+        "item": ["Choice Band"],
+        "ability": ["Steelworker"],
+        "evs": {"atk": 252, "spd": 4, "spe": 252},
+        "nature": "Jolly",
+        "moves": [["Double-Edge"], ["Gear Grind"], ["Volt Tackle"], ["Earthquake"]]
+      }
+    ]
+  },
   "cinderace": {
     "usage": 10,
     "sets": [

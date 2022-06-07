@@ -2102,7 +2102,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	chatter: {
 		num: 448,
 		accuracy: 100,
-		basePower: 65,
+		basePower: 85,
 		category: "Special",
 		name: "Chatter",
 		pp: 20,
@@ -5966,7 +5966,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	geargrind: {
 		num: 544,
-		accuracy: 90,
+		accuracy: 95,
 		basePower: 55,
 		category: "Physical",
 		name: "Gear Grind",

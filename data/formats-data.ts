@@ -7716,6 +7716,15 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	metalynxmega: {
 		tier: "RU",
 	},
+	raptorch: {
+		tier: "LC",
+	},
+	archilles: {
+		tier: "RU",
+	},
+	archillesmega: {
+		tier: "UU",
+	},
 	seikamater: {
 		tier: "OU",
 	},
