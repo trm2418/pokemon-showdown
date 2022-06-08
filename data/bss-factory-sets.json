@@ -571,6 +571,7 @@
         "item": ["Expert Belt", "Life Orb"],
         "ability": ["Neuroforce"],
         "evs": {"spa": 252, "spd": 4, "spe": 252},
+        "ivs": {"atk": 0},
         "nature": "Timid",
         "moves": [["Calm Mind", "Power Gem", "Focus Blast", "Dazzling Gleam"], ["Surf"], ["Ice Beam"], ["Psychic", "Psyshock"]]
       },
@@ -580,6 +581,7 @@
         "item": ["Expert Belt", "Life Orb"],
         "ability": ["Neuroforce"],
         "evs": {"spa": 252, "spd": 4, "spe": 252},
+        "ivs": {"atk": 0},
         "nature": "Timid",
         "moves": [["Hyper Focus"], ["Hydro Pump"], ["Frost Blast"], ["Psionic Storm", "Focus Blast"]]
       },
@@ -589,6 +591,7 @@
         "item": ["Choice Scarf"],
         "ability": ["Neuroforce"],
         "evs": {"spa": 252, "spd": 4, "spe": 252},
+        "ivs": {"atk": 0},
         "nature": "Modest",
         "moves": [["Power Gem", "Focus Blast", "Dazzling Gleam"], ["Surf"], ["Ice Beam"], ["Psychic", "Psyshock"]]
       },
@@ -598,6 +601,7 @@
         "item": ["Choice Specs"],
         "ability": ["Neuroforce"],
         "evs": {"spa": 252, "spd": 4, "spe": 252},
+        "ivs": {"atk": 0},
         "nature": "Timid",
         "moves": [["Power Gem", "Focus Blast", "Dazzling Gleam"], ["Surf"], ["Ice Beam"], ["Psychic", "Psyshock"]]
       }
@@ -612,6 +616,7 @@
         "item": ["Focus Sash", "King's Rock", "White Herb", "Life Orb"],
         "ability": ["Skill Link"],
         "evs": {"atk": 252, "spd": 4, "spe": 252},
+        "ivs": {"spa": 0},
         "nature": "Adamant",
         "moves": [["Shell Smash"], ["Icicle Spear"], ["Rock Blast"], ["Pin Missile", "Fusillade", "Spike Cannon", "Fury Attack", "Razor Shell"]]
       },
@@ -621,6 +626,7 @@
         "item": ["Focus Sash", "King's Rock", "White Herb", "Life Orb"],
         "ability": ["Skill Link"],
         "evs": {"spa": 252, "spd": 4, "spe": 252},
+        "ivs": {"atk": 0},
         "nature": "Modest",
         "moves": [["Shell Smash"], ["Water Shuriken"], ["Snowball Volley"], ["Body Press", "Spirit Volley", "Poison Fury"]]
       },
@@ -629,7 +635,7 @@
         "level": 52,
         "item": ["King's Rock"],
         "ability": ["Skill Link"],
-        "evs": {"spa": 252, "spd": 4, "atk": 252},
+        "evs": {"spa": 252, "spe": 4, "atk": 252},
         "nature": "Mild",
         "moves": [["Shell Smash"], ["Water Shuriken"], ["Snowball Volley", "Icicle Spear"], ["Fusillade"]]
       },
@@ -639,6 +645,7 @@
         "item": ["Leftovers"],
         "ability": ["Shell Armor"],
         "evs": {"hp": 4, "def": 252, "spd": 252},
+        "ivs": {"atk": 0},
         "nature": "Bold",
         "moves": [["Body Press"], ["Iron Defense"], ["Water Shuriken"], ["Clear Rain", "Rejuvenate"]]
       },
@@ -648,7 +655,8 @@
         "item": ["Mental Herb", "Focus Sash", "Custap Berry"],
         "ability": ["Filter"],
         "evs": {"hp": 4, "def": 252, "spd": 252},
-        "nature": "Bold",
+        "ivs": {"spa": 0},
+        "nature": "Impish",
         "moves": [["Prod", "Body Press", "Steel Roller", "Rapid Spin"], ["Black Ice"], ["Toxic Spikes", "Spikes", "Stealth Rock", "Sturdy Spikes"], ["Frost Burst", "Memento", "Destiny Bond", "Explosion"]]
       }
     ]
@@ -661,6 +669,7 @@
         "item": ["Life Orb"],
         "ability": ["Swift Swim"],
         "evs": {"spa": 252, "spd": 4, "spe": 252},
+        "ivs": {"atk": 0},
         "nature": "Modest",
         "moves": [["Squall", "Rain Dance"], ["Hydro Pump", "Ocean's Wrath", "Surf", "Hydroshock"], ["Thunder", "Hurricane", "Clear Rain", "Acid Rain"], ["Slush Ball"]]
       },
@@ -669,6 +678,7 @@
         "item": ["Leftovers"],
         "ability": ["Multiscale"],
         "evs": {"hp": 252, "spa": 4, "spd": 252},
+        "ivs": {"atk": 0},
         "nature": "Calm",
         "moves": [["Recover", "Ancient Blessing"], ["Ocean's Wrath", "Scald"], ["Frost Blast", "Ice Beam", "Moonblast", "Aura Sphere", "Plague Breath"], ["Substitute"]]
       },
@@ -677,14 +687,16 @@
         "item": ["Leftovers"],
         "ability": ["Multiscale"],
         "evs": {"hp": 252, "spa": 4, "spd": 252},
+        "ivs": {"atk": 0},
         "nature": "Calm",
-        "moves": [["Stockpile"], ["Spit Up"], ["Swallow"], ["Hydroshock", "Scald", "Surf", "Hydro Pump", "Ocean's Wrath"]]
+        "moves": [["Stockpile"], ["Spit Up"], ["Swallow"], ["Ocean's Wrath", "Toxic"]]
       },
       {
         "species": "Gigakarp",
         "item": ["Choice Scarf"],
         "ability": ["Hubris"],
         "evs": {"spa": 252, "spd": 4, "spe": 252},
+        "ivs": {"atk": 0},
         "nature": "Timid",
         "moves": [["Hydro Pump", "Surf"], ["Thunderbolt", "Moonblast", "Aura Sphere"], ["Ice Beam", "Frost Blast"], ["Plague Breath"]]
       },
@@ -693,6 +705,7 @@
         "item": ["Leftovers"],
         "ability": ["Hubris"],
         "evs": {"spa": 252, "spd": 4, "spe": 252},
+        "ivs": {"atk": 0},
         "nature": "Timid",
         "moves": [["Surf"], ["Thunderbolt", "Moonblast", "Aura Sphere"], ["Ice Beam", "Plague Breath"], ["Fairy Dance"]]
       }
@@ -707,6 +720,7 @@
         "item": ["Life Orb", "Focus Sash"],
         "ability": ["Adaptability"],
         "evs": {"atk": 252, "spd": 4, "spe": 252},
+        "ivs": {"spa": 0},
         "nature": "Adamant",
         "moves": [["Divebomb", "Talon Gash"], ["Fury Strike"], ["Extreme Speed"], ["Swords Dance"]]
       },
@@ -716,6 +730,7 @@
         "item": ["Choice Band"],
         "ability": ["Adaptability"],
         "evs": {"atk": 252, "spd": 4, "spe": 252},
+        "ivs": {"spa": 0},
         "nature": "Adamant",
         "moves": [["Divebomb", "Talon Gash"], ["Fury Strike"], ["Extreme Speed"], ["U-turn"]]
       },
@@ -725,6 +740,7 @@
         "item": ["Life Orb", "Focus Sash"],
         "ability": ["Adaptability"],
         "evs": {"spa": 252, "spd": 4, "spe": 252},
+        "ivs": {"atk": 0},
         "nature": "Modest",
         "moves": [["Wind Blast"], ["Boomburst"], ["Heat Wave"], ["Nasty Plot"]]
       },
@@ -734,15 +750,17 @@
         "item": ["Choice Specs"],
         "ability": ["Adaptability"],
         "evs": {"spa": 252, "spd": 4, "spe": 252},
+        "ivs": {"atk": 0},
         "nature": "Modest",
         "moves": [["Wind Blast"], ["Boomburst"], ["Heat Wave"], ["Electro Ball", "Vacuum Wave", "Hidden Power Fighting"]]
       },
       {
         "species": "Swellow",
         "level": 53,
-        "item": ["Choice Scarf"],
+        "item": ["Choice Specs"],
         "ability": ["Adaptability"],
         "evs": {"spa": 252, "spd": 4, "spe": 252},
+        "ivs": {"atk": 0},
         "nature": "Timid",
         "moves": [["Mach Turn"], ["Boomburst"], ["Heat Wave", "Hidden Power Fighting"], ["Electro Ball"]]
       },
@@ -752,6 +770,7 @@
         "item": ["Flame Orb"],
         "ability": ["Flare Boost"],
         "evs": {"atk": 252, "spd": 4, "spe": 252},
+        "ivs": {"spa": 0},
         "nature": "Adamant",
         "moves": [["Divebomb", "Talon Gash"], ["Facade"], ["Protect", "Substitute"], ["Flare Blitz", "Facing Fears", "Fury Strike", "U-turn"]]
       },
@@ -761,6 +780,7 @@
         "item": ["Flame Orb"],
         "ability": ["Flare Boost"],
         "evs": {"spa": 252, "spd": 4, "spe": 252},
+        "ivs": {"atk": 0},
         "nature": "Modest",
         "moves": [["Wind Blast"], ["Boomburst"], ["Protect", "Substitute"], ["Heat Wave"]]
       },
@@ -779,6 +799,7 @@
         "item": ["Life Orb"],
         "ability": ["Speed Boost"],
         "evs": {"spa": 252, "spd": 4, "spe": 252},
+        "ivs": {"atk": 0},
         "nature": "Timid",
         "moves": [["Mach Turn"], ["Electro Ball"], ["Agility", "Protect", "Rejuvenate", "Roost"], ["Overheat"]]
       },
@@ -797,6 +818,7 @@
         "item": ["Heavy-Duty Boots"],
         "ability": ["Adaptability"],
         "evs": {"atk": 252, "spd": 4, "spe": 252},
+        "ivs": {"spa": 0},
         "nature": "Adamant",
         "moves": [["Momentum Strike"], ["U-turn"], ["Defog"], ["Extreme Speed", "Roost", "Divebomb"]]
       }
@@ -811,6 +833,7 @@
         "item": ["Sitrus Berry", "Wide Lens", "Muscle Band"],
         "ability": ["Reckless"],
         "evs": {"atk": 252, "spd": 4, "spe": 252},
+        "ivs": {"spa": 0},
         "nature": "Adamant",
         "moves": [["Shift Gear"], ["Gear Grind", "Mow Down"], ["Volt Tackle"], ["Double-Edge", "Earthquake"]]
       },
@@ -820,6 +843,7 @@
         "item": ["Life Orb", "Leftovers"],
         "ability": ["Steelworker"],
         "evs": {"atk": 252, "spd": 4, "spe": 252},
+        "ivs": {"spa": 0},
         "nature": "Adamant",
         "moves": [["Shift Gear"], ["Gear Grind"], ["Volt Tackle"], ["Earthquake"]]
       },
@@ -829,8 +853,73 @@
         "item": ["Choice Band"],
         "ability": ["Steelworker"],
         "evs": {"atk": 252, "spd": 4, "spe": 252},
+        "ivs": {"spa": 0},
         "nature": "Jolly",
         "moves": [["Double-Edge"], ["Gear Grind"], ["Volt Tackle"], ["Earthquake"]]
+      }
+    ]
+  },
+  "slurpuff": {
+    "usage": 5,
+    "sets": [
+      {
+        "species": "Slurpuff",
+        "level": 52,
+        "item": ["Sitrus Berry"],
+        "ability": ["Unburden"],
+        "evs": {"atk": 252, "spd": 4, "spe": 252},
+        "ivs": {"spa": 0},
+        "nature": "Adamant",
+        "moves": [["Belly Drum"], ["Play Rough"], ["Drain Punch"], ["Fire Punch"]]
+      },
+      {
+        "species": "Slurpuff",
+        "level": 52,
+        "item": ["Sitrus Berry"],
+        "ability": ["Unburden"],
+        "evs": {"atk": 252, "spd": 4, "spe": 252},
+        "ivs": {"spa": 0},
+        "nature": "Adamant",
+        "moves": [["Belly Drum"], ["Revel Dance"], ["Drain Punch"], ["Fire Punch", "Gunk Shot"]]
+      },
+      {
+        "species": "Slurpuff",
+        "level": 52,
+        "item": ["Focus Sash"],
+        "ability": ["Unburden"],
+        "evs": {"spa": 252, "spe": 252},
+        "ivs": {"atk": 0, "hp": 0, "def": 0, "spd": 0},
+        "nature": "Rash",
+        "moves": [["Sticky Web"], ["Yawn", "Healing Circle"], ["Endeavor", "Magic Coat"], ["Misty Explosion"]]
+      },
+      {
+        "species": "Slurpuff",
+        "level": 52,
+        "item": ["Petaya Berry"],
+        "ability": ["Unburden"],
+        "evs": {"spa": 252, "spd": 4, "spe": 252},
+        "ivs": {"atk": 0},
+        "nature": "Modest",
+        "moves": [["Sticky Web"], ["Yawn", "Healing Circle"], ["Endeavor", "Magic Coat"], ["Misty Explosion"]]
+      },
+      {
+        "species": "Slurpuff",
+        "level": 52,
+        "item": ["White Herb"],
+        "ability": ["Unburden"],
+        "evs": {"spa": 252, "spd": 4, "spe": 252},
+        "ivs": {"atk": 0},
+        "nature": "Modest",
+        "moves": [["Fleur Cannon"], ["Decorate"], ["Flamethrower"], ["Surf", "Energy Ball", "Thunderbolt", "Psychic", "Shadow Ball"]]
+      },
+      {
+        "species": "Slurpuff",
+        "level": 52,
+        "item": ["White Herb"],
+        "ability": ["Unburden"],
+        "evs": {"atk": 252, "spa": 4, "spe": 252},
+        "nature": "Naughty",
+        "moves": [["Fleur Cannon"], ["Decorate"], ["Drain Punch", "Gunk Shot", "Fire Punch"], ["Revel Dance"]]
       }
     ]
   },

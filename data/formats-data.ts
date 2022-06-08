@@ -7709,8 +7709,6 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "LC",
 	},
 	metalynx: {
-		randomBattleMoves: ["leafblade", "nightslash", "sacredsword", "swordsdance", "agility"],
-		randomBattleLevel: 81,
 		tier: "RU",
 	},
 	metalynxmega: {
@@ -7725,6 +7723,378 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	archillesmega: {
 		tier: "UU",
 	},
+	eletux: {
+		tier: "LC",
+	},
+	electruxo: {
+		tier: "RU",
+	},
+	electruxomega: {
+		tier: "RU",
+	},
+	cubbug: {
+		tier: "LC",
+	},
+	cubblfly: {
+		tier: "NFE",
+	},
+	nimflora: {
+		tier: "NU",
+	},
+	grozard: {
+		tier: "LC",
+	},
+	terlard: {
+		tier: "PU",
+	},
+	owten: {
+		tier: "LC",
+	}, 
+	eshouten: {
+		tier: "NU",
+	}, 
+	smore: {
+		tier: "LC",
+	}, 
+	firoke: {
+		tier: "(PU)",
+	}, 
+	brailip: {
+		tier: "LC",
+	}, 
+	brainoar: {
+		tier: "NU",
+	}, 
+	sponee: {
+		tier: "LC",
+	}, 
+	sponaree: {
+		tier: "(PU)",
+	}, 
+	pahar: {
+		tier: "LC",
+	}, 
+	palij: {
+		tier: "NFE",
+	}, 
+	pajay: {
+		tier: "NU",
+	}, 
+	jerbolta: {
+		tier: "PU",
+	}, 
+	comite: {
+		tier: "LC",
+	}, 
+	cometeor: {
+		tier: "NFE",
+	}, 
+	astronite: {
+		tier: "RU",
+	}, 
+	baashaun: {
+		tier: "LC",
+	}, 
+	baaschaf: {
+		tier: "NFE",
+	}, 
+	baariette: {
+		tier: "RU",
+	},
+	baariettemega: {
+		tier: "UU",
+	}, 
+	tricwe: {
+		tier: "LC",
+	}, 
+	harylect: {
+		tier: "PU",
+	}, 
+	lunapup: {
+		tier: "LC",
+	}, 
+	herolune: {
+		tier: "RU",
+	}, 
+	minyan: {
+		tier: "LC",
+	}, 
+	vilucard: {
+		tier: "RU",
+	}, 
+	cocaran: {
+		tier: "LC",
+	}, 
+	cararalm: {
+		tier: "NFE",
+	}, 
+	cocancer: {
+		tier: "NU",
+	}, 
+	cassnail: {
+		tier: "LC",
+	}, 
+	sableau: {
+		tier: "NFE",
+	}, 
+	escartress: {
+		tier: "UU",
+	}, 
+	nupin: {
+		tier: "LC",
+	}, 
+	gellin: {
+		tier: "RU",
+	}, 
+	barand: {
+		tier: "PU",
+	},
+	barandmega: {
+		tier: "OU",
+	}, 
+	glaslug: {
+		tier: "LC",
+	}, 
+	glavinug: {
+		tier: "UU",
+	}, 
+	s51: {
+		tier: "LC",
+	}, 
+	s51a: {
+		tier: "RU",
+	},
+	s51amega: {
+		tier: "UU",
+	}, 
+	flager: {
+		tier: "LC",
+	}, 
+	inflagetah: {
+		tier: "UU",
+	},
+	inflagetahmega: {
+		tier: "OU",
+	}, 
+	chimical: {
+		tier: "LC",
+	}, 
+	chimaconda: {
+		tier: "UU",
+	}, 
+	tikiki: {
+		tier: "LC",
+	}, 
+	frikitiki: {
+		tier: "RU",
+	}, 
+	unymph: {
+		tier: "LC",
+	}, 
+	harptera: {
+		tier: "RU",
+	}, 
+	chicoatl: {
+		tier: "LC",
+	}, 
+	quetzoral: {
+		tier: "NFE",
+	}, 
+	coatlith: {
+		tier: "RU",
+	}, 
+	tracton: {
+		tier: "RU",
+	}, 
+	snopach: {
+		tier: "LC",
+	}, 
+	dermafrost: {
+		tier: "RU",
+	},
+	dermafrostrebirthed: {
+		tier: "RU",
+	},
+	slothohm: {
+		tier: "LC",
+	}, 
+	theriamp: {
+		tier: "UU",
+	},
+	theriamprebirthed: {
+		tier: "UU",
+	}, 
+	frynai: {
+		tier: "LC",
+	}, 
+	saidine: {
+		tier: "NFE",
+	}, 
+	daikatuna: {
+		tier: "UU",
+	}, 
+	selkid: {
+		tier: "LC",
+	}, 
+	syrentide: {
+		tier: "PU",
+	},
+	syrentidemega: {
+		tier: "UU",
+	}, 
+	jackdeary: {
+		tier: "LC",
+	}, 
+	winotinger: {
+		tier: "UU",
+	}, 
+	gargryph: {
+		tier: "RU",
+	}, 
+	masking: {
+		tier: "LC",
+	}, 
+	dramsama: {
+		tier: "UU",
+	},
+	dramsamamega: {
+		tier: "UU",
+	}, 
+	chupacho: {
+		tier: "LC",
+	}, 
+	luchabra: {
+		tier: "RU",
+	}, 
+	linkite: {
+		tier: "LC",
+	}, 
+	chainite: {
+		tier: "UU",
+	}, 
+	pufluff: {
+		tier: "LC",
+	}, 
+	alpico: {
+		tier: "UU",
+	}, 
+	anderind: {
+		tier: "RU",
+	}, 
+	colarva: {
+		tier: "LC",
+	}, 
+	frosulo: {
+		tier: "NFE",
+	}, 
+	frosthra: {
+		tier: "OU",
+	}, 
+	fafurr: {
+		tier: "LC",
+	}, 
+	fafninter: {
+		tier: "OU",
+	}, 
+	shrimputy: {
+		tier: "LC",
+	}, 
+	krilvolver: {
+		tier: "RU",
+	}, 
+	swabone: {
+		tier: "LC",
+	}, 
+	skelerogue: {
+		tier: "NFE",
+	}, 
+	navighast: {
+		tier: "OU",
+	}, 
+	stenowatt: {
+		tier: "UU",
+	}, 
+	jungore: {
+		tier: "LC",
+	}, 
+	majungold: {
+		tier: "NU",
+	}, 
+	majungoldrebirthed: {
+		tier: "RU",
+	},
+	hagoop: {
+		tier: "LC",
+	}, 
+	haagross: {
+		tier: "RU",
+	}, 
+	xenomite: {
+		tier: "LC",
+	}, 
+	xenogen: {
+		tier: "NFE",
+	}, 
+	xenoqueen: {
+		tier: "OU",
+	}, 
+	hazma: {
+		tier: "RU",
+	}, 
+	geigeroach: {
+		tier: "RU",
+	}, 
+	minicorn: {
+		tier: "LC",
+	}, 
+	kiricorn: {
+		tier: "UU",
+	},
+	kiricornmega: {
+		tier: "UU",
+	}, 
+	oblivicorn: {
+		tier: "UU",
+	},
+	oblivicornmega: {
+		tier: "UU",
+	}, 
+	luxi: {
+		tier: "LC",
+	}, 
+	luxor: {
+		tier: "NFE",
+	}, 
+	luxelong: {
+		tier: "RU",
+	}, 
+	sheebit: {
+		tier: "LC",
+	}, 
+	terrabbit: {
+		tier: "NFE",
+	}, 
+	laissure: {
+		tier: "OU",
+	}, 
+	volchik: {
+		tier: "LC",
+	}, 
+	voltasu: {
+		tier: "NFE",
+	}, 
+	yatagaryu: {
+		tier: "OU",
+	}, 
+	devimp: {
+		tier: "LC",
+	}, 
+	fallengel: {
+		tier: "NFE",
+	}, 
+	beliaddon: {
+		tier: "UU",
+	}, 
 	seikamater: {
 		tier: "OU",
 	},

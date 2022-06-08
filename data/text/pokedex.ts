@@ -4895,6 +4895,15 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	electruxomega: {
 		name: "Electruxo-Mega",
 	},
+	cubbug: {
+		name: "Cubbug",
+	},
+	cubblfly: {
+		name: "Cubblfly",
+	},
+	nimflora: {
+		name: "Nimflora",
+	},
 	grozard: {
 		name: "Grozard",
 	},

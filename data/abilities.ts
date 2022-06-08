@@ -986,14 +986,20 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 49,
 	},
 	flareboost: {
-		onBasePowerPriority: 19,
-		onBasePower(basePower, attacker, defender, move) {
-			if (attacker.status === 'brn') {
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, pokemon) {
+			if (pokemon.status === 'brn') {
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(spa, pokemon) {
+			if (pokemon.status === 'brn') {
 				return this.chainModify(1.5);
 			}
 		},
 		name: "Flare Boost",
-		rating: 2,
+		rating: 3.5,
 		num: 138,
 	},
 	flashfire: {
