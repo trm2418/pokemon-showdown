@@ -5279,6 +5279,84 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	mutios: {
 		name: "Mutios",
 	},
+	cindigre: {
+		name: "Cindigre",
+	},
+	lavigre: {
+		name: "Lavigre",
+	},
+	voltigre: {
+		name: "Voltigre",
+	},
+	faintrick: {
+		name: "Faintrick",
+	},
+	fraudkill: {
+		name: "Fraudkill",
+	},
+	stickibat: {
+		name: "Stickibat",
+	},
+	trickibat: {
+		name: "Trickibat",
+	},
+	bandibat: {
+		name: "Bandibat",
+	},
+	arridian: {
+		name: "Arridian",
+	}, 
+	obsedge: {
+		name: "Obsedge",
+	}, 
+	glasdius: {
+		name: "Glasdius",
+	}, 
+	kwee: {
+		name: "Kwee",
+	}, 
+	casberry: {
+		name: "Casberry",
+	}, 
+	avracos: {
+		name: "Avracos",
+	}, 
+	cavernolm: {
+		name: "Cavernolm",
+	}, 
+	bewildog: {
+		name: "Bewildog",
+	}, 
+	deludaze: {
+		name: "Deludaze",
+	}, 
+	kolveta: {
+		name: "Kolveta",
+	}, 
+	cessmer: {
+		name: "Cessmer",
+	}, 
+	mesmire: {
+		name: "Mesmire",
+	}, 
+	divey: {
+		name: "Divey",
+	}, 
+	davlocke: {
+		name: "Davlocke",
+	}, 
+	boogle: {
+		name: "Boogle",
+	}, 
+	confuzel: {
+		name: "Confuzel",
+	}, 
+	smulch: {
+		name: "Smulch",
+	}, 
+	mulgrowst: {
+		name: "Mulgrowst",
+	}, 
 	eronze: {
 		name: "Eronze",
 	},

@@ -4653,4 +4653,14 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3,
 		num: -4,
 	},
+	alchemicwings: {
+		onSourceAfterFaint(length, target, source, effect) {
+			if (effect && effect.effectType === 'Move') {
+				this.boost({atk: length, def: length}, source);
+			}
+		},
+		name: "Alchemic Wings",
+		rating: 3,
+		num: -100,
+	},
 };

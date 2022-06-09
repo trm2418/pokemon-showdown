@@ -8113,6 +8113,84 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	mutios: {
 		tier: "OU",
 	},
+	cindigre: {
+		tier: "LC",
+	}, 
+	lavigre: {
+		tier: "NFE",
+	}, 
+	voltigre: {
+		tier: "RU",
+	}, 
+	faintrick: {
+		tier: "LC",
+	}, 
+	fraudkill: {
+		tier: "PU",
+	}, 
+	stickibat: {
+		tier: "LC",
+	}, 
+	trickibat: {
+		tier: "NFE",
+	}, 
+	bandibat: {
+		tier: "NU",
+	}, 
+	arridian: {
+		tier: "LC",
+	}, 
+	obsedge: {
+		tier: "NFE",
+	}, 
+	glasdius: {
+		tier: "RU",
+	}, 
+	kwee: {
+		tier: "LC",
+	}, 
+	casberry: {
+		tier: "NFE",
+	}, 
+	avracos: {
+		tier: "UU",
+	}, 
+	cavernolm: {
+		tier: "UU",
+	}, 
+	bewildog: {
+		tier: "LC",
+	}, 
+	deludaze: {
+		tier: "NU",
+	}, 
+	kolveta: {
+		tier: "RU",
+	}, 
+	cessmer: {
+		tier: "LC",
+	}, 
+	mesmire: {
+		tier: "NU",
+	}, 
+	divey: {
+		tier: "LC",
+	}, 
+	davlocke: {
+		tier: "RU",
+	}, 
+	boogle: {
+		tier: "LC",
+	}, 
+	confuzel: {
+		tier: "UU",
+	}, 
+	smulch: {
+		tier: "LC",
+	}, 
+	mulgrowst: {
+		tier: "NU",
+	}, 
 	eronze: {
 		tier: "OU",
 	},
